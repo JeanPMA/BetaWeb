@@ -1,8 +1,11 @@
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   background-color:#41567E;
   
 }
 
+.nav{
+  margin-left: 50px;
+}
 
