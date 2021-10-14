@@ -1,7 +1,16 @@
-.App{
-  text-align: center;
+.App {
+  background-color: #41567e;
+  height: 100vh;
+}
+#ofertas {
+  background-color: #3f475c;
+}
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
 }
 
-a{     
-    margin-left: 50px;  
+a {
+  margin-left: 50px;
 }

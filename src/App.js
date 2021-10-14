@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import './App.css';
-import Navigation from './components/Navegacion';
+import "./App.css";
+import Navigation from "./components/Navegacion";
+import OfCursos from "./components/OfCursos";
 
 class App extends Component {
-  render(){
-     return (
+  render() {
+    return (
       <div className="App">
         <Navigation />
-       
+        <OfCursos />
       </div>
     );
   }
