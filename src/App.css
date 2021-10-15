@@ -40,14 +40,14 @@ a {
   line-height: 200%;
 }
 
-.boton_buscar{
+#boton_buscar{
   background-color: rgb(81, 81, 162);
   margin-left: 740px;
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 90px;
-  
+  padding-top:6px ;
   border-style: hidden;
   text-align: center;
 }

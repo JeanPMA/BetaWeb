@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 
 class Navigation extends Component{
@@ -14,7 +15,7 @@ class Navigation extends Component{
                     
                     </a> 
                   
-                    <button class="boton_buscar" type="button">Cursos</button>                  
+                    <Link to="/cursos" id="boton_buscar" className="btn " type="button">Cursos</Link>                    
                     
                 </nav>
                 
