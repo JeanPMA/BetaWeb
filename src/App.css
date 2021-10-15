@@ -39,3 +39,15 @@ a {
 .Titulo {
   line-height: 200%;
 }
+
+.boton_buscar{
+  background-color: rgb(81, 81, 162);
+  margin-left: 740px;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 90px;
+  
+  border-style: hidden;
+  text-align: center;
+}
