@@ -5,7 +5,7 @@ function OfCurso() {
   return (
     <a href="https://www.udemy.com/">
       <div
-        className="card border-top border-start border-end border-bottom border-white p-2 text-white"
+        className="card  border-top border-start border-end border-bottom border-white p-2 text-white"
         id="ofertas"
       >
         <img src={imagenCurso} />

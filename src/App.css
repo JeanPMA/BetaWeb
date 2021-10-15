@@ -1,6 +1,6 @@
 .App {
   background-color: #41567e;
-  height: 100vh;
+  height: 100%;
 }
 #ofertas {
   background-color: #3f475c;
@@ -18,18 +18,17 @@ a {
 .Descripcion {
   width: 410px;
   height: 210px;
-  background-color: #DCEDFF;
+  background-color: #dcedff;
   padding: 30px;
   margin-top: 60px;
-  margin-left: 90px;  
+  margin-left: 90px;
 }
 
-.logo{
+.logo {
   margin-left: 600px;
   margin-top: -160px;
-  
 }
 
-.Titulo{
+.Titulo {
   line-height: 200%;
 }
