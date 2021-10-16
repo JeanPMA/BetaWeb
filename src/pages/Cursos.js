@@ -4,7 +4,6 @@ import Curso from "../components/Curso";
 function Cursos() {
   return (
     <div>
-      <Navegacion />
       <div className="container" id="cursosRegistrados">
         <Curso />
         <Curso />
