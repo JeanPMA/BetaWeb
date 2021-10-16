@@ -1,6 +1,6 @@
 .App {
   background-color: #41567e;
-  height: 100vh;
+  height: 100%;
 }
 #ofertas {
   background-color: #3f475c;
@@ -40,14 +40,32 @@ a {
   line-height: 200%;
 }
 
-#boton_buscar{
+#boton_buscar {
   background-color: rgb(81, 81, 162);
   margin-left: 740px;
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 90px;
-  padding-top:6px ;
+  padding-top: 6px;
   border-style: hidden;
   text-align: center;
+}
+#cursosRegistrados {
+  padding-top: 80px;
+}
+#cursos {
+  margin-bottom: 8px;
+}
+#btn-inscribirse {
+  background-color: transparent;
+  border: transparent;
+  color: #fcf93f;
+}
+#instructor {
+  font-size: 12px;
+}
+#nombre-del-curso {
+  font-size: 20px;
+  font-weight: bold;
 }

@@ -8,7 +8,7 @@ function OfCurso() {
         className="card border-top border-start border-end border-bottom border-white p-2 text-white"
         id="ofertas"
       >
-        <img src={imagenCurso} />
+        <img src={imagenCurso} alt="" />
         <div className="card-body">
           <h4 id="titulo" className="card-title">
             Titulo del curso

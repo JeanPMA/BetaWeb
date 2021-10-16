@@ -1,11 +1,24 @@
-import React from 'react'
-
+import React from "react";
+import Navegacion from "../components/Navegacion";
+import Curso from "../components/Curso";
 function Cursos() {
-    return (
-        <div>
-            <h1>Pagina de cursos</h1>
-        </div>
-    )
+  return (
+    <div>
+      <Navegacion />
+      <div className="container" id="cursosRegistrados">
+        <Curso />
+        <Curso />
+        <Curso />
+        <Curso />
+        <Curso />
+        <Curso />
+        <Curso />
+        <Curso />
+        <Curso />
+        <Curso />
+      </div>
+    </div>
+  );
 }
 
-export default Cursos
+export default Cursos;
