@@ -17,7 +17,8 @@ class Navigation extends Component{
                     <input class="buscador" type="search" id="search" placeholder="Buscar cursos" />   
 
                     <Link to="/cursos" id="boton_buscar" className="btn " type="button">Cursos</Link>                    
-                                       
+
+                     <Link to="/#" id="boton_login" className="btn " type="button">Iniciar Sesión</Link>                   
                 </nav>
                 
             
