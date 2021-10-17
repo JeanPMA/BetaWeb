@@ -23,12 +23,25 @@ class Navigation extends Component {
           placeholder="Buscar cursos"
         />
 
+<<<<<<< HEAD
         <Link to="/cursos" id="boton_buscar" className="btn " type="button">
           Cursos
         </Link>
       </nav>
     );
   }
+=======
+                    <input class="buscador" type="search" id="search" placeholder="Buscar cursos" />   
+
+                    <Link to="/cursos" id="boton_buscar" className="btn " type="button">Cursos</Link>                    
+
+                     <Link to="/#" id="boton_login" className="btn " type="button">Iniciar Sesión</Link>                   
+                </nav>
+                
+            
+        )
+    }
+>>>>>>> origin/develop
 }
 
 export default Navigation;
