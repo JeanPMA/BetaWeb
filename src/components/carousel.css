@@ -61,6 +61,9 @@
   background-color: #08cf68;
   border: 1px solid #ddd;
   color: white;
+  font-size: 30px;
+
+  font-weight: bold;
 }
 
 .left-arrow {
