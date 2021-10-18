@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./carousel.css";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 const Carousel = (props) => {
   const { children, show } = props;
 
@@ -56,7 +60,7 @@ const Carousel = (props) => {
       <div className="carousel-wrapper">
         {currentIndex > 0 && (
           <button onClick={prev} className="left-arrow">
-            &lt;
+            <FontAwesomeIcon icon={faChevronLeft} />
           </button>
         )}
         <div
@@ -76,7 +80,7 @@ const Carousel = (props) => {
 
         {currentIndex < length - show && (
           <button onClick={next} className="right-arrow">
-            &gt;
+            <FontAwesomeIcon icon={faChevronRight} />
           </button>
         )}
       </div>
