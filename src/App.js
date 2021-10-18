@@ -6,6 +6,7 @@ import Detalles from "./components/Detalles";
 import Navigation from "./components/Navegacion";
 import Slider from "./components/Slider";
 import Cursos from "./pages/Cursos";
+import Instructor from "./pages/Instructor";
 
 class App extends Component {
   render() {
@@ -20,6 +21,9 @@ class App extends Component {
             </Route>
             <Route path="/cursos">
               <Cursos />
+            </Route>
+            <Route path="/instructor">
+              <Instructor />
             </Route>
           </Switch>
         </div>

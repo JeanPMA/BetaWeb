@@ -70,16 +70,16 @@ a {
   font-weight: bold;
 }
 
-.buscador{
- width: 25em;
- height: 28px;
- border-radius: 60px;
- margin-left: 5em;
- border-color: rgba(0, 0, 0, 0.479);
- position: relative;
- text-align: left;
- padding-left: 10px;
- outline-style: none;
+.buscador {
+  width: 25em;
+  height: 28px;
+  border-radius: 60px;
+  margin-left: 5em;
+  border-color: rgba(0, 0, 0, 0.479);
+  position: relative;
+  text-align: left;
+  padding-left: 10px;
+  outline-style: none;
 }
 
 #boton_login {
@@ -92,4 +92,78 @@ a {
   padding-top: 6px;
   border-style: hidden;
   text-align: center;
+}
+
+/* CSS instructor*/
+.container-instructor {
+  margin: 0px auto;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 300px 1066px;
+}
+.aside {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-color: #101c34;
+}
+
+.foto-usuario {
+  margin: auto;
+  display: block;
+  width: 150px;
+  padding-top: 70px;
+}
+.nombre-usuario {
+  display: block;
+  padding-top: 60px;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+}
+.texto-menu {
+  display: block;
+  margin-left: 10px;
+  color: blueviolet;
+  font-size: 20px;
+}
+.boton-inicio-instructor,
+.boton-cursos-instructor {
+  display: block;
+  margin: 0px;
+  margin-top: 30px;
+  font-size: 25px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+.boton-inicio-instructor:hover {
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+.boton-cursos-instructor:hover {
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+.boton-inicio-instructor:focus {
+  background-color: #5051a1;
+  border-radius: 50px;
+}
+.boton-cursos-instructor:focus {
+  background-color: #5051a1;
+  border-radius: 50px;
+}
+
+.icono-inicio-cursos-instructor {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 30px;
+}
+.icono-boton-instructor {
+  font-size: 35px;
+}
+
+span {
+  margin-left: 25px;
+  font-size: 20px;
 }
