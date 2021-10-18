@@ -70,7 +70,7 @@ a {
   font-weight: bold;
 }
 
-<<<<<<< HEAD
+
 .buscador {
   width: 25em;
   height: 28px;
@@ -167,20 +167,9 @@ span {
   margin-left: 25px;
   font-size: 20px;
 }
-=======
-.buscador{
- width: 25em;
- height: 28px;
- border-radius: 60px;
- margin-left: 5em;
- border-color: rgba(0, 0, 0, 0.479);
- position: relative;
- text-align: left;
- padding-left: 10px;
- outline-style: none;
-}
+
 
 #logo_lupa{
   margin-left: 10px;
 }
->>>>>>> Historia_usuario4
+

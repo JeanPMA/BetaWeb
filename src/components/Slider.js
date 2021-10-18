@@ -4,7 +4,7 @@ const Slider = () => {
   return (
     <div>
       <div className="text-white oferta">
-        <h2>Oferta de cursos</h2>
+        <h2>Oferta de cursos gratuitos</h2>
       </div>
 
       <div
