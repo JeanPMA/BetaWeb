@@ -25,7 +25,7 @@ const Slider = () => {
             marginRight: "auto",
           }}
         >
-          <Carousel show={5}>
+          <Carousel show={4}>
             <div className="contenedor-cursos-inicio border border-white">
               <div className="justify-content-center pt-2 imagen-oferta">
                 <img src={Imagen} alt="placeholder" style={{ width: "90%" }} />
