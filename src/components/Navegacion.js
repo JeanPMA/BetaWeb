@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
+import logoLupa from "../imagenes/logoLupa.png"
 
 class Navigation extends Component{
     render(){
@@ -15,6 +15,7 @@ class Navigation extends Component{
                     </a> 
 
                     <input class="buscador" type="search" id="search" placeholder="Buscar cursos" />   
+                    <img src={logoLupa} id="logo_lupa" width="30" height="30"/>
 
                     <Link to="/cursos" id="boton_buscar" className="btn " type="button">Cursos</Link>                    
                                        
