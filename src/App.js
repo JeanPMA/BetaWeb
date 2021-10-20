@@ -7,7 +7,8 @@ import Navigation from "./components/Navegacion";
 import Slider from "./components/Slider";
 import Cursos from "./pages/Cursos";
 import Instructor from "./pages/Instructor";
-import MisCursos_docente from "./pages/MisCursos_docente"
+import MisCursos_docente from "./pages/MisCursos_docente";
+
 
 class App extends Component {
   render() {

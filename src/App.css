@@ -226,7 +226,7 @@ span {
   margin-left: 10px;
 }
 
-#boton_misCursos {
+#boton_crearCursos {
   background-color: #0ecd67;
   margin-left: 1100px;
   margin-top: 120px;
@@ -238,3 +238,53 @@ span {
   border-style: hidden;
   text-align: center;
 }
+
+
+
+#tituloCrearCurso{
+  background: #41567e;
+  border: none;
+  color: white;
+  
+}
+
+#tituloModal{
+  margin-left: 100px;
+}
+
+#cuerpoCrearCurso{
+  background: #41567e;
+  border: none;
+  color: white;
+}
+
+#pieCrearCurso{
+  background: #41567e;
+  border: none;
+  color: white;
+}
+
+#botonCrearCancelar{
+  background-color: #0ecd67;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 100px;
+  padding-top: 6px;
+  border-style: hidden;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+#botonCrearAceptar{
+  background-color: #0ecd67;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 100px;
+  padding-top: 6px;
+  border-style: hidden;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
