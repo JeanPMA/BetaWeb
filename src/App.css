@@ -238,6 +238,7 @@ span {
   border-style: hidden;
   text-align: center;
 }
+<<<<<<< HEAD
 
 
 
@@ -288,3 +289,76 @@ span {
   margin-top: 20px;
 }
 
+=======
+.icono1-slider-instructor {
+  color: #535861;
+  height: 100%;
+  font-size: 42px;
+  margin-top: 60px;
+  position: relative;
+  margin-right: 130px;
+}
+.eye {
+  color: #adec47;
+  font-size: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-top: 17px;
+  margin-right: 7px;
+}
+.texto-1 {
+  width: 80px;
+  text-align: left;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: 70px;
+}
+.icono2-slider-instructor {
+  color: #09f6ff;
+  height: 100%;
+  font-size: 35px;
+  margin-top: 65px;
+  position: relative;
+  margin-right: 130px;
+}
+.texto-2 {
+  height: 100%;
+  width: 100px;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: 70px;
+}
+.icono3-slider-instructor {
+  color: #e80e46;
+  font-size: 35px;
+  margin-top: 60px;
+  position: relative;
+  margin-right: 130px;
+}
+.texto-3 {
+  width: 110px;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: 70px;
+}
+>>>>>>> b7d186160a548f47b583fc09fd866063b4c23581
