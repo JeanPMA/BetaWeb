@@ -225,3 +225,16 @@ span {
 #logo_lupa {
   margin-left: 10px;
 }
+
+#boton_misCursos {
+  background-color: #0ecd67;
+  margin-left: 1100px;
+  margin-top: 120px;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 160px;
+  padding-top: 6px;
+  border-style: hidden;
+  text-align: center;
+}

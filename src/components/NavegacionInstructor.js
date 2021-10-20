@@ -57,7 +57,7 @@ function NavegacionInstructor() {
                 </Link>
 
                 <Link
-                  to="/instructor/#"
+                  to="/MisCursos_docente/#"
                   type="button"
                   className="boton-cursos-instructor  text-white"
                 >
