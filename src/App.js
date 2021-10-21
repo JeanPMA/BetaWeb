@@ -5,9 +5,11 @@ import "./App.css";
 import Detalles from "./components/Detalles";
 import Navigation from "./components/Navegacion";
 import Slider from "./components/Slider";
+import Formulario from "./login/Formulario";
 import Cursos from "./pages/Cursos";
 import Instructor from "./pages/Instructor";
 import MisCursos_docente from "./pages/MisCursos_docente";
+import Vista from "./Vistados/Vista";
 
 
 class App extends Component {
@@ -22,10 +24,10 @@ class App extends Component {
               <Slider />
             </Route>
             <Route path="/cursos">
-              <Cursos />
+              <Vista />
             </Route>
-            <Route path="/instructor">
-              <Instructor />
+            <Route path="/inicio">
+              <Formulario />
             </Route>
             <Route path="/misCursos_docente">
               <MisCursos_docente />
