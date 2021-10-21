@@ -24,9 +24,11 @@ class App extends Component {
               <Slider />
             </Route>
             <Route path="/cursos">
+              <Navigation/>
               <Vista />
             </Route>
             <Route path="/inicio">
+              <Navigation/>
               <Formulario />
             </Route>
             <Route path="/misCursos_docente">
