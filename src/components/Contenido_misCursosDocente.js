@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import {Button, Modal, ModalHeader, ModalBody, ModalFooter, FormGroup, Input, Label} from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 
-class misCursosDocente extends Component{
+class boton_misCursosDocente extends Component{
     state={
         abierto: false,
     }
@@ -65,4 +65,4 @@ class misCursosDocente extends Component{
     }
 }
 
-export default misCursosDocente;
+export default boton_misCursosDocente;
