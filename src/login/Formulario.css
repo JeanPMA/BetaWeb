@@ -1,0 +1,24 @@
+
+.btn {
+ 
+  background-color: #0ecd67;
+  color: white;
+  border-style: hidden;
+  text-align: center;
+}
+.tam{
+  margin-top: 200px;
+      margin-bottom: 150px ;
+      border-color: white;
+      border: ridge;
+}
+.login{
+  background-color: #41567e;
+  border-color: white;
+}
+.mb-4{
+  color: white;
+}
+.form-check{
+  color: white;
+}

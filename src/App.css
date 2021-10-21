@@ -18,7 +18,7 @@ a:active {
   text-decoration: none;
 }
 
-a {
+.a {
   margin-left: 50px;
 }
 
@@ -359,4 +359,5 @@ span {
   right: 0;
   margin-left: 70px;
 }
+
 
