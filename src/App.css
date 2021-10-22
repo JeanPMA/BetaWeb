@@ -203,7 +203,7 @@ a:active {
 .icono-boton-instructor {
   font-size: 35px;
 }
-span {
+.span {
   margin-left: 25px;
   font-size: 20px;
 }
@@ -239,31 +239,29 @@ span {
   text-align: center;
 }
 
-
-#tituloCrearCurso{
+#tituloCrearCurso {
   background: #41567e;
   border: none;
   color: white;
-  
 }
 
-#tituloModal{
+#tituloModal {
   margin-left: 100px;
 }
 
-#cuerpoCrearCurso{
+#cuerpoCrearCurso {
   background: #41567e;
   border: none;
   color: white;
 }
 
-#pieCrearCurso{
+#pieCrearCurso {
   background: #41567e;
   border: none;
   color: white;
 }
 
-#botonCrearCancelar{
+#botonCrearCancelar {
   background-color: #0ecd67;
   border-radius: 30px;
   color: white;
@@ -275,7 +273,7 @@ span {
   margin-top: 20px;
 }
 
-#botonCrearAceptar{
+#botonCrearAceptar {
   background-color: #0ecd67;
   border-radius: 30px;
   color: white;
@@ -286,7 +284,6 @@ span {
   margin-right: 40px;
   margin-top: 20px;
 }
-
 
 .icono1-slider-instructor {
   color: #535861;
@@ -359,5 +356,7 @@ span {
   right: 0;
   margin-left: 70px;
 }
-
-
+#detalle {
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
