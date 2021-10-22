@@ -133,7 +133,6 @@ class boton_misCursosDocente extends Component {
                 <Button
                   type="submit"
                   id="botonCrearAceptar"
-                  onClick={this.abrirModal}
                   onChange={this.onChange}
                 >
                   {" "}
