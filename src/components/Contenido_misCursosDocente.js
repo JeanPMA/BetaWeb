@@ -13,17 +13,10 @@ import {
 } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
 
-<<<<<<< HEAD
-class boton_misCursosDocente extends Component{
-    state={
-        abierto: false,
-    }
-=======
-class misCursosDocente extends Component {
+class boton_misCursosDocente extends Component {
   state = {
     abierto: false,
   };
->>>>>>> Historia_usuario9
 
   abrirModal = () => {
     this.setState({ abierto: !this.state.abierto });
@@ -155,8 +148,4 @@ class misCursosDocente extends Component {
   }
 }
 
-<<<<<<< HEAD
 export default boton_misCursosDocente;
-=======
-export default misCursosDocente;
->>>>>>> Historia_usuario9
