@@ -239,12 +239,7 @@ a:active {
   text-align: center;
 }
 
-<<<<<<< HEAD
-
-#tituloCrearCurso{
-=======
 #tituloCrearCurso {
->>>>>>> Historia_usuario9
   background: #41567e;
   border: none;
   color: white;
@@ -289,7 +284,6 @@ a:active {
   margin-right: 40px;
   margin-top: 20px;
 }
-
 
 .icono1-slider-instructor {
   color: #535861;
@@ -362,5 +356,3 @@ a:active {
   right: 0;
   margin-left: 70px;
 }
-
-
