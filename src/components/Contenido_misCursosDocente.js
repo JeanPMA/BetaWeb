@@ -60,7 +60,7 @@ class misCursosDocente extends Component {
     }
     if (valido) {
       //enviar a la BD
-      console.log("Se envian los datos" + JSON.stringify(this.state));
+      console.log("Se envian los datos" + JSON.stringify(this.state)); // solo par verificar que si envia los datos
     }
   }
   render() {
