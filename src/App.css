@@ -239,31 +239,34 @@ span {
   text-align: center;
 }
 
+<<<<<<< HEAD
 
 #tituloCrearCurso{
+=======
+#tituloCrearCurso {
+>>>>>>> Historia_usuario9
   background: #41567e;
   border: none;
   color: white;
-  
 }
 
-#tituloModal{
+#tituloModal {
   margin-left: 100px;
 }
 
-#cuerpoCrearCurso{
+#cuerpoCrearCurso {
   background: #41567e;
   border: none;
   color: white;
 }
 
-#pieCrearCurso{
+#pieCrearCurso {
   background: #41567e;
   border: none;
   color: white;
 }
 
-#botonCrearCancelar{
+#botonCrearCancelar {
   background-color: #0ecd67;
   border-radius: 30px;
   color: white;
@@ -275,7 +278,7 @@ span {
   margin-top: 20px;
 }
 
-#botonCrearAceptar{
+#botonCrearAceptar {
   background-color: #0ecd67;
   border-radius: 30px;
   color: white;
