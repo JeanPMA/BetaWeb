@@ -356,3 +356,8 @@ a:active {
   right: 0;
   margin-left: 70px;
 }
+
+#archivoImagen{
+  margin-top: 20px;
+  border: none;
+}

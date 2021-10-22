@@ -68,8 +68,9 @@ class boton_misCursosDocente extends Component {
       position: "absolute",
       top: "50%",
       left: "50%",
-      transform: "translate(-50%, -50%)",
+      transform: "translate(-50%, -90%)",
       width: "22em",
+      height: "200px"
     };
 
     return (
@@ -120,6 +121,12 @@ class boton_misCursosDocente extends Component {
                     {this.state.mensajeDetalles}
                   </FormFeedback>
                 </FormGroup>
+                  <Input 
+                    type="file" 
+                    id="archivoImagen"
+                    name="adjunto" 
+                    accept=".jpg,.png" 
+                    multiple/>
               </ModalBody>
               <ModalFooter id="pieCrearCurso">
                 <Button
