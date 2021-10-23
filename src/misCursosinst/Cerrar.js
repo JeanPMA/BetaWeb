@@ -1,27 +1,22 @@
 import React from 'react';
 import "./Miscursos.css";
-
-
+import "bootstrap/dist/css/bootstrap.css";
+import {
+  Button
+} from "reactstrap";
 function Cerrar() {
   return (
-    <div className="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div className="modal-dialog">
-    <div className="modal-content">
-      
-      <div className="modal-body">
-       Cerro correctamente
-      </div>
-      <div className="d-grid gap-2 col-4 mx-auto">
-      
-        <button type="button" 
-        className="btnn btn-secondary mb-2 rounded-pill shadow-sm" 
-        data-bs-dismiss="modal"
-        value="cerrar" onClick={() => window.location = '/'}>Aceptar</button>
-      
-      </div>
+    <div className="principal">
+    <Button 
+    type="button" 
+    className="secundario" 
+    data-bs-toggle="modal" 
+    data-bs-target="#exampleModal" 
+    data-bs-whatever="@getbootstrap"
+    id="boton_crearCursos"
+    >Cerrar Secion</Button>
     </div>
-  </div>
-</div>
+    
   );
   
 }
