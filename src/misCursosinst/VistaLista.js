@@ -1,24 +1,28 @@
 import React from "react";
-import NavegacionInstructor from "../components/NavegacionInstructor";
-import Contenido_misCursosDocente from "../components/Contenido_misCursosDocente";
-import Cerrar from "../misCursosinst/Cerrar";
 
-function cursos_docente() {
+import NavegacionInstructor from "../components/NavegacionInstructor";
+import Lista from "./Lista";
+import Miscursos from "./Miscursos";
+import Contenido_misCursosDocente from "../components/Contenido_misCursosDocente";
+function VistaLista() {
   return (
     <div className="container-instructor">
       <div className="navegacion-menu">
         <NavegacionInstructor />
-        <div>
-        
-        <Cerrar/>
-        </div>
-      
       </div>
+      <div className="contenido-pagina">
       <div className="contenido">
         <Contenido_misCursosDocente />
+      </div>
+        <div className="lista">
+          <Lista />
+          <Miscursos/>
+        </div>
+       
+     
       </div>
     </div>
   );
 }
 
-export default cursos_docente;
+export default VistaLista;

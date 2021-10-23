@@ -10,6 +10,7 @@ import Cursos from "./pages/Cursos";
 import Instructor from "./pages/Instructor";
 import MisCursos_docente from "./pages/MisCursos_docente";
 import Vista from "./Vistados/Vista";
+import VistaLista from "./misCursosinst/VistaLista";
 
 class App extends Component {
   render() {
@@ -33,9 +34,13 @@ class App extends Component {
             <Route path="/instructor">
               <Instructor />
             </Route>
+            <Route path="/VistaIntructor">
+              < VistaLista/>
+            </Route>
             <Route path="/misCursos_docente">
               <MisCursos_docente />
             </Route>
+            
           </Switch>
         </div>
       </Router>

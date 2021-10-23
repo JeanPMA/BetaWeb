@@ -22,9 +22,15 @@ function Cursoss() {
         <p id="nombre-del-curso" className="card-text">
           Nombre del curso
         </p>
-        <button type="button" id="btn-inscribirse">
-          Inscribirse
-        </button>
+        <p id="Descripcion" className="card-text">
+         Descripcion:
+         <br/>
+         <p  className="card-text">
+         ...
+        </p>
+        </p>
+        
+       
       </div>
      
     </div>
