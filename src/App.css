@@ -357,7 +357,12 @@ a:active {
   margin-left: 70px;
 }
 
-#archivoImagen{
+#archivoImagen {
   margin-top: 20px;
   border: none;
+}
+.bienvenido-a-betaweb {
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bold;
 }
