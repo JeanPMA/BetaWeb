@@ -50,7 +50,7 @@ function NavegacionInstructor
               <div className="botones-menu-instructor">
                 
                    <Link
-                      to="/instructor/#"
+                      to="/instructor"
                       type="button"
                        className="boton-inicio-instructor text-white">
                         <div className="icono-inicio-cursos-instructor">
@@ -59,10 +59,9 @@ function NavegacionInstructor
                       <span>Inicio</span>
                    </Link>
 
-                <Link
-                  data-bs-toggle="modal" 
-                  data-bs-target="#exampleModal" 
-                  data-bs-whatever="@mdo"
+                   <Link
+                   to="/VistaIntructor"
+                   type="button"
                   type="button"
                   className="boton-cursos-instructor  text-white"
                 >
@@ -71,21 +70,9 @@ function NavegacionInstructor
                   </div>
               <span>Mis Cursos</span>
                 </Link>
-               
 
-                <Link
-           
-                type="button" 
                
-                data-bs-toggle="modal"
-                 data-bs-target="#staticBackdrop"
-                 
-                  className="boton-cursos-instructor  text-white" >
-                      <div className="icono-inicio-cursos-instructor ">
-                             <FontAwesomeIcon icon={faSquare} />
-                       </div>
-               <span>Cerrar Secion</span>
-             </Link>
+    
 
               </div>
             </div>
