@@ -4,9 +4,13 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faPlayCircle } from "@fortawesome/free-regular-svg-icons";
+import { faSquare } from "@fortawesome/free-regular-svg-icons";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 
-function NavegacionInstructor() {
+
+
+function NavegacionInstructor 
+() {
   return (
     <div>
       <div>
@@ -44,28 +48,45 @@ function NavegacionInstructor() {
             <div className="menu-instructor">
               <h2 className="texto-menu">Menú</h2>
               <div className="botones-menu-instructor">
-                <Link
-                  to="/instructor/#"
-                  type="button"
-                  className="boton-inicio-instructor text-white"
-                >
-                  <div className="icono-inicio-cursos-instructor">
-                    <FontAwesomeIcon icon={faHome} />
-                  </div>
+                
+                   <Link
+                      to="/instructor/#"
+                      type="button"
+                       className="boton-inicio-instructor text-white">
+                        <div className="icono-inicio-cursos-instructor">
+                          <FontAwesomeIcon icon={faHome} />
+                        </div>
+                      <span>Inicio</span>
+                   </Link>
 
-                  <span>Inicio</span>
-                </Link>
-
                 <Link
-                  to="/MisCursos_docente/#"
+                  data-bs-toggle="modal" 
+                  data-bs-target="#exampleModal" 
+                  data-bs-whatever="@mdo"
                   type="button"
                   className="boton-cursos-instructor  text-white"
                 >
                   <div className="icono-inicio-cursos-instructor icono-boton-instructor">
                     <FontAwesomeIcon icon={faPlayCircle} />{" "}
                   </div>
-                  <span>Mis Cursos</span>
+              <span>Mis Cursos</span>
                 </Link>
+               
+
+                <Link
+           
+                type="button" 
+               
+                data-bs-toggle="modal"
+                 data-bs-target="#staticBackdrop"
+                 
+                  className="boton-cursos-instructor  text-white" >
+                      <div className="icono-inicio-cursos-instructor ">
+                             <FontAwesomeIcon icon={faSquare} />
+                       </div>
+               <span>Cerrar Secion</span>
+             </Link>
+
               </div>
             </div>
           </nav>
