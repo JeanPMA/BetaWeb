@@ -1,74 +1,72 @@
-#container { 
-    width: 780px; 
-    background: #FFFFFF; 
-    margin: 0 auto; 
-    border: 1px solid #000000; 
-    text-align: left; 
-} 
+#container {
+  width: 780px;
+  background: #ffffff;
+  margin: 0 auto;
+  border: 1px solid #000000;
+  text-align: left;
+}
 
-.style { 
-    margin: 0 0 0 250px; 
-    padding: 0 20px 20px 20px; 
-    padding-left: 50px;
-} 
+.style {
+  margin: 0 0 0 250px;
+  padding: 0 20px 20px 20px;
+  padding-left: 50px;
+}
 #cursosRegistrados {
-    margin-top: 130px;
-  }
-  .alin{
-      float: left;
-  }
-  .center {
-    text-align: center;
-   
-    display: flex;
-   
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+  margin-top: 80px;
 }
-  
+.alin {
+  float: left;
+}
+.center {
+  text-align: center;
+
+  display: flex;
+
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
 .pagination {
-    margin-left: 4px;
-    text-decoration: none;
-    list-style-type: none;
-    
+  margin-left: 4px;
+  text-decoration: none;
+  list-style-type: none;
 }
-  
+
 .pagination li {
-    color: rgb(248, 246, 246);
-    float: left;
-    padding: 10px ;
-    text-decoration:none;
-    transition: background-color .3s;
-    border: 1px solid #ddd;
-    text-align: center;
-    
-    
+  color: rgb(248, 246, 246);
+  float: left;
+  padding: 10px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  border: 1px solid #ddd;
+  text-align: center;
 }
-  
+
 .pagination li.active {
-    
-    color: white;
-    border: 1px solid;
-    border-radius: 15px;
-    font-size: 20px;
+  color: white;
+  border: 1px solid;
+  border-radius: 15px;
+  font-size: 20px;
 }
-  
+
 .pagination li:hover:not(.active) {
-    background-color: #ddd;
- 
-    font-size: 20px;   
+  background-color: #ddd;
+
+  font-size: 20px;
 }
 
 .pagination li:first-child {
-    border-radius: 15px;
-  }
-  
+  border-radius: 15px;
+}
+
 .pagination li:last-child {
-    border-radius: 15px;
+  border-radius: 15px;
 }
 .a {
-    margin-left: 30px;
-  }
-
+  margin-left: 30px;
+}
+#cursos {
+  height: 165px;
+}

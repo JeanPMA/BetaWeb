@@ -2,42 +2,36 @@ import React from "react";
 import imagenCurso from "../assets/imagenCurso.jpg";
 import "./Cursoss.css";
 
-
-function Cursoss() {
-   
+const Cursoss =({cursos = []}) => {
   return (
+    <div>
+    {cursos.map((item) => (
     <div className="p-2 text-white overflow" id="cursos">
-       
+      <a href="#">
         <img
-        src={imagenCurso}
-        alt=""
-        width="200px"
-        height="120px"
-        className=" alin border-top border-start border-end border-bottom border-white"
-      />
-      <div className=" card-body style " >
+          src={item.ubicacion}
+          alt=""
+          width="200px"
+          height="120px"
+          className=" alin border-top border-start border-end border-bottom border-white"
+        />
+      </a>
+      <div className=" card-body style ">
         <h4 id="instructor" className="card-title">
-          Instructor
+          {item.instructorName}
         </h4>
         <p id="nombre-del-curso" className="card-text">
-          Nombre del curso
+          {item.nombre}
         </p>
         <p id="Descripcion" className="card-text">
-         Descripcion:
-         <br/>
-         <p  className="card-text">
-         ...
+          {item.descripcion}
+          <br />
         </p>
-        </p>
-        
-       
       </div>
-     
     </div>
-    
- 
+    ))}
+    </div>
   );
- 
 }
 
 export default Cursoss;

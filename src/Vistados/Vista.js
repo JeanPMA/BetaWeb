@@ -1,25 +1,27 @@
-import React from "react";
-import Curso from "./Cursoss";
-import Paginacion from "./Paginacion";
-function vista() {
-  
+import React, { useEffect, useState } from "react";
+import Cursoss from "./Cursoss";
+
+function Vista() {
+  const [cursos, setCursos] = useState([]);
+
+  const fetchCursos = () => {
+    fetch("http://localhost:8080/api/curso")
+      .then((response) => response.json())
+      .then((data) => setCursos(data))
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    fetchCursos("http://localhost:8080/api/curso");
+  }, []);
+
   return (
- 
     <div>
       <div className="container scroll-container" id="cursosRegistrados">
-      <Curso />
-      <Curso />
-      <Curso />
-      <Curso/>
-      
-      
+        <Cursoss cursos={cursos} />
       </div>
-      
-      <Paginacion >
-      </Paginacion>
     </div>
-    
   );
 }
 
-export default vista;
+export default Vista;
