@@ -11,10 +11,7 @@ function Instructor() {
       <div className="navegacion-menu">
         <NavegacionInstructor />
       </div>
-      <div className="Cerrar">
-          <Cerrar/>
-          <End/>
-        </div>
+      
       <div className="contenido-pagina">
        
         <div className="bienvenida">

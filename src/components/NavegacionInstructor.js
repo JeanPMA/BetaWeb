@@ -6,8 +6,9 @@ import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faPlayCircle } from "@fortawesome/free-regular-svg-icons";
 import { faSquare } from "@fortawesome/free-regular-svg-icons";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import Cookies from "universal-cookie";
 
-
+const cookies = new Cookies();
 
 function NavegacionInstructor 
 () {
@@ -43,7 +44,7 @@ function NavegacionInstructor
                 alt="foto de perfil"
                 className="foto-usuario"
               />
-              <h3 className="nombre-usuario">Nombre del usuario</h3>
+              <h3 className="nombre-usuario">{cookies.get('nombre')} {cookies.get('apellido')}</h3>
             </div>
             <div className="menu-instructor">
               <h2 className="texto-menu">Menú</h2>
