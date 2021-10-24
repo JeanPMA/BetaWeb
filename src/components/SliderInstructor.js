@@ -35,6 +35,15 @@ const SliderInstructor = () => {
         >
           <Carousel show={3}>
             <div className=" border border-white consejo">
+              <div className="justify-content-center pt-2 imagen-oferta ">
+                <div className="bienvenido-a-betaweb">
+                  <p className="text-white bienvenido-a-betaweb">
+                    BIENVENIDO A BETAWEB
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className=" border border-white consejo">
               <div className="justify-content-center pt-2 imagen-oferta">
                 <div className="icono1-slider-instructor">
                   <FontAwesomeIcon icon={faSearch} />
@@ -72,9 +81,6 @@ const SliderInstructor = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className=" border border-white consejo">
-              <div className="justify-content-center pt-2 imagen-oferta "></div>
             </div>
           </Carousel>
         </div>
