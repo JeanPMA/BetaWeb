@@ -2,46 +2,90 @@ import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './Formulario.css';
+import axios from 'axios';
+import md5 from 'md5';
+import Cookies from 'universal-cookie';
+
+const baseUrl="http://localhost:3001/usuarios";
+const cookies = new Cookies();
+
 class Formulario extends Component {
-    
+    state={
+        form:{
+            username: '',
+            password: ''
+        }
+    }
+
+    handleChange=async e=>{
+        await this.setState({
+            form:{
+                ...this.state.form,
+                [e.target.name]: e.target.value
+            }
+        });
+    }
+
+    iniciarSesion=async()=>{
+        await axios.get(baseUrl, {params: {username: this.state.form.username, password: md5(this.state.form.password)}})
+        .then(response=>{
+            return response.data;
+        })
+        .then(response=>{
+            if(response.length>0){
+                var respuesta=response[0];
+                cookies.set('id', respuesta.id, {path: "/"});
+                cookies.set('nombre', respuesta.nombre, {path: "/"});
+                cookies.set('apellido', respuesta.apellido, {path: "/"});
+                cookies.set('email', respuesta.email, {path: "/"});
+                cookies.set('username', respuesta.username, {path: "/"});
+                cookies.set('password', respuesta.password, {path: "/"});
+                alert(`Bienvenido ${respuesta.nombre} ${respuesta.apellido}`);
+                window.location.href="../instructor";
+            }else{
+                alert('El usuario o la contraseña no son correctos');
+            }
+        })
+        .catch(error=>{
+            console.log(error);
+        })
+
+    }
+
+    componentDidMount(){
+        if(cookies.get('username')){
+            window.location.href="../instructor";
+        }
+    }
  
-  render() {
-   
-    return (
-     
-       <div className="maincontainer color">
-        <div className="container-fluid">
-            <div className="no-gutter">
-          <div className="col-md-3 offset-md-4  tam  margin-top: 30%;">
-                    <div className="login  py-5">
-                       
-                        <div className="container">
-                            <div className="">
-                                <div className="col-lg-5 col-xl-8 mx-auto">
-                                    <form>
-                                        <div className="mb-3">
-                                        <p className="  mb-4">Usuario</p>
-                                            <input id="inputEmail" type="Nombre" placeholder="Nombre" required="" autofocus="" className="form-control rounded-pill border-0 shadow-sm px-4" />
-                                        </div>
-                                        <div className="mb-3">
-                                        <p className="  mb-4">Contraseña</p>
-                                            <input id="inputPassword" type="password" placeholder="Password" required="" className="form-control rounded-pill border-0 shadow-sm px-4 text-primary" />
-                                        </div>
-                                      <br></br>
-                                        <div className="d-grid gap-2 mt-2 stylee">
-                                        <button type="submit" className="btnn  btn-block  mb-2 rounded-pill shadow-sm">Iniciar secion</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    render() {
+        return (
+    <div className="containerPrincipal">
+        <div className="containerSecundario">
+          <div className="form-group">
+            <label>Usuario: </label>
+            <br />
+            <input
+              type="text"
+              className="form-control"
+              name="username"
+              onChange={this.handleChange}
+            />
+            <br />
+            <label>Contraseña: </label>
+            <br />
+            <input
+              type="password"
+              className="form-control"
+              name="password"
+              onChange={this.handleChange}
+            />
+            <br />
+            <button id="boton_iniciarSesion" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
+          </div>
         </div>
-      </div>
-      
-)
-};
+    </div>
+        );
+    }
 }
 export default Formulario;
