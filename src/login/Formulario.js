@@ -13,7 +13,7 @@ class Formulario extends Component {
     state={
         form:{
             username: '',
-            password: ''
+            contraseña: ''
         }
     }
 
@@ -27,7 +27,7 @@ class Formulario extends Component {
     }
 
     iniciarSesion=async()=>{
-        await axios.get(baseUrl, {params: {username: this.state.form.username, password: md5(this.state.form.password)}})
+        await axios.get(baseUrl, {params: {username: this.state.form.username, contraseña: md5(this.state.form.contraseña)}})
         .then(response=>{
             return response.data;
         })
@@ -39,7 +39,7 @@ class Formulario extends Component {
                 cookies.set('apellido', respuesta.apellido, {path: "/"});
                 cookies.set('email', respuesta.email, {path: "/"});
                 cookies.set('username', respuesta.username, {path: "/"});
-                cookies.set('password', respuesta.password, {path: "/"});
+                cookies.set('contraseña', respuesta.contraseña, {path: "/"});
                 alert(`Bienvenido ${respuesta.nombre} ${respuesta.apellido}`);
                 window.location.href="../instructor";
             }else{
@@ -77,7 +77,7 @@ class Formulario extends Component {
             <input
               type="password"
               className="form-control"
-              name="password"
+              name="contraseña"
               onChange={this.handleChange}
             />
             <br />

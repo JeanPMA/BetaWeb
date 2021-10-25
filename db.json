@@ -6,7 +6,7 @@
             "apellido": "Perez",
             "email": "hola@gmail.com",
             "username": "juanito",
-            "password": "827ccb0eea8a706c4c34a16891f84e7b"
+            "contraseña": "827ccb0eea8a706c4c34a16891f84e7b"
         },
         {
             "id": 2,
@@ -14,7 +14,7 @@
             "apellido": "Perez",
             "email": "hola@gmail.com",
             "username": "pedrito",
-            "password": "e10adc3949ba59abbe56e057f20f883e"
+            "contraseña": "e10adc3949ba59abbe56e057f20f883e"
         }        
     ]    
 }
