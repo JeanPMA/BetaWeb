@@ -5,14 +5,14 @@ function Vista() {
   const [cursos, setCursos] = useState([]);
 
   const fetchCursos = () => {
-    fetch("http://localhost:8080/api/curso")
+    fetch("https://pbetasoftb.herokuapp.com/api/curso")
       .then((response) => response.json())
       .then((data) => setCursos(data))
       .catch((error) => console.log(error));
   };
 
   useEffect(() => {
-    fetchCursos("http://localhost:8080/api/curso");
+    fetchCursos("https://pbetasoftb.herokuapp.com/api/curso");
   }, []);
 
   return (
