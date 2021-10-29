@@ -6,12 +6,14 @@ import axios from 'axios';
 import md5 from 'md5';
 import Cookies from 'universal-cookie';
 
-const baseUrl="https://backendpruebalogin.herokuapp.com/api/usuarios";
+const baseUrl="https://backendpruebalogin.herokuapp.com/api/usuarios/usuarios/pedrito";
+
 const cookies = new Cookies();
 
 class Formulario extends Component {
     state={
         form:{
+            
             username: '',
             contraseña: ''
         }
@@ -27,14 +29,16 @@ class Formulario extends Component {
     }
 
     iniciarSesion=async()=>{
-        await axios.get(baseUrl, {params: {username: this.state.form.username, contraseña: md5(this.state.form.contraseña)}})
+       // await axios.get(baseUrl, {params: {username: this.state.form.username, contraseña: md5(this.state.form.contraseña)}})
+       await axios.get(baseUrl)
         .then(response=>{
             return response.data;
         })
         .then(response=>{
             if(response.length>0){
                 
-                var respuesta=response[0];
+                var respuesta=response;
+                console.log(respuesta);
                 cookies.set('id', respuesta.id, {path: "/"});
                 cookies.set('nombre', respuesta.nombre, {path: "/"});
                 cookies.set('apellido', respuesta.apellido, {path: "/"});
