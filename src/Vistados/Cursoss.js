@@ -17,8 +17,14 @@ const Cursoss = ({ cursos = [] }) => {
             />
           </a>
           <div className=" card-body style ">
-            <h4 id="instructor" className="card-title">
-              {item.instructorName}
+            <h4 id="instructor-nombre" className="card-title">
+              {item.instructor.nombre}
+            </h4>
+            <h4 id="instructor-apellido-paterno" className="card-title">
+              {item.instructor.apellido_paterno}
+            </h4>
+            <h4 id="instructor-apellido-materno" className="card-title">
+              {item.instructor.apellido_materno}
             </h4>
             <p id="nombre-del-curso" className="card-text">
               {item.nombre}
