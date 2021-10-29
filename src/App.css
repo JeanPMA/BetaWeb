@@ -62,9 +62,7 @@ a:active {
   border: transparent;
   color: #fcf93f;
 }
-#instructor {
-  font-size: 12px;
-}
+
 #nombre-del-curso {
   font-size: 20px;
   font-weight: bold;
@@ -367,7 +365,7 @@ a:active {
   font-weight: bold;
 }
 
-#Boton_cerrar{
+#Boton_cerrar {
   background-color: #0ecd67;
   border-radius: 30px;
   color: white;
@@ -378,5 +376,18 @@ a:active {
   border-style: hidden;
   margin-right: 40px;
   margin-top: none;
-  
+}
+#instructor-nombre {
+  font-size: 12px;
+  display: inline-block;
+}
+#instructor-apellido-paterno {
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 7px;
+}
+#instructor-apellido-materno {
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 7px;
 }
