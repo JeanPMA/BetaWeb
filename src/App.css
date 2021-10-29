@@ -391,3 +391,6 @@ a:active {
   display: inline-block;
   margin-left: 7px;
 }
+#instructor {
+  font-size: 12px;
+}
