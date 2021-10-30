@@ -38,8 +38,6 @@ function Vista() {
       if(elemento.nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
       ){
         return elemento;
-      }else{
-        <a> no se encontro nada relacionado</a>
       }
     });
     setCursos(resultadoBusqueda);
