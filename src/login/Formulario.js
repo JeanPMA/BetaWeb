@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState} from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './Formulario.css';
@@ -6,14 +6,14 @@ import axios from 'axios';
 import md5 from 'md5';
 import Cookies from 'universal-cookie';
 
-const baseUrl="https://backendpruebalogin.herokuapp.com/api/usuarios/usuarios/pedrito";
+const baseUrl="https://betaweb-back.herokuapp.com/api/usuarios";
 
 const cookies = new Cookies();
 
 class Formulario extends Component {
+   
     state={
-        form:{
-            
+        form:{            
             username: '',
             contraseña: ''
         }
@@ -29,16 +29,22 @@ class Formulario extends Component {
     }
 
     iniciarSesion=async()=>{
-       // await axios.get(baseUrl, {params: {username: this.state.form.username, contraseña: md5(this.state.form.contraseña)}})
-       await axios.get(baseUrl)
+        await axios.get(baseUrl, {params: {username: this.state.form.username, contraseña: md5(this.state.form.contraseña)}})
+       
+
+
         .then(response=>{
             return response.data;
         })
         .then(response=>{
-            if(response.length>0){
-                
-                var respuesta=response;
-                console.log(respuesta);
+            var contador=response.length;
+            if(response.length>0){ 
+                for(var i=0; i<response.length;i++){   
+                    
+                  if(response[i].username==this.state.form.username) {  
+                     
+
+                var respuesta=response[i];                
                 cookies.set('id', respuesta.id, {path: "/"});
                 cookies.set('nombre', respuesta.nombre, {path: "/"});
                 cookies.set('apellido', respuesta.apellido, {path: "/"});
@@ -46,9 +52,14 @@ class Formulario extends Component {
                 cookies.set('username', respuesta.username, {path: "/"});
                 cookies.set('contraseña', respuesta.contraseña, {path: "/"});
                 alert(`Bienvenido ${respuesta.nombre} ${respuesta.apellido}`);
+                
                 window.location.href="../instructor";
-            }else{
-                alert('El usuario o la contraseña no son correctos');
+                break;
+                    }
+                    if(contador==i+1){
+                        alert('El usuario o la contraseña no son correctos');
+                    }
+                }
             }
         })
         .catch(error=>{
@@ -67,7 +78,9 @@ class Formulario extends Component {
         return (
     <div className="containerPrincipal">
         <div className="containerSecundario">
+           
           <div className="form-group">
+             
             <label>Usuario: </label>
             <br />
             <input
@@ -88,6 +101,7 @@ class Formulario extends Component {
             <br />
             <button id="boton_iniciarSesion" onClick={()=> this.iniciarSesion()}>Iniciar Sesión</button>
           </div>
+          
         </div>
     </div>
         );
