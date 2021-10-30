@@ -42,7 +42,7 @@ a:active {
 
 #boton_buscar {
   background-color: rgb(81, 81, 162);
-  margin-left: 280px;
+  margin-left: 880px;
   border-radius: 30px;
   color: white;
   height: 38px;
@@ -72,12 +72,13 @@ a:active {
   width: 25em;
   height: 28px;
   border-radius: 60px;
-  margin-left: 5em;
-  border-color: rgba(0, 0, 0, 0.479);
+  margin-left: 10em;
+  border-color: #41567e;
   position: relative;
   text-align: left;
   padding-left: 10px;
   outline-style: none;
+  margin-top: 50px;
 }
 
 #boton_login {
