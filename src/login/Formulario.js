@@ -29,7 +29,7 @@ class Formulario extends Component {
     }
 
     iniciarSesion=async()=>{
-        await axios.get(baseUrl, {params: {username: this.state.form.username, contraseña: md5(this.state.form.contraseña)}})
+        await axios.get(baseUrl, {params: {username: this.state.form.username, contraseña: this.state.form.contraseña}})
        
 
 
@@ -41,7 +41,7 @@ class Formulario extends Component {
             if(response.length>0){ 
                 for(var i=0; i<response.length;i++){   
                     
-                  if(response[i].username==this.state.form.username) {  
+                  if(response[i].username==this.state.form.username && response[i].contraseña==this.state.form.contraseña) {  
                      
 
                 var respuesta=response[i];                
