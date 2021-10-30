@@ -36,7 +36,6 @@ function Vista() {
   const filtrar=(terminoBusqueda)=>{
     var resultadoBusqueda=tabla.filter((elemento)=>{
       if(elemento.nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
-      || elemento.descripcion.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())
       ){
         return elemento;
       }else{
