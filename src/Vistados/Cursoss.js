@@ -16,15 +16,15 @@ const Cursoss = ({ cursos = [] }) => {
               className=" alin border-top border-start border-end border-bottom border-white"
             />
           </a>
-          <div className=" card-body style  ">
+          <div className=" card-body style ">
             <h4 id="instructor-nombre" className="card-title">
-              Nombre
+              {item.instructor.nombre}
             </h4>
             <h4 id="instructor-apellido-paterno" className="card-title">
-              Apellido Paterno
+              {item.instructor.apellido_paterno}
             </h4>
             <h4 id="instructor-apellido-materno" className="card-title">
-              Apellido Materno
+              {item.instructor.apellido_materno}
             </h4>
             <p id="nombre-del-curso" className="card-text">
               {item.nombre}
