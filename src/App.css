@@ -243,6 +243,10 @@ a:active {
   border: none;
   color: white;
 }
+.contenedorModal{
+  height: 380px;
+  width: 360px;
+}
 
 #tituloModal {
   margin-left: 100px;
@@ -257,6 +261,7 @@ a:active {
 #pieCrearCurso {
   background: #41567e;
   border: none;
+  
   color: white;
 }
 

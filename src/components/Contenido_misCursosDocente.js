@@ -26,10 +26,13 @@ class boton_misCursosDocente extends Component {
     this.state = {
       nombre: "",
       detalle: "",
+      ubicacion: "",
       mensajeNombre: "",
       mensajeDetalles: "",
+      mensajeUbicacion: "",
       invalidNombre: false,
       invalidDetalles: false,
+      invalidUbicacion: false,
     };
     this.onChange = this.onChange.bind(this);
     this.enviarAlaBD = this.enviarAlaBD.bind(this);
@@ -55,6 +58,13 @@ class boton_misCursosDocente extends Component {
       this.setState({
         invalidDetalles: true,
         mensajeDetalles: "Este campo es obligatorio",
+      });
+      valido = false;
+    }
+    if (this.state.ubicacion === "") {
+      this.setState({
+        invalidUbicacion: true,
+        mensajeUbicacion: "Este campo es obligatorio",
       });
       valido = false;
     }
@@ -121,12 +131,20 @@ class boton_misCursosDocente extends Component {
                     {this.state.mensajeDetalles}
                   </FormFeedback>
                 </FormGroup>
-                  <Input 
-                    type="file" 
-                    id="archivoImagen"
-                    name="adjunto" 
-                    accept=".jpg,.png" 
-                    multiple/>
+                <FormGroup className="position-relative">
+                  <Label for="nombre">Ubicación imagen:</Label>
+                  <Input
+                    type="text"
+                    id="ubicacion"
+                    name="ubicacion"
+                    value={this.state.ubicacion}
+                    onChange={this.onChange}
+                    invalid={this.state.invalidUbicacion}
+                  />
+                  <FormFeedback tooltip>
+                    {this.state.mensajeNombre}
+                  </FormFeedback>
+                </FormGroup>
               </ModalBody>
               <ModalFooter id="pieCrearCurso">
                 <Button
@@ -143,7 +161,7 @@ class boton_misCursosDocente extends Component {
                   onChange={this.onChange}
                 >
                   {" "}
-                  Aceptar{" "}
+                  Guardar{" "}
                 </Button>
               </ModalFooter>
             </Form>
