@@ -131,35 +131,21 @@ class boton_misCursosDocente extends Component {
                     {this.state.mensajeDetalles}
                   </FormFeedback>
                 </FormGroup>
-<<<<<<< HEAD
-                <FormGroup className="position-relative">
-                  <Label for="nombre">Ubicación imagen:</Label>
-=======
                 <FormGroup
                   id="contenedor-descripcion"
                   className="position-relative"
                 >
                   <Label for="detalle">Ubicacion de la imagen</Label>
->>>>>>> 3249c0d77b035d3d861167110c0664142f6a9718
                   <Input
                     type="text"
                     id="ubicacion"
                     name="ubicacion"
-<<<<<<< HEAD
-                    value={this.state.ubicacion}
-                    onChange={this.onChange}
-                    invalid={this.state.invalidUbicacion}
-                  />
-                  <FormFeedback tooltip>
-                    {this.state.mensajeNombre}
-=======
                     value={this.state.detalle}
                     onChange={this.onChange}
                     invalid={this.state.invalidDetalles}
                   />
                   <FormFeedback tooltip>
                     {this.state.mensajeDetalles}
->>>>>>> 3249c0d77b035d3d861167110c0664142f6a9718
                   </FormFeedback>
                 </FormGroup>
               </ModalBody>

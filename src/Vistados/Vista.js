@@ -50,7 +50,7 @@ function Vista() {
     <div>
       <div>
            <input class="buscador" type="search" id="search" 
-           placeholder="Buscar cursos" value={busqueda} 
+           placeholder="Introduzca palabra clave" value={busqueda} 
            onChange={hanldeChange}
            />   
               <img src={logoLupa} id="logo_lupa" width="30" height="30"/>
