@@ -9,7 +9,7 @@ class Navigation extends Component{
                 
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     
-                    <a id="tituloPagina" class="navbar-brand" href="#" border-width="medium">                    
+                    <a id="tituloPagina" class="navbar-brand" href="javascript:history.back()" border-width="medium">                    
                       BETAWEB
                     <img src="https://previews.123rf.com/images/mochipet/mochipet1707/mochipet170700056/82167896-ilustraci%C3%B3n-vectorial-bombilla-con-haces-de-luz-en-estilo-pop-art-dibujos-animados-con-contorno-aisl.jpg" width="30" height="30" class="d-inline-block align-top" alt=""/>                        
                     </a> 

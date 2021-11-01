@@ -6,7 +6,7 @@ import axios from 'axios';
 import md5 from 'md5';
 import Cookies from 'universal-cookie';
 
-const baseUrl="https://betaweb-back.herokuapp.com/api/usuarios";
+const baseUrl="https://app-sw.herokuapp.com/api/usuario";
 
 const cookies = new Cookies();
 
@@ -15,7 +15,7 @@ class Formulario extends Component {
     state={
         form:{            
             username: '',
-            contraseña: ''
+            passwd: ''
         }
     }
 
@@ -29,7 +29,7 @@ class Formulario extends Component {
     }
 
     iniciarSesion=async()=>{
-        await axios.get(baseUrl, {params: {username: this.state.form.username, contraseña: this.state.form.contraseña}})
+        await axios.get(baseUrl, {params: {username: this.state.form.username, passwd: this.state.form.passwd}})
        
 
 
@@ -41,17 +41,18 @@ class Formulario extends Component {
             if(response.length>0){ 
                 for(var i=0; i<response.length;i++){   
                     
-                  if(response[i].username==this.state.form.username && response[i].contraseña==this.state.form.contraseña) {  
+                  if(response[i].username==this.state.form.username && response[i].passwd==this.state.form.passwd) {  
                      
 
                 var respuesta=response[i];                
-                cookies.set('id', respuesta.id, {path: "/"});
-                cookies.set('nombre', respuesta.nombre, {path: "/"});
-                cookies.set('apellido', respuesta.apellido, {path: "/"});
+                cookies.set('id_usuario', respuesta.id_usuario, {path: "/"});
+                cookies.set('nombre', respuesta.instructor.nombre, {path: "/"});
+                cookies.set('apellido_paterno', respuesta.instructor.apellido_paterno, {path: "/"});
+                cookies.set('apellido_materno', respuesta.instructor.apellido_materno, {path: "/"});
                 cookies.set('email', respuesta.email, {path: "/"});
                 cookies.set('username', respuesta.username, {path: "/"});
-                cookies.set('contraseña', respuesta.contraseña, {path: "/"});
-                alert(`Bienvenido ${respuesta.nombre} ${respuesta.apellido}`);
+                cookies.set('passwd', respuesta.passwd, {path: "/"});
+                alert(`Bienvenido ${respuesta.instructor.nombre} ${respuesta.instructor.apellido_paterno} ${respuesta.instructor.apellido_materno}`);
                 
                 window.location.href="../instructor";
                 break;
@@ -95,7 +96,7 @@ class Formulario extends Component {
             <input
               type="password"
               className="form-control"
-              name="contraseña"
+              name="passwd"
               onChange={this.handleChange}
             />
             <br />

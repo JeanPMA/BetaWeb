@@ -6,9 +6,10 @@ const cookies = new Cookies();
 
 class Bienvenida extends Component {
    cerrarSesion=()=>{
-    cookies.remove('id', {path: "/"});
+    cookies.remove('id_usuario', {path: "/"});
     cookies.remove('nombre', {path: "/"});
-    cookies.remove('apellido', {path: "/"});
+    cookies.remove('apellido_paterno', {path: "/"});
+    cookies.remove('apellido_materno', {path: "/"});
     cookies.remove('email', {path: "/"});
     cookies.remove('username', {path: "/"});
   
@@ -20,17 +21,18 @@ class Bienvenida extends Component {
     }
   }
   render() {
-      console.log('id' + cookies.get('id'));
+      console.log('id_usuario' + cookies.get('id_usuario'));
       console.log('nombre' + cookies.get('nombre'));
-      console.log('apellido' + cookies.get('apellido'));
+      console.log('apellido_paterno' + cookies.get('apellido_paterno'));
+      console.log('apellido_materno' + cookies.get('apellido_materno'));
       console.log('email' + cookies.get('email'));
       console.log('username' + cookies.get('username'));
-      console.log('contraseña' + cookies.get('contraseña'));
+      console.log('passwd' + cookies.get('contraseña'));
 
   return (
     
     <div>
-      <h3>Bienvenido {cookies.get('nombre')} {cookies.get('apellido')}</h3>
+      <h3>Bienvenido {cookies.get('nombre')} {cookies.get('apellido_paterno')} {cookies.get('apellido_materno')}</h3>
       <div>
       <button id="Boton_cerrar" onClick={()=>this.cerrarSesion()}>Cerrar sesión</button>
       </div>
