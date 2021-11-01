@@ -36,12 +36,11 @@ class App extends Component {
               <Instructor />
             </Route>
             <Route path="/VistaIntructor">
-              < VistaLista/>
+              <VistaLista />
             </Route>
             <Route path="/misCursos_docente">
               <MisCursos_docente />
             </Route>
-            
           </Switch>
         </div>
       </Router>

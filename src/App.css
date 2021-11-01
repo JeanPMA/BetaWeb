@@ -198,6 +198,7 @@ a:active {
   display: inline-block;
   margin-left: 15px;
   font-size: 30px;
+  margin-right: 20px;
 }
 .icono-boton-instructor {
   font-size: 35px;
@@ -243,7 +244,7 @@ a:active {
   border: none;
   color: white;
 }
-.contenedorModal{
+.contenedorModal {
   height: 380px;
   width: 360px;
 }
@@ -261,7 +262,7 @@ a:active {
 #pieCrearCurso {
   background: #41567e;
   border: none;
-  
+
   color: white;
 }
 
@@ -434,4 +435,8 @@ a:active {
   padding-top: 6px;
   border-style: hidden;
   text-align: center;
+}
+.container-instructor {
+  width: 1366px;
+  margin: auto;
 }
