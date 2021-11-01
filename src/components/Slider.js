@@ -155,38 +155,6 @@ const Slider = () => {
                 </div>
               </div>
             </a>
-            <a href="#">
-              <div className="contenedor-cursos-inicio border border-white">
-                <div className="justify-content-center pt-2 imagen-oferta">
-                  <img
-                    src="https://img-c.udemycdn.com/course/240x135/1245130_efdb_10.jpg"
-                    style={{ width: "90%" }}
-                  />
-                </div>
-                <div className="text-white">
-                  <p className="instructor">Carlos Arturo Esparza</p>
-                </div>
-                <div className="text-white">
-                  <p>Bootstrap 5 de cero</p>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div className="contenedor-cursos-inicio border border-white">
-                <div className="justify-content-center pt-2 imagen-oferta">
-                  <img
-                    src="https://img-c.udemycdn.com/course/240x135/672600_1def_7.jpg"
-                    style={{ width: "90%" }}
-                  />
-                </div>
-                <div className="text-white">
-                  <p className="instructor">Carlos Arturo Esparza</p>
-                </div>
-                <div className="text-white">
-                  <p>PHP 8 y MySQL</p>
-                </div>
-              </div>
-            </a>
           </Carousel>
         </div>
       </div>
