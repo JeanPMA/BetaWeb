@@ -1,5 +1,6 @@
 import React from "react";
 import Carousel from "./CarouselInstructor";
+import IconoLupa from "../assets/lupa.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSearch,
@@ -46,10 +47,7 @@ const SliderInstructor = () => {
             <div className=" border border-white consejo">
               <div className="justify-content-center pt-2 imagen-oferta">
                 <div className="icono1-slider-instructor">
-                  <FontAwesomeIcon icon={faSearch} />
-                  <div className="eye">
-                    <FontAwesomeIcon icon={faEye} />
-                  </div>
+                  <img src={IconoLupa} className="lupa" />
                   <div>
                     <p className="texto-1">Permite ver el estado de un curso</p>
                   </div>
