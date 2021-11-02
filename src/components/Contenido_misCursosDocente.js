@@ -140,12 +140,12 @@ class boton_misCursosDocente extends Component {
                     type="text"
                     id="ubicacion"
                     name="ubicacion"
-                    value={this.state.detalle}
+                    value={this.state.ubicacion}
                     onChange={this.onChange}
-                    invalid={this.state.invalidDetalles}
+                    invalid={this.state.invalidUbicacion}
                   />
                   <FormFeedback tooltip>
-                    {this.state.mensajeDetalles}
+                    {this.state.mensajeUbicacion}
                   </FormFeedback>
                 </FormGroup>
               </ModalBody>
