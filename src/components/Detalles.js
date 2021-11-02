@@ -5,9 +5,9 @@ class Detalles extends Component{
         return(
             
                 <div class="Descripcion">
-                    <h3 class="Titulo"> A CERCA DE NOSOTROS... <pre></pre> </h3>    
-                    <p> BETAWEB es una plataforma de cursos gratuitos  <br></br>
-                     dirigida al area de ciencias de la computacion
+                    <h3 class="Titulo"> ACERCA DE NOSOTROS... <pre></pre> </h3>    
+                    <p> BETAWEB es una plataforma de cursos gratuitos,  <br></br>
+                     dirigida al área de ciencias de la computación
                     </p>
                     
                     <div class="logo">
