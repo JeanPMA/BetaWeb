@@ -27,7 +27,7 @@ class Bienvenida extends Component {
       console.log('apellido_materno' + cookies.get('apellido_materno'));
       console.log('email' + cookies.get('email'));
       console.log('username' + cookies.get('username'));
-      console.log('passwd' + cookies.get('contraseña'));
+      console.log('passwd' + cookies.get('passwd'));
 
   return (
     

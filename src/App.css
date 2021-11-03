@@ -170,10 +170,12 @@ a:active {
 .boton-cursos-instructor {
   display: block;
   margin: 0px;
-  margin-top: 30px;
+  margin-top: 20px;
   font-size: 25px;
   border-radius: 50px;
   transition: background-color 0.3s;
+  
+
 }
 .boton-inicio-instructor:hover {
   border: 1px solid white;
@@ -447,4 +449,15 @@ a:active {
 }
 .lupa-2 {
   width: 27px;
+}
+.BienvenidaEstudiante {
+  background-color: #dcedff;
+  text-align: center;
+  width: 600px;
+  margin-left: 380px;
+  margin-top: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  border-radius: 35px 35px;
 }
