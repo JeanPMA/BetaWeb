@@ -25,7 +25,7 @@ class boton_misCursosDocente extends Component {
     super(props);
     this.state = {
       nombre: "",
-      detalle: "",
+      descripcion: "",
       ubicacion: "",
       mensajeNombre: "",
       mensajeDetalles: "",
@@ -54,7 +54,7 @@ class boton_misCursosDocente extends Component {
       });
       valido = false;
     }
-    if (this.state.detalle === "") {
+    if (this.state.descripcion === "") {
       this.setState({
         invalidDetalles: true,
         mensajeDetalles: "Este campo es obligatorio",
@@ -122,8 +122,8 @@ class boton_misCursosDocente extends Component {
                   <Input
                     type="textarea"
                     id="detalle"
-                    name="detalle"
-                    value={this.state.detalle}
+                    name="descripcion"
+                    value={this.state.descripcion}
                     onChange={this.onChange}
                     invalid={this.state.invalidDetalles}
                   />
