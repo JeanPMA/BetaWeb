@@ -6,7 +6,7 @@ import axios from "axios";
 import md5 from "md5";
 import Cookies from "universal-cookie";
 
-const baseUrl = "https://app-cleancode.herokuapp.com/api/usuario";
+const baseUrl = "https://betaweb-back.herokuapp.com/api/usuario";
 
 const cookies = new Cookies();
 

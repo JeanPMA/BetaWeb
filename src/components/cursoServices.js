@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseUrl = "https://app-cleancode.herokuapp.com/api";
+const baseUrl = "https://betaweb-back.herokuapp.com/api";
 
 const curso = {};
 

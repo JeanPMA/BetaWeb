@@ -31,15 +31,6 @@ class boton_misCursosDocente extends Component {
     this.setState({ abierto: !this.state.abierto });
   };
 
-  async componentDidMount() {
-    await this.fetchUsuario();
-  }
-  fetchUsuario = async () => {
-    let res = await fetch("https://app-cleancode.herokuapp.com/api/usuario");
-    let data = await res.json();
-    console.log(data);
-  };
-
   constructor(props) {
     super(props);
     this.state = {
