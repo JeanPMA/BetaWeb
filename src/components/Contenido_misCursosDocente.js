@@ -47,7 +47,7 @@ class boton_misCursosDocente extends Component {
       descripcion: "",
       ubicacion: "",
       instructor: {
-        id_instructor: 5,
+        id_instructor: cookieIdInstructor,
       },
       mensajeNombre: "",
       mensajeDetalles: "",
