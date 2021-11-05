@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import cursoServices from "./cursoServices";
 import {
   Button,
   Modal,
@@ -12,6 +13,14 @@ import {
   Form,
 } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
+import curso from "./cursoServices";
+
+let cookieIdInstructor = document.cookie.replace(
+  /(?:(?:^|.*;\s*)id_instructor\s*\=\s*([^;]*).*$)|^.*$/,
+  "$1"
+);
+
+console.log(cookieIdInstructor);
 
 class boton_misCursosDocente extends Component {
   state = {
@@ -21,12 +30,25 @@ class boton_misCursosDocente extends Component {
   abrirModal = () => {
     this.setState({ abierto: !this.state.abierto });
   };
+
+  async componentDidMount() {
+    await this.fetchUsuario();
+  }
+  fetchUsuario = async () => {
+    let res = await fetch("https://app-cleancode.herokuapp.com/api/usuario");
+    let data = await res.json();
+    console.log(data);
+  };
+
   constructor(props) {
     super(props);
     this.state = {
       nombre: "",
       descripcion: "",
       ubicacion: "",
+      instructor: {
+        id_instructor: 5,
+      },
       mensajeNombre: "",
       mensajeDetalles: "",
       mensajeUbicacion: "",
@@ -68,10 +90,10 @@ class boton_misCursosDocente extends Component {
       });
       valido = false;
     }
-    if (valido) {
+    /*if (valido) {
       //enviar a la BD
       console.log("Se envian los datos" + JSON.stringify(this.state)); // solo par verificar que si envia los datos
-    }
+    }*/
   }
   render() {
     const modalStyles = {
@@ -107,7 +129,10 @@ class boton_misCursosDocente extends Component {
                     id="nombre"
                     name="nombre"
                     value={this.state.nombre}
-                    onChange={this.onChange}
+                    onChange={
+                      (this.onChange,
+                      (event) => this.setState({ nombre: event.target.value }))
+                    }
                     invalid={this.state.invalidNombre}
                   />
                   <FormFeedback tooltip>
@@ -124,7 +149,11 @@ class boton_misCursosDocente extends Component {
                     id="detalle"
                     name="descripcion"
                     value={this.state.descripcion}
-                    onChange={this.onChange}
+                    onChange={
+                      (this.onChange,
+                      (event) =>
+                        this.setState({ descripcion: event.target.value }))
+                    }
                     invalid={this.state.invalidDetalles}
                   />
                   <FormFeedback tooltip>
@@ -141,7 +170,11 @@ class boton_misCursosDocente extends Component {
                     id="ubicacion"
                     name="ubicacion"
                     value={this.state.ubicacion}
-                    onChange={this.onChange}
+                    onChange={
+                      (this.onChange,
+                      (event) =>
+                        this.setState({ ubicacion: event.target.value }))
+                    }
                     invalid={this.state.invalidUbicacion}
                   />
                   <FormFeedback tooltip>
@@ -162,6 +195,7 @@ class boton_misCursosDocente extends Component {
                   type="submit"
                   id="botonCrearAceptar"
                   onChange={this.onChange}
+                  onClick={() => this.onClickSave()}
                 >
                   {" "}
                   Guardar{" "}
@@ -172,6 +206,15 @@ class boton_misCursosDocente extends Component {
         </Modal>
       </>
     );
+  }
+  async onClickSave() {
+    this.abrirModal();
+    const res = await curso.create(this.state);
+    if (res.success) {
+      alert(res.message);
+    } else {
+      alert("Error ==>" + res.message.message);
+    }
   }
 }
 
