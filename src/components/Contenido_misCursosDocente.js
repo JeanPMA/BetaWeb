@@ -37,15 +37,18 @@ class boton_misCursosDocente extends Component {
       nombre: "",
       descripcion: "",
       ubicacion: "",
+      video: "",
       instructor: {
         id_instructor: cookieIdInstructor,
       },
       mensajeNombre: "",
       mensajeDetalles: "",
       mensajeUbicacion: "",
+      mensajeVideo: "",
       invalidNombre: false,
       invalidDetalles: false,
       invalidUbicacion: false,
+      invalidVideo: false,
     };
     this.onChange = this.onChange.bind(this);
     this.enviarAlaBD = this.enviarAlaBD.bind(this);
@@ -78,6 +81,13 @@ class boton_misCursosDocente extends Component {
       this.setState({
         invalidUbicacion: true,
         mensajeUbicacion: "Este campo es obligatorio",
+      });
+      valido = false;
+    }
+    if (this.state.video === "") {
+      this.setState({
+        invalidVideo: true,
+        mensajeVideo: "Este campo es obligatorio",
       });
       valido = false;
     }
@@ -170,6 +180,24 @@ class boton_misCursosDocente extends Component {
                   <FormFeedback tooltip>
                     {this.state.mensajeUbicacion}
                   </FormFeedback>
+                </FormGroup>
+                <FormGroup
+                  id="contenedor-descripcion"
+                  className="position-relative"
+                >
+                  <Label for="video">URL del video</Label>
+                  <Input
+                    type="text"
+                    id="video"
+                    name="video"
+                    value={this.state.video}
+                    onChange={
+                      (this.onChange,
+                      (event) => this.setState({ video: event.target.value }))
+                    }
+                    invalid={this.state.invalidVideo}
+                  />
+                  <FormFeedback tooltip>{this.state.mensajeVideo}</FormFeedback>
                 </FormGroup>
               </ModalBody>
               <ModalFooter id="pieCrearCurso">

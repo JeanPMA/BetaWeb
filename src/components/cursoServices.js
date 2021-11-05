@@ -9,6 +9,7 @@ curso.create = async (state) => {
     nombre: state.nombre,
     descripcion: state.descripcion,
     ubicacion: state.ubicacion,
+    video: state.video,
     instructor: state.instructor,
   };
 
