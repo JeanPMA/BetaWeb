@@ -6,7 +6,7 @@ import axios from 'axios';
 import md5 from 'md5';
 import Cookies from 'universal-cookie';
 
-const baseUrl="https://app-sw.herokuapp.com/api/usuario";
+const baseUrl="https://app-cleancode.herokuapp.com/api/usuario";
 
 const cookies = new Cookies();
 
@@ -49,7 +49,8 @@ class Formulario extends Component {
                 cookies.set('nombre', respuesta.instructor.nombre, {path: "/"});
                 cookies.set('apellido_paterno', respuesta.instructor.apellido_paterno, {path: "/"});
                 cookies.set('apellido_materno', respuesta.instructor.apellido_materno, {path: "/"});
-                cookies.set('email', respuesta.email, {path: "/"});
+                cookies.set('email', respuesta.instructor.email, {path: "/"});
+                cookies.set('id_instructor', respuesta.instructor.id_instructor, {path: "/"});
                 cookies.set('username', respuesta.username, {path: "/"});
                 cookies.set('passwd', respuesta.passwd, {path: "/"});
                 alert(`Bienvenido ${respuesta.instructor.nombre} ${respuesta.instructor.apellido_paterno} ${respuesta.instructor.apellido_materno}`);

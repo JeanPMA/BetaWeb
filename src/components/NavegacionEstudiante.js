@@ -61,7 +61,7 @@ function NavegacionEstudiante
                      </Link>
   
                      <Link
-                     to="/estudiante"
+                     to="/VistaEstudiante"
                      type="button"
                     type="button"
                     className="boton-cursos-instructor  text-white"
