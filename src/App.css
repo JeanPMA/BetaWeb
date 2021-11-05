@@ -1,7 +1,463 @@
-.App{
+.App {
+  background-color: #41567e;
+  height: 100%;
+}
+#ofertas {
+  background-color: #3f475c;
+  height: 200px;
+}
+#titulo {
+  font-size: 13px;
+}
+#descripcion {
+  font-size: 12px;
+}
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+#tituloPagina {
+  margin-left: 50px;
+}
+
+.Descripcion {
+  width: 410px;
+  height: 210px;
+  background-color: #dcedff;
+  padding: 30px;
+  margin-top: 60px;
+  margin-left: 90px;
+}
+
+.logo {
+  margin-left: 600px;
+  margin-top: -160px;
+}
+
+.Titulo {
+  line-height: 200%;
+}
+
+#boton_buscar {
+  background-color: rgb(81, 81, 162);
+  margin-left: 880px;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 90px;
+  padding-top: 6px;
+  border-style: hidden;
+  text-align: center;
+}
+#cursosRegistrados {
+  margin-top: 130px;
+}
+#cursos {
+  margin-bottom: 8px;
+}
+#btn-inscribirse {
+  background-color: transparent;
+  border: transparent;
+  color: #fcf93f;
+}
+
+#nombre-del-curso {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.buscador {
+  width: 25em;
+  height: 28px;
+  border-radius: 60px;
+  margin-left: 10em;
+  border-color: #41567e;
+  position: relative;
+  text-align: left;
+  padding-left: 10px;
+  outline-style: none;
+  margin-top: 50px;
+}
+
+#boton_login {
+  background-color: #0ecd67;
+  margin-left: 10px;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 120px;
+  padding-top: 6px;
+  border-style: hidden;
   text-align: center;
 }
 
-a{     
-    margin-left: 50px;  
+/* CSS instructor*/
+.icono-menu {
+  margin: 0px;
+  margin-left: 20px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.logo-betasoft {
+  margin-right: 49%;
+}
+#boton-menu {
+  display: none;
+}
+.container-menu {
+  z-index: 1;
+  position: absolute;
+  background-color: #101c34;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100vh;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+#boton-menu:checked ~ .container-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cont-menu {
+  width: 100%;
+  position: relative;
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr 1fr;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+}
+#boton-menu:checked ~ .container-menu .cont-menu {
+  transform: translateX(0%);
+}
+.cont-menu nav {
+  transform: translateY(15%);
+}
+.container-menu label {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  color: white;
+  cursor: pointer;
+}
+
+.foto-usuario {
+  margin: auto;
+  display: block;
+  width: 150px;
+  padding-top: 35px;
+}
+.nombre-usuario {
+  display: block;
+  padding-top: 60px;
+  text-align: center;
+  color: white;
+  font-size: 15px;
+}
+.texto-menu {
+  display: block;
+  margin-left: 10px;
+  color: blueviolet;
+  font-size: 20px;
+  margin-top: 60px;
+}
+.boton-inicio-instructor,
+.boton-cursos-instructor {
+  display: block;
+  margin: 0px;
+  margin-top: 20px;
+  font-size: 25px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+  
+
+}
+.boton-inicio-instructor:hover {
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+.boton-cursos-instructor:hover {
+  border: 1px solid white;
+  border-radius: 50px;
+}
+
+.boton-inicio-instructor:focus {
+  background-color: #5051a1;
+  border-radius: 50px;
+}
+.boton-cursos-instructor:focus {
+  background-color: #5051a1;
+  border-radius: 50px;
+}
+
+.icono-inicio-cursos-instructor {
+  display: inline-block;
+  margin-left: 15px;
+  font-size: 30px;
+  margin-right: 20px;
+}
+.icono-boton-instructor {
+  font-size: 35px;
+}
+.span {
+  margin-left: 25px;
+  font-size: 20px;
+}
+.bienvenida {
+  background-color: #dcedff;
+  text-align: center;
+  width: 600px;
+  margin-left: 380px;
+  margin-top: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  border-radius: 35px 35px;
+}
+.instrucciones {
+  font-size: 30px;
+  margin-left: 272px;
+}
+#logo_lupa {
+  margin-left: 10px;
+}
+
+#boton_crearCursos {
+  background-color: #0ecd67;
+  margin-left: 1100px;
+  margin-top: 120px;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 160px;
+  padding-top: 6px;
+  border-style: hidden;
+  text-align: center;
+}
+
+#tituloCrearCurso {
+  background: #41567e;
+  border: none;
+  color: white;
+}
+.contenedorModal {
+  height: 380px;
+  width: 360px;
+}
+
+#tituloModal {
+  margin-left: 100px;
+}
+
+#cuerpoCrearCurso {
+  background: #41567e;
+  border: none;
+  color: white;
+}
+
+#pieCrearCurso {
+  background: #41567e;
+  border: none;
+
+  color: white;
+}
+
+#botonCrearCancelar {
+  background-color: #0ecd67;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 100px;
+  padding-top: 6px;
+  border-style: hidden;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+#botonCrearAceptar {
+  background-color: #0ecd67;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 100px;
+  padding-top: 6px;
+  border-style: hidden;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+.icono1-slider-instructor {
+  color: #535861;
+  height: 100%;
+  font-size: 42px;
+  margin-top: 60px;
+  position: relative;
+  margin-right: 130px;
+}
+.eye {
+  color: #adec47;
+  font-size: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  margin-top: 17px;
+  margin-right: 7px;
+}
+.texto-1 {
+  width: 80px;
+  text-align: left;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: 70px;
+}
+.icono2-slider-instructor {
+  color: #09f6ff;
+  height: 100%;
+  font-size: 35px;
+  margin-top: 65px;
+  position: relative;
+  margin-right: 130px;
+}
+.texto-2 {
+  height: 100%;
+  width: 100px;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: 70px;
+}
+.icono3-slider-instructor {
+  color: #e80e46;
+  font-size: 35px;
+  margin-top: 60px;
+  position: relative;
+  margin-right: 130px;
+}
+.texto-3 {
+  width: 110px;
+  color: white;
+  text-align: left;
+  font-weight: bold;
+  font-size: 14px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: 70px;
+}
+
+#archivoImagen {
+  margin-top: 20px;
+  border: none;
+}
+.bienvenido-a-betaweb {
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#Boton_cerrar {
+  background-color: #0ecd67;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 150px;
+  padding-top: none;
+  margin-left: 800px;
+  border-style: hidden;
+  margin-right: 40px;
+  margin-top: none;
+}
+#instructor-nombre {
+  font-size: 12px;
+  display: inline-block;
+}
+#instructor-apellido-paterno {
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 7px;
+}
+#instructor-apellido-materno {
+  font-size: 12px;
+  display: inline-block;
+  margin-left: 7px;
+}
+#instructor {
+  font-size: 12px;
+}
+
+#Boton_atrasCursos {
+  background-color: #0ecd67;
+  margin-left: 500px;
+  margin-top: 0px;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 200px;
+  padding-top: none;
+  border-style: hidden;
+  text-align: center;
+}
+#boton_buscarCursos {
+  background-color: rgb(81, 81, 162);
+  margin-left: 180px;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 90px;
+  padding-top: 6px;
+  border-style: hidden;
+  text-align: center;
+}
+#boton_loginCursos {
+  background-color: #0ecd67;
+  margin-left: 10px;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 120px;
+  padding-top: 6px;
+  border-style: hidden;
+  text-align: center;
+}
+.container-instructor {
+  width: 1366px;
+  margin: auto;
+}
+.lupa {
+  width: 50px;
+  margin-bottom: 17px;
+  margin-right: 15px;
+}
+.lupa-2 {
+  width: 27px;
+}
+.BienvenidaEstudiante {
+  background-color: #dcedff;
+  text-align: center;
+  width: 600px;
+  margin-left: 380px;
+  margin-top: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  border-radius: 35px 35px;
 }

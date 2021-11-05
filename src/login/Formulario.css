@@ -1,0 +1,34 @@
+
+.login{
+  background-color: #41567e;
+  border-color: white;
+}
+.containerPrincipal{
+  height: 200px;
+  width: 350px;
+  margin-left: 32em;
+  margin-top: 10em;
+  color: white;
+  border-color: white;
+  border: 100px ;
+}
+.containerSecundario{
+  border: 1px solid white;
+  padding-left: 20px;
+  padding-top: 40px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+ 
+}
+#boton_iniciarSesion{
+  background-color: #0ecd67;
+  margin-left: 95px;
+  margin-top: 25px;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 120px;
+  padding-top: none;
+  border-style: hidden;
+  text-align: center;
+}

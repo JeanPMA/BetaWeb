@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import logoLupa from "../imagenes/logoLupa.png"
 
-class Navigation extends Component{
+class NavegacionCursos extends Component{
     render(){
         return(
             
@@ -14,16 +14,15 @@ class Navigation extends Component{
                     <img src="https://previews.123rf.com/images/mochipet/mochipet1707/mochipet170700056/82167896-ilustraci%C3%B3n-vectorial-bombilla-con-haces-de-luz-en-estilo-pop-art-dibujos-animados-con-contorno-aisl.jpg" width="30" height="30" class="d-inline-block align-top" alt=""/>                        
                     </a> 
 
-                 
+                    <Link to="/" id="Boton_atrasCursos" className="btn " type="button">Volver Pagina de Inicio</Link>
 
-                    <Link to="/cursos" id="boton_buscar" className="btn " type="button">Cursos</Link>                    
+                    <Link to="/cursos" id="boton_buscarCursos" className="btn " type="button">Cursos</Link>                    
 
-                     <Link to="/inicio" id="boton_login" className="btn " type="button">Iniciar Sesión</Link>                   
+                     <Link to="/inicio" id="boton_loginCursos" className="btn " type="button">Iniciar Sesión</Link>                   
                 </nav>
                 
             
         )
     }
 }
-
-export default Navigation;
+export default NavegacionCursos;
