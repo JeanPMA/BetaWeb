@@ -22,9 +22,7 @@ function Vista() {
 
   const peticionGet = async () => {
     await axios
-      .get(
-        "https://app-cleancode.herokuapp.com/api/cursohttps://app-cleancode.herokuapp.com/api/curso"
-      )
+      .get("https://app-cleancode.herokuapp.com/api/curso")
       .then((response) => {
         setTablaCursos(response.data);
         setCursos(response.data);
