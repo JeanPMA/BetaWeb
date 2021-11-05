@@ -8,13 +8,14 @@ function Vista() {
 
   const fetchCursos = () => {
     fetch("https://app-cleancode.herokuapp.com/api/curso")
+    
       .then((response) => response.json())
       .then((data) => setCursos(data))
       .catch((error) => console.log(error));
   };
 
   useEffect(() => {
-    fetchCursos("https://app-cleancode.herokuapp.com/api/curso");
+    fetchCursos("https://app-betasoft.herokuapp.com/api/curso");
   }, []);
 
   const [tabla, setTablaCursos] = useState([]);
@@ -22,9 +23,7 @@ function Vista() {
 
   const peticionGet = async () => {
     await axios
-      .get(
-        "https://app-cleancode.herokuapp.com/api/cursohttps://app-cleancode.herokuapp.com/api/curso"
-      )
+      .get("https://app-betasoft.herokuapp.com/api/curso")
       .then((response) => {
         setTablaCursos(response.data);
         setCursos(response.data);

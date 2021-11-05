@@ -2,7 +2,8 @@ import React from "react";
 import Bienvenida from "../components/Bienvenida";
 import BienvenidaEstudiante from "../components/BienvenidaEstudiante";
 import NavegacionEstudiante from "../components/NavegacionEstudiante";
-import SliderInstructor from "../components/SliderInstructor";
+import SliderEstudiante from "../components/SliderEstudiante";
+
 
 function Estudiante() {
   return (
@@ -15,6 +16,9 @@ function Estudiante() {
                 <div className="BienvenidaEstudiante">
                     <BienvenidaEstudiante />
                 </div>
+                <div className="slider-instructor">
+                     <SliderEstudiante />
+          </div>
              </div>
         </div>
           

@@ -44,7 +44,7 @@ function NavegacionEstudiante
                   alt="foto de perfil"
                   className="foto-usuario"
                 />
-                <h3 className="nombre-usuario">{cookies.get('nombre')} {cookies.get('apellido_paterno')} {cookies.get('apellido_materno')}</h3>
+                <h3 className="nombre-usuario">Estudiante</h3>
               </div>
               <div className="menu-instructor">
                 <h2 className="texto-menu">Menú</h2>
@@ -61,7 +61,7 @@ function NavegacionEstudiante
                      </Link>
   
                      <Link
-                     to="/estudiante"
+                     to="/VistaEstudiante"
                      type="button"
                     type="button"
                     className="boton-cursos-instructor  text-white"

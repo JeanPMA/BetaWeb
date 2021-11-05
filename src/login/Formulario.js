@@ -51,6 +51,7 @@ class Formulario extends Component {
                 cookies.set('apellido_materno', respuesta.instructor.apellido_materno, {path: "/"});
                 cookies.set('email', respuesta.instructor.email, {path: "/"});
                 cookies.set('id_instructor', respuesta.instructor.id_instructor, {path:"/"});
+                
                 cookies.set('username', respuesta.username, {path: "/"});
                 cookies.set('passwd', respuesta.passwd, {path: "/"});
                 alert(`Bienvenido ${respuesta.instructor.nombre} ${respuesta.instructor.apellido_paterno} ${respuesta.instructor.apellido_materno}`);
