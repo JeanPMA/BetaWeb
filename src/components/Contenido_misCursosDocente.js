@@ -202,6 +202,7 @@ class boton_misCursosDocente extends Component {
     this.abrirModal();
     const res = await curso.create(this.state);
     if (res.success) {
+      window.location.href = window.location.href;
       alert(res.message);
     } else {
       alert("Error ==>" + res.message.message);
