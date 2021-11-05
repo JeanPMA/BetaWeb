@@ -81,10 +81,9 @@ class boton_misCursosDocente extends Component {
       });
       valido = false;
     }
-    /*if (valido) {
-      //enviar a la BD
-      console.log("Se envian los datos" + JSON.stringify(this.state)); // solo par verificar que si envia los datos
-    }*/
+    if (valido) {
+      this.onClickSave();
+    }
   }
   render() {
     const modalStyles = {
@@ -186,7 +185,6 @@ class boton_misCursosDocente extends Component {
                   type="submit"
                   id="botonCrearAceptar"
                   onChange={this.onChange}
-                  onClick={() => this.onClickSave()}
                 >
                   {" "}
                   Guardar{" "}
