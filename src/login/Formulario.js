@@ -6,11 +6,12 @@ import axios from "axios";
 import md5 from "md5";
 import Cookies from "universal-cookie";
 
-const baseUrl = "https://betaweb-back.herokuapp.com/api/usuario";
+const baseUrl = "https://app-btawb.herokuapp.com/api/usuario";
 
 const cookies = new Cookies();
 
 class Formulario extends Component {
+  
   state = {
     form: {
       username: "",
@@ -49,29 +50,22 @@ class Formulario extends Component {
             ) {
               var respuesta = response[i];
               cookies.set("id_usuario", respuesta.id_usuario, { path: "/" });
-              cookies.set("id_instructor", respuesta.instructor.id_instructor, {
-                path: "/",
-              });
-              cookies.set("nombre", respuesta.instructor.nombre, { path: "/" });
-              cookies.set(
-                "apellido_paterno",
-                respuesta.instructor.apellido_paterno,
-                { path: "/" }
-              );
-              cookies.set(
-                "apellido_materno",
-                respuesta.instructor.apellido_materno,
-                { path: "/" }
-              );
-              cookies.set("email", respuesta.email, { path: "/" });
               cookies.set("username", respuesta.username, { path: "/" });
               cookies.set("passwd", respuesta.passwd, { path: "/" });
+              
+              
+              
+              
               alert(
-                `Bienvenido ${respuesta.instructor.nombre} ${respuesta.instructor.apellido_paterno} ${respuesta.instructor.apellido_materno}`
+                `Bienvenido ${respuesta.username}`
               );
-
-              window.location.href = "../instructor";
-              break;
+              if (respuesta.instructor="null"){
+              window.location.href = "../estudiante";
+              
+              }else{
+                window.location.href = "../instructor";
+                break;
+              }
             }
             if (contador == i + 1) {
               alert("El usuario o la contraseña no son correctos");
@@ -86,8 +80,17 @@ class Formulario extends Component {
 
   componentDidMount() {
     if (cookies.get("username")) {
+      
+     // cookies.set("id_instructor", respuesta.instructor.id_instructor, {path: "/",});
+      //cookies.set("nombre", respuesta.instructor.nombre, { path: "/" });
+      //cookies.set("apellido_paterno", respuesta.instructor.apellido_paterno,{ path: "/" });
+      //cookies.set("apellido_materno",respuesta.instructor.apellido_materno,{ path: "/" });
       window.location.href = "../instructor";
     }
+      //indow.location.href = "../estudiante";
+      //cookies.set("id_estudiante", respuesta.estudiante.id_estudiante, {path: "/",});
+     // cookies.set("nombre", respuesta.estudiante.nombre_completo, { path: "/" });
+    
   }
 
   render() {
