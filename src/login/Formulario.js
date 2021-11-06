@@ -49,6 +49,7 @@ class Formulario extends Component {
               response[i].passwd == this.state.form.passwd
             ) {
               var respuesta = response[i];
+              console.log(respuesta)
               cookies.set("id_usuario", respuesta.id_usuario, { path: "/" });
               cookies.set("username", respuesta.username, { path: "/" });
               cookies.set("passwd", respuesta.passwd, { path: "/" });
@@ -59,7 +60,7 @@ class Formulario extends Component {
               alert(
                 `Bienvenido ${respuesta.username}`
               );
-              if (respuesta.instructor="null"){
+              if (respuesta.instructor==null){
               window.location.href = "../estudiante";
               
               }else{
@@ -67,7 +68,7 @@ class Formulario extends Component {
                 break;
               }
             }
-            if (contador == i + 1) {
+            if (contador == i ) {
               alert("El usuario o la contraseña no son correctos");
             }
           }
