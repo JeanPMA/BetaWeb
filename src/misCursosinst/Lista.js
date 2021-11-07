@@ -22,7 +22,7 @@ const lupa = <img src={Lupa} className="lupa-2" />;
 function Lista() {
   const [instructor, setInstructor] = useState([]);
   const [cursos, setCursos] = useState([]);
-  const [modalEditar, setModalEditar] = useState(false);
+  const [abrirModal, setAbrirModal] = useState(false);
 
   useEffect(() => {
     axios
@@ -80,6 +80,15 @@ function Lista() {
     return "";
   };
 
+  const modalStyles = {
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -90%)",
+    width: "22em",
+    height: "200px",
+  };
+
   return (
     <>
       <div className="list-group">
@@ -114,7 +123,12 @@ function Lista() {
                             {" "}
                             {lupa}
                           </button>
-                          <button className="btn btn-lg">
+                          <button
+                            className="btn btn-lg"
+                            onClick={() => {
+                              setAbrirModal(true);
+                            }}
+                          >
                             <i className="bi bi-pencil-fill celeste"></i>
                           </button>
                           <button className="btn btn-lg" type="button">
@@ -130,6 +144,58 @@ function Lista() {
           </div>
         </div>
       </div>
+
+      <Modal isOpen={abrirModal} style={modalStyles}>
+        <div className="contenedorModal">
+          <Form>
+            <ModalHeader id="tituloCrearCurso">
+              <a id="tituloModal"> Editar Curso </a>
+            </ModalHeader>
+            <ModalBody id="cuerpoCrearCurso">
+              <FormGroup className="position-relative">
+                <Label for="nombre">Nombre</Label>
+                <Input type="text" id="nombre" name="nombre" />
+              </FormGroup>
+              <FormGroup
+                id="contenedor-descripcion"
+                className="position-relative"
+              >
+                <Label for="detalle">Descripcion</Label>
+                <Input type="textarea" id="detalle" name="descripcion" />
+              </FormGroup>
+              <FormGroup
+                id="contenedor-descripcion"
+                className="position-relative"
+              >
+                <Label for="detalle">Ubicacion de la imagen</Label>
+                <Input type="text" id="ubicacion" name="ubicacion_img" />
+              </FormGroup>
+              <FormGroup
+                id="contenedor-descripcion"
+                className="position-relative"
+              >
+                <Label for="video">URL del video</Label>
+                <Input type="text" id="video" name="ubicacion_vid" />
+              </FormGroup>
+            </ModalBody>
+            <ModalFooter id="pieCrearCurso">
+              <Button
+                id="botonCrearCancelar"
+                onClick={() => {
+                  setAbrirModal(false);
+                }}
+              >
+                {" "}
+                Cancelar
+              </Button>
+              <Button type="submit" id="botonCrearAceptar">
+                {" "}
+                Guardar{" "}
+              </Button>
+            </ModalFooter>
+          </Form>
+        </div>
+      </Modal>
     </>
   );
 }
