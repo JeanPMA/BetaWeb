@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import cursoServices from "./cursoServices";
 import {
   Button,
   Modal,
@@ -12,6 +13,14 @@ import {
   Form,
 } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
+import curso from "./cursoServices";
+
+let cookieIdInstructor = document.cookie.replace(
+  /(?:(?:^|.*;\s*)id_instructor\s*\=\s*([^;]*).*$)|^.*$/,
+  "$1"
+);
+
+console.log(cookieIdInstructor);
 
 class boton_misCursosDocente extends Component {
   state = {
@@ -21,18 +30,25 @@ class boton_misCursosDocente extends Component {
   abrirModal = () => {
     this.setState({ abierto: !this.state.abierto });
   };
+
   constructor(props) {
     super(props);
     this.state = {
       nombre: "",
-      detalle: "",
+      descripcion: "",
       ubicacion: "",
+      video: "",
+      instructor: {
+        id_instructor: cookieIdInstructor,
+      },
       mensajeNombre: "",
       mensajeDetalles: "",
       mensajeUbicacion: "",
+      mensajeVideo: "",
       invalidNombre: false,
       invalidDetalles: false,
       invalidUbicacion: false,
+      invalidVideo: false,
     };
     this.onChange = this.onChange.bind(this);
     this.enviarAlaBD = this.enviarAlaBD.bind(this);
@@ -54,7 +70,7 @@ class boton_misCursosDocente extends Component {
       });
       valido = false;
     }
-    if (this.state.detalle === "") {
+    if (this.state.descripcion === "") {
       this.setState({
         invalidDetalles: true,
         mensajeDetalles: "Este campo es obligatorio",
@@ -68,9 +84,15 @@ class boton_misCursosDocente extends Component {
       });
       valido = false;
     }
+    if (this.state.video === "") {
+      this.setState({
+        invalidVideo: true,
+        mensajeVideo: "Este campo es obligatorio",
+      });
+      valido = false;
+    }
     if (valido) {
-      //enviar a la BD
-      console.log("Se envian los datos" + JSON.stringify(this.state)); // solo par verificar que si envia los datos
+      this.onClickSave();
     }
   }
   render() {
@@ -107,7 +129,10 @@ class boton_misCursosDocente extends Component {
                     id="nombre"
                     name="nombre"
                     value={this.state.nombre}
-                    onChange={this.onChange}
+                    onChange={
+                      (this.onChange,
+                      (event) => this.setState({ nombre: event.target.value }))
+                    }
                     invalid={this.state.invalidNombre}
                   />
                   <FormFeedback tooltip>
@@ -122,9 +147,13 @@ class boton_misCursosDocente extends Component {
                   <Input
                     type="textarea"
                     id="detalle"
-                    name="detalle"
-                    value={this.state.detalle}
-                    onChange={this.onChange}
+                    name="descripcion"
+                    value={this.state.descripcion}
+                    onChange={
+                      (this.onChange,
+                      (event) =>
+                        this.setState({ descripcion: event.target.value }))
+                    }
                     invalid={this.state.invalidDetalles}
                   />
                   <FormFeedback tooltip>
@@ -141,12 +170,34 @@ class boton_misCursosDocente extends Component {
                     id="ubicacion"
                     name="ubicacion"
                     value={this.state.ubicacion}
-                    onChange={this.onChange}
+                    onChange={
+                      (this.onChange,
+                      (event) =>
+                        this.setState({ ubicacion: event.target.value }))
+                    }
                     invalid={this.state.invalidUbicacion}
                   />
                   <FormFeedback tooltip>
                     {this.state.mensajeUbicacion}
                   </FormFeedback>
+                </FormGroup>
+                <FormGroup
+                  id="contenedor-descripcion"
+                  className="position-relative"
+                >
+                  <Label for="video">URL del video</Label>
+                  <Input
+                    type="text"
+                    id="video"
+                    name="video"
+                    value={this.state.video}
+                    onChange={
+                      (this.onChange,
+                      (event) => this.setState({ video: event.target.value }))
+                    }
+                    invalid={this.state.invalidVideo}
+                  />
+                  <FormFeedback tooltip>{this.state.mensajeVideo}</FormFeedback>
                 </FormGroup>
               </ModalBody>
               <ModalFooter id="pieCrearCurso">
@@ -172,6 +223,16 @@ class boton_misCursosDocente extends Component {
         </Modal>
       </>
     );
+  }
+  async onClickSave() {
+    this.abrirModal();
+    const res = await curso.create(this.state);
+    if (res.success) {
+      window.location.href = window.location.href;
+      alert(res.message);
+    } else {
+      alert("Error ==>" + res.message.message);
+    }
   }
 }
 

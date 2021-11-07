@@ -9,6 +9,7 @@ function Routes() {
       <Switch>
             <Route exact path="/" component={Login}/>
             <Route exact path="/instructor" component={Menu}/>
+            <Route exact path="/estudiante" component={Menu}/>
       </Switch>
     </BrowserRouter>
   );
