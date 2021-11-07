@@ -44,7 +44,7 @@ function NavegacionEstudiante
                   alt="foto de perfil"
                   className="foto-usuario"
                 />
-                <h3 className="nombre-usuario">Estudiante</h3>
+                <h3 className="nombre-usuario">{cookies.get('nombre_completo')}</h3>
               </div>
               <div className="menu-instructor">
                 <h2 className="texto-menu">Menú</h2>

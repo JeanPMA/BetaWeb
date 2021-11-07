@@ -9,6 +9,7 @@ class BienvenidaEstudiante extends Component {
     cookies.remove('id_usuario', {path: "/"});
     cookies.remove('nombre_completo', {path: "/"});
     cookies.remove('id_estudiante', {path: "/"});
+    cookies.remove('username', {path: "/"});
     window.location.href='./';
   }
   componentDidMount(){
@@ -25,7 +26,7 @@ class BienvenidaEstudiante extends Component {
 
     return(
     <div>
-      <h3>Bienvenido Estudiante</h3>
+      <h3>Bienvenido {cookies.get('nombre_completo')}</h3>
       <div>
       <button id="Boton_cerrar" onClick={()=>this.cerrarSesion()}>Cerrar sesión</button>
       </div>

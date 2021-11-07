@@ -49,7 +49,7 @@ class Formulario extends Component {
               response[i].passwd == this.state.form.passwd
             ) {
               var respuesta = response[i];
-              console.log(respuesta)
+              
               cookies.set("id_usuario", respuesta.id_usuario, { path: "/" });
               cookies.set("username", respuesta.username, { path: "/" });
               cookies.set("passwd", respuesta.passwd, { path: "/" });
@@ -61,14 +61,22 @@ class Formulario extends Component {
                 `Bienvenido ${respuesta.username}`
               );
               if (respuesta.instructor==null){
+                cookies.set("id_estudiante", respuesta.estudiante.id_estudiante, {path: "/",});
+                cookies.set("nombre_completo", respuesta.estudiante.nombre_completo, { path: "/" }); 
               window.location.href = "../estudiante";
+              break;
               
               }else{
+                cookies.set("id_instructor", respuesta.instructor.id_instructor, {path: "/",});
+                cookies.set("nombre", respuesta.instructor.nombre, { path: "/" });
+                cookies.set("apellido_paterno", respuesta.instructor.apellido_paterno,{ path: "/" });
+                cookies.set("apellido_materno",respuesta.instructor.apellido_materno,{ path: "/" });
+                
                 window.location.href = "../instructor";
                 break;
               }
             }
-            if (contador == i ) {
+            if (contador == i+1 ) {
               alert("El usuario o la contraseña no son correctos");
             }
           }
@@ -82,17 +90,13 @@ class Formulario extends Component {
   componentDidMount() {
     if (cookies.get("username")) {
       
-     // cookies.set("id_instructor", respuesta.instructor.id_instructor, {path: "/",});
-      //cookies.set("nombre", respuesta.instructor.nombre, { path: "/" });
-      //cookies.set("apellido_paterno", respuesta.instructor.apellido_paterno,{ path: "/" });
-      //cookies.set("apellido_materno",respuesta.instructor.apellido_materno,{ path: "/" });
+     
       window.location.href = "../instructor";
     }
-      //indow.location.href = "../estudiante";
-      //cookies.set("id_estudiante", respuesta.estudiante.id_estudiante, {path: "/",});
-     // cookies.set("nombre", respuesta.estudiante.nombre_completo, { path: "/" });
+     
     
   }
+  
 
   render() {
     return (
