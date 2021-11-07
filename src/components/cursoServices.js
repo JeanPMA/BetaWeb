@@ -8,8 +8,8 @@ curso.create = async (state) => {
   const datapost = {
     nombre: state.nombre,
     descripcion: state.descripcion,
-    ubicacion: state.ubicacion,
-    video: state.video,
+    ubicacion_img: state.ubicacion_img,
+    ubicacion_vid: state.ubicacion_vid,
     instructor: state.instructor,
   };
 

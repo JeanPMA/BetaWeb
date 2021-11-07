@@ -36,8 +36,8 @@ class boton_misCursosDocente extends Component {
     this.state = {
       nombre: "",
       descripcion: "",
-      ubicacion: "",
-      video: "",
+      ubicacion_img: "",
+      ubicacion_vid: "",
       instructor: {
         id_instructor: cookieIdInstructor,
       },
@@ -77,14 +77,14 @@ class boton_misCursosDocente extends Component {
       });
       valido = false;
     }
-    if (this.state.ubicacion === "") {
+    if (this.state.ubicacion_img === "") {
       this.setState({
         invalidUbicacion: true,
         mensajeUbicacion: "Este campo es obligatorio",
       });
       valido = false;
     }
-    if (this.state.video === "") {
+    if (this.state.ubicacion_vid === "") {
       this.setState({
         invalidVideo: true,
         mensajeVideo: "Este campo es obligatorio",
@@ -168,12 +168,12 @@ class boton_misCursosDocente extends Component {
                   <Input
                     type="text"
                     id="ubicacion"
-                    name="ubicacion"
-                    value={this.state.ubicacion}
+                    name="ubicacion_img"
+                    value={this.state.ubicacion_img}
                     onChange={
                       (this.onChange,
                       (event) =>
-                        this.setState({ ubicacion: event.target.value }))
+                        this.setState({ ubicacion_img: event.target.value }))
                     }
                     invalid={this.state.invalidUbicacion}
                   />
@@ -189,11 +189,12 @@ class boton_misCursosDocente extends Component {
                   <Input
                     type="text"
                     id="video"
-                    name="video"
-                    value={this.state.video}
+                    name="ubicacion_vid"
+                    value={this.state.ubicacion_vid}
                     onChange={
                       (this.onChange,
-                      (event) => this.setState({ video: event.target.value }))
+                      (event) =>
+                        this.setState({ ubicacion_vid: event.target.value }))
                     }
                     invalid={this.state.invalidVideo}
                   />

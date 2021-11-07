@@ -174,8 +174,6 @@ a:active {
   font-size: 25px;
   border-radius: 50px;
   transition: background-color 0.3s;
-  
-
 }
 .boton-inicio-instructor:hover {
   border: 1px solid white;
@@ -460,4 +458,7 @@ a:active {
   padding-bottom: 30px;
   margin-bottom: 40px;
   border-radius: 35px 35px;
+}
+.celeste {
+  color: #09f6ff;
 }
