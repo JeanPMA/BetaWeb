@@ -167,7 +167,6 @@ function Lista() {
                   getInstructorByid().cursos?.map((element) => {
                     return (
                       <tr>
-                        <Miscursos curso={getCursosByid(element.nombre)} />
                         <td className="text-white">{element.nombre}</td>
 
                         <td>
@@ -197,6 +196,7 @@ function Lista() {
                             <i className="bi bi-trash-fill rojo"></i>
                           </button>
                         </td>
+                        <Miscursos curso={getCursosByid(element.id_curso)} />
                       </tr>
                     );
                   })}
