@@ -1,9 +1,14 @@
-.amarillo{
-    color: yellow;
+.amarillo {
+  color: yellow;
 }
-.rojo{
-    color: red;
+.rojo {
+  color: red;
 }
 .lupa-2 {
-    width: 27px;
-  }
+  width: 27px;
+}
+#modal-eliminar {
+  background-color: #41567e;
+  color: white;
+  border: 20px white;
+}

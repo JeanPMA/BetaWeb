@@ -10,8 +10,7 @@ import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
 
-function NavegacionInstructor 
-() {
+function NavegacionInstructor() {
   return (
     <div>
       <div>
@@ -44,37 +43,36 @@ function NavegacionInstructor
                 alt="foto de perfil"
                 className="foto-usuario"
               />
-              <h3 className="nombre-usuario">{cookies.get('nombre')} {cookies.get('apellido_paterno')} {cookies.get('apellido_materno')}</h3>
+              <h3 className="nombre-usuario">
+                {cookies.get("nombre")} {cookies.get("apellido_paterno")}{" "}
+                {cookies.get("apellido_materno")}
+              </h3>
             </div>
             <div className="menu-instructor">
               <h2 className="texto-menu">Menú</h2>
               <div className="botones-menu-instructor">
-                
-                   <Link
-                      to="/instructor"
-                      type="button"
-                       className="boton-inicio-instructor text-white">
-                        <div className="icono-inicio-cursos-instructor">
-                          <FontAwesomeIcon icon={faHome} />
-                        </div>
-                      <span>Inicio</span>
-                   </Link>
+                <Link
+                  to="/instructor"
+                  type="button"
+                  className="boton-inicio-instructor text-white"
+                >
+                  <div className="icono-inicio-cursos-instructor">
+                    <FontAwesomeIcon icon={faHome} />
+                  </div>
+                  <span>Inicio</span>
+                </Link>
 
-                   <Link
-                   to="/VistaIntructor"
-                   type="button"
+                <Link
+                  to="/VistaInstructor"
+                  type="button"
                   type="button"
                   className="boton-cursos-instructor  text-white"
                 >
                   <div className="icono-inicio-cursos-instructor icono-boton-instructor">
                     <FontAwesomeIcon icon={faPlayCircle} />{" "}
                   </div>
-              <span>Mis Cursos</span>
+                  <span>Mis Cursos</span>
                 </Link>
-
-               
-    
-
               </div>
             </div>
           </nav>

@@ -37,7 +37,7 @@ class App extends Component {
             <Route path="/instructor">
               <Instructor />
             </Route>
-            <Route path="/VistaIntructor">
+            <Route path="/VistaInstructor">
               <VistaLista />
             </Route>
             <Route path="/misCursos_docente">

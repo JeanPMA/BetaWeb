@@ -14,7 +14,7 @@ function Miscursos(props) {
             <div class="container-fluid">
               <div className="row">
                 <div className="col-md-3" >
-                  <img src={props.curso.ubicacion} width="200" height="150" />
+                  <img src={props.curso.ubicacion_img} width="200" height="150" />
                 </div>
                 <div className="col-md-6 ms-auto">  <div className="modal-dialog  text-white" >
                     <h5 className="modal-title text-warning " id="exampleModalLabel">{props.curso.nombre}</h5>
