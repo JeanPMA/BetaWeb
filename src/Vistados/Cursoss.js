@@ -9,7 +9,7 @@ const Cursoss = ({ cursos = [] }) => {
         <div className="p-2 text-white overflow" id="cursos">
           <a href="#">
             <img
-              src={item.ubicacion}
+              src={item.ubicacion_img}
               alt=""
               width="200px"
               height="120px"

@@ -3,7 +3,8 @@ import "./Vista.css";
 import axios from "axios";
 import Lupa from "../assets/lupa.png";
 import Miscursos from "./Miscursos";
-import {
+
+/*import {
   Button,
   Modal,
   ModalHeader,
@@ -14,16 +15,85 @@ import {
   Label,
   FormFeedback,
   Form,
-} from "reactstrap";
+} from "reactstrap";*/
 import "bootstrap/dist/css/bootstrap.css";
 
+import { makeStyles } from "@material-ui/core/styles";
+import {
+  Modal,
+  Button,
+  Input,
+} from "@material-ui/core";
+import { Edit, Delete, Label, TextFormat } from "@material-ui/icons";
+
 const lupa = <img src={Lupa} className="lupa-2" />;
+const baseUrl = "https://betaweb-back.herokuapp.com/api/curso/";
+const useStyles = makeStyles((theme) => ({
+  modal: {
+    position: "absolute",
+    width: 400,
+    backgroundColor: theme.palette.background.paper,
+    border: "2px solid #000",
+    boxShadow: theme.shadows[5],
+    padding: theme.spacing(2, 4, 3),
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  },
+  iconos: {
+    cursor: "pointer",
+  },
+  inputMaterial: {
+    width: "100%",
+  },
+}));
 
 function Lista() {
   const [instructor, setInstructor] = useState([]);
   const [cursos, setCursos] = useState([]);
-  const [abrirModal, setAbrirModal] = useState(false);
+  //const [abrirModal, setAbrirModal] = useState(false);
+  const styles = useStyles();
+  const [data, setData] = useState([]);
+  const [modalEliminar, setModalEliminar] = useState(false);
 
+  const [cursoSeleccionado, setCursoSeleccionado] = useState({
+    nombre: "",
+    descripcion: "",
+    ubicacion_img: "",
+    ubicacion_vid: "",
+  });
+
+  
+
+  
+ 
+
+  const peticionDelete = async () => {
+    await axios
+      .delete(baseUrl + cursoSeleccionado.id_curso)
+      .then(response => {
+        setData(
+          data.filter((curso) => curso.id_curso !== cursoSeleccionado.id_curso)
+        );
+        abrirCerrarModalEliminar();
+        window.location.href = window.location.href;
+      });
+  };
+
+
+
+  const abrirCerrarModalEliminar = () => {
+    setModalEliminar(!modalEliminar);
+  };
+
+  const seleccionarCurso = (curso, caso) => {
+    setCursoSeleccionado(curso);
+    caso === "Eliminar" && abrirCerrarModalEliminar();
+  };
+
+ 
+
+  ///////////////////
   useEffect(() => {
     axios
       .get("https://betaweb-back.herokuapp.com/api/curso")
@@ -80,15 +150,23 @@ function Lista() {
     return "";
   };
 
-  const modalStyles = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -90%)",
-    width: "22em",
-    height: "200px",
-  };
-
+  
+  const bodyEliminar = (
+    <div className={styles.modal} id="eliminar">
+      <p>
+        Estás seguro que deseas eliminar  el curso{" "}
+        <b>{cursoSeleccionado && cursoSeleccionado.nombre}</b> ?{" "}
+      </p>
+      <div align="right">
+        <Button id="si-no" onClick={() => peticionDelete()}>
+          SI
+        </Button>
+        <Button id="si-no" onClick={() => abrirCerrarModalEliminar()}>
+          NO
+        </Button>
+      </div>
+    </div>
+  );
   return (
     <>
       <div className="list-group">
@@ -112,6 +190,7 @@ function Lista() {
                     return (
                       <tr>
                         <td className="text-white">{element.nombre}</td>
+                       
                         <td>
                           <button
                             className="btn btn-lg"
@@ -125,17 +204,21 @@ function Lista() {
                           </button>
                           <button
                             className="btn btn-lg"
-                            onClick={() => {
-                              setAbrirModal(true);
-                            }}
+                            onClick={() => seleccionarCurso(element, "Editar")}
                           >
                             <i className="bi bi-pencil-fill celeste"></i>
                           </button>
-                          <button className="btn btn-lg" type="button">
+                          <button
+                            className="btn btn-lg"
+                            type="button"
+                            onClick={() =>
+                              seleccionarCurso(element, "Eliminar")
+                            }
+                          >
                             <i className="bi bi-trash-fill rojo"></i>
                           </button>
                         </td>
-                        <Miscursos curso={getCursosByid(element.id_curso)} />
+                        <Miscursos curso={getCursosByid(element.id_curso)}/>
                       </tr>
                     );
                   })}
@@ -145,56 +228,14 @@ function Lista() {
         </div>
       </div>
 
-      <Modal isOpen={abrirModal} style={modalStyles}>
-        <div className="contenedorModal">
-          <Form>
-            <ModalHeader id="tituloCrearCurso">
-              <a id="tituloModal"> Editar Curso </a>
-            </ModalHeader>
-            <ModalBody id="cuerpoCrearCurso">
-              <FormGroup className="position-relative">
-                <Label for="nombre">Nombre</Label>
-                <Input type="text" id="nombre" name="nombre" />
-              </FormGroup>
-              <FormGroup
-                id="contenedor-descripcion"
-                className="position-relative"
-              >
-                <Label for="detalle">Descripcion</Label>
-                <Input type="textarea" id="detalle" name="descripcion" />
-              </FormGroup>
-              <FormGroup
-                id="contenedor-descripcion"
-                className="position-relative"
-              >
-                <Label for="detalle">Ubicacion de la imagen</Label>
-                <Input type="text" id="ubicacion" name="ubicacion_img" />
-              </FormGroup>
-              <FormGroup
-                id="contenedor-descripcion"
-                className="position-relative"
-              >
-                <Label for="video">URL del video</Label>
-                <Input type="text" id="video" name="ubicacion_vid" />
-              </FormGroup>
-            </ModalBody>
-            <ModalFooter id="pieCrearCurso">
-              <Button
-                id="botonCrearCancelar"
-                onClick={() => {
-                  setAbrirModal(false);
-                }}
-              >
-                {" "}
-                Cancelar
-              </Button>
-              <Button type="submit" id="botonCrearAceptar">
-                {" "}
-                Guardar{" "}
-              </Button>
-            </ModalFooter>
-          </Form>
-        </div>
+
+
+ 
+
+
+
+      <Modal open={modalEliminar} onClose={abrirCerrarModalEliminar}>
+        {bodyEliminar}
       </Modal>
     </>
   );
