@@ -462,3 +462,13 @@ a:active {
 .celeste {
   color: #09f6ff;
 }
+#eliminar {
+  color: white;
+  background-color: #5b7bb8;
+  border: #dcedff;
+}
+#si-no {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+}
