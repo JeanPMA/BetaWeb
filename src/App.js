@@ -14,6 +14,8 @@ import VistaLista from "./misCursosinst/VistaLista";
 import NavegacionCursos from "./components/NavegacionCursos";
 import Estudiante from "./pages/Estudiante";
 import VistaListaEstudiantes from "./misCursosEstudiante/VistaListaEstudiantes";
+import NavegacionEstudiante from "./components/NavegacionEstudiante";
+import ListaCursosParaEstudiantes from "./CursosEstudiante/ListaCursosParaEstudiante";
 
 class App extends Component {
   render() {
@@ -48,6 +50,10 @@ class App extends Component {
             </Route>
             <Route path="/VistaEstudiante">
               <VistaListaEstudiantes />
+            </Route>
+            <Route path="/cursosDisponibles">
+              <NavegacionEstudiante />
+              <ListaCursosParaEstudiantes />
             </Route>
           </Switch>
         </div>
