@@ -64,6 +64,7 @@ function Lista() {
         });
         setData(dataNueva);
         setModalEditar(false);
+
         window.location.href = "/VistaInstructor";
       });
   };
@@ -167,7 +168,16 @@ function Lista() {
                   getInstructorByid().cursos?.map((element) => {
                     return (
                       <tr>
-                        <td className="text-white">{element.nombre}</td>
+                        <td className="text-white ">{element.nombre}</td>
+                        <td className="text-white ocultar">
+                          {element.descripcion}
+                        </td>
+                        <td className="text-white ocultar">
+                          {element.ubicacion_img}
+                        </td>
+                        <td className="text-white ocultar">
+                          {element.ubicacion_vid}
+                        </td>
 
                         <td>
                           <button

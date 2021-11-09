@@ -12,3 +12,9 @@
   color: white;
   border: 20px white;
 }
+.ocultar {
+  display: none;
+}
+#detalle {
+  min-height: 100px;
+}
