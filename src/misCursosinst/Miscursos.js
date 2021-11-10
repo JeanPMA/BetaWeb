@@ -22,12 +22,7 @@ function Miscursos(props) {
                   </div>
                 </div>   
                  </div>
-              <div className="row">
-                <div className="col-md-4">
-                  <label className="col-form-label text-white" id="fondoletra">7 Estudiantes</label>
-                  <h5 className="text-white">Fecha de Publicacion: 1/10/2021</h5>
-                </div>
-              </div>
+            
             </div>
           </div>
           <div className="d-grid gap-2 col-4 mx-auto">
