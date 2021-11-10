@@ -116,7 +116,7 @@ class boton_misCursosDocente extends Component {
         </div>
 
         <Modal isOpen={this.state.abierto} style={modalStyles}>
-          <div className="contenedorModal">
+          <div className="contenedorModal  border-top border-start border-end border-bottom border-white">
             <Form onSubmit={this.enviarAlaBD}>
               <ModalHeader id="tituloCrearCurso">
                 <a id="tituloModal"> Nuevo curso </a>

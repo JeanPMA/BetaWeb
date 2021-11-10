@@ -217,7 +217,10 @@ function Lista() {
       </div>
 
       <Modal isOpen={modalEditar} style={modalStyles}>
-        <div className="contenedorModal">
+        <div
+          className="contenedorModal"
+          className=" border-top border-start border-end border-bottom border-white"
+        >
           <Form>
             <ModalHeader id="tituloCrearCurso">
               <a id="tituloModal"> Editar curso </a>
@@ -287,7 +290,7 @@ function Lista() {
                 onClick={() => editar()}
               >
                 {" "}
-                Guardar{" "}
+                Modificar{" "}
               </Button>
             </ModalFooter>
           </Form>
@@ -295,20 +298,28 @@ function Lista() {
       </Modal>
 
       <Modal isOpen={modalEliminar} style={modalStyles}>
+        <ModalHeader id="tituloCrearCurso">
+          <a id="tituloModal"> Eliminar curso </a>
+        </ModalHeader>
         <ModalBody id="modal-eliminar">
           Estás Seguro que deseas eliminar el curso:{" "}
           <b>{cursoSeleccionado && cursoSeleccionado.nombre}</b>
         </ModalBody>
         <ModalFooter id="modal-eliminar">
-          <button className="btn btn-danger" onClick={() => eliminar()}>
-            SI
-          </button>
-          <button
-            className="btn btn-secondary"
+          <Button
+            className="btn btn-primary"
+            id="botonCrearAceptar"
             onClick={() => setModalEliminar(false)}
           >
-            NO
-          </button>
+            Cancelar
+          </Button>
+          <Button
+            className="btn btn-primary"
+            id="botonCrearAceptar"
+            onClick={() => eliminar()}
+          >
+            Confirmar
+          </Button>
         </ModalFooter>
       </Modal>
     </>

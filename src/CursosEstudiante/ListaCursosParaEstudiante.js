@@ -53,8 +53,8 @@ function ListaCursosParaEstudiantes() {
   }, []);
 
   return (
-    <div>
-      <div>
+    <div className="margen-cursos">
+      <div className="margen-buscador">
         <input
           class="buscador"
           type="search"

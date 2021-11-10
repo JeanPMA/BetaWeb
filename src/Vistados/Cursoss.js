@@ -6,7 +6,10 @@ const Cursoss = ({ cursos = [] }) => {
   return (
     <div>
       {cursos.map((item) => (
-        <div className="p-2 text-white overflow" id="cursos">
+        <div
+          className="p-2 text-white overflow  border-top border-start border-end border-bottom border-white"
+          id="cursos"
+        >
           <a href="#">
             <img
               src={item.ubicacion_img}
