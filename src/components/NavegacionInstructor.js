@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import ImagenUsuario from "../assets/usuario.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,6 +7,7 @@ import { faPlayCircle } from "@fortawesome/free-regular-svg-icons";
 import { faSquare } from "@fortawesome/free-regular-svg-icons";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Cookies from "universal-cookie";
+import { render } from "@testing-library/react";
 
 const cookies = new Cookies();
 
@@ -30,6 +31,8 @@ function NavegacionInstructor() {
                 alt=""
               />
             </a>
+            
+            
           </div>
         </nav>
       </div>
@@ -73,6 +76,8 @@ function NavegacionInstructor() {
                   </div>
                   <span>Mis Cursos</span>
                 </Link>
+
+                
               </div>
             </div>
           </nav>
@@ -80,9 +85,11 @@ function NavegacionInstructor() {
         <label for="boton-menu" className="icon-equis">
           <FontAwesomeIcon icon={faTimes} />
         </label>
+        
       </div>
     </div>
   );
+  
 }
 
 export default NavegacionInstructor;

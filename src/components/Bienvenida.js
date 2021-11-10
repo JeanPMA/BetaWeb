@@ -13,13 +13,20 @@ class Bienvenida extends Component {
     cookies.remove('email', {path: "/"});
     cookies.remove('username', {path: "/"});
     cookies.remove('id_instructor', {path: "/"});
+    cookies.remove('estudiante', {path: "/"});
     window.location.href='./';
   }
   componentDidMount(){
     if(!cookies.get('username')){
         window.location.href="./";
+    }else{
+      if(!cookies.get('id_instructor')){
+        window.location.href="./estudiante";
+        
+    }
     }
   }
+  
   render() {
       console.log('id_usuario' + cookies.get('id_usuario'));
       console.log('nombre' + cookies.get('nombre'));
@@ -30,14 +37,12 @@ class Bienvenida extends Component {
       console.log('username' + cookies.get('username'));
       console.log('passwd' + cookies.get('passwd'));
       console.log('id_instructor' + cookies.get('id_instructor'));
-
+      console.log('estudiante' + cookies.get('estudiante'));
   return (
     
     <div>
       <h3>Bienvenido {cookies.get('nombre')} {cookies.get('apellido_paterno')} {cookies.get('apellido_materno')}</h3>
-      <div>
       <button id="Boton_cerrar" onClick={()=>this.cerrarSesion()}>Cerrar sesión</button>
-      </div>
     </div>
         
   );
