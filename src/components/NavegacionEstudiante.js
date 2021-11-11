@@ -10,7 +10,7 @@ import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
 
-class NavegacionEstudiante extends Component() {
+class NavegacionEstudiante extends Component {
   render() {
     return (
       <div>
