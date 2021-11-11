@@ -101,7 +101,7 @@ a:active {
   cursor: pointer;
 }
 .logo-betasoft {
-  margin-right: 1240px;
+  margin-right: 1px;
 }
 
 #Boton_cerrar {
@@ -111,7 +111,7 @@ a:active {
   height: 38px;
   width: 150px;
   padding-top: none;
-  margin-left: 800px;
+  margin-left: 1050px;
   border-style: hidden;
   margin-right: 40px;
   margin-top: none;
