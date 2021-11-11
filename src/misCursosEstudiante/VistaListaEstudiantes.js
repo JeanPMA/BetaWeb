@@ -17,7 +17,7 @@ function VistaListaEstudiantes() {
           </div>
           <div className="lista">
             <ListaEstudiantes />
-            <MisCursos />
+           
           </div>
         </div>
       </div>
