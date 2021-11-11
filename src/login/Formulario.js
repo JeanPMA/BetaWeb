@@ -61,8 +61,10 @@ class Formulario extends Component {
                 `Bienvenido ${respuesta.username}`
               );
               if (respuesta.instructor==null){
+                cookies.set("instructor", respuesta.instructor, { path: "/" }); 
                 cookies.set("id_estudiante", respuesta.estudiante.id_estudiante, {path: "/",});
                 cookies.set("nombre_completo", respuesta.estudiante.nombre_completo, { path: "/" }); 
+                
               window.location.href = "../estudiante";
               break;
               
@@ -71,7 +73,7 @@ class Formulario extends Component {
                 cookies.set("nombre", respuesta.instructor.nombre, { path: "/" });
                 cookies.set("apellido_paterno", respuesta.instructor.apellido_paterno,{ path: "/" });
                 cookies.set("apellido_materno",respuesta.instructor.apellido_materno,{ path: "/" });
-                
+                cookies.set("estudiante", respuesta.estudiante, {path: "/",});
                 window.location.href = "../instructor";
                 break;
               }
@@ -88,10 +90,20 @@ class Formulario extends Component {
   };
 
   componentDidMount() {
-    if (cookies.get("username")) {
+    if (cookies.get("username") && (cookies.get('estudiante'))=="null"){
       
      
       window.location.href = "../instructor";
+    }
+     
+    
+  }
+
+  componentDidMount() {
+    if (cookies.get("username") && (!cookies.get('instructor'))=='null') {
+      
+     
+      window.location.href = "../estudiante";
     }
      
     
