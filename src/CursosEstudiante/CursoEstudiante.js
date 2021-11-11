@@ -1,13 +1,13 @@
 import React from "react";
 import imagenCurso from "../assets/imagenCurso.jpg";
-import "./Cursoss.css";
+//import "./Cursoss.css";
 
-const Cursoss = ({ cursos = [] }) => {
+const CursoEstudiante = ({ cursos = [] }) => {
   return (
     <div>
       {cursos.map((item) => (
         <div
-          className="p-2 text-white overflow  border-top border-start border-end border-bottom border-white"
+          className="p-2 text-white overflow border-top border-start border-end border-bottom border-white"
           id="cursos"
         >
           <a href="#">
@@ -19,7 +19,7 @@ const Cursoss = ({ cursos = [] }) => {
               className=" alin border-top border-start border-end border-bottom border-white"
             />
           </a>
-          <div className=" card-body style ">
+          <div className=" card-body style">
             <h4 id="instructor-nombre" className="card-title">
               {item.instructor.nombre}
             </h4>
@@ -43,4 +43,4 @@ const Cursoss = ({ cursos = [] }) => {
   );
 };
 
-export default Cursoss;
+export default CursoEstudiante;

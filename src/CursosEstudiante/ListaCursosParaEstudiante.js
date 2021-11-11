@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Cursoss from "./Cursoss";
+import CursoEstudiante from "../CursosEstudiante/CursoEstudiante";
 import logoLupa from "../imagenes/logoLupa.png";
 import axios from "axios";
 
-function Vista() {
+function ListaCursosParaEstudiantes() {
   const [cursos, setCursos] = useState([]);
 
   const fetchCursos = () => {
@@ -53,8 +53,8 @@ function Vista() {
   }, []);
 
   return (
-    <div>
-      <div>
+    <div className="margen-cursos">
+      <div className="margen-buscador">
         <input
           class="buscador"
           type="search"
@@ -66,10 +66,10 @@ function Vista() {
         <img src={logoLupa} id="logo_lupa" width="30" height="30" />
       </div>
       <div className="container scroll-container" id="cursosRegistrados">
-        <Cursoss cursos={cursos} />
+        <CursoEstudiante cursos={cursos} />
       </div>
     </div>
   );
 }
 
-export default Vista;
+export default ListaCursosParaEstudiantes;

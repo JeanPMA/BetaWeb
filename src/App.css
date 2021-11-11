@@ -101,8 +101,22 @@ a:active {
   cursor: pointer;
 }
 .logo-betasoft {
-  margin-right: 49%;
+  margin-right: 1px;
 }
+
+#Boton_cerrar {
+  background-color: #0ecd67;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 150px;
+  padding-top: none;
+  margin-left: 1050px;
+  border-style: hidden;
+  margin-right: 40px;
+  margin-top: none;
+}
+
 #boton-menu {
   display: none;
 }
@@ -174,8 +188,6 @@ a:active {
   font-size: 25px;
   border-radius: 50px;
   transition: background-color 0.3s;
-  
-
 }
 .boton-inicio-instructor:hover {
   border: 1px solid white;
@@ -374,18 +386,7 @@ a:active {
   font-weight: bold;
 }
 
-#Boton_cerrar {
-  background-color: #0ecd67;
-  border-radius: 30px;
-  color: white;
-  height: 38px;
-  width: 150px;
-  padding-top: none;
-  margin-left: 800px;
-  border-style: hidden;
-  margin-right: 40px;
-  margin-top: none;
-}
+
 #instructor-nombre {
   font-size: 12px;
   display: inline-block;
@@ -460,4 +461,13 @@ a:active {
   padding-bottom: 30px;
   margin-bottom: 40px;
   border-radius: 35px 35px;
+}
+.celeste {
+  color: #09f6ff;
+}
+.margen-cursos {
+  margin-left: 99px;
+}
+.margen-buscador {
+  margin-left: 10px;
 }
