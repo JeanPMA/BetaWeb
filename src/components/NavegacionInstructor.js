@@ -52,7 +52,7 @@ class NavegacionInstructor extends Component {
                   class="d-inline-block align-top"
                   alt=""
                 />
-                <button id="Boton_cerrar" onClick={()=>this.cerrarSesion()}>Cerrar sesión</button>
+                <button id="Boton_cerrar" className="btn " type="button" onClick={()=>this.cerrarSesion()}>Cerrar sesión</button>
               </a>
             </div>
           </nav>

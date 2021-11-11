@@ -11,7 +11,21 @@ import Cookies from "universal-cookie";
 const cookies = new Cookies();
 
 class NavegacionEstudiante extends Component {
+  cerrarSesion=()=>{
+    cookies.remove('id_usuario', {path: "/"});
+    cookies.remove('nombre_completo', {path: "/"});
+    cookies.remove('id_estudiante', {path: "/"});
+    cookies.remove('username', {path: "/"});
+    cookies.remove('instructor', {path: "/"});
+    window.location.href='./';
+  }
   render() {
+    console.log('id_usuario' + cookies.get('id_usuario'));
+    console.log('nombre_completo' + cookies.get('nombre_completo'));
+    console.log('username' + cookies.get('username'));
+    console.log('passwd' + cookies.get('passwd'));
+    console.log('id_estudiante' + cookies.get('id_estudiante'));
+    console.log('instructor' + cookies.get('instructor'));
     return (
       <div>
         <div>
@@ -30,8 +44,10 @@ class NavegacionEstudiante extends Component {
                   class="d-inline-block align-top"
                   alt=""
                 />
+                <button id="Boton_cerrar" className="btn " type="button" onClick={()=>this.cerrarSesion()}>Cerrar sesión</button>
               </a>
             </div>
+
           </nav>
         </div>
         <input type="checkbox" id="boton-menu" />

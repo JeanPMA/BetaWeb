@@ -99,9 +99,11 @@ a:active {
   margin-left: 20px;
   font-size: 20px;
   cursor: pointer;
+  margin-bottom: 5px;
 }
 .logo-betasoft {
   margin-right: 1px;
+  
 }
 
 #Boton_cerrar {
@@ -111,10 +113,12 @@ a:active {
   height: 38px;
   width: 150px;
   padding-top: none;
-  margin-left: 1050px;
+  margin-left: 1090px;
   border-style: hidden;
   margin-right: 40px;
   margin-top: none;
+  text-align: center;
+  
 }
 
 #boton-menu {
