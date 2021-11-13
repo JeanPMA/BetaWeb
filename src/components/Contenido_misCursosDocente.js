@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import cursoServices from "./cursoServices";
 import {
   Button,
   Modal,
@@ -230,7 +229,7 @@ class boton_misCursosDocente extends Component {
     const res = await curso.create(this.state);
     if (res.success) {
       window.location.href = window.location.href;
-      alert(res.message);
+      alert("Curso Registrado");
     } else {
       alert("Error ==>" + res.message.message);
     }
