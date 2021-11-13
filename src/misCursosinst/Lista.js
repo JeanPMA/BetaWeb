@@ -68,7 +68,7 @@ function Lista() {
         window.location.href = "/VistaInstructor";
       });
   };
-
+  /////
   const eliminar = async () => {
     await axios
       .delete(baseUrl + cursoSeleccionado.id_curso)
