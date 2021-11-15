@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import ImagenUsuario from "../assets/usuario.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,8 +10,26 @@ import Cookies from "universal-cookie";
 
 const cookies = new Cookies();
 
-function NavegacionEstudiante
-() {
+class NavegacionEstudiante extends Component {
+  cerrarSesion=()=>{
+    cookies.remove('id_usuario', {path: "/"});
+    cookies.remove('nombre', {path: "/"});
+    cookies.remove('apellido_paterno', {path: "/"});
+    cookies.remove('apellido_materno', {path: "/"});
+    cookies.remove('id_estudiante', {path: "/"});
+    cookies.remove('username', {path: "/"});
+    cookies.remove('instructor', {path: "/"});
+    window.location.href='./';
+  }
+  render() {
+    console.log('id_usuario' + cookies.get('id_usuario'));
+    console.log('nombre' + cookies.get('nombre'));
+      console.log('apellido_paterno' + cookies.get('apellido_paterno'));
+      console.log('apellido_materno' + cookies.get('apellido_materno'));
+    console.log('username' + cookies.get('username'));
+    console.log('passwd' + cookies.get('passwd'));
+    console.log('id_estudiante' + cookies.get('id_estudiante'));
+    console.log('instructor' + cookies.get('instructor'));
     return (
       <div>
         <div>
@@ -19,7 +37,7 @@ function NavegacionEstudiante
             <label for="boton-menu" className="icono-menu">
               <FontAwesomeIcon icon={faBars} />
             </label>
-  
+
             <div className="logo-betasoft">
               <a class="navbar-brand" href="#" border-width="medium">
                 BETAWEB
@@ -30,8 +48,10 @@ function NavegacionEstudiante
                   class="d-inline-block align-top"
                   alt=""
                 />
+                <button id="Boton_cerrar" className="btn " type="button" onClick={()=>this.cerrarSesion()}>Cerrar sesión</button>
               </a>
             </div>
+
           </nav>
         </div>
         <input type="checkbox" id="boton-menu" />
@@ -44,47 +64,48 @@ function NavegacionEstudiante
                   alt="foto de perfil"
                   className="foto-usuario"
                 />
-                <h3 className="nombre-usuario">Estudiante</h3>
+                <h3 className="nombre-usuario">
+                  {cookies.get("nombre")} {cookies.get("apellido_paterno")}{" "}
+                  {cookies.get("apellido_materno")}
+                </h3>
               </div>
               <div className="menu-instructor">
                 <h2 className="texto-menu">Menú</h2>
                 <div className="botones-menu-instructor">
-                  
-                     <Link
-                        to="/estudiante"
-                        type="button"
-                         className="boton-inicio-instructor text-white">
-                          <div className="icono-inicio-cursos-instructor">
-                            <FontAwesomeIcon icon={faHome} />
-                          </div>
-                        <span>Inicio</span>
-                     </Link>
-  
-                     <Link
-                     to="/VistaEstudiante"
-                     type="button"
-                    type="button"
-                    className="boton-cursos-instructor  text-white"
-                  >
-                    <div className="icono-inicio-cursos-instructor icono-boton-instructor">
-                      <FontAwesomeIcon icon={faPlayCircle} />{" "}
-                    </div>
-                <span>Mis Cursos</span>
-                  </Link>
-  
                   <Link
-                     to="/estudiante"
-                     type="button"
+                    to="/estudiante"
+                    type="button"
+                    className="boton-inicio-instructor text-white"
+                  >
+                    <div className="icono-inicio-cursos-instructor">
+                      <FontAwesomeIcon icon={faHome} />
+                    </div>
+                    <span>Inicio</span>
+                  </Link>
+
+                  <Link
+                    to="/VistaEstudiante"
+                    type="button"
                     type="button"
                     className="boton-cursos-instructor  text-white"
                   >
                     <div className="icono-inicio-cursos-instructor icono-boton-instructor">
                       <FontAwesomeIcon icon={faPlayCircle} />{" "}
                     </div>
-                <span>Cursos</span>
+                    <span>Mis Cursos</span>
                   </Link>
-      
-  
+
+                  <Link
+                    to="/cursosDisponibles"
+                    type="button"
+                    type="button"
+                    className="boton-cursos-instructor  text-white"
+                  >
+                    <div className="icono-inicio-cursos-instructor icono-boton-instructor">
+                      <FontAwesomeIcon icon={faPlayCircle} />{" "}
+                    </div>
+                    <span>Cursos</span>
+                  </Link>
                 </div>
               </div>
             </nav>
@@ -96,5 +117,5 @@ function NavegacionEstudiante
       </div>
     );
   }
-
+}
 export default NavegacionEstudiante;

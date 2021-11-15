@@ -1,68 +1,114 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Vista.css";
+import axios from "axios";
+import Miscursos from "./MisCursos";
+
+const baseUrl = "https://betaweb-back.herokuapp.com/api/inscritos/";
+
+function Lista()  {
+  
+    const [estudiantes, setEstudiantes] = useState([]);
+  const [cursos, setCursos] = useState([]);
 
 
 
-const Lista = () => {
+  
+  ///////////////////////////////////
+  useEffect(() => {
+    axios
+      .get("https://betaweb-back.herokuapp.com/api/inscritos")
+      .then((response) => {
+        setCursos(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+  useEffect(() => {
+    axios
+      .get("https://betaweb-back.herokuapp.com/api/estudiantes")
+      .then((response) => {
+        setEstudiantes(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+  
+  
+  const getEstudianteByid = () => {
+    const idEstudiante = parseInt(getCookies("id_estudiante"));
+    let est = {};
+    estudiantes.forEach((ins) => {
+      if (ins.id_estudiante === idEstudiante) {
+        est = ins;
+      }
+    });
+    return est;
+  };
+
+  const getCookies = (cname) => {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(";");
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == " ") {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  };
+ 
+
   return (
-    <div className="list-group ">
-      <div className="col-md-6 col align-self-center">
-        <div className="container">
-          <div className="row">
-            <div className="col-9 text-warning">
-              <h3>Mis Cursos</h3>
-            </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <div className="col-9 text-white">
-              {" "}
-              <h4>Nombre</h4>
-            </div>
-            
+    <>
+      <div className="list-group">
+        <div className="col-md-6 col align-self-center">
+          <div className="container">
+            <h3 className="text-white">Mis cursos</h3>
+            <table className="table text-white">
+              <thead>
+                <tr>
+                  <th scope="col" className="text-white">
+                    Nombres
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {estudiantes.length > 0 &&
+                  getEstudianteByid().inscripciones?.map((element) => {
+                    
+                    return (
+                      <tr>
+                        <td className="text-white ">{element.curso.nombre}</td>
+                        <td className="text-white ocultar">
+                          {element.curso.escripcion}
+                        </td>
+                        <td className="text-white ocultar">
+                          {element.curso.ubicacion_img}
+                        </td>
+                        <td className="text-white ocultar">
+                          {element.curso.ubicacion_vid}
+                        </td>
+
+                       
+                      </tr>
+                       
+                    );
+                   
+                  })}
+              </tbody>
+            </table>
           </div>
         </div>
-        <a
-        
-          type="button"
-          className="list-group-item list-group-item-action bg-transparent border-bottom"
-        >
-          <div className="justify-content-between">
-            <h5 className="mb-1 text-white">Ia con PyThon</h5>
-          </div>
-          <div className="d-grid gap-2 d-md-flex justify-content-md-end">
-            
-          </div>
-        </a>
-        <a
-         
-          type="button"
-          className="list-group-item list-group-item-action bg-transparent border-bottom"
-        >
-          <div className=" justify-content-between">
-            <h5 className="mb-1 text-white">Ingenieria de Software</h5>
-          </div>
-          <div className="d-grid gap-2 d-md-flex justify-content-md-end">
-            
-            
-          </div>
-        </a>
-        <a
-          href="#"
-          className="list-group-item list-group-item-action bg-transparent border-bottom"
-        >
-          <div className=" justify-content-between">
-            <h5 className="mb-1 text-white">Redes neuronales</h5>
-          </div>
-          <div className=" gap-2 d-md-flex justify-content-md-end bg-transparent">
-            
-            
-          </div>
-        </a>
       </div>
-    </div>
-  );
+      </>
+    )
+  
 };
 
 export default Lista;

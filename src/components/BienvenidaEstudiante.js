@@ -1,16 +1,28 @@
 import { render } from "@testing-library/react";
 import React, {Component} from "react";
-//import Cookies from "universal-cookie";
+import Cookies from "universal-cookie";
 
-//const cookies = new Cookies();
+const cookies = new Cookies();
 
 class BienvenidaEstudiante extends Component {
+ 
+  componentDidMount(){
+    if(!cookies.get('username')){
+        window.location.href="./";
+    }else{
+      if(!cookies.get('id_estudiante')){
+        window.location.href="./instructor";
+    }
+    }
+  }
+  
   render(){
+   
     return(
     <div>
-      <h3>Bienvenido Estudiante</h3>
+      <h3>Bienvenido {cookies.get('nombre')} {cookies.get('apellido_paterno')} {cookies.get('apellido_materno')}</h3>
       <div>
-      <button id="Boton_cerrar" >Cerrar sesión</button>
+      
       </div>
     </div>
         
