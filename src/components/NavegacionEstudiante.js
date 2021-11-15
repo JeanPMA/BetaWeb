@@ -13,7 +13,9 @@ const cookies = new Cookies();
 class NavegacionEstudiante extends Component {
   cerrarSesion=()=>{
     cookies.remove('id_usuario', {path: "/"});
-    cookies.remove('nombre_completo', {path: "/"});
+    cookies.remove('nombre', {path: "/"});
+    cookies.remove('apellido_paterno', {path: "/"});
+    cookies.remove('apellido_materno', {path: "/"});
     cookies.remove('id_estudiante', {path: "/"});
     cookies.remove('username', {path: "/"});
     cookies.remove('instructor', {path: "/"});
@@ -21,7 +23,9 @@ class NavegacionEstudiante extends Component {
   }
   render() {
     console.log('id_usuario' + cookies.get('id_usuario'));
-    console.log('nombre_completo' + cookies.get('nombre_completo'));
+    console.log('nombre' + cookies.get('nombre'));
+      console.log('apellido_paterno' + cookies.get('apellido_paterno'));
+      console.log('apellido_materno' + cookies.get('apellido_materno'));
     console.log('username' + cookies.get('username'));
     console.log('passwd' + cookies.get('passwd'));
     console.log('id_estudiante' + cookies.get('id_estudiante'));
@@ -61,7 +65,8 @@ class NavegacionEstudiante extends Component {
                   className="foto-usuario"
                 />
                 <h3 className="nombre-usuario">
-                  {cookies.get("nombre_completo")}
+                  {cookies.get("nombre")} {cookies.get("apellido_paterno")}{" "}
+                  {cookies.get("apellido_materno")}
                 </h3>
               </div>
               <div className="menu-instructor">

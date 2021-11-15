@@ -6,7 +6,7 @@ import axios from "axios";
 import md5 from "md5";
 import Cookies from "universal-cookie";
 
-const baseUrl = "https://app-btawb.herokuapp.com/api/usuario";
+const baseUrl = "https://betaweb-back.herokuapp.com/api/usuario";
 
 const cookies = new Cookies();
 
@@ -57,13 +57,14 @@ class Formulario extends Component {
               
               
               
-              alert(
-                `Bienvenido ${respuesta.username}`
-              );
+              
               if (respuesta.instructor==null){
                 cookies.set("instructor", respuesta.instructor, { path: "/" }); 
                 cookies.set("id_estudiante", respuesta.estudiante.id_estudiante, {path: "/",});
-                cookies.set("nombre_completo", respuesta.estudiante.nombre_completo, { path: "/" }); 
+                cookies.set("nombre", respuesta.estudiante.nombre, { path: "/" });
+                cookies.set("apellido_paterno", respuesta.estudiante.apellido_paterno,{ path: "/" });
+                cookies.set("apellido_materno",respuesta.estudiante.apellido_materno,{ path: "/" });
+
                 
               window.location.href = "../estudiante";
               break;
