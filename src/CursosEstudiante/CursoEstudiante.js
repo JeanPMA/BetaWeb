@@ -1,8 +1,8 @@
-import React from "react";
-import imagenCurso from "../assets/imagenCurso.jpg";
-//import "./Cursoss.css";
+import React,{useState} from "react";
+import InscribirCurso from "./InscribirCurso";
 
 const CursoEstudiante = ({ cursos = [] }) => {
+  const [curso, setCurso] = useState({});
   return (
     <div>
       {cursos.map((item) => (
@@ -37,8 +37,19 @@ const CursoEstudiante = ({ cursos = [] }) => {
               <br />
             </p>
           </div>
+          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+          <button 
+          type="button" 
+          onClick={() => setCurso(item)} 
+          data-bs-toggle="modal"  
+          data-bs-target="#staticBackdrop" 
+          className="btn btn-outline-success">
+            Inscribirse
+            </button>
+          </div>
         </div>
       ))}
+         <InscribirCurso curso={curso}/>
     </div>
   );
 };
