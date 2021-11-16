@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import CursoEstudiante from "../CursosEstudiante/CursoEstudiante";
 import logoLupa from "../imagenes/logoLupa.png";
 import axios from "axios";
+import IncribirCurso from "../CursosEstudiante/InscribirCurso";
 
 function ListaCursosParaEstudiantes() {
   const [cursos, setCursos] = useState([]);
@@ -67,6 +68,7 @@ function ListaCursosParaEstudiantes() {
       </div>
       <div className="container scroll-container" id="cursosRegistrados">
         <CursoEstudiante cursos={cursos} />
+        <IncribirCurso/>
       </div>
     </div>
   );
