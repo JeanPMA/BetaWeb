@@ -231,7 +231,7 @@ class boton_misCursosDocente extends Component {
       window.location.href = window.location.href;
       alert("Curso Registrado");
     } else {
-      alert("Error al guardar curso");
+      alert("Error al guardar curso, verifica el formato de tus URL");
       window.location.href = window.location.href;
     }
   }
