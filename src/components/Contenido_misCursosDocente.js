@@ -165,7 +165,7 @@ class boton_misCursosDocente extends Component {
                 >
                   <Label for="detalle">Ubicacion de la imagen</Label>
                   <Input
-                    type="text"
+                    type="url"
                     id="ubicacion"
                     name="ubicacion_img"
                     value={this.state.ubicacion_img}
@@ -186,7 +186,7 @@ class boton_misCursosDocente extends Component {
                 >
                   <Label for="video">URL del video</Label>
                   <Input
-                    type="text"
+                    type="url"
                     id="video"
                     name="ubicacion_vid"
                     value={this.state.ubicacion_vid}
@@ -231,7 +231,8 @@ class boton_misCursosDocente extends Component {
       window.location.href = window.location.href;
       alert("Curso Registrado");
     } else {
-      alert("Error ==>" + res.message.message);
+      alert("Error al guardar curso");
+      window.location.href = window.location.href;
     }
   }
 }
