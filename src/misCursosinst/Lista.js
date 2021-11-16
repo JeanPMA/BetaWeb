@@ -229,6 +229,7 @@ function Lista() {
               <FormGroup className="position-relative">
                 <Label for="nombre">Nombre</Label>
                 <Input
+                  required
                   type="text"
                   id="nombre"
                   name="nombre"
@@ -242,6 +243,7 @@ function Lista() {
               >
                 <Label for="detalle">Descripcion</Label>
                 <Input
+                  required
                   type="textarea"
                   id="detalle"
                   name="descripcion"
@@ -255,7 +257,8 @@ function Lista() {
               >
                 <Label for="detalle">Ubicacion de la imagen</Label>
                 <Input
-                  type="text"
+                  required
+                  type="url"
                   id="ubicacion"
                   name="ubicacion_img"
                   value={cursoSeleccionado && cursoSeleccionado.ubicacion_img}
@@ -268,7 +271,8 @@ function Lista() {
               >
                 <Label for="video">URL del video</Label>
                 <Input
-                  type="text"
+                  required
+                  type="url"
                   id="video"
                   name="ubicacion_vid"
                   value={cursoSeleccionado && cursoSeleccionado.ubicacion_vid}
