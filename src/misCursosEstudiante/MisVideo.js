@@ -3,6 +3,11 @@ import "./Vista.css";
 import $ from "jquery";
 
 function MisVideo(props) {
+  $(".btn-close").on("click", () => {
+    $(".embed-responsive").remove();
+    window.location.href = window.location.href;
+  });
+
   const idVideo = props.curso.ubicacion_vid?.split("=")[1];
   return (
     // <div className="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
