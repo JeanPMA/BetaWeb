@@ -8,14 +8,14 @@ const Cursoss = ({ cursos = [] }) => {
     <div>
       {cursos.map((item) => (
         <div
-          className="p-2 text-white overflow  border-top border-start border-end border-bottom border-white"
+          className="p-2 text-white overflow  border-top border-start border-end border-bottom border-white -auto"
           id="cursos"
         >
           {" "}
           <a
             type="button"
             onClick={() => setCurso(item)}
-            className="vistaprevia"
+            className="vistaprevia m-auto "
             data-bs-toggle="modal"
             data-bs-target="#videoModal"
           >
@@ -27,7 +27,7 @@ const Cursoss = ({ cursos = [] }) => {
               className=" alin border-top border-start border-end border-bottom border-white"
             />
           </a>
-          <div className=" card-body style contenedor-datos-curso m-0 ">
+          <div className=" card-body style contenedor-datos-curso m-0 mt-2">
             <h4 id="instructor-nombre" className="card-title">
               {item.instructor.nombre}
             </h4>
