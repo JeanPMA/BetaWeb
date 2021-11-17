@@ -27,7 +27,7 @@ const Cursoss = ({ cursos = [] }) => {
               className=" alin border-top border-start border-end border-bottom border-white"
             />
           </a>
-          <div className=" card-body style contenedor-datos-curso ">
+          <div className=" card-body style contenedor-datos-curso m-0 ">
             <h4 id="instructor-nombre" className="card-title">
               {item.instructor.nombre}
             </h4>
