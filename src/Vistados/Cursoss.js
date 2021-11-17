@@ -11,6 +11,7 @@ const Cursoss = ({ cursos = [] }) => {
           className="p-2 text-white overflow  border-top border-start border-end border-bottom border-white"
           id="cursos"
         >
+          {" "}
           <a
             type="button"
             onClick={() => setCurso(item)}
@@ -26,7 +27,7 @@ const Cursoss = ({ cursos = [] }) => {
               className=" alin border-top border-start border-end border-bottom border-white"
             />
           </a>
-          <div className=" card-body style ">
+          <div className=" card-body style contenedor-datos-curso ">
             <h4 id="instructor-nombre" className="card-title">
               {item.instructor.nombre}
             </h4>
@@ -36,12 +37,14 @@ const Cursoss = ({ cursos = [] }) => {
             <h4 id="instructor-apellido-materno" className="card-title">
               {item.instructor.apellido_materno}
             </h4>
+            <br></br>
             <a
               type="button"
               onClick={() => setCurso(item)}
               className="vistaprevia"
               data-bs-toggle="modal"
               data-bs-target="#videoModal"
+              id="nombre-curso"
             >
               <p id="nombre-del-curso" className="card-text">
                 {item.nombre}

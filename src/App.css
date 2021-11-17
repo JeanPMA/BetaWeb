@@ -472,15 +472,21 @@ a:active {
 .margen-buscador {
   margin-left: 10px;
 }
-.vistaprevia {
-  display: block;
+#nombre-curso {
   text-decoration: none;
   color: white;
 }
-.vistaprevia :hover {
+#nombre-curso :hover {
   color: white;
 }
 .caracteres {
   text-align: end;
   font-size: 12px;
+}
+#cursos {
+  display: inline-flex;
+  width: 100%;
+}
+.contenedor-datos-curso {
+  margin: 0 0 0 0;
 }

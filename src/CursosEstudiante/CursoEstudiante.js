@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import InscribirCurso from "./InscribirCurso";
 import MisVideo from "../misCursosEstudiante/MisVideo";
+import "./InscribirCurso.css";
 
 const CursoEstudiante = ({ cursos = [] }) => {
   const [curso, setCurso] = useState({});
@@ -26,7 +27,7 @@ const CursoEstudiante = ({ cursos = [] }) => {
               className=" alin border-top border-start border-end border-bottom border-white"
             />
           </a>
-          <div className=" card-body style">
+          <div className=" card-body style m-0 ">
             <h4 id="instructor-nombre" className="card-title">
               {item.instructor.nombre}
             </h4>
@@ -42,6 +43,7 @@ const CursoEstudiante = ({ cursos = [] }) => {
               className="vistaprevia"
               data-bs-toggle="modal"
               data-bs-target="#videoModal"
+              id="nombre-curso"
             >
               {" "}
               <p id="nombre-del-curso" className="card-text">
@@ -60,7 +62,7 @@ const CursoEstudiante = ({ cursos = [] }) => {
               onClick={() => setCurso(item)}
               data-bs-toggle="modal"
               data-bs-target="#staticBackdrop"
-              className="btn btn-outline-success"
+              className="  btn btn-outline-success boton-inscribirse  "
             >
               Inscribirse
             </button>
