@@ -124,6 +124,7 @@ class boton_misCursosDocente extends Component {
                 <FormGroup className="position-relative">
                   <Label for="nombre">Nombre</Label>
                   <Input
+                    placeholder="Nombre del curso"
                     maxlength="70"
                     type="text"
                     id="nombre"
@@ -146,6 +147,7 @@ class boton_misCursosDocente extends Component {
                 >
                   <Label for="detalle">Descripcion</Label>
                   <Input
+                    placeholder="Descripcion del curso"
                     maxlength="300"
                     type="textarea"
                     id="detalle"
@@ -169,6 +171,7 @@ class boton_misCursosDocente extends Component {
                 >
                   <Label for="detalle">Ubicacion de la imagen</Label>
                   <Input
+                    placeholder="https://www.images.com/image.jpg"
                     type="url"
                     id="ubicacion"
                     name="ubicacion_img"
@@ -190,6 +193,7 @@ class boton_misCursosDocente extends Component {
                 >
                   <Label for="video">URL del video</Label>
                   <Input
+                    placeholder="https://www.youtube.com/watch?examplevideo"
                     type="url"
                     id="video"
                     name="ubicacion_vid"
