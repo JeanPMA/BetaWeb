@@ -158,9 +158,11 @@ function Lista() {
                   <th scope="col" className="text-white">
                     Nombres
                   </th>
-                  <th scope="col" className="text-white">
-                    Acciones
-                  </th>
+                  <div className="acciones">
+                    <th scope="col" className="text-white">
+                      Acciones
+                    </th>
+                  </div>
                 </tr>
               </thead>
               <tbody>
@@ -179,7 +181,7 @@ function Lista() {
                           {element.ubicacion_vid}
                         </td>
 
-                        <td>
+                        <td width="200">
                           <button
                             className="btn btn-lg"
                             data-bs-toggle="modal"
