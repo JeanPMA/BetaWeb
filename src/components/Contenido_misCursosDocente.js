@@ -106,7 +106,7 @@ class boton_misCursosDocente extends Component {
 
     return (
       <>
-        <div className="principal">
+        <div className="principal ">
           <div className="secundario">
             <Button id="boton_crearCursos" onClick={this.abrirModal}>
               Crear nuevo curso
@@ -114,7 +114,7 @@ class boton_misCursosDocente extends Component {
           </div>
         </div>
 
-        <Modal isOpen={this.state.abierto} style={modalStyles}>
+        <Modal isOpen={this.state.abierto} style={modalStyles} className="">
           <div className="contenedorModal  border-top border-start border-end border-bottom border-white">
             <Form onSubmit={this.enviarAlaBD}>
               <ModalHeader id="tituloCrearCurso">
@@ -124,6 +124,7 @@ class boton_misCursosDocente extends Component {
                 <FormGroup className="position-relative">
                   <Label for="nombre">Nombre</Label>
                   <Input
+                    maxlength="70"
                     type="text"
                     id="nombre"
                     name="nombre"
@@ -134,6 +135,7 @@ class boton_misCursosDocente extends Component {
                     }
                     invalid={this.state.invalidNombre}
                   />
+                  <p className="caracteres">Caract. Max. 70</p>
                   <FormFeedback tooltip>
                     {this.state.mensajeNombre}
                   </FormFeedback>
@@ -144,6 +146,7 @@ class boton_misCursosDocente extends Component {
                 >
                   <Label for="detalle">Descripcion</Label>
                   <Input
+                    maxlength="300"
                     type="textarea"
                     id="detalle"
                     name="descripcion"
@@ -155,6 +158,7 @@ class boton_misCursosDocente extends Component {
                     }
                     invalid={this.state.invalidDetalles}
                   />
+                  <p className="caracteres">Caract. Max. 300</p>
                   <FormFeedback tooltip>
                     {this.state.mensajeDetalles}
                   </FormFeedback>

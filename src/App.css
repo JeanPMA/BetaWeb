@@ -103,7 +103,6 @@ a:active {
 }
 .logo-betasoft {
   margin-right: 110px;
-  
 }
 
 #Boton_cerrar {
@@ -118,7 +117,6 @@ a:active {
   margin-right: 40px;
   margin-top: none;
   text-align: center;
-  
 }
 
 #boton-menu {
@@ -390,7 +388,6 @@ a:active {
   font-weight: bold;
 }
 
-
 #instructor-nombre {
   font-size: 12px;
   display: inline-block;
@@ -474,4 +471,16 @@ a:active {
 }
 .margen-buscador {
   margin-left: 10px;
+}
+.vistaprevia {
+  display: block;
+  text-decoration: none;
+  color: white;
+}
+.vistaprevia :hover {
+  color: white;
+}
+.caracteres {
+  text-align: end;
+  font-size: 12px;
 }

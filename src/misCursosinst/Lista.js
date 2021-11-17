@@ -229,6 +229,7 @@ function Lista() {
               <FormGroup className="position-relative">
                 <Label for="nombre">Nombre</Label>
                 <Input
+                  maxLength="70"
                   required
                   type="text"
                   id="nombre"
@@ -236,6 +237,7 @@ function Lista() {
                   value={cursoSeleccionado && cursoSeleccionado.nombre}
                   onChange={handleChange}
                 />
+                <p className="caracteres">Caract. Max. 70</p>
               </FormGroup>
               <FormGroup
                 id="contenedor-descripcion"
@@ -243,6 +245,7 @@ function Lista() {
               >
                 <Label for="detalle">Descripcion</Label>
                 <Input
+                  maxLength="300"
                   required
                   type="textarea"
                   id="detalle"
@@ -250,6 +253,7 @@ function Lista() {
                   value={cursoSeleccionado && cursoSeleccionado.descripcion}
                   onChange={handleChange}
                 />
+                <p className="caracteres">Caract. Max. 300</p>
               </FormGroup>
               <FormGroup
                 id="contenedor-descripcion"
