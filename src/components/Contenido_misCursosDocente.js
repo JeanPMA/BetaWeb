@@ -169,7 +169,7 @@ class boton_misCursosDocente extends Component {
                   id="contenedor-descripcion"
                   className="position-relative"
                 >
-                  <Label for="detalle">Ubicacion de la imagen</Label>
+                  <Label for="detalle">URL de la imagen</Label>
                   <Input
                     placeholder="https://www.images.com/image.jpg"
                     type="url"

@@ -261,7 +261,7 @@ function Lista() {
                 id="contenedor-descripcion"
                 className="position-relative"
               >
-                <Label for="detalle">Ubicacion de la imagen</Label>
+                <Label for="detalle">URL de la imagen</Label>
                 <Input
                   required
                   type="url"
