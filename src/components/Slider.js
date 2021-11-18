@@ -352,7 +352,7 @@ const Slider = () => {
           </div>
         </div>
       </div>
-      <div id="popup" class="overlay">
+      <div id="popup8" class="overlay">
         <div id="popupBody">
           <a id="cerrar" href="/">
             &times;
