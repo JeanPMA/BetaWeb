@@ -1,8 +1,20 @@
 import React from "react";
 import "./Vista.css";
+<<<<<<< HEAD
 
 function MisVideo(props) {
   const idVideo = props.curso.ubicacion_vid?.split("=")[1]
+=======
+import $ from "jquery";
+
+function MisVideo(props) {
+  $(".btn-close").on("click", () => {
+    $(".embed-responsive").remove();
+    window.location.href = window.location.href;
+  });
+
+  const idVideo = props.curso.ubicacion_vid?.split("=")[1];
+>>>>>>> 0d1b9bb1d5f4570851956652781e6ac324d633df
   return (
     // <div className="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     //   <div className="modal-fullscreen">
@@ -20,6 +32,7 @@ function MisVideo(props) {
     //     </div>
     //   </div>
     // </div>
+<<<<<<< HEAD
     <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg">
     <div class="modal-content color">
@@ -40,3 +53,46 @@ function MisVideo(props) {
 }
 
 export default MisVideo;
+=======
+
+    <>
+      <div
+        class="modal fade"
+        id="videoModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content color">
+            <div class="modal-header">
+              <h5 class="modal-title text-white" id="exampleModalLabel">
+                {props.curso.nombre}
+              </h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div className="embed-responsive embed-responsive-16by9">
+                <iframe
+                  className="embed-responsive-item"
+                  width="750px"
+                  height="700px"
+                  src={"https://www.youtube.com/embed/" + idVideo}
+                  allowfullscreen="true"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default MisVideo;
+>>>>>>> 0d1b9bb1d5f4570851956652781e6ac324d633df

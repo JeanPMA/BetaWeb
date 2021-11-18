@@ -158,9 +158,11 @@ function Lista() {
                   <th scope="col" className="text-white">
                     Nombres
                   </th>
-                  <th scope="col" className="text-white">
-                    Acciones
-                  </th>
+                  <div className="acciones">
+                    <th scope="col" className="text-white">
+                      Acciones
+                    </th>
+                  </div>
                 </tr>
               </thead>
               <tbody>
@@ -179,7 +181,7 @@ function Lista() {
                           {element.ubicacion_vid}
                         </td>
 
-                        <td>
+                        <td width="200">
                           <button
                             className="btn btn-lg"
                             data-bs-toggle="modal"
@@ -229,12 +231,15 @@ function Lista() {
               <FormGroup className="position-relative">
                 <Label for="nombre">Nombre</Label>
                 <Input
+                  maxLength="70"
+                  required
                   type="text"
                   id="nombre"
                   name="nombre"
                   value={cursoSeleccionado && cursoSeleccionado.nombre}
                   onChange={handleChange}
                 />
+                <p className="caracteres">Caract. Max. 70</p>
               </FormGroup>
               <FormGroup
                 id="contenedor-descripcion"
@@ -242,20 +247,24 @@ function Lista() {
               >
                 <Label for="detalle">Descripcion</Label>
                 <Input
+                  maxLength="300"
+                  required
                   type="textarea"
                   id="detalle"
                   name="descripcion"
                   value={cursoSeleccionado && cursoSeleccionado.descripcion}
                   onChange={handleChange}
                 />
+                <p className="caracteres">Caract. Max. 300</p>
               </FormGroup>
               <FormGroup
                 id="contenedor-descripcion"
                 className="position-relative"
               >
-                <Label for="detalle">Ubicacion de la imagen</Label>
+                <Label for="detalle">URL de la imagen</Label>
                 <Input
-                  type="text"
+                  required
+                  type="url"
                   id="ubicacion"
                   name="ubicacion_img"
                   value={cursoSeleccionado && cursoSeleccionado.ubicacion_img}
@@ -268,7 +277,8 @@ function Lista() {
               >
                 <Label for="video">URL del video</Label>
                 <Input
-                  type="text"
+                  required
+                  type="url"
                   id="video"
                   name="ubicacion_vid"
                   value={cursoSeleccionado && cursoSeleccionado.ubicacion_vid}

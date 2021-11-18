@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Vista.css";
 import axios from "axios";
 import MisVideo from "./MisVideo";
+<<<<<<< HEAD
 
 
 
@@ -40,6 +41,39 @@ function ListaEstudiante()  {
 
  
  
+=======
+
+const baseUrl = "https://betaweb-back.herokuapp.com/api/inscritos/";
+
+function ListaEstudiante() {
+  const [cursos, setCursos] = useState([]);
+  const [curso, setCurso] = useState({});
+  let inscritos = [];
+
+  ///////////////////////////////////
+  useEffect(() => {
+    if (cursos.length === 0) {
+      axios
+        .get("https://betaweb-back.herokuapp.com/api/inscritos")
+        .then((response) => {
+          inscritos = response.data;
+          setCursos(
+            inscritos.map((element) => {
+              if (
+                element.estudiante?.id_estudiante ===
+                parseInt(getCookies("id_estudiante"))
+              ) {
+                return element.curso;
+              }
+            })
+          );
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  }, []);
+>>>>>>> 0d1b9bb1d5f4570851956652781e6ac324d633df
 
   const getCookies = (cname) => {
     var name = cname + "=";
@@ -72,7 +106,12 @@ function ListaEstudiante()  {
               </thead>
               <tbody>
                 {cursos.map((element) => {
+<<<<<<< HEAD
                     return ( element &&
+=======
+                  return (
+                    element && (
+>>>>>>> 0d1b9bb1d5f4570851956652781e6ac324d633df
                       <tr>
                         <td className="text-white ">{element.nombre}</td>
                         <td className="text-white ocultar">
@@ -85,6 +124,7 @@ function ListaEstudiante()  {
                           {element.ubicacion_vid}
                         </td>
                         <td>
+<<<<<<< HEAD
                         <button
                         type="button" 
                        onClick={()=> setCurso(element)}
@@ -105,12 +145,30 @@ function ListaEstudiante()  {
               </tbody>
             </table>
             <MisVideo curso= {curso}/>
+=======
+                          <button
+                            type="button"
+                            onClick={() => setCurso(element)}
+                            className="btn btn-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#videoModal"
+                          >
+                            <i className="bi bi-play-btn-fill"></i>
+                          </button>
+                        </td>
+                      </tr>
+                    )
+                  );
+                })}
+              </tbody>
+            </table>
+            <MisVideo curso={curso} />
+>>>>>>> 0d1b9bb1d5f4570851956652781e6ac324d633df
           </div>
         </div>
       </div>
-      </>
-    )
-  
-};
+    </>
+  );
+}
 
 export default ListaEstudiante;
