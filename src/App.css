@@ -505,7 +505,7 @@ a:active {
 }
 #popupBody {
   width: 50%;
-  height: 80%;
+  height: 525px;
   padding: 1%;
   border-radius: 5px;
   box-shadow: 0 0 5px #ccc;
@@ -527,6 +527,7 @@ a:active {
 }
 .titulo-inicio {
   color: white;
+  font-size: 20px;
 }
 .popupContent {
   padding-top: 15px;

@@ -184,7 +184,7 @@ const Slider = () => {
             >
               <iframe
                 width="100%"
-                height="680px"
+                height="450px"
                 src="https://www.youtube.com/embed/zIY87vU33aA"
                 title="YouTube video player"
                 frameborder="0"
@@ -211,7 +211,7 @@ const Slider = () => {
             >
               <iframe
                 width="100%"
-                height="680px"
+                height="450px"
                 src="https://www.youtube.com/embed/z95mZVUcJ-E"
                 title="YouTube video player"
                 frameborder="0"
@@ -236,7 +236,7 @@ const Slider = () => {
             >
               <iframe
                 width="100%"
-                height="680px"
+                height="450px"
                 src="https://www.youtube.com/embed/chPhlsHoEPo"
                 title="YouTube video player"
                 frameborder="0"
@@ -263,7 +263,7 @@ const Slider = () => {
             >
               <iframe
                 width="100%"
-                height="680px"
+                height="450px"
                 src="https://www.youtube.com/embed/BhvLIzVL8_o"
                 title="YouTube video player"
                 frameborder="0"
@@ -288,7 +288,7 @@ const Slider = () => {
             >
               <iframe
                 width="100%"
-                height="680px"
+                height="450px"
                 src="https://www.youtube.com/embed/gBfXjjhsl-o"
                 title="YouTube video player"
                 frameborder="0"
@@ -313,7 +313,7 @@ const Slider = () => {
             >
               <iframe
                 width="100%"
-                height="680px"
+                height="450px"
                 src="https://www.youtube.com/embed/wSqBnj7fC8Q"
                 title="YouTube video player"
                 frameborder="0"
@@ -330,8 +330,7 @@ const Slider = () => {
             &times;
           </a>
           <h2 className="titulo-inicio">
-            Curso de Java Fullstack Completo (springboot, hibernate, JWT, API
-            Rest)
+            Curso de Java Fullstack Completo (springboot,API Rest)
           </h2>
 
           <div className=" border-top border-white popupContent">
@@ -341,7 +340,7 @@ const Slider = () => {
             >
               <iframe
                 width="100%"
-                height="680px"
+                height="450px"
                 src="https://www.youtube.com/embed/7vHzVN0EiQc"
                 title="YouTube video player"
                 frameborder="0"
@@ -368,7 +367,7 @@ const Slider = () => {
             >
               <iframe
                 width="100%"
-                height="680px"
+                height="450px"
                 src="https://www.youtube.com/embed/bYOjmW-740M"
                 title="YouTube video player"
                 frameborder="0"
