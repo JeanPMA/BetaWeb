@@ -148,7 +148,7 @@ class boton_misCursosDocente extends Component {
                   <Label for="detalle">Descripcion</Label>
                   <Input
                     placeholder="Descripcion del curso"
-                    maxlength="300"
+                    maxlength="700"
                     type="textarea"
                     id="detalle"
                     name="descripcion"
@@ -160,7 +160,7 @@ class boton_misCursosDocente extends Component {
                     }
                     invalid={this.state.invalidDetalles}
                   />
-                  <p className="caracteres">Caract. Max. 300</p>
+                  <p className="caracteres">Caract. Max. 700</p>
                   <FormFeedback tooltip>
                     {this.state.mensajeDetalles}
                   </FormFeedback>

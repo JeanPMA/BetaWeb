@@ -247,7 +247,7 @@ function Lista() {
               >
                 <Label for="detalle">Descripcion</Label>
                 <Input
-                  maxLength="300"
+                  maxLength="700"
                   required
                   type="textarea"
                   id="detalle"
@@ -255,7 +255,7 @@ function Lista() {
                   value={cursoSeleccionado && cursoSeleccionado.descripcion}
                   onChange={handleChange}
                 />
-                <p className="caracteres">Caract. Max. 300</p>
+                <p className="caracteres">Caract. Max. 700</p>
               </FormGroup>
               <FormGroup
                 id="contenedor-descripcion"
