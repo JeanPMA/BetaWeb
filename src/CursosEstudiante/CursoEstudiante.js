@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-import React,{useState} from "react";
-import InscribirCurso from "./InscribirCurso";
-=======
 import React, { useState } from "react";
 import InscribirCurso from "./InscribirCurso";
 import MisVideo from "../misCursosEstudiante/MisVideo";
 import "./InscribirCurso.css";
->>>>>>> 0d1b9bb1d5f4570851956652781e6ac324d633df
 
 const CursoEstudiante = ({ cursos = [] }) => {
   const [curso, setCurso] = useState({});
@@ -60,16 +55,6 @@ const CursoEstudiante = ({ cursos = [] }) => {
               <br />
             </p>
           </div>
-<<<<<<< HEAD
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-          <button 
-          type="button" 
-          onClick={() => setCurso(item)} 
-          data-bs-toggle="modal"  
-          data-bs-target="#staticBackdrop" 
-          className="btn btn-outline-success">
-            Inscribirse
-=======
 
           <div class="d-grid gap-2 d-md-flex justify-content-md-end">
             <button
@@ -80,17 +65,12 @@ const CursoEstudiante = ({ cursos = [] }) => {
               className="  btn btn-outline-success boton-inscribirse  "
             >
               Inscribirse
->>>>>>> 0d1b9bb1d5f4570851956652781e6ac324d633df
             </button>
           </div>
         </div>
       ))}
-<<<<<<< HEAD
-         <InscribirCurso curso={curso}/>
-=======
       <InscribirCurso curso={curso} />
       <MisVideo curso={curso} />
->>>>>>> 0d1b9bb1d5f4570851956652781e6ac324d633df
     </div>
   );
 };
