@@ -23,7 +23,7 @@ const CursoEstudiante = ({ cursos = [] }) => {
               src={item.ubicacion_img}
               alt=""
               width="200px"
-              height="120px"
+              height="150px"
               className=" alin border-top border-start border-end border-bottom border-white"
             />
           </a>
@@ -36,7 +36,7 @@ const CursoEstudiante = ({ cursos = [] }) => {
             </h4>
             <h4 id="instructor-apellido-materno" className="card-title">
               {item.instructor.apellido_materno}
-            </h4>
+            </h4><br />
             <a
               type="button"
               onClick={() => setCurso(item)}
@@ -52,20 +52,18 @@ const CursoEstudiante = ({ cursos = [] }) => {
             </a>
             <p id="Descripcion" className="card-text">
               {item.descripcion}
-              <br />
             </p>
-          </div>
-
-          <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-            <button
-              type="button"
-              onClick={() => setCurso(item)}
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-              className="  btn btn-outline-success boton-inscribirse  "
-            >
-              Inscribirse
-            </button>
+            <div class="d-grid justify-content-md-end">
+              <button
+                type="button"
+                onClick={() => setCurso(item)}
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                className="  btnnn btn-outline-success boton-inscribirse  "
+              >
+                Inscribirse
+              </button>
+            </div>
           </div>
         </div>
       ))}

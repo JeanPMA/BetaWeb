@@ -66,31 +66,32 @@ function ListaEstudiante() {
               <tbody>
                 {cursos.map((element) => {
                   return (
-                    element && (
-                      <tr>
-                        <td className="text-white ">{element.nombre}</td>
-                        <td className="text-white ocultar">
-                          {element.descripcion}
-                        </td>
-                        <td className="text-white ocultar">
-                          {element.ubicacion_img}
-                        </td>
-                        <td className="text-white ocultar">
-                          {element.ubicacion_vid}
-                        </td>
-                        <td>
-                          <button
-                            type="button"
-                            onClick={() => setCurso(element)}
-                            className="btn btn-primary"
-                            data-bs-toggle="modal"
-                            data-bs-target="#videoModal"
-                          >
-                            <i className="bi bi-play-btn-fill"></i>
-                          </button>
-                        </td>
-                      </tr>
-                    )
+                    element &&
+                    <tr>
+                      <td className="text-white ">
+                        {element.nombre}
+                      </td>
+                      <td className="text-white ocultar">
+                        {element.descripcion}
+                      </td>
+                      <td className="text-white ocultar">
+                        {element.ubicacion_img}
+                      </td>
+                      <td className="text-white ocultar">
+                        {element.ubicacion_vid}
+                      </td>
+                      <td>
+                        <button
+                          type="button"
+                          onClick={() => setCurso(element)}
+                          className="btn btn-danger"
+                          data-bs-toggle="modal"
+                          data-bs-target="#videoModal"
+                        >
+                          <i className="bi bi-play-btn-fill"></i>
+                        </button>
+                      </td>
+                    </tr>
                   );
                 })}
               </tbody>

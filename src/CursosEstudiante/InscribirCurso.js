@@ -25,7 +25,7 @@ function InscribirCurso(props) {
       id_curso: props.curso.id_curso,
       id_estudiante: getCookies("id_estudiante")
     }
- 
+
     const res = await axios
       .post("https://betaweb-back.herokuapp.com/api/inscribirse", dato)
       .then((response) => {
@@ -38,11 +38,9 @@ function InscribirCurso(props) {
         return data;
       });
   }
-  
+
   return (
-
-
-    <div
+ <div
       className="modal fade"
       id="staticBackdrop"
       data-bs-backdrop="static"
@@ -51,11 +49,11 @@ function InscribirCurso(props) {
       aria-labelledby="staticBackdropLabel"
       aria-hidden="true">
       <div className="modal-dialog">
-        <div className="modal-content color"><br/>
+        <div className="modal-content color"><br />
           <div className="col-md-9 ms-auto" >
             <h3 className="text-white" id="staticBackdropLabel">Inscribirse a este curso</h3>
-          </div><br/>
-          <div className="col-md-8 ms-auto" id="cursos">
+          </div><br />
+          <div className="col-md-8 ms-auto" >
 
             <img
               src={props.curso?.ubicacion_img || ""}
@@ -65,15 +63,15 @@ function InscribirCurso(props) {
               className=" alin border-top border-start border-end border-bottom border-white"
             />
 
-          </div><br/>
+          </div><br />
           <div className="row ">
             <div className="col-md-4 ms-auto">
-            <button button type="button" className="btnn " data-bs-dismiss="modal">Cancelar</button>
+              <button button type="button" className="btnn " data-bs-dismiss="modal">Cancelar</button>
             </div>
             <div className="col-md-4 ms-auto">
-            <button type="button" onClick={() => enviar()} className="btnn " data-bs-dismiss="modal">Aceptar</button>
+              <button type="button" onClick={() => enviar()} className="btnn " data-bs-dismiss="modal">Aceptar</button>
             </div>
-          </div><br/>
+          </div><br />
         </div>
       </div>
     </div>
