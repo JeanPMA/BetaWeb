@@ -12,13 +12,7 @@ const Cursoss = ({ cursos = [] }) => {
           id="cursos"
         >
           {" "}
-          <a
-            type="button"
-            onClick={() => setCurso(item)}
-            className="vistaprevia m-auto "
-            data-bs-toggle="modal"
-            data-bs-target="#videoModal"
-          >
+          <a href="#">
             <img
               src={item.ubicacion_img}
               alt=""
@@ -38,14 +32,7 @@ const Cursoss = ({ cursos = [] }) => {
               {item.instructor.apellido_materno}
             </h4>
             <br></br>
-            <a
-              type="button"
-              onClick={() => setCurso(item)}
-              className="vistaprevia"
-              data-bs-toggle="modal"
-              data-bs-target="#videoModal"
-              id="nombre-curso"
-            >
+            <a>
               <p id="nombre-del-curso" className="card-text">
                 {item.nombre}
               </p>
