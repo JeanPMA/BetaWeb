@@ -158,9 +158,11 @@ function Lista() {
                   <th scope="col" className="text-white">
                     Nombres
                   </th>
-                  <th scope="col" className="text-white">
-                    Acciones
-                  </th>
+                  <div className="acciones">
+                    <th scope="col" className="text-white">
+                      Acciones
+                    </th>
+                  </div>
                 </tr>
               </thead>
               <tbody>
@@ -179,7 +181,7 @@ function Lista() {
                           {element.ubicacion_vid}
                         </td>
 
-                        <td>
+                        <td width="200">
                           <button
                             className="btn btn-lg"
                             data-bs-toggle="modal"
@@ -229,6 +231,7 @@ function Lista() {
               <FormGroup className="position-relative">
                 <Label for="nombre">Nombre</Label>
                 <Input
+                  maxLength="70"
                   required
                   type="text"
                   id="nombre"
@@ -236,6 +239,7 @@ function Lista() {
                   value={cursoSeleccionado && cursoSeleccionado.nombre}
                   onChange={handleChange}
                 />
+                <p className="caracteres">Caract. Max. 70</p>
               </FormGroup>
               <FormGroup
                 id="contenedor-descripcion"
@@ -243,6 +247,7 @@ function Lista() {
               >
                 <Label for="detalle">Descripcion</Label>
                 <Input
+                  maxLength="700"
                   required
                   type="textarea"
                   id="detalle"
@@ -250,12 +255,13 @@ function Lista() {
                   value={cursoSeleccionado && cursoSeleccionado.descripcion}
                   onChange={handleChange}
                 />
+                <p className="caracteres">Caract. Max. 700</p>
               </FormGroup>
               <FormGroup
                 id="contenedor-descripcion"
                 className="position-relative"
               >
-                <Label for="detalle">Ubicacion de la imagen</Label>
+                <Label for="detalle">URL de la imagen</Label>
                 <Input
                   required
                   type="url"

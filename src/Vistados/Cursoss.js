@@ -1,15 +1,17 @@
-import React from "react";
-import imagenCurso from "../assets/imagenCurso.jpg";
+import React, { useState } from "react";
+import MisVideo from "../misCursosEstudiante/MisVideo";
 import "./Cursoss.css";
 
 const Cursoss = ({ cursos = [] }) => {
+  const [curso, setCurso] = useState({});
   return (
     <div>
       {cursos.map((item) => (
         <div
-          className="p-2 text-white overflow  border-top border-start border-end border-bottom border-white"
+          className="p-2 text-white overflow  border-top border-start border-end border-bottom border-white -auto"
           id="cursos"
         >
+          {" "}
           <a href="#">
             <img
               src={item.ubicacion_img}
@@ -19,7 +21,7 @@ const Cursoss = ({ cursos = [] }) => {
               className=" alin border-top border-start border-end border-bottom border-white"
             />
           </a>
-          <div className=" card-body style ">
+          <div className=" card-body style contenedor-datos-curso m-0 mt-2">
             <h4 id="instructor-nombre" className="card-title">
               {item.instructor.nombre}
             </h4>
@@ -29,9 +31,12 @@ const Cursoss = ({ cursos = [] }) => {
             <h4 id="instructor-apellido-materno" className="card-title">
               {item.instructor.apellido_materno}
             </h4>
-            <p id="nombre-del-curso" className="card-text">
-              {item.nombre}
-            </p>
+            <br></br>
+            <a>
+              <p id="nombre-del-curso" className="card-text">
+                {item.nombre}
+              </p>
+            </a>
             <p id="Descripcion" className="card-text">
               {item.descripcion}
               <br />
@@ -39,6 +44,7 @@ const Cursoss = ({ cursos = [] }) => {
           </div>
         </div>
       ))}
+      <MisVideo curso={curso} />
     </div>
   );
 };

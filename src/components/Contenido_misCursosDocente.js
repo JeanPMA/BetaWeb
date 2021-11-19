@@ -106,7 +106,7 @@ class boton_misCursosDocente extends Component {
 
     return (
       <>
-        <div className="principal">
+        <div className="principal ">
           <div className="secundario">
             <Button id="boton_crearCursos" onClick={this.abrirModal}>
               Crear nuevo curso
@@ -114,7 +114,7 @@ class boton_misCursosDocente extends Component {
           </div>
         </div>
 
-        <Modal isOpen={this.state.abierto} style={modalStyles}>
+        <Modal isOpen={this.state.abierto} style={modalStyles} className="">
           <div className="contenedorModal  border-top border-start border-end border-bottom border-white">
             <Form onSubmit={this.enviarAlaBD}>
               <ModalHeader id="tituloCrearCurso">
@@ -124,6 +124,8 @@ class boton_misCursosDocente extends Component {
                 <FormGroup className="position-relative">
                   <Label for="nombre">Nombre</Label>
                   <Input
+                    placeholder="Nombre del curso"
+                    maxlength="70"
                     type="text"
                     id="nombre"
                     name="nombre"
@@ -134,6 +136,7 @@ class boton_misCursosDocente extends Component {
                     }
                     invalid={this.state.invalidNombre}
                   />
+                  <p className="caracteres">Caract. Max. 70</p>
                   <FormFeedback tooltip>
                     {this.state.mensajeNombre}
                   </FormFeedback>
@@ -144,6 +147,8 @@ class boton_misCursosDocente extends Component {
                 >
                   <Label for="detalle">Descripcion</Label>
                   <Input
+                    placeholder="Descripcion del curso"
+                    maxlength="700"
                     type="textarea"
                     id="detalle"
                     name="descripcion"
@@ -155,6 +160,7 @@ class boton_misCursosDocente extends Component {
                     }
                     invalid={this.state.invalidDetalles}
                   />
+                  <p className="caracteres">Caract. Max. 700</p>
                   <FormFeedback tooltip>
                     {this.state.mensajeDetalles}
                   </FormFeedback>
@@ -163,8 +169,9 @@ class boton_misCursosDocente extends Component {
                   id="contenedor-descripcion"
                   className="position-relative"
                 >
-                  <Label for="detalle">Ubicacion de la imagen</Label>
+                  <Label for="detalle">URL de la imagen</Label>
                   <Input
+                    placeholder="https://www.images.com/image.jpg"
                     type="url"
                     id="ubicacion"
                     name="ubicacion_img"
@@ -186,6 +193,7 @@ class boton_misCursosDocente extends Component {
                 >
                   <Label for="video">URL del video</Label>
                   <Input
+                    placeholder="https://www.youtube.com/watch?examplevideo"
                     type="url"
                     id="video"
                     name="ubicacion_vid"

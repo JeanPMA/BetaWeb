@@ -103,7 +103,6 @@ a:active {
 }
 .logo-betasoft {
   margin-right: 110px;
-  
 }
 
 #Boton_cerrar {
@@ -118,7 +117,6 @@ a:active {
   margin-right: 40px;
   margin-top: none;
   text-align: center;
-  
 }
 
 #boton-menu {
@@ -390,7 +388,6 @@ a:active {
   font-weight: bold;
 }
 
-
 #instructor-nombre {
   font-size: 12px;
   display: inline-block;
@@ -474,4 +471,64 @@ a:active {
 }
 .margen-buscador {
   margin-left: 10px;
+}
+#nombre-curso {
+  text-decoration: none;
+  color: white;
+}
+#nombre-curso :hover {
+  color: white;
+}
+.caracteres {
+  text-align: end;
+  font-size: 12px;
+}
+#cursos {
+  display: inline-flex;
+  width: 100%;
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+}
+#popupBody {
+  width: 50%;
+  height: 525px;
+  padding: 1%;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ccc;
+  background: #41567e;
+  position: relative;
+  transition: all 1s ease-in;
+  margin: 5% auto;
+  z-index: 5;
+}
+#cerrar {
+  position: absolute;
+  top: 0;
+  right: 12px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+.titulo-inicio {
+  color: white;
+  font-size: 20px;
+}
+.popupContent {
+  padding-top: 15px;
 }

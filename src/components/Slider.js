@@ -6,7 +6,6 @@ const Slider = () => {
       <div className="text-white oferta">
         <h2>Oferta de cursos gratuitos</h2>
       </div>
-
       <div
         className="border border-white container-cursos"
         style={{
@@ -26,132 +25,142 @@ const Slider = () => {
           }}
         >
           <Carousel show={4}>
-            <a href="#">
+            <a href="#popup">
               <div className="contenedor-cursos-inicio border border-white">
                 <div className="justify-content-center pt-2 imagen-oferta">
                   <img
-                    src="https://img-c.udemycdn.com/course/240x135/3096364_6113_3.jpg"
-                    style={{ width: "90%" }}
+                    src="https://img-c.udemycdn.com/course/240x135/1245130_efdb_10.jpg"
+                    width="200px"
+                    height="120px"
                   />
                 </div>
                 <div className="text-white">
-                  <p className="instructor">Fernando Herrera</p>
+                  <p className="instructor">Carlos Arturo</p>
                 </div>
 
                 <div className="text-white">
-                  <p>React: De cero a experto</p>
+                  <p>Bootstrap 5: El Curso Completo, Práctico y Desde Cero</p>
                 </div>
               </div>
             </a>
-            <a href="#">
+            <a href="#popup2">
               <div className="contenedor-cursos-inicio border border-white">
                 <div className="justify-content-center pt-2 imagen-oferta">
                   <img
-                    src="https://img-c.udemycdn.com/course/240x135/3694466_c5db_5.jpg"
-                    style={{ width: "90%" }}
+                    width="200px"
+                    height="120px"
+                    src="https://www.pcprogramasymas.net/wp-content/uploads/2020/01/ctraining_resize_md.jpg"
                   />
                 </div>
                 <div className="text-white">
-                  <p className="instructor">Damian Sire</p>
+                  <p className="instructor">Indira Castillo</p>
                 </div>
                 <div className="text-white">
-                  <p>Estructuras de datos y logica </p>
+                  <p>Programación orientada a objetos </p>
                 </div>
               </div>
             </a>
-            <a href="#">
+            <a href="#popup3">
               <div className="contenedor-cursos-inicio border border-white">
                 <div className="justify-content-center pt-2 imagen-oferta">
                   <img
-                    src="https://img-c.udemycdn.com/course/240x135/2297910_788e_2.jpg"
-                    style={{ width: "90%" }}
+                    src="https://i.imgur.com/GYNgOfm.jpg"
+                    width="200px"
+                    height="120px"
                   />
                 </div>
                 <div className="text-white">
-                  <p className="instructor">Alvaro Chirou</p>
+                  <p className="instructor">Ruben Cartagena</p>
                 </div>
                 <div className="text-white">
-                  <p>Master en Python 3</p>
+                  <p>Ciencia de datos</p>
                 </div>
               </div>
             </a>
-            <a href="#">
+            <a href="#popup4">
               <div className="contenedor-cursos-inicio border border-white">
                 <div className="justify-content-center pt-2 imagen-oferta">
                   <img
-                    src="https://img-c.udemycdn.com/course/240x135/1562070_d426_2.jpg"
-                    style={{ width: "90%" }}
+                    src=" https://i.imgur.com/GYNgOfm.jpg"
+                    width="200px"
+                    height="120px"
+                  />
+                </div>
+                <div className="text-white">
+                  <p className="instructor">Ruben Cartagena</p>
+                </div>
+                <div className="text-white">
+                  <p>Datawarhouse</p>
+                </div>
+              </div>
+            </a>
+            <a href="#popup5">
+              <div className="contenedor-cursos-inicio border border-white">
+                <div className="justify-content-center pt-2 imagen-oferta">
+                  <img
+                    src="https://img-c.udemycdn.com/course/240x135/672600_1def_7.jpg"
+                    width="200px"
+                    height="120px"
+                  />
+                </div>
+                <div className="text-white">
+                  <p className="instructor">Carlos Arturo</p>
+                </div>
+                <div className="text-white">
+                  <p>
+                    PHP 8 y MYSQL: El Curso Completo, Práctico y Desde Cero !
+                  </p>
+                </div>
+              </div>
+            </a>
+            <a href="#popup6">
+              <div className="contenedor-cursos-inicio border border-white">
+                <div className="justify-content-center pt-2 imagen-oferta">
+                  <img
+                    src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2018/03/pandas.jpg"
+                    width="200px"
+                    height="120px"
                   />
                 </div>
                 <div className="text-white">
                   <p className="instructor">Fernando Herrera</p>
                 </div>
                 <div className="text-white">
-                  <p>Node: De cero a experto</p>
+                  <p>Python</p>
                 </div>
               </div>
             </a>
-            <a href="#">
+            <a href="#popup7">
               <div className="contenedor-cursos-inicio border border-white">
                 <div className="justify-content-center pt-2 imagen-oferta">
                   <img
-                    src="https://img-c.udemycdn.com/course/240x135/2306140_8181.jpg"
-                    style={{ width: "90%" }}
+                    src="https://www.ecured.cu/images/a/a8/Pandas_python.png"
+                    width="200px"
+                    height="120px"
                   />
                 </div>
                 <div className="text-white">
-                  <p className="instructor">Fernando Herrera</p>
+                  <p className="instructor">Marcelo Reinaga</p>
                 </div>
                 <div className="text-white">
-                  <p>Flutter para IOS y Android</p>
+                  <p>Pandas - Python</p>
                 </div>
               </div>
             </a>
-            <a href="#">
+            <a href="#popup8">
               <div className="contenedor-cursos-inicio border border-white">
                 <div className="justify-content-center pt-2 imagen-oferta">
                   <img
-                    src="https://img-c.udemycdn.com/course/240x135/3078492_1a27_2.jpg"
-                    style={{ width: "90%" }}
+                    src="https://i.ytimg.com/vi/ACT9uDY2oY0/maxresdefault.jpg"
+                    width="200px"
+                    height="120px"
                   />
                 </div>
                 <div className="text-white">
-                  <p className="instructor">Andres Jose Guzman</p>
+                  <p className="instructor">Andres jose</p>
                 </div>
                 <div className="text-white">
-                  <p>Java de cero a experto</p>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div className="contenedor-cursos-inicio border border-white">
-                <div className="justify-content-center pt-2 imagen-oferta">
-                  <img
-                    src="https://img-c.udemycdn.com/course/240x135/3657264_4270_2.jpg"
-                    style={{ width: "90%" }}
-                  />
-                </div>
-                <div className="text-white">
-                  <p className="instructor">Jhonatan Peñaloza</p>
-                </div>
-                <div className="text-white">
-                  <p>Fullstack Java y React</p>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div className="contenedor-cursos-inicio border border-white">
-                <div className="justify-content-center pt-2 imagen-oferta">
-                  <img
-                    src="https://img-c.udemycdn.com/course/240x135/980450_7fc0_3.jpg"
-                    style={{ width: "90%" }}
-                  />
-                </div>
-                <div className="text-white">
-                  <p className="instructor">Juan Pablo de la Torre Valdez</p>
-                </div>
-                <div className="text-white">
-                  <p>Desarrollo web completo</p>
+                  <p>Tkinter</p>
                 </div>
               </div>
             </a>

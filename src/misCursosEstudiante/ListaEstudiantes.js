@@ -3,43 +3,36 @@ import "./Vista.css";
 import axios from "axios";
 import MisVideo from "./MisVideo";
 
-
-
 const baseUrl = "https://betaweb-back.herokuapp.com/api/inscritos/";
 
-function ListaEstudiante()  {
-  
-   const [cursos, setCursos] = useState([]);
-   const [curso, setCurso] = useState({});
-  let inscritos=[];
-  
-  
+function ListaEstudiante() {
+  const [cursos, setCursos] = useState([]);
+  const [curso, setCurso] = useState({});
+  let inscritos = [];
 
-
-  
   ///////////////////////////////////
   useEffect(() => {
-    if(cursos.length=== 0){
-    axios
-      .get("https://betaweb-back.herokuapp.com/api/inscritos")
-      .then((response) => {
-        inscritos=response.data;
-        setCursos(inscritos.map((element)=>{
-         if( element.estudiante?.id_estudiante === parseInt( getCookies("id_estudiante")))
-            {
-              return element.curso;
-            }
-         
-        } ))
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (cursos.length === 0) {
+      axios
+        .get("https://betaweb-back.herokuapp.com/api/inscritos")
+        .then((response) => {
+          inscritos = response.data;
+          setCursos(
+            inscritos.map((element) => {
+              if (
+                element.estudiante?.id_estudiante ===
+                parseInt(getCookies("id_estudiante"))
+              ) {
+                return element.curso;
+              }
+            })
+          );
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     }
   }, []);
-
- 
- 
 
   const getCookies = (cname) => {
     var name = cname + "=";
@@ -72,45 +65,43 @@ function ListaEstudiante()  {
               </thead>
               <tbody>
                 {cursos.map((element) => {
-                    return ( element &&
-                      <tr>
-                        <td className="text-white ">{element.nombre}</td>
-                        <td className="text-white ocultar">
-                          {element.descripcion}
-                        </td>
-                        <td className="text-white ocultar">
-                          {element.ubicacion_img}
-                        </td>
-                        <td className="text-white ocultar">
-                          {element.ubicacion_vid}
-                        </td>
-                        <td>
+                  return (
+                    element &&
+                    <tr>
+                      <td className="text-white ">
+                        {element.nombre}
+                      </td>
+                      <td className="text-white ocultar">
+                        {element.descripcion}
+                      </td>
+                      <td className="text-white ocultar">
+                        {element.ubicacion_img}
+                      </td>
+                      <td className="text-white ocultar">
+                        {element.ubicacion_vid}
+                      </td>
+                      <td>
                         <button
-                        type="button" 
-                       onClick={()=> setCurso(element)}
-                        className="btn btn-primary" 
-                        data-bs-toggle="modal"
-                        data-bs-target="#videoModal"
-                          >
+                          type="button"
+                          onClick={() => setCurso(element)}
+                          className="btn btn-danger"
+                          data-bs-toggle="modal"
+                          data-bs-target="#videoModal"
+                        >
                           <i className="bi bi-play-btn-fill"></i>
-                      
-                          </button>
-                        </td>
-                       
-                  </tr>
-                    
-                    );
-                   
-                  })}
+                        </button>
+                      </td>
+                    </tr>
+                  );
+                })}
               </tbody>
             </table>
-            <MisVideo curso= {curso}/>
+            <MisVideo curso={curso} />
           </div>
         </div>
       </div>
-      </>
-    )
-  
-};
+    </>
+  );
+}
 
 export default ListaEstudiante;
