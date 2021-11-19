@@ -29,17 +29,17 @@ const Slider = () => {
               <div className="contenedor-cursos-inicio border border-white">
                 <div className="justify-content-center pt-2 imagen-oferta">
                   <img
-                    src="https://i.ytimg.com/vi/zIY87vU33aA/maxresdefault.jpg"
+                    src="https://img-c.udemycdn.com/course/240x135/1245130_efdb_10.jpg"
                     width="200px"
                     height="120px"
                   />
                 </div>
                 <div className="text-white">
-                  <p className="instructor">Fazt</p>
+                  <p className="instructor">Carlos Arturo</p>
                 </div>
 
                 <div className="text-white">
-                  <p>Reactjs, Curso Práctico para Principiantes (React 16)</p>
+                  <p>Bootstrap 5: El Curso Completo, Práctico y Desde Cero</p>
                 </div>
               </div>
             </a>
@@ -49,16 +49,14 @@ const Slider = () => {
                   <img
                     width="200px"
                     height="120px"
-                    src="https://i.ytimg.com/vi/z95mZVUcJ-E/maxresdefault.jpg"
+                    src="https://www.pcprogramasymas.net/wp-content/uploads/2020/01/ctraining_resize_md.jpg"
                   />
                 </div>
                 <div className="text-white">
-                  <p className="instructor">Soy Dalto</p>
+                  <p className="instructor">Indira Castillo</p>
                 </div>
                 <div className="text-white">
-                  <p>
-                    Curso de JAVASCRIPT desde CERO (Completo) - Nivel JUNIOR{" "}
-                  </p>
+                  <p>Programación orientada a objetos </p>
                 </div>
               </div>
             </a>
@@ -66,16 +64,16 @@ const Slider = () => {
               <div className="contenedor-cursos-inicio border border-white">
                 <div className="justify-content-center pt-2 imagen-oferta">
                   <img
-                    src="https://i.ytimg.com/vi/chPhlsHoEPo/maxresdefault.jpg"
+                    src="https://i.imgur.com/GYNgOfm.jpg"
                     width="200px"
                     height="120px"
                   />
                 </div>
                 <div className="text-white">
-                  <p className="instructor">Fazt</p>
+                  <p className="instructor">Ruben Cartagena</p>
                 </div>
                 <div className="text-white">
-                  <p>Curso Python para principiantes</p>
+                  <p>Ciencia de datos</p>
                 </div>
               </div>
             </a>
@@ -83,16 +81,16 @@ const Slider = () => {
               <div className="contenedor-cursos-inicio border border-white">
                 <div className="justify-content-center pt-2 imagen-oferta">
                   <img
-                    src="https://i.ytimg.com/vi/BhvLIzVL8_o/maxresdefault.jpg"
+                    src=" https://i.imgur.com/GYNgOfm.jpg"
                     width="200px"
                     height="120px"
                   />
                 </div>
                 <div className="text-white">
-                  <p className="instructor">Fazt</p>
+                  <p className="instructor">Ruben Cartagena</p>
                 </div>
                 <div className="text-white">
-                  <p>Nodejs: Curso desde cero, para participantes</p>
+                  <p>Datawarhouse</p>
                 </div>
               </div>
             </a>
@@ -100,16 +98,18 @@ const Slider = () => {
               <div className="contenedor-cursos-inicio border border-white">
                 <div className="justify-content-center pt-2 imagen-oferta">
                   <img
-                    src="https://i.ytimg.com/vi/gBfXjjhsl-o/maxresdefault.jpg"
+                    src="https://img-c.udemycdn.com/course/240x135/672600_1def_7.jpg"
                     width="200px"
                     height="120px"
                   />
                 </div>
                 <div className="text-white">
-                  <p className="instructor">Leonidas Esteban</p>
+                  <p className="instructor">Carlos Arturo</p>
                 </div>
                 <div className="text-white">
-                  <p>Curso de Flutter</p>
+                  <p>
+                    PHP 8 y MYSQL: El Curso Completo, Práctico y Desde Cero !
+                  </p>
                 </div>
               </div>
             </a>
@@ -117,16 +117,16 @@ const Slider = () => {
               <div className="contenedor-cursos-inicio border border-white">
                 <div className="justify-content-center pt-2 imagen-oferta">
                   <img
-                    src="https://i.imgur.com/WxUmkn5.jpg"
+                    src="https://s3-ap-south-1.amazonaws.com/av-blog-media/wp-content/uploads/2018/03/pandas.jpg"
                     width="200px"
                     height="120px"
                   />
                 </div>
                 <div className="text-white">
-                  <p className="instructor">Yoney Gallardo</p>
+                  <p className="instructor">Fernando Herrera</p>
                 </div>
                 <div className="text-white">
-                  <p>CURSO DE JAVA - COMPLETO</p>
+                  <p>Python</p>
                 </div>
               </div>
             </a>
@@ -134,19 +134,16 @@ const Slider = () => {
               <div className="contenedor-cursos-inicio border border-white">
                 <div className="justify-content-center pt-2 imagen-oferta">
                   <img
-                    src="https://i.ytimg.com/vi/7vHzVN0EiQc/maxresdefault.jpg"
+                    src="https://www.ecured.cu/images/a/a8/Pandas_python.png"
                     width="200px"
                     height="120px"
                   />
                 </div>
                 <div className="text-white">
-                  <p className="instructor">Lucas Moy</p>
+                  <p className="instructor">Marcelo Reinaga</p>
                 </div>
                 <div className="text-white">
-                  <p>
-                    Curso de Java Fullstack Completo (springboot, hibernate,
-                    JWT, API)
-                  </p>
+                  <p>Pandas - Python</p>
                 </div>
               </div>
             </a>
@@ -154,16 +151,16 @@ const Slider = () => {
               <div className="contenedor-cursos-inicio border border-white">
                 <div className="justify-content-center pt-2 imagen-oferta">
                   <img
-                    src="https://i.ytimg.com/vi/bYOjmW-740M/maxresdefault.jpg"
+                    src="https://i.ytimg.com/vi/ACT9uDY2oY0/maxresdefault.jpg"
                     width="200px"
                     height="120px"
                   />
                 </div>
                 <div className="text-white">
-                  <p className="instructor">Yoney Gallardo</p>
+                  <p className="instructor">Andres jose</p>
                 </div>
                 <div className="text-white">
-                  <p>CURSO DE DISEÑO Y DESARROLLO WEB - COMPLETO</p>
+                  <p>Tkinter</p>
                 </div>
               </div>
             </a>
