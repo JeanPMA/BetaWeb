@@ -17,7 +17,7 @@ const Cursoss = ({ cursos = [] }) => {
               src={item.ubicacion_img}
               alt=""
               width="200px"
-              height="120px"
+              height="150px"
               className=" alin border-top border-start border-end border-bottom border-white"
             />
           </a>
