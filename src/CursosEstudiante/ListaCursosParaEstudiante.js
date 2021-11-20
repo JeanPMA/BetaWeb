@@ -54,7 +54,16 @@ function ListaCursosParaEstudiantes() {
   }, []);
 
   return (
-    <div className="margen-cursos">
+    <div className="margen-cursos margen-cursos-estudiante">
+      <h2
+        style={{
+          color: "white",
+          marginTop: "10px",
+          marginLeft: "0",
+        }}
+      >
+        Cursos Disponibles
+      </h2>
       <div className="margen-buscador">
         <input
           class="buscador"
@@ -68,7 +77,7 @@ function ListaCursosParaEstudiantes() {
       </div>
       <div className="container scroll-container" id="cursosRegistrados">
         <CursoEstudiante cursos={cursos} />
-        <IncribirCurso/>
+        <IncribirCurso />
       </div>
     </div>
   );
