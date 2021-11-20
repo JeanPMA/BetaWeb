@@ -62,7 +62,7 @@ function ListaCursosParaEstudiantes() {
           marginLeft: "0",
         }}
       >
-        Cursos Disponibles
+        Cursos
       </h2>
       <div className="margen-buscador">
         <input
