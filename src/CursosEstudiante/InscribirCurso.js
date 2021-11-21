@@ -16,7 +16,8 @@ function InscribirCurso(props) {
         id_curso: props.curso.id_curso,
       },
     };
-const res = await axios
+    window.location.href = window.location.href;
+    const res = await axios
       .post("https://betaweb-back.herokuapp.com/api/inscribirse", dataPost)
       .then((response) => {
         const dataPost = { success: true, message: response.data };
@@ -28,7 +29,6 @@ const res = await axios
       });
     return res;
   };
-
 
   return (
     <div
