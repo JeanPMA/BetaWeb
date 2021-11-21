@@ -59,6 +59,9 @@ class boton_misCursosDocente extends Component {
       [name]: value,
     });
   }
+  actualizarCancelar() {
+    window.location.href = window.location.href;
+  }
   enviarAlaBD(e) {
     e.preventDefault();
     let valido = true;
@@ -211,7 +214,7 @@ class boton_misCursosDocente extends Component {
               <ModalFooter id="pieCrearCurso">
                 <Button
                   id="botonCrearCancelar"
-                  onClick={this.abrirModal}
+                  onClick={(this.abrirModal, this.actualizarCancelar)}
                   onChange={this.onChange}
                 >
                   {" "}

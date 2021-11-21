@@ -6,11 +6,7 @@ let cookieIdEstudiante = document.cookie.replace(
   /(?:(?:^|.*;\s*)id_estudiante\s*\=\s*([^;]*).*$)|^.*$/,
   "$1"
 );
-
-console.log(cookieIdEstudiante);
-
 function InscribirCurso(props) {
-  console.log(props);
   const enviar = async () => {
     const dataPost = {
       estudiante: {
@@ -20,12 +16,11 @@ function InscribirCurso(props) {
         id_curso: props.curso.id_curso,
       },
     };
-
+    window.location.href = window.location.href;
     const res = await axios
       .post("https://betaweb-back.herokuapp.com/api/inscribirse", dataPost)
       .then((response) => {
         const dataPost = { success: true, message: response.data };
-        console.log(response);
         return dataPost;
       })
       .catch((error) => {
