@@ -157,7 +157,7 @@ function Lista() {
       <div className="list-group">
         <div className="col-md-6 col align-self-center">
           <div className="container">
-            <h3 className="text-white">Mis cursosss</h3>
+            <h3 className="text-white">Mis cursos</h3>
             <table className="table text-white">
               <thead>
                 <tr>
