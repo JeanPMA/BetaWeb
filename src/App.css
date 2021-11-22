@@ -101,8 +101,9 @@ a:active {
   cursor: pointer;
   margin-bottom: 5px;
 }
-.logo-betasoft {
-  margin-right: 90px;
+#logo-betasoft {
+  margin-left: 12px;
+  
 }
 
 #Boton_cerrar {
@@ -112,15 +113,16 @@ a:active {
   height: 38px;
   width: 150px;
   padding-top: none;
-  margin-left: 900px;
+  margin-left: 1000px;
   border-style: hidden;
-  margin-right: 40px;
+  margin-right: 0px;
   margin-top: none;
   text-align: center;
 }
 
 #boton-menu {
   display: none;
+  
 }
 .container-menu {
   z-index: 1;
