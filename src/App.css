@@ -103,7 +103,6 @@ a:active {
 }
 #logo-betasoft {
   margin-left: 12px;
-  
 }
 
 #Boton_cerrar {
@@ -122,7 +121,6 @@ a:active {
 
 #boton-menu {
   display: none;
-  
 }
 .container-menu {
   z-index: 1;
@@ -488,6 +486,7 @@ a:active {
 #cursos {
   display: inline-flex;
   width: 100%;
+  height: 200px;
 }
 .overlay {
   position: fixed;
@@ -536,4 +535,15 @@ a:active {
 }
 .margen-cursos-estudiante {
   margin-left: 20px;
+}
+#imagen-cursos-estudiante {
+  margin-top: 15px;
+}
+#Descripcion {
+  height: 70px;
+  margin-bottom: 0px;
+}
+#nombre-del-curso {
+  margin-bottom: 8px;
+  height: 50px;
 }
