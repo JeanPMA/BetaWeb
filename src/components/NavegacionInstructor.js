@@ -37,13 +37,13 @@ class NavegacionInstructor extends Component {
     return (
       <div>
         <div>
-          <nav class="navbar  navbar-light bg-light">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <label for="boton-menu" className="icono-menu">
               <FontAwesomeIcon icon={faBars} />
             </label>
 
-            <div className="logo-betasoft">
-              <a class="navbar-brand" href="#" border-width="medium">
+            <div >
+              <a  id="logo-betasoft" class="navbar-brand" href="#" border-width="medium">
                 BETAWEB
                 <img
                   src="https://previews.123rf.com/images/mochipet/mochipet1707/mochipet170700056/82167896-ilustraci%C3%B3n-vectorial-bombilla-con-haces-de-luz-en-estilo-pop-art-dibujos-animados-con-contorno-aisl.jpg"

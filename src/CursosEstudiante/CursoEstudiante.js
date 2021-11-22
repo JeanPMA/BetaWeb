@@ -90,6 +90,7 @@ const CursoEstudiante = ({ cursos = [] }) => {
               {item.descripcion}
             </p>
             <div class="d-grid justify-content-md-end">
+<<<<<<< HEAD
               {!buscador(item.id_curso) ? (
                 <button
                   type="button"
@@ -109,6 +110,28 @@ const CursoEstudiante = ({ cursos = [] }) => {
                   Inscrito
                 </button>
               )}
+=======
+              {
+               !buscador(item.id_curso) ? 
+              <button
+                type="button"
+                onClick={() => setCurso(item)}
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+                className="btnnn btn-outline-success boton-inscribirse"
+              >
+                Inscribirse
+              </button>
+              :
+              <button
+                type="button"
+                style={{color:"yellow"}}
+                className="btnnn btn-outline-warning boton-inscribirse"
+              >
+                Ir al curso
+              </button>
+              }
+>>>>>>> a44b5b13d2e1b140dfd1e5344512c09422364921
             </div>
           </div>
         </div>
