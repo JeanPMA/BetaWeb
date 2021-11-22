@@ -119,7 +119,13 @@ function Lista() {
         instruc = ins;
       }
     });
-    return instruc;
+    const cursos_orden=instruc.cursos.sort(function (x, y){
+      if (x.nombre < y.nombre) {return -1;}
+      if (x.nombre > y.nombre) {return 1;}
+      return 0;
+    })
+    //console.log(cursos_orden);
+    return cursos_orden;
   };
 
   const getCookies = (cname) => {
@@ -151,7 +157,7 @@ function Lista() {
       <div className="list-group">
         <div className="col-md-6 col align-self-center">
           <div className="container">
-            <h3 className="text-white">Mis cursos</h3>
+            <h3 className="text-white">Mis cursosss</h3>
             <table className="table text-white">
               <thead>
                 <tr>
@@ -167,7 +173,7 @@ function Lista() {
               </thead>
               <tbody>
                 {instructor.length > 0 &&
-                  getInstructorByid().cursos?.map((element) => {
+                  getInstructorByid()?.map((element) => {
                     return (
                       <tr>
                         <td className="text-white ">{element.nombre}</td>
