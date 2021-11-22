@@ -486,6 +486,7 @@ a:active {
 #cursos {
   display: inline-flex;
   width: 100%;
+  height: 200px;
 }
 .overlay {
   position: fixed;
@@ -534,4 +535,15 @@ a:active {
 }
 .margen-cursos-estudiante {
   margin-left: 20px;
+}
+#imagen-cursos-estudiante {
+  margin-top: 15px;
+}
+#Descripcion {
+  height: 70px;
+  margin-bottom: 0px;
+}
+#nombre-del-curso {
+  margin-bottom: 0px;
+  height: 50px;
 }

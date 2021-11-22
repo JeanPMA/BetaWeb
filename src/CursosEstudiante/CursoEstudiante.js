@@ -1,4 +1,4 @@
-import React, { useState ,useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import InscribirCurso from "./InscribirCurso";
 import MisVideo from "../misCursosEstudiante/MisVideo";
 import "./InscribirCurso.css";
@@ -13,7 +13,7 @@ const CursoEstudiante = ({ cursos = [] }) => {
       axios
         .get("https://betaweb-back.herokuapp.com/api/inscritos")
         .then((response) => {
-        setMiscursos(
+          setMiscursos(
             response.data.map((element) => {
               if (
                 element.estudiante?.id_estudiante ===
@@ -31,14 +31,14 @@ const CursoEstudiante = ({ cursos = [] }) => {
   }, []);
 
   const buscador = (idcurso) => {
-    let result=false
-    miscursos.forEach(element => {
-      if(element && idcurso === element.id_curso){
-         result=true;
+    let result = false;
+    miscursos.forEach((element) => {
+      if (element && idcurso === element.id_curso) {
+        result = true;
       }
     });
     return result;
-  }
+  };
 
   const getCookies = (cname) => {
     var name = cname + "=";
@@ -63,21 +63,15 @@ const CursoEstudiante = ({ cursos = [] }) => {
           className="p-2 text-white overflow border-top border-start border-end border-bottom border-white"
           id="cursos"
         >
-          <a
-            type="button"
-            onClick={() => setCurso(item)}
-            className="vistaprevia"
-            data-bs-toggle="modal"
-            data-bs-target="#videoModal"
-          >
-            <img
-              src={item.ubicacion_img}
-              alt=""
-              width="200px"
-              height="150px"
-              className=" alin border-top border-start border-end border-bottom border-white"
-            />
-          </a>
+          <img
+            src={item.ubicacion_img}
+            id="imagen-cursos-estudiante"
+            alt=""
+            width="200px"
+            height="150px"
+            className=" alin border-top border-start border-end border-bottom border-white"
+          />
+
           <div className=" card-body style m-0 ">
             <h4 id="instructor-nombre" className="card-title">
               {item.instructor.nombre}
@@ -87,44 +81,34 @@ const CursoEstudiante = ({ cursos = [] }) => {
             </h4>
             <h4 id="instructor-apellido-materno" className="card-title">
               {item.instructor.apellido_materno}
-            </h4><br />
-            <a
-              type="button"
-              onClick={() => setCurso(item)}
-              className="vistaprevia"
-              data-bs-toggle="modal"
-              data-bs-target="#videoModal"
-              id="nombre-curso"
-            >
-              {" "}
-              <p id="nombre-del-curso" className="card-text">
-                {item.nombre}
-              </p>
-            </a>
+            </h4>
+            <br />{" "}
+            <p id="nombre-del-curso" className="card-text">
+              {item.nombre}
+            </p>
             <p id="Descripcion" className="card-text">
               {item.descripcion}
             </p>
             <div class="d-grid justify-content-md-end">
-              {
-               !buscador(item.id_curso) ? 
-              <button
-                type="button"
-                onClick={() => setCurso(item)}
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-                className="btnnn btn-outline-success boton-inscribirse"
-              >
-                Inscribirse
-              </button>
-              :
-              <button
-                type="button"
-                style={{color:"yellow"}}
-                className="btnnn btn-outline-warning boton-inscribirse"
-              >
-                Inscrito
-              </button>
-              }
+              {!buscador(item.id_curso) ? (
+                <button
+                  type="button"
+                  onClick={() => setCurso(item)}
+                  data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop"
+                  className="btnnn btn-outline-success boton-inscribirse"
+                >
+                  Inscribirse
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  style={{ color: "yellow" }}
+                  className="btnnn btn-outline-warning boton-inscribirse"
+                >
+                  Inscrito
+                </button>
+              )}
             </div>
           </div>
         </div>
