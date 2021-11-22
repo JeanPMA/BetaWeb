@@ -122,7 +122,7 @@ const CursoEstudiante = ({ cursos = [] }) => {
                 style={{color:"yellow"}}
                 className="btnnn btn-outline-warning boton-inscribirse"
               >
-                Inscrito
+                Ir al curso
               </button>
               }
             </div>
