@@ -17,7 +17,8 @@ import Estudiante from "./pages/Estudiante";
 import VistaListaEstudiantes from "./misCursosEstudiante/VistaListaEstudiantes";
 import NavegacionEstudiante from "./components/NavegacionEstudiante";
 import ListaCursosParaEstudiantes from "./CursosEstudiante/ListaCursosParaEstudiante";
-import MisVideo from "./misCursosEstudiante/MisVideo"
+import MisVideo from "./misCursosEstudiante/MisVideo";
+import Administrador from "./pages/Administrador";
 
 class App extends Component {
   render() {
@@ -60,6 +61,9 @@ class App extends Component {
             </Route>
             <Route path="/MisVideo">
               <MisVideo/>
+            </Route>
+            <Route path="/administrador">
+              <Administrador />
             </Route>
           </Switch>
         </div>
