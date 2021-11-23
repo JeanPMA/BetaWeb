@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./App.css";
 import Detalles from "./components/Detalles";
 import Navigation from "./components/Navegacion";
+import NavigationLogin from "./components/NavegacionLogin";
 import Slider from "./components/Slider";
 import Formulario from "./login/Formulario";
 import Cursos from "./pages/Cursos";
@@ -34,7 +35,7 @@ class App extends Component {
               <Vista />
             </Route>
             <Route path="/inicio">
-              <Navigation />
+              <NavigationLogin />
               <Formulario />
             </Route>
             <Route path="/instructor">
