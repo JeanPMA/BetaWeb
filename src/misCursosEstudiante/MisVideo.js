@@ -1,10 +1,14 @@
 import React from "react";
+import $ from "jquery";
 import "./Vista.css";
-const recargar = () => {
-  window.location.href = window.location.href;
-};
+
 function MisVideo(props) {
   const idVideo = props.curso.ubicacion_vid?.split("=")[1];
+  const recargar = () => {
+    $("#videoModal iframe").attr("src", $("#videoModal iframe").attr("src"));
+    $("#videoModal iframe").attr("src", "https://www.youtube.com/embed/" + idVideo);
+  };
+
   return (
     <div
       className="modal fade"
