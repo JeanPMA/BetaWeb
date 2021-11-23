@@ -70,6 +70,10 @@ function Lista() {
   };
   /////
   const eliminar = async () => {
+    /* if (cursoSeleccionado.nombre == "ababa") {
+      setModalEliminar(false);
+      alert("Curso" + cursoSeleccionado.nombre + " tiene estudiantes");
+    } else {*/
     await axios
       .delete(baseUrl + cursoSeleccionado.id_curso)
       .then((response) => {
@@ -80,7 +84,7 @@ function Lista() {
         window.location.href = "/VistaInstructor";
       });
   };
-
+  // };
   ///////////////////////////////////
   useEffect(() => {
     axios
@@ -119,11 +123,15 @@ function Lista() {
         instruc = ins;
       }
     });
-    const cursos_orden=instruc.cursos.sort(function (x, y){
-      if (x.nombre < y.nombre) {return -1;}
-      if (x.nombre > y.nombre) {return 1;}
+    const cursos_orden = instruc.cursos.sort(function (x, y) {
+      if (x.nombre < y.nombre) {
+        return -1;
+      }
+      if (x.nombre > y.nombre) {
+        return 1;
+      }
       return 0;
-    })
+    });
     //console.log(cursos_orden);
     return cursos_orden;
   };
