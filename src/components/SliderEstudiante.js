@@ -1,6 +1,8 @@
 import React from "react";
 import Carousel from "./CarouselInstructor";
 import IconoLupa from "../assets/lupa.png";
+import IconoYoutube from "../assets/YouTube.png";
+import IconoInscribete from "../assets/inscribete2.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faSearch,
@@ -59,7 +61,7 @@ const SliderEstudiante = () => {
             <div className="border border-white consejo">
               <div className="justify-content-center pt-2 imagen-oferta">
                 <div className="icono2-slider-instructor">
-                  <FontAwesomeIcon icon={faRegistered} />
+                 < img src={IconoInscribete} className="inscribete" height="40px" width="50px" />
 
                   <div>
                     <p className="texto-2">
@@ -72,7 +74,7 @@ const SliderEstudiante = () => {
             <div className="contenedor-cursos-inicio border border-white consejo">
               <div className="justify-content-center pt-2 imagen-oferta ">
                 <div className="icono3-slider-instructor">
-                  <FontAwesomeIcon icon={faEye} />
+                < img src={IconoYoutube} className="YouTube" height="50px" width="50px" />
 
                   <div>
                     <p className="texto-3">
