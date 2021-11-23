@@ -65,14 +65,15 @@ class boton_misCursosDocente extends Component {
   enviarAlaBD(e) {
     e.preventDefault();
     let valido = true;
-    if (this.state.nombre === "") {
+
+    if (this.state.nombre.trim() == "") {
       this.setState({
         invalidNombre: true,
         mensajeNombre: "Este campo es obligatorio",
       });
       valido = false;
     }
-    if (this.state.descripcion === "") {
+    if (this.state.descripcion.trim() == "") {
       this.setState({
         invalidDetalles: true,
         mensajeDetalles: "Este campo es obligatorio",
