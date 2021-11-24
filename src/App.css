@@ -547,3 +547,8 @@ a:active {
   margin-bottom: 8px;
   height: 50px;
 }
+#ver-detalles {
+  float: right;
+  height: 25px;
+  width: 95px;
+}

@@ -31,13 +31,7 @@ function DetallesModal(props) {
               width="50%"
               className="m-auto"
             />
-            <p className="text-white fs-5 fw-bold text-start ">
-              {props.curso.instructor.nombre +
-                " " +
-                props.curso.instructor.apellido_paterno +
-                " " +
-                props.curso.instructor.apellido_materno}
-            </p>
+
             <p className="text-white text-start">{props.curso.descripcion}</p>
           </div>
         </div>
