@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Link } from "react";
 import MisVideo from "../misCursosEstudiante/MisVideo";
 import "./Cursoss.css";
 
@@ -15,6 +15,7 @@ const Cursoss = ({ cursos = [] }) => {
           <a href="#">
             <img
               src={item.ubicacion_img}
+              id="imagen-cursos-estudiante"
               alt=""
               width="200px"
               height="150px"
@@ -41,6 +42,16 @@ const Cursoss = ({ cursos = [] }) => {
               {item.descripcion}
               <br />
             </p>
+            <div>
+              <a
+                type="button"
+                href="/inicio"
+                className=" btn btn-success p-0  "
+                id="ver-detalles"
+              >
+                Ver detalles
+              </a>
+            </div>
           </div>
         </div>
       ))}

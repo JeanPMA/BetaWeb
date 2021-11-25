@@ -1,26 +1,22 @@
 import Carousel from "./Carousel";
-import React, { Component } from "react";
-import axios from "axios";
 
-class Slider extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      cursos: [],
-    };
-  }
-  componentDidMount() {
-    axios.get("https://betaweb-back.herokuapp.com/api/curso").then((resp) => {
-      const limit = 8;
+import React, { useState, useEffect } from "react";
 
-      this.setState({
-        cursos: resp.data.slice(0, limit),
-      });
-    });
-  }
-  render() {
-    const { cursos } = this.state;
-    return (
+import DetallesModal from "./DetallesModal";
+
+const Slider = () => {
+  const [cursos, setCursos] = useState([]);
+  const [curso, setCurso] = useState({});
+
+  useEffect(() => {
+    fetch("https://betaweb-back.herokuapp.com/api/curso").then(
+      async (response) => {
+        if (response.ok) setCursos(await response.json());
+      }
+    );
+  }, []);
+  return (
+    <>
       <div>
         <div className="text-white oferta">
           <h2>Oferta de cursos</h2>
@@ -45,35 +41,43 @@ class Slider extends Component {
             }}
           >
             <Carousel show={4}>
-              {cursos.map((curso) => (
-                <a href="#popup">
+              {cursos.map((item) => (
+                <a
+                  key={item.id_curso}
+                  type="button"
+                  onClick={() => setCurso(item)}
+                  data-bs-toggle="modal"
+                  data-bs-target="#videoModal"
+                >
                   <div className="contenedor-cursos-inicio border border-white">
                     <div className="justify-content-center pt-2 imagen-oferta">
                       <img
-                        src={curso.ubicacion_img}
+                        src={item.ubicacion_img}
                         width="200px"
                         height="120px"
                       />
                     </div>
                     <div className="text-white">
                       <p className="instructor">
-                        {curso.instructor.nombre +
+                        {item.instructor.nombre +
                           " " +
-                          curso.instructor.apellido_paterno}
+                          item.instructor.apellido_paterno}
                       </p>
                     </div>
 
                     <div className="text-white">
-                      <p>{curso.nombre}</p>
+                      <p>{item.nombre}</p>
                     </div>
                   </div>
                 </a>
               ))}
             </Carousel>
+            <DetallesModal curso={curso} />
           </div>
         </div>
       </div>
-    );
-  }
-}
+    </>
+  );
+};
+
 export default Slider;
