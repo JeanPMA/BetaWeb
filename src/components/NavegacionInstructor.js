@@ -21,6 +21,7 @@ class NavegacionInstructor extends Component {
     cookies.remove('username', {path: "/"});
     cookies.remove('id_instructor', {path: "/"});
     cookies.remove('estudiante', {path: "/"});
+    cookies.remove('admin', {path: "/"});
     window.location.href='./';
   }
   render() {
@@ -34,6 +35,7 @@ class NavegacionInstructor extends Component {
       console.log('passwd' + cookies.get('passwd'));
       console.log('id_instructor' + cookies.get('id_instructor'));
       console.log('estudiante' + cookies.get('estudiante'));
+      console.log('admin' + cookies.get('admin'));
     return (
       <div>
         <div>

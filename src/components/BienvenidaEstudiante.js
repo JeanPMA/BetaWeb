@@ -8,13 +8,18 @@ class BienvenidaEstudiante extends Component {
  
   componentDidMount(){
     if(!cookies.get('username')){
-        window.location.href="./";
-    }else{
-      if(!cookies.get('id_estudiante')){
+      window.location.href="./";
+  }else{
+    if(!cookies.get('id_estudiante')){
+      if(!cookies.get('id_instructor')){ 
+        window.location.href="./administrador";
+      }else{
         window.location.href="./instructor";
-    }
-    }
+      }
+
   }
+  }
+}
   
   render(){
    

@@ -58,8 +58,9 @@ class Formulario extends Component {
               
               
               
-              if (respuesta.instructor==null){
+              if (respuesta.instructor==null && respuesta.admin==null){
                 cookies.set("instructor", respuesta.instructor, { path: "/" }); 
+                cookies.set("admin", respuesta.admin, { path: "/" }); 
                 cookies.set("id_estudiante", respuesta.estudiante.id_estudiante, {path: "/",});
                 cookies.set("nombre", respuesta.estudiante.nombre, { path: "/" });
                 cookies.set("apellido_paterno", respuesta.estudiante.apellido_paterno,{ path: "/" });
@@ -68,13 +69,24 @@ class Formulario extends Component {
                 
               window.location.href = "../estudiante";
               break;
-              
-              }else{
+              }
+              else if(respuesta.instructor==null && respuesta.estudiante==null){
+                cookies.set("instructor", respuesta.instructor, { path: "/" }); 
+                cookies.set("estudiante", respuesta.estudiante, {path: "/",});
+                cookies.set("id_admin", respuesta.admin.id_administrador, {path: "/",});
+                cookies.set("nombre", respuesta.admin.nombre, { path: "/" });
+                cookies.set("apellido_paterno", respuesta.admin.apellido_paterno,{ path: "/" });
+                cookies.set("apellido_materno",respuesta.admin.apellido_materno,{ path: "/" });
+                window.location.href = "../administrador";
+                break;
+              }
+              else{
                 cookies.set("id_instructor", respuesta.instructor.id_instructor, {path: "/",});
                 cookies.set("nombre", respuesta.instructor.nombre, { path: "/" });
                 cookies.set("apellido_paterno", respuesta.instructor.apellido_paterno,{ path: "/" });
                 cookies.set("apellido_materno",respuesta.instructor.apellido_materno,{ path: "/" });
                 cookies.set("estudiante", respuesta.estudiante, {path: "/",});
+                cookies.set("admin", respuesta.admin, { path: "/" }); 
                 window.location.href = "../instructor";
                 break;
               }
@@ -110,6 +122,15 @@ class Formulario extends Component {
     
   }
   
+  componentDidMount() {
+    if (cookies.get("username") && (!cookies.get('admin'))=='null') {
+      
+     
+      window.location.href = "../administrador";
+    }
+     
+    
+  }
 
   render() {
     return (
