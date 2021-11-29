@@ -3,9 +3,10 @@ import React from "react";
 import BienvenidaAdministrador from "../components/BienvenidaAdministrador";
 import NavegacionAdministrador from "../components/NavegacionAdministrador";
 import Contenido_Administrador from "../components/Contenido_Administrador";
+import ListaDocentes from "../Administrador/listaDocentes";
 
 
-function Estudiante() {
+function Administrador() {
   return (
     <>
       <div className="navegacion-menu">
@@ -18,8 +19,11 @@ function Estudiante() {
                 </div>
                 <div className="BienvenidaAdministrador">
                     <BienvenidaAdministrador />
+                   
                 </div>
-                
+                <div className="listaDocentes">
+                <ListaDocentes/>
+                </div>
              </div>
         </div>
           
@@ -28,4 +32,4 @@ function Estudiante() {
   );
 }
 
-export default Estudiante;
+export default Administrador;
