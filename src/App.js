@@ -19,6 +19,7 @@ import NavegacionEstudiante from "./components/NavegacionEstudiante";
 import ListaCursosParaEstudiantes from "./CursosEstudiante/ListaCursosParaEstudiante";
 import MisVideo from "./misCursosEstudiante/MisVideo";
 import Administrador from "./pages/Administrador";
+import RegistroEstudiante from "./registro_estudiante/RegistroEstudiante";
 
 class App extends Component {
   render() {
@@ -39,7 +40,11 @@ class App extends Component {
               <NavigationLogin />
               <Formulario />
             </Route>
-            <Route path="/instructor">
+            <Route path="/registro">
+              <NavigationLogin />
+              <RegistroEstudiante />
+            </Route>
+           <Route path="/instructor">
               <Instructor />
             </Route>
             <Route path="/VistaInstructor">
