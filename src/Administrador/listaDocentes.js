@@ -41,12 +41,21 @@ function ListaDocentes() {
       <div className="list-group">
         <div className="col-md-6 col align-self-center">
           <div className="container">
-            <h3 className="text-white">Mis cursos</h3>
+            <h3 className="text-white">Mis Instructores</h3>
             <table className="table text-white">
               <thead>
                 <tr>
                   <th scope="col" className="text-white">
                     Nombres
+                  </th>
+                  <th scope="col" className="text-white">
+                    Apellido Paterno
+                  </th>
+                  <th scope="col" className="text-white">
+                    Apellido Materno
+                  </th>
+                  <th scope="col" className="text-white">
+                    Correo Electronico
                   </th>
                 </tr>
               </thead>
@@ -57,15 +66,17 @@ function ListaDocentes() {
                       <tr key={element.id_curso}>
                         <td className="text-white ">{element.nombre}</td>
                         <td className="text-white ">
-                          {element.email}
-                        </td>
-                        <td className="text-white ocultar">
                           {element.apellido_paterno}
                         </td>
-                        <td className="text-white ocultar">
+                        <td className="text-white ">
                           {element.apellido_materno}
                         </td>
                         
+                        <td className="text-white ">
+                          {element.email}
+                        </td>
+                        
+                                         
                       </tr>
                     )
                   );

@@ -24,23 +24,7 @@ class BienvenidaAdministrador extends Component {
   render(){
    
     return(
-        <div><div className="list-group">
-        <div className="col-md-6 col align-self-center">
-          <div className="container">
-            <h3 className="text-white">Mis Instructores</h3>
-            <table className="table text-white">
-              <thead>
-                <tr>
-                  <th scope="col" className="text-white">
-                    Nombres
-                  </th>
-                  
-                </tr>
-              </thead>
-              </table>
-              </div>
-        </div>
-    </div></div>
+        <div></div>
         
   );
   }
