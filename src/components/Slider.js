@@ -36,10 +36,6 @@ const Slider = () => {
                 breakpoint: 990,
                 cols: 2,
               },
-              {
-                breakpoint: 760,
-                cols: 1,
-              },
             ]}
             mobileBreakpoint={760}
           >
