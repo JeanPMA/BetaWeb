@@ -1,7 +1,6 @@
-import Carousel from "./Carousel";
-
 import React, { useState, useEffect } from "react";
-
+import Carousel from "react-grid-carousel";
+import "./carousel.css";
 import DetallesModal from "./DetallesModal";
 
 const Slider = () => {
@@ -15,6 +14,7 @@ const Slider = () => {
       }
     );
   }, []);
+
   return (
     <>
       <div>
@@ -22,26 +22,29 @@ const Slider = () => {
           <h2>Oferta de cursos</h2>
         </div>
 
-        <div
-          className="border border-white container-cursos"
-          style={{
-            maxWidth: 1200,
-            marginLeft: "auto",
-            marginRight: "auto",
-            marginTop: 10,
-            paddingLeft: 0,
-          }}
-        >
-          <div
-            className="text-center"
-            style={{
-              maxWidth: 1100,
-              marginLeft: "auto",
-              marginRight: "auto",
-            }}
+        <div className="text-center container-carousel">
+          <Carousel
+            cols={4}
+            rows={1}
+            gap={11}
+            responsiveLayout={[
+              {
+                breakpoint: 1200,
+                cols: 3,
+              },
+              {
+                breakpoint: 990,
+                cols: 2,
+              },
+              {
+                breakpoint: 760,
+                cols: 1,
+              },
+            ]}
+            mobileBreakpoint={760}
           >
-            <Carousel show={4}>
-              {cursos.map((item) => (
+            {cursos.map((item) => (
+              <Carousel.Item>
                 <a
                   key={item.id_curso}
                   type="button"
@@ -65,15 +68,15 @@ const Slider = () => {
                       </p>
                     </div>
 
-                    <div className="text-white">
+                    <div className="text-white align-self-center p-2 ">
                       <p>{item.nombre}</p>
                     </div>
                   </div>
                 </a>
-              ))}
-            </Carousel>
-            <DetallesModal curso={curso} />
-          </div>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+          <DetallesModal curso={curso} />
         </div>
       </div>
     </>
