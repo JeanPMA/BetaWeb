@@ -101,7 +101,7 @@ class boton_misCursosDocente extends Component {
   render() {
     const modalStyles = {
       position: "absolute",
-      top: "50%",
+      top: "30%",
       left: "50%",
       transform: "translate(-50%, -90%)",
       width: "22em",
@@ -119,7 +119,10 @@ class boton_misCursosDocente extends Component {
         </div>
 
         <Modal isOpen={this.state.abierto} style={modalStyles} className="">
-          <div className="contenedorModal  border-top border-start border-end border-bottom border-white">
+          <div
+            className="contenedorModal  "
+            className=" border-top border-start border-end border-bottom border-white"
+          >
             <Form onSubmit={this.enviarAlaBD}>
               <ModalHeader id="tituloCrearCurso">
                 <a id="tituloModal"> Nuevo curso </a>

@@ -1,89 +1,15 @@
-.carousel-container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.carousel-wrapper {
-  display: flex;
-  width: 100%;
-  position: relative;
-}
-
-.carousel-content-wrapper {
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-}
-
-.carousel-content {
-  display: flex;
-  transition: all 250ms linear;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-.carousel-content::-webkit-scrollbar,
-.carousel-content::-webkit-scrollbar {
-  display: none;
-}
-
-.carousel-content > * {
-  width: 100%;
-  flex-shrink: 0;
-  flex-grow: 1;
-}
-
-.carousel-content.show-2 > * {
-  width: 50%;
-}
-
-.carousel-content.show-3 > * {
-  width: calc(100% / 3);
-}
-
-.carousel-content.show-4 > * {
-  width: calc(100% / 4);
-}
-
-.left-arrow,
-.right-arrow {
-  position: absolute;
-  z-index: 1;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-  border-radius: 24px;
-  background-color: #08cf68;
-  border: 1px solid #ddd;
-  color: white;
-  font-size: 30px;
-
-  font-weight: bold;
-}
-
-.left-arrow {
-  left: 0px;
-}
-
-.right-arrow {
-  left: 1040px;
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .left-arrow,
-  .right-arrow {
-    display: none;
-  }
-}
 .contenedor-cursos-inicio {
   background-color: #101c36;
-  margin-right: 10px;
-  max-width: 265px;
-  min-width: 265px;
-  max-height: 200px;
-  min-height: 200px;
+
+  width: 250px;
+  height: 250px;
+}
+
+.container-carousel {
+  max-width: 1100px;
+  padding: 0 50 px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .oferta {
   margin-left: 85px;
@@ -95,4 +21,33 @@
 .instructor {
   font-size: 12px;
   margin-bottom: 0px;
+}
+@media (max-width: 1200px) {
+  .contenedor-cursos-inicio {
+    width: 300px;
+  }
+}
+@media (max-width: 990px) {
+  .contenedor-cursos-inicio {
+    width: 350px;
+  }
+  .imagen-oferta > img {
+    width: 300px;
+    height: 140px;
+  }
+}
+@media (max-width: 760px) {
+  .contenedor-cursos-inicio {
+    width: 450px;
+    height: 300px;
+    min-width: 350px;
+  }
+  .imagen-oferta > img {
+    padding-top: 10px;
+    width: 350px;
+    height: 180px;
+  }
+  .oferta {
+    text-align: center;
+  }
 }
