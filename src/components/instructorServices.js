@@ -2,18 +2,23 @@ import axios from "axios";
 
 const baseUrl = "https://betaweb-back.herokuapp.com/api";
 
-const curso = {};
+const instructor = {};
 
 curso.create = async (state) => {
   const datapost = {
     nombre: state.nombre,
-    descripcion: state.descripcion,
-    ubicacion_img: state.ubicacion_img,
-    ubicacion_vid: state.ubicacion_vid, 
-    instructor: state.instructor,
+    apellido_paterno: state.apellido_paterno,
+    apellido_materno: state.apellido_materno,
+    email: state.email, 
+    usuario: state.usuario,
+    contraseña: state.contraseña,
+    area_especializacion: state.area_especializacion,
+    nivel_estudio: state.nivel_estudio,
+    fecha_nacimiento: state.fecha_nacimiento,
   };
 
-  const urlPost = baseUrl + "/CrearCurso";
+
+  const urlPost = baseUrl + "/NewInstructor";
 
   const res = await axios
     .post(urlPost, datapost)
@@ -30,4 +35,4 @@ curso.create = async (state) => {
   return res;
 };
 
-export default curso;
+export default instructor;

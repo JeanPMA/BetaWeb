@@ -12,9 +12,14 @@ import {
   Form,
 } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
-import curso from "./cursoServices";
+import instructor from "./instructorServices";
 
+let cookieIdInstructor = document.cookie.replace(
+  /(?:(?:^|.*;\s*)id_instructor\s*\=\s*([^;]*).*$)|^.*$/,
+  "$1"
+);
 
+console.log(cookieIdInstructor);
 
 class Contenido_Administrador extends Component {
   state = {
@@ -29,12 +34,17 @@ class Contenido_Administrador extends Component {
     super(props);
     this.state = {
       nombre: "",
-      descripcion: "",
-      ubicacion_img: "",
-      ubicacion_vid: "",
-     /* instructor: {
+      apellido_paterno: "",
+      apellido_materno: "",
+      email: "",
+      usuario: "",
+      contraseña: "",
+      area_especializacion: "",
+      nivel_estudio: "",
+      fecha_nacimiento: "",
+      instructor: {
         id_instructor: cookieIdInstructor,
-      },*/
+      },
       mensajeNombre: "",
       mensajeDetalles: "",
       mensajeUbicacion: "",
@@ -145,8 +155,8 @@ class Contenido_Administrador extends Component {
                     placeholder="Apellido paterno del instructor"
                     maxlength="10"
                     type="text"
-                    id="nombre"
-                    name="nombre"
+                    id="apellidoP"
+                    name="apellido_paterno"
                     value={this.state.nombre}
                     onChange={
                       (this.onChange,
@@ -165,8 +175,8 @@ class Contenido_Administrador extends Component {
                     placeholder="Apellido materno del instructor"
                     maxlength="20"
                     type="text"
-                    id="nombre"
-                    name="nombre"
+                    id="apellidoM"
+                    name="apellido_materno"
                     value={this.state.nombre}
                     onChange={
                       (this.onChange,
@@ -185,8 +195,8 @@ class Contenido_Administrador extends Component {
                     placeholder="Correo electronico del instructor"
                     maxlength="20"
                     type="text"
-                    id="nombre"
-                    name="nombre"
+                    id="correo"
+                    name="email"
                     value={this.state.nombre}
                     onChange={
                       (this.onChange,
@@ -205,8 +215,8 @@ class Contenido_Administrador extends Component {
                     placeholder="Nombre de usuario del instructor"
                     maxlength="20"
                     type="text"
-                    id="nombre"
-                    name="nombre"
+                    id="usuario"
+                    name="usuario"
                     value={this.state.nombre}
                     onChange={
                       (this.onChange,
@@ -225,8 +235,8 @@ class Contenido_Administrador extends Component {
                     placeholder="Contraseña del instructor"
                     maxlength="20"
                     type="text"
-                    id="nombre"
-                    name="nombre"
+                    id="contraseña"
+                    name="contraseña"
                     value={this.state.nombre}
                     onChange={
                       (this.onChange,
@@ -245,8 +255,8 @@ class Contenido_Administrador extends Component {
                     placeholder="Areas de especializacion del instructor"
                     maxlength="100"
                     type="textarea"
-                    id="detalle"
-                    name="descripcion"
+                    id="detalleArea"
+                    name="area_especializacion"
                     value={this.state.descripcion}
                     onChange={
                       (this.onChange,
@@ -266,8 +276,8 @@ class Contenido_Administrador extends Component {
                     placeholder="Nivel de estudio del instructor"
                     maxlength="20"
                     type="text"
-                    id="nombre"
-                    name="nombre"
+                    id="nivel"
+                    name="nivel_estudio"
                     value={this.state.nombre}
                     onChange={
                       (this.onChange,
@@ -286,8 +296,8 @@ class Contenido_Administrador extends Component {
                     placeholder="(dia/mes/año"
                     maxlength="20"
                     type="text"
-                    id="nombre"
-                    name="nombre"
+                    id="fechaNac"
+                    name="fecha_nacimiento"
                     value={this.state.nombre}
                     onChange={
                       (this.onChange,
@@ -330,9 +340,9 @@ class Contenido_Administrador extends Component {
     const res = await curso.create(this.state);
     if (res.success) {
       window.location.href = window.location.href;
-      alert("Curso Registrado");
+      alert("Instructor Registrado");
     } else {
-      alert("Error al guardar curso, verifica el formato de tus URL");
+      alert("Error al registrar instructor, verifica los datos");
       window.location.href = window.location.href;
     }
   }
