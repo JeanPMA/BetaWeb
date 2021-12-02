@@ -33,12 +33,12 @@ class Contenido_Administrador extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      username: "",
+      passwd: "",     
       nombre: "",
       apellido_paterno: "",
       apellido_materno: "",
-      email: "",
-      usuario: "",
-      contraseña: "",
+      email: "",              
       area_especializacion: "",
       nivel_estudio: "",
       fecha_nacimiento: "",
@@ -46,8 +46,8 @@ class Contenido_Administrador extends Component {
       mensajeApellido_paterno: "",
       mensajeApellido_materno: "",
       mensajeEmail: "",
-      mensajeUsuario: "",
-      mensajeContraseña: "",
+      mensajeUsername: "",
+      mensajePasswd: "",
       mensajeArea_especializacion: "",
       mensajeNivel_estudio: "",
       mensajeFecha_nacimiento: "",
@@ -55,8 +55,8 @@ class Contenido_Administrador extends Component {
       invalidApellido_paterno: false,
       invalidApellido_materno: false,
       invalidEmail: false,
-      invalidUsuario: false,
-      invalidContraseña: false,
+      invalidUsername: false,
+      invalidPasswd: false,
       invalidArea_especializacion: false,
       invalidNivel_estudio: false,
       invalidFecha_nacimiento: false,
@@ -79,21 +79,21 @@ class Contenido_Administrador extends Component {
     e.preventDefault();
     let valido = true;
 
-    if (this.state.nombre.trim() == "") {
+    if (this.state.nombre == "") {
       this.setState({
         invalidNombre: true,
         mensajeNombre: "Este campo es obligatorio",
       });
       valido = false;
     }
-    if (this.state.apellido_paterno.trim() == "") {
+    if (this.state.apellido_paterno == "") {
       this.setState({
         invalidApellido_paterno: true,
         mensajeApellido_paterno: "Este campo es obligatorio",
       });
       valido = false;
     }
-    if (this.state.apellido_materno.trim() === "") {
+    if (this.state.apellido_materno === "") {
       this.setState({
         invalidApellido_materno: true,
         mensajeApellido_materno: "Este campo es obligatorio",
@@ -107,17 +107,17 @@ class Contenido_Administrador extends Component {
       });
       valido = false;
     }
-    if (this.state.usuario === "") {
+    if (this.state.username === "") {
       this.setState({
-        invalidUsuario: true,
-        mensajeUsuario: "Este campo es obligatorio",
+        invalidUsername: true,
+        mensajeUsername: "Este campo es obligatorio",
       });
       valido = false;
     }
     if (this.state.contraseña === "") {
       this.setState({
-        invalidContraseña: true,
-        mensajeContraseña: "Este campo es obligatorio",
+        invalidPasswd: true,
+        mensajePasswd: "Este campo es obligatorio",
       });
       valido = false;
     }
@@ -258,18 +258,18 @@ class Contenido_Administrador extends Component {
                     placeholder="Nombre de usuario del instructor"
                     maxlength="20"
                     type="text"
-                    id="usuario"
-                    name="usuario"
-                    value={this.state.usuario}
+                    id="username"
+                    name="username"
+                    value={this.state.username}
                     onChange={
                       (this.onChange,
-                      (event) => this.setState({ usuario: event.target.value }))
+                      (event) => this.setState({ username: event.target.value }))
                     }
-                    invalid={this.state.invalidUsuario}
+                    invalid={this.state.invalidUsername}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
                   <FormFeedback tooltip>
-                    {this.state.mensajeUsuario}
+                    {this.state.mensajeUsername}
                   </FormFeedback>
                 </FormGroup>
                 <FormGroup>
@@ -278,18 +278,18 @@ class Contenido_Administrador extends Component {
                     placeholder="Contraseña del instructor"
                     maxlength="20"
                     type="text"
-                    id="contraseña"
-                    name="contraseña"
-                    value={this.state.contraseña}
+                    id="passwd"
+                    name="passwd"
+                    value={this.state.passwd}
                     onChange={
                       (this.onChange,
-                      (event) => this.setState({ contraseña: event.target.value }))
+                      (event) => this.setState({ passwd: event.target.value }))
                     }
-                    invalid={this.state.invalidContraseña}
+                    invalid={this.state.invalidPasswd}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
                   <FormFeedback tooltip>
-                    {this.state.mensajeContraseña}
+                    {this.state.mensajePasswd}
                   </FormFeedback>
                 </FormGroup>
                 <FormGroup>

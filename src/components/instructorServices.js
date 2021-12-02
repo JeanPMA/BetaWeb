@@ -6,20 +6,22 @@ const instructor = {};
 
 instructor.create = async (state) => {
   const datapost = {
+    
+    username: state.username,
+    passwd: state.passwd,
     nombre: state.nombre,
     apellido_paterno: state.apellido_paterno,
     apellido_materno: state.apellido_materno,
-    email: state.email, 
-    usuario: state.usuario,
-    contraseña: state.contraseña,
+    email: state.email,
     area_especializacion: state.area_especializacion,
     nivel_estudio: state.nivel_estudio,
     fecha_nacimiento: state.fecha_nacimiento,
+    
   };
 
 
 
-  const urlPost = baseUrl + "/NewUser";
+  const urlPost = baseUrl + "/NewInstructor";
   //const urlPost2 = baseUrl + "/NewUser";
 
   const res = await axios
