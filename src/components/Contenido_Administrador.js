@@ -42,17 +42,25 @@ class Contenido_Administrador extends Component {
       area_especializacion: "",
       nivel_estudio: "",
       fecha_nacimiento: "",
-      instructor: {
-        id_instructor: cookieIdInstructor,
-      },
       mensajeNombre: "",
-      mensajeDetalles: "",
-      mensajeUbicacion: "",
-      mensajeVideo: "",
+      mensajeApellido_paterno: "",
+      mensajeApellido_materno: "",
+      mensajeEmail: "",
+      mensajeUsuario: "",
+      mensajeContraseña: "",
+      mensajeArea_especializacion: "",
+      mensajeNivel_estudio: "",
+      mensajeFecha_nacimiento: "",
       invalidNombre: false,
-      invalidDetalles: false,
-      invalidUbicacion: false,
-      invalidVideo: false,
+      invalidApellido_paterno: false,
+      invalidApellido_materno: false,
+      invalidEmail: false,
+      invalidUsuario: false,
+      invalidContraseña: false,
+      invalidArea_especializacion: false,
+      invalidNivel_estudio: false,
+      invalidFecha_nacimiento: false,
+
     };
     this.onChange = this.onChange.bind(this);
     this.enviarAlaBD = this.enviarAlaBD.bind(this);
@@ -78,24 +86,59 @@ class Contenido_Administrador extends Component {
       });
       valido = false;
     }
-    if (this.state.descripcion.trim() == "") {
+    if (this.state.apellido_paterno.trim() == "") {
       this.setState({
-        invalidDetalles: true,
-        mensajeDetalles: "Este campo es obligatorio",
+        invalidApellido_paterno: true,
+        mensajeApellido_paterno: "Este campo es obligatorio",
       });
       valido = false;
     }
-    if (this.state.ubicacion_img === "") {
+    if (this.state.apellido_materno.trim() === "") {
       this.setState({
-        invalidUbicacion: true,
-        mensajeUbicacion: "Este campo es obligatorio",
+        invalidApellido_materno: true,
+        mensajeApellido_materno: "Este campo es obligatorio",
       });
       valido = false;
     }
-    if (this.state.ubicacion_vid === "") {
+    if (this.state.email === "") {
       this.setState({
-        invalidVideo: true,
-        mensajeVideo: "Este campo es obligatorio",
+        invalidEmail: true,
+        mensajeEmail: "Este campo es obligatorio",
+      });
+      valido = false;
+    }
+    if (this.state.usuario === "") {
+      this.setState({
+        invalidUsuario: true,
+        mensajeUsuario: "Este campo es obligatorio",
+      });
+      valido = false;
+    }
+    if (this.state.contraseña === "") {
+      this.setState({
+        invalidContraseña: true,
+        mensajeContraseña: "Este campo es obligatorio",
+      });
+      valido = false;
+    }
+    if (this.state.area_especializacion === "") {
+      this.setState({
+        invalidArea_especializacion: true,
+        mensajeArea_especializacion: "Este campo es obligatorio",
+      });
+      valido = false;
+    }
+    if (this.state.nivel_estudio === "") {
+      this.setState({
+        invalidNivel_estudio: true,
+        mensajeNivel_estudio: "Este campo es obligatorio",
+      });
+      valido = false;
+    }
+    if (this.state.fecha_nacimiento === "") {
+      this.setState({
+        invalidFecha_nacimiento: true,
+        mensajeFecha_nacimiento: "Este campo es obligatorio",
       });
       valido = false;
     }
@@ -157,16 +200,16 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="apellidoP"
                     name="apellido_paterno"
-                    value={this.state.nombre}
+                    value={this.state.apellido_paterno}
                     onChange={
                       (this.onChange,
-                      (event) => this.setState({ nombre: event.target.value }))
+                      (event) => this.setState({ apellido_paterno: event.target.value }))
                     }
-                    invalid={this.state.invalidNombre}
+                    invalid={this.state.invalidApellido_paterno}
                   />
                   <p className="caracteres">Caract. Max. 10</p>
                   <FormFeedback tooltip>
-                    {this.state.mensajeNombre}
+                    {this.state.mensajeApellido_paterno}
                   </FormFeedback>
                 </FormGroup>
                 <FormGroup>
@@ -177,16 +220,16 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="apellidoM"
                     name="apellido_materno"
-                    value={this.state.nombre}
+                    value={this.state.apellido_materno}
                     onChange={
                       (this.onChange,
-                      (event) => this.setState({ nombre: event.target.value }))
+                      (event) => this.setState({ apellido_materno: event.target.value }))
                     }
-                    invalid={this.state.invalidNombre}
+                    invalid={this.state.invalidApellido_materno}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
                   <FormFeedback tooltip>
-                    {this.state.mensajeNombre}
+                    {this.state.mensajeApellido_materno}
                   </FormFeedback>
                 </FormGroup>
                 <FormGroup>
@@ -197,16 +240,16 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="correo"
                     name="email"
-                    value={this.state.nombre}
+                    value={this.state.email}
                     onChange={
                       (this.onChange,
-                      (event) => this.setState({ nombre: event.target.value }))
+                      (event) => this.setState({ email: event.target.value }))
                     }
-                    invalid={this.state.invalidNombre}
+                    invalid={this.state.invalidEmail}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
                   <FormFeedback tooltip>
-                    {this.state.mensajeNombre}
+                    {this.state.mensajeEmail}
                   </FormFeedback>
                 </FormGroup>
                 <FormGroup>
@@ -217,16 +260,16 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="usuario"
                     name="usuario"
-                    value={this.state.nombre}
+                    value={this.state.usuario}
                     onChange={
                       (this.onChange,
-                      (event) => this.setState({ nombre: event.target.value }))
+                      (event) => this.setState({ usuario: event.target.value }))
                     }
-                    invalid={this.state.invalidNombre}
+                    invalid={this.state.invalidUsuario}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
                   <FormFeedback tooltip>
-                    {this.state.mensajeNombre}
+                    {this.state.mensajeUsuario}
                   </FormFeedback>
                 </FormGroup>
                 <FormGroup>
@@ -237,16 +280,16 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="contraseña"
                     name="contraseña"
-                    value={this.state.nombre}
+                    value={this.state.contraseña}
                     onChange={
                       (this.onChange,
-                      (event) => this.setState({ nombre: event.target.value }))
+                      (event) => this.setState({ contraseña: event.target.value }))
                     }
-                    invalid={this.state.invalidNombre}
+                    invalid={this.state.invalidContraseña}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
                   <FormFeedback tooltip>
-                    {this.state.mensajeNombre}
+                    {this.state.mensajeContraseña}
                   </FormFeedback>
                 </FormGroup>
                 <FormGroup>
@@ -257,17 +300,17 @@ class Contenido_Administrador extends Component {
                     type="textarea"
                     id="detalleArea"
                     name="area_especializacion"
-                    value={this.state.descripcion}
+                    value={this.state.area_especializacion}
                     onChange={
                       (this.onChange,
                       (event) =>
-                        this.setState({ descripcion: event.target.value }))
+                        this.setState({ area_especializacion: event.target.value }))
                     }
-                    invalid={this.state.invalidDetalles}
+                    invalid={this.state.invalidArea_especializacion}
                   />
                   <p className="caracteres">Caract. Max. 100</p>
                   <FormFeedback tooltip>
-                    {this.state.mensajeDetalles}
+                    {this.state.mensajeArea_especializacion}
                   </FormFeedback>
                 </FormGroup>
                 <FormGroup>
@@ -278,36 +321,36 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="nivel"
                     name="nivel_estudio"
-                    value={this.state.nombre}
+                    value={this.state.nivel_estudio}
                     onChange={
                       (this.onChange,
-                      (event) => this.setState({ nombre: event.target.value }))
+                      (event) => this.setState({ nivel_estudio: event.target.value }))
                     }
-                    invalid={this.state.invalidNombre}
+                    invalid={this.state.invalidNivel_estudio}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
                   <FormFeedback tooltip>
-                    {this.state.mensajeNombre}
+                    {this.state.mensajeNivel_estudio}
                   </FormFeedback>
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Fecha de nacimiento</Label>
                   <Input
-                    placeholder="(dia/mes/año"
+                    placeholder="dia/mes/año"
                     maxlength="20"
                     type="text"
                     id="fechaNac"
                     name="fecha_nacimiento"
-                    value={this.state.nombre}
+                    value={this.state.fecha_nacimiento}
                     onChange={
                       (this.onChange,
-                      (event) => this.setState({ nombre: event.target.value }))
+                      (event) => this.setState({ fecha_nacimiento: event.target.value }))
                     }
-                    invalid={this.state.invalidNombre}
+                    invalid={this.state.invalidFecha_nacimiento}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
                   <FormFeedback tooltip>
-                    {this.state.mensajeNombre}
+                    {this.state.mensajeFecha_nacimiento}
                   </FormFeedback>
                 </FormGroup>
               </ModalBody>
@@ -337,7 +380,7 @@ class Contenido_Administrador extends Component {
   }
   async onClickSave() {
     this.abrirModal();
-    const res = await curso.create(this.state);
+    const res = await instructor.create(this.state);
     if (res.success) {
       window.location.href = window.location.href;
       alert("Instructor Registrado");
@@ -345,6 +388,7 @@ class Contenido_Administrador extends Component {
       alert("Error al registrar instructor, verifica los datos");
       window.location.href = window.location.href;
     }
+    
   }
 }
 
