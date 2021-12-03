@@ -569,3 +569,37 @@ a:active {
 .icono {
   padding-left: 3%;
 }
+@media (max-width: 1000px) {
+  .container-menu {
+    width: 30%;
+  }
+}
+@media (max-width: 730px) {
+  .container-menu {
+    width: 100%;
+  }
+
+  .nombre-usuario {
+    padding-top: 0px;
+
+    font-size: 28px;
+  }
+  .texto-menu {
+    display: none;
+  }
+  .botones-menu-instructor {
+    text-align: center;
+    margin-top: 20%;
+  }
+  .icono-inicio-cursos-instructor {
+    display: none;
+  }
+  .boton-inicio-instructor {
+    border-radius: 0px;
+    border-bottom: 2px solid rgb(224, 224, 224, 0.5);
+  }
+  .boton-cursos-instructor {
+    border-radius: 0px;
+    border-bottom: 2px solid rgb(224, 224, 224, 0.5);
+  }
+}
