@@ -84,63 +84,63 @@ class Contenido_Administrador extends Component {
     if (this.state.nombre == "") {
       this.setState({
         invalidNombre: true,
-        mensajeNombre: "Este campo es obligatorio",
+    
       });
       valido = false;
     }
     if (this.state.apellido_paterno == "") {
       this.setState({
         invalidApellido_paterno: true,
-        mensajeApellido_paterno: "Este campo es obligatorio",
+       
       });
       valido = false;
     }
     if (this.state.apellido_materno === "") {
       this.setState({
         invalidApellido_materno: true,
-        mensajeApellido_materno: "Este campo es obligatorio",
+        
       });
       valido = false;
     }
     if (this.state.email === "") {
       this.setState({
         invalidEmail: true,
-        mensajeEmail: "Este campo es obligatorio",
+       
       });
       valido = false;
     }
     if (this.state.username === "") {
       this.setState({
         invalidUsername: true,
-        mensajeUsername: "Este campo es obligatorio",
+        
       });
       valido = false;
     }
-    if (this.state.contraseña === "") {
+    if (this.state.passwd === "") {
       this.setState({
         invalidPasswd: true,
-        mensajePasswd: "Este campo es obligatorio",
+        
       });
       valido = false;
     }
     if (this.state.area_especializacion === "") {
       this.setState({
         invalidArea_especializacion: true,
-        mensajeArea_especializacion: "Este campo es obligatorio",
+       
       });
       valido = false;
     }
     if (this.state.nivel_estudio === "") {
       this.setState({
         invalidNivel_estudio: true,
-        mensajeNivel_estudio: "Este campo es obligatorio",
+        
       });
       valido = false;
     }
     if (this.state.fecha_nacimiento === "") {
       this.setState({
         invalidFecha_nacimiento: true,
-        mensajeFecha_nacimiento: "Este campo es obligatorio",
+        
       });
       valido = false;
     }
@@ -151,7 +151,7 @@ class Contenido_Administrador extends Component {
   render() {
     const modalStyles = {
       position: "absolute",
-      top: "20%",
+      top: "26%",
       left: "50%",
       transform: "translate(-50%, -90%)",
       width: "22em",
@@ -172,8 +172,10 @@ class Contenido_Administrador extends Component {
             <Form onSubmit={this.enviarAlaBD}>
               <ModalHeader id="tituloCrearCurso">
                 <a id="tituloModal"> Nuevo instructor </a>
+                
               </ModalHeader>
               <ModalBody id="cuerpoCrearCurso">
+              <i id="obligatorio"><small>obligatorio  </small></i><i className="bi bi-exclamation-circle rojo" width="5px" height="5px"></i>
                 <FormGroup className="position-relative">
                   <Label for="nombre">Nombre</Label>
                   <Input
@@ -189,10 +191,9 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidNombre}
                   />
+                  
                   <p className="caracteres">Caract. Max. 20</p>
-                  <FormFeedback tooltip>
-                    {this.state.mensajeNombre}
-                  </FormFeedback>
+                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Apellido paterno</Label>
@@ -210,9 +211,7 @@ class Contenido_Administrador extends Component {
                     invalid={this.state.invalidApellido_paterno}
                   />
                   <p className="caracteres">Caract. Max. 10</p>
-                  <FormFeedback tooltip>
-                    {this.state.mensajeApellido_paterno}
-                  </FormFeedback>
+                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Apellido materno</Label>
@@ -230,9 +229,7 @@ class Contenido_Administrador extends Component {
                     invalid={this.state.invalidApellido_materno}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
-                  <FormFeedback tooltip>
-                    {this.state.mensajeApellido_materno}
-                  </FormFeedback>
+                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Correo electronico</Label>
@@ -250,9 +247,7 @@ class Contenido_Administrador extends Component {
                     invalid={this.state.invalidEmail}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
-                  <FormFeedback tooltip>
-                    {this.state.mensajeEmail}
-                  </FormFeedback>
+                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Usuario</Label>
@@ -270,9 +265,7 @@ class Contenido_Administrador extends Component {
                     invalid={this.state.invalidUsername}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
-                  <FormFeedback tooltip>
-                    {this.state.mensajeUsername}
-                  </FormFeedback>
+                 
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Contraseña</Label>
@@ -290,9 +283,7 @@ class Contenido_Administrador extends Component {
                     invalid={this.state.invalidPasswd}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
-                  <FormFeedback tooltip>
-                    {this.state.mensajePasswd}
-                  </FormFeedback>
+                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Area de especializacion</Label>
@@ -311,9 +302,7 @@ class Contenido_Administrador extends Component {
                     invalid={this.state.invalidArea_especializacion}
                   />
                   <p className="caracteres">Caract. Max. 100</p>
-                  <FormFeedback tooltip>
-                    {this.state.mensajeArea_especializacion}
-                  </FormFeedback>
+                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Nivel de estudio</Label>
@@ -331,18 +320,16 @@ class Contenido_Administrador extends Component {
                     invalid={this.state.invalidNivel_estudio}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
-                  <FormFeedback tooltip>
-                    {this.state.mensajeNivel_estudio}
-                  </FormFeedback>
+                  
                 </FormGroup>
                 <FormGroup>
-                  <Label for="nombre">Fecha de nacimiento</Label>
+                  <Label for="start">Fecha de nacimiento</Label>
                   <Input
                     placeholder="dia/mes/año"
                     maxlength="20"
-                    type="text"
-                    id="fechaNac"
-                    name="fecha_nacimiento"
+                    type="date"
+                    id="start"
+                    name="fecha_nacimiento" 
                     value={this.state.fecha_nacimiento}
                     onChange={
                       (this.onChange,
@@ -351,9 +338,7 @@ class Contenido_Administrador extends Component {
                     invalid={this.state.invalidFecha_nacimiento}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
-                  <FormFeedback tooltip>
-                    {this.state.mensajeFecha_nacimiento}
-                  </FormFeedback>
+                 
                 </FormGroup>
               </ModalBody>
               <ModalFooter id="pieCrearCurso">
@@ -384,15 +369,15 @@ class Contenido_Administrador extends Component {
     this.abrirModal();
     const res = await instructor.create(this.state);
     if (res.success) {
-      //window.location.href = window.location.href;
+      
       alert("Instructor Registrado");
     } else {
       alert("Error al registrar instructor, verifica los datos");
-      //window.location.href = window.location.href;
+      
     }
     const res2 = await instructor2.create(this.state);
     if (res2.success) {
-     // window.location.href = window.location.href;
+    //  window.location.href = window.location.href;
       alert("Instructor Registrado");
     } else {
       alert("Error al registrar instructor, verifica los datos");

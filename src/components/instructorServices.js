@@ -20,6 +20,7 @@ instructor.create = async (state) => {
 
   const urlPost = baseUrl + "/NewInstructor";
 
+console.log(datapost);
 
   const res = await axios
     .post(urlPost, datapost)
