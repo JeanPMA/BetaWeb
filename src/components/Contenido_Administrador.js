@@ -13,6 +13,7 @@ import {
 } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
 import instructor from "./instructorServices";
+import instructor2 from "./instructorServices2";
 
 /*let cookieIdInstructor = document.cookie.replace(
   /(?:(?:^|.*;\s*)id_instructor\s*\=\s*([^;]*).*$)|^.*$/,
@@ -62,6 +63,7 @@ class Contenido_Administrador extends Component {
       invalidFecha_nacimiento: false,
 
     };
+    
     this.onChange = this.onChange.bind(this);
     this.enviarAlaBD = this.enviarAlaBD.bind(this);
   }
@@ -382,16 +384,23 @@ class Contenido_Administrador extends Component {
     this.abrirModal();
     const res = await instructor.create(this.state);
     if (res.success) {
-      window.location.href = window.location.href;
+      //window.location.href = window.location.href;
       alert("Instructor Registrado");
-      console.log(res);
     } else {
       alert("Error al registrar instructor, verifica los datos");
-     // window.location.href = window.location.href;
-      console.log(res);
+      //window.location.href = window.location.href;
     }
-    
+    const res2 = await instructor2.create(this.state);
+    if (res2.success) {
+     // window.location.href = window.location.href;
+      alert("Instructor Registrado");
+    } else {
+      alert("Error al registrar instructor, verifica los datos");
+      //window.location.href = window.location.href;
+    }
+   
   }
+ 
 }
 
 export default Contenido_Administrador;
