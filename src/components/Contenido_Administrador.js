@@ -14,12 +14,12 @@ import {
 import "bootstrap/dist/css/bootstrap.css";
 import instructor from "./instructorServices";
 
-let cookieIdInstructor = document.cookie.replace(
+/*let cookieIdInstructor = document.cookie.replace(
   /(?:(?:^|.*;\s*)id_instructor\s*\=\s*([^;]*).*$)|^.*$/,
   "$1"
-);
+);*/
 
-console.log(cookieIdInstructor);
+//console.log(cookieIdInstructor);
 
 class Contenido_Administrador extends Component {
   state = {
@@ -149,7 +149,7 @@ class Contenido_Administrador extends Component {
   render() {
     const modalStyles = {
       position: "absolute",
-      top: "50%",
+      top: "20%",
       left: "50%",
       transform: "translate(-50%, -90%)",
       width: "22em",
@@ -384,9 +384,11 @@ class Contenido_Administrador extends Component {
     if (res.success) {
       window.location.href = window.location.href;
       alert("Instructor Registrado");
+      console.log(res);
     } else {
       alert("Error al registrar instructor, verifica los datos");
-      window.location.href = window.location.href;
+     // window.location.href = window.location.href;
+      console.log(res);
     }
     
   }
