@@ -37,6 +37,9 @@
   }
 }
 @media (max-width: 760px) {
+  .oferta {
+    text-align: initial;
+  }
   .contenedor-cursos-inicio {
     width: 450px;
     height: 300px;
@@ -49,5 +52,23 @@
   }
   .oferta {
     text-align: center;
+  }
+}
+@media (max-width: 500px) {
+  .contenedor-cursos-inicio {
+    width: 300px;
+    min-width: 200px;
+  }
+  .imagen-oferta > img {
+    width: 100%;
+  }
+}
+@media (max-width: 334px) {
+  .contenedor-cursos-inicio {
+    width: 250px;
+    min-width: 200px;
+  }
+  .imagen-oferta > img {
+    width: 100%;
   }
 }
