@@ -411,21 +411,22 @@ class Contenido_Administrador extends Component {
   async onClickSave() {
     this.abrirModal();
     const res = await instructor.create(this.state);
-    if (res.success) {
-     // window.location.href = window.location.href;
-     // alert("Instructor Registrado");
-    } else {
-      alert("Error al registrar instructor, verifica los datos");
-      
-    }
     const res2 = await instructor2.create(this.state);
-    if (res2.success) {
+    if (res.success && res2.success) {
       window.location.href = window.location.href;
-      //alert("Instructor Registrado");
+      alert("Instructor Registrado");
     } else {
       alert("Error al registrar instructor, verifica los datos");
       window.location.href = window.location.href;
     }
+    
+   /* if (res2.success) {
+      window.location.href = window.location.href;
+      alert("Instructor Registrado");
+    } else {
+      alert("Error al registrar instructor, verifica los datos");
+      window.location.href = window.location.href;
+    }*/
    
   }
  
