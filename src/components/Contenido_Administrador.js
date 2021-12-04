@@ -14,6 +14,7 @@ import {
 import "bootstrap/dist/css/bootstrap.css";
 import instructor from "./instructorServices";
 import instructor2 from "./instructorServices2";
+import { defineMetadata } from "core-js/fn/reflect";
 
 /*let cookieIdInstructor = document.cookie.replace(
   /(?:(?:^|.*;\s*)id_instructor\s*\=\s*([^;]*).*$)|^.*$/,
@@ -35,7 +36,8 @@ class Contenido_Administrador extends Component {
     super(props);
     this.state = {
       username: "",
-      passwd: "",     
+      passwd: "",
+      passwd2: "",      
       nombre: "",
       apellido_paterno: "",
       apellido_materno: "",
@@ -49,6 +51,7 @@ class Contenido_Administrador extends Component {
       mensajeEmail: "",
       mensajeUsername: "",
       mensajePasswd: "",
+      mensajePasswd2: "",
       mensajeArea_especializacion: "",
       mensajeNivel_estudio: "",
       mensajeFecha_nacimiento: "",
@@ -58,6 +61,7 @@ class Contenido_Administrador extends Component {
       invalidEmail: false,
       invalidUsername: false,
       invalidPasswd: false,
+      invalidPasswd2: false,
       invalidArea_especializacion: false,
       invalidNivel_estudio: false,
       invalidFecha_nacimiento: false,
@@ -144,6 +148,15 @@ class Contenido_Administrador extends Component {
       });
       valido = false;
     }
+    if (this.state.passwd != this.state.passwd2){
+      this.setState({
+        invalidPasswd: true,
+        invalidPasswd2: true,
+        mensajePasswd: "Las constraseñas no son iguales",
+        
+     });
+      valido = false;
+    }
     if (valido) {
       this.onClickSave();
     }
@@ -157,6 +170,8 @@ class Contenido_Administrador extends Component {
       width: "22em",
       height: "200px",
     };
+  
+
 
     return (
       <>
@@ -169,13 +184,14 @@ class Contenido_Administrador extends Component {
         </div>
         <Modal isOpen={this.state.abierto} style={modalStyles} className="">
           <div className="contenedorModal  border-top border-start border-end border-bottom border-white">
-            <Form onSubmit={this.enviarAlaBD}>
+            <Form onSubmit={this.enviarAlaBD} /*onSubmit={verificarPasswords()}*/>
               <ModalHeader id="tituloCrearCurso">
                 <a id="tituloModal"> Nuevo instructor </a>
                 
               </ModalHeader>
               <ModalBody id="cuerpoCrearCurso">
               <i id="obligatorio"><small>obligatorio  </small></i><i className="bi bi-exclamation-circle rojo" width="5px" height="5px"></i>
+              
                 <FormGroup className="position-relative">
                   <Label for="nombre">Nombre</Label>
                   <Input
@@ -272,8 +288,8 @@ class Contenido_Administrador extends Component {
                   <Input
                     placeholder="Contraseña del instructor"
                     maxlength="20"
-                    type="text"
-                    id="passwd"
+                    type="password" 
+                    id="passwd" required
                     name="passwd"
                     value={this.state.passwd}
                     onChange={
@@ -281,6 +297,24 @@ class Contenido_Administrador extends Component {
                       (event) => this.setState({ passwd: event.target.value }))
                     }
                     invalid={this.state.invalidPasswd}
+                  />
+                  <p className="caracteres">Caract. Max. 20</p>
+                  
+                </FormGroup>
+                <FormGroup>
+                  <Label for="nombre">Vuelve a escribir la Contraseña</Label>
+                  <Input
+                    placeholder="vuelve a escribir la contraseña"
+                    maxlength="20"
+                    type="password"
+                    id="passwd2" required
+                    name="passwd2"
+                    value={this.state.passwd2}
+                    onChange={
+                      (this.onChange,
+                      (event) => this.setState({ passwd2: event.target.value }))
+                    }
+                    invalid={this.state.invalidPasswd2}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
                   
@@ -340,7 +374,11 @@ class Contenido_Administrador extends Component {
                   <p className="caracteres">Caract. Max. 20</p>
                  
                 </FormGroup>
+                
               </ModalBody>
+              <FormFeedback tooltip>
+                    {this.state.mensajePasswd}
+                  </FormFeedback>
               <ModalFooter id="pieCrearCurso">
                 <Button
                   id="botonCrearCancelar"
@@ -361,10 +399,15 @@ class Contenido_Administrador extends Component {
               </ModalFooter>
             </Form>
           </div>
+          
         </Modal>
       </>
+      
     );
+   
   }
+  
+
   async onClickSave() {
     this.abrirModal();
     const res = await instructor.create(this.state);
@@ -377,11 +420,11 @@ class Contenido_Administrador extends Component {
     }
     const res2 = await instructor2.create(this.state);
     if (res2.success) {
-    //  window.location.href = window.location.href;
-      alert("Instructor Registrado");
+      window.location.href = window.location.href;
+      //alert("Instructor Registrado");
     } else {
       alert("Error al registrar instructor, verifica los datos");
-      //window.location.href = window.location.href;
+      window.location.href = window.location.href;
     }
    
   }
