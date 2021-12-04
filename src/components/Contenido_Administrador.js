@@ -412,8 +412,8 @@ class Contenido_Administrador extends Component {
     this.abrirModal();
     const res = await instructor.create(this.state);
     if (res.success) {
-      
-      alert("Instructor Registrado");
+     // window.location.href = window.location.href;
+     // alert("Instructor Registrado");
     } else {
       alert("Error al registrar instructor, verifica los datos");
       

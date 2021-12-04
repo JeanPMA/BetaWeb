@@ -6,6 +6,7 @@ const instructor = {};
 
 instructor.create = async (state) => {
   const datapost = {
+    
     apellido_paterno: state.apellido_paterno,
     apellido_materno: state.apellido_materno,
     email: state.email,
@@ -20,7 +21,7 @@ instructor.create = async (state) => {
 
   const urlPost = baseUrl + "/NewInstructor";
 
-console.log(datapost);
+  console.log(datapost);
 
   const res = await axios
     .post(urlPost, datapost)
