@@ -7,7 +7,7 @@ const baseUrl3 = "https://betaweb-back.herokuapp.com/api/usuario";
 
 const instructor2 = {};
 
-var respuesta={};
+var respuesta2={};
 
 instructor2.create = async (state) => {
  
@@ -21,22 +21,23 @@ instructor2.create = async (state) => {
         var contador = response.length;
         if (response.length > 0) {
           for (var i = 0; i < response.length; i++) {
-            if (
-              i == response.length-1
-            ) {
-                respuesta = response[i];
+            if (response[i].email===state.email && i===response.length-1) {
+                respuesta2 = response[i];
+            }if (contador == i+1 ) {
+              //alert("Email ya resgistrado");
+              break;
             }
         }
     }
     
 });
-
+console.log(respuesta2)
     const datapost2 = {
         
         username: state.username,
         passwd: state.passwd,
         instructor: {
-          id_instructor: respuesta.id_instructor,
+          id_instructor: respuesta2.id_instructor,
           apellido_paterno: state.apellido_paterno,
           apellido_materno: state.apellido_materno,
           email: state.email,

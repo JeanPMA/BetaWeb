@@ -15,6 +15,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import instructor from "./instructorServices";
 import instructor2 from "./instructorServices2";
 import { defineMetadata } from "core-js/fn/reflect";
+import axios from "axios";
 
 /*let cookieIdInstructor = document.cookie.replace(
   /(?:(?:^|.*;\s*)id_instructor\s*\=\s*([^;]*).*$)|^.*$/,
@@ -22,14 +23,17 @@ import { defineMetadata } from "core-js/fn/reflect";
 );*/
 
 //console.log(cookieIdInstructor);
-
+const baseUrl3 = "https://betaweb-back.herokuapp.com/api/usuario";
+ 
 class Contenido_Administrador extends Component {
+  
   state = {
     abierto: false,
   };
 
   abrirModal = () => {
     this.setState({ abierto: !this.state.abierto });
+    
   };
 
   constructor(props) {
@@ -52,6 +56,7 @@ class Contenido_Administrador extends Component {
       mensajeUsername: "",
       mensajePasswd: "",
       mensajePasswd2: "",
+      mensajePasswd3: "",
       mensajeArea_especializacion: "",
       mensajeNivel_estudio: "",
       mensajeFecha_nacimiento: "",
@@ -81,10 +86,14 @@ class Contenido_Administrador extends Component {
   actualizarCancelar() {
     window.location.href = window.location.href;
   }
+  
+  
   enviarAlaBD(e) {
-    e.preventDefault();
-    let valido = true;
 
+    e.preventDefault();
+  
+    let valido = true;
+    
     if (this.state.nombre == "") {
       this.setState({
         invalidNombre: true,
@@ -120,6 +129,7 @@ class Contenido_Administrador extends Component {
       });
       valido = false;
     }
+    
     if (this.state.passwd === "") {
       this.setState({
         invalidPasswd: true,
@@ -152,11 +162,13 @@ class Contenido_Administrador extends Component {
       this.setState({
         invalidPasswd: true,
         invalidPasswd2: true,
-        mensajePasswd: "Las constraseñas no son iguales",
+        mensajePasswd3: "Las contraseñas no son iguales",
         
      });
       valido = false;
     }
+  
+
     if (valido) {
       this.onClickSave();
     }
@@ -184,7 +196,7 @@ class Contenido_Administrador extends Component {
         </div>
         <Modal isOpen={this.state.abierto} style={modalStyles} className="">
           <div className="contenedorModal  border-top border-start border-end border-bottom border-white">
-            <Form onSubmit={this.enviarAlaBD} /*onSubmit={verificarPasswords()}*/>
+            <Form onSubmit={this.enviarAlaBD} /*onClick={() => this.submitFormulario()}*/ /*onSubmit={verificarPasswords()}*/>
               <ModalHeader id="tituloCrearCurso">
                 <a id="tituloModal"> Nuevo instructor </a>
                 
@@ -211,6 +223,7 @@ class Contenido_Administrador extends Component {
                   <p className="caracteres">Caract. Max. 20</p>
                   
                 </FormGroup>
+               
                 <FormGroup>
                   <Label for="nombre">Apellido paterno</Label>
                   <Input
@@ -229,6 +242,7 @@ class Contenido_Administrador extends Component {
                   <p className="caracteres">Caract. Max. 10</p>
                   
                 </FormGroup>
+                
                 <FormGroup>
                   <Label for="nombre">Apellido materno</Label>
                   <Input
@@ -250,7 +264,7 @@ class Contenido_Administrador extends Component {
                 <FormGroup>
                   <Label for="nombre">Correo electronico</Label>
                   <Input
-                    placeholder="Correo electronico del instructor"
+                    placeholder="algo123@gmail.com"
                     maxlength="20"
                     type="text"
                     id="correo"
@@ -271,7 +285,7 @@ class Contenido_Administrador extends Component {
                     placeholder="Nombre de usuario del instructor"
                     maxlength="20"
                     type="text"
-                    id="username"
+                    id="username" 
                     name="username"
                     value={this.state.username}
                     onChange={
@@ -289,7 +303,7 @@ class Contenido_Administrador extends Component {
                     placeholder="Contraseña del instructor"
                     maxlength="20"
                     type="password" 
-                    id="passwd" required
+                    id="passwd" 
                     name="passwd"
                     value={this.state.passwd}
                     onChange={
@@ -304,10 +318,10 @@ class Contenido_Administrador extends Component {
                 <FormGroup>
                   <Label for="nombre">Vuelve a escribir la Contraseña</Label>
                   <Input
-                    placeholder="vuelve a escribir la contraseña"
+                    placeholder="Vuelve a escribir la contraseña"
                     maxlength="20"
                     type="password"
-                    id="passwd2" required
+                    id="passwd2" //required
                     name="passwd2"
                     value={this.state.passwd2}
                     onChange={
@@ -315,10 +329,15 @@ class Contenido_Administrador extends Component {
                       (event) => this.setState({ passwd2: event.target.value }))
                     }
                     invalid={this.state.invalidPasswd2}
+                    
                   />
+                  <FormFeedback tooltip id="mensajePassword">
+                    {this.state.mensajePasswd3}
+                  </FormFeedback>
                   <p className="caracteres">Caract. Max. 20</p>
                   
                 </FormGroup>
+               
                 <FormGroup>
                   <Label for="nombre">Area de especializacion</Label>
                   <Input
@@ -392,6 +411,7 @@ class Contenido_Administrador extends Component {
                   type="submit"
                   id="botonCrearAceptar"
                   onChange={this.onChange}
+                  
                 >
                   {" "}
                   Guardar{" "}
@@ -416,7 +436,7 @@ class Contenido_Administrador extends Component {
       window.location.href = window.location.href;
       alert("Instructor Registrado");
     } else {
-      alert("Error al registrar instructor, verifica los datos");
+      alert("Error al registrar instructor, el email o usuario ya esta en uso");
       window.location.href = window.location.href;
     }
     

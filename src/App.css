@@ -561,3 +561,7 @@ a:active {
 .mostrar {
   display: block;
 }
+#mensajePassword{
+  margin-top: -6%;
+  margin-left: 17%;
+}
