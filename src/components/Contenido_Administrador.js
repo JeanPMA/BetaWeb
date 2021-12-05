@@ -24,16 +24,14 @@ import axios from "axios";
 
 //console.log(cookieIdInstructor);
 const baseUrl3 = "https://betaweb-back.herokuapp.com/api/usuario";
- 
+
 class Contenido_Administrador extends Component {
-  
   state = {
     abierto: false,
   };
 
   abrirModal = () => {
     this.setState({ abierto: !this.state.abierto });
-    
   };
 
   constructor(props) {
@@ -41,11 +39,11 @@ class Contenido_Administrador extends Component {
     this.state = {
       username: "",
       passwd: "",
-      passwd2: "",      
+      passwd2: "",
       nombre: "",
       apellido_paterno: "",
       apellido_materno: "",
-      email: "",              
+      email: "",
       area_especializacion: "",
       nivel_estudio: "",
       fecha_nacimiento: "",
@@ -70,9 +68,8 @@ class Contenido_Administrador extends Component {
       invalidArea_especializacion: false,
       invalidNivel_estudio: false,
       invalidFecha_nacimiento: false,
-
     };
-    
+
     this.onChange = this.onChange.bind(this);
     this.enviarAlaBD = this.enviarAlaBD.bind(this);
   }
@@ -86,88 +83,75 @@ class Contenido_Administrador extends Component {
   actualizarCancelar() {
     window.location.href = window.location.href;
   }
-  
-  
-  enviarAlaBD(e) {
 
+  enviarAlaBD(e) {
     e.preventDefault();
-  
+
     let valido = true;
-    
+
     if (this.state.nombre == "") {
       this.setState({
         invalidNombre: true,
-    
       });
       valido = false;
     }
     if (this.state.apellido_paterno == "") {
       this.setState({
         invalidApellido_paterno: true,
-       
       });
       valido = false;
     }
     if (this.state.apellido_materno === "") {
       this.setState({
         invalidApellido_materno: true,
-        
       });
       valido = false;
     }
     if (this.state.email === "") {
       this.setState({
         invalidEmail: true,
-       
       });
       valido = false;
     }
     if (this.state.username === "") {
       this.setState({
         invalidUsername: true,
-        
       });
       valido = false;
     }
-    
+
     if (this.state.passwd === "") {
       this.setState({
         invalidPasswd: true,
-        
       });
       valido = false;
     }
     if (this.state.area_especializacion === "") {
       this.setState({
         invalidArea_especializacion: true,
-       
       });
       valido = false;
     }
     if (this.state.nivel_estudio === "") {
       this.setState({
         invalidNivel_estudio: true,
-        
       });
       valido = false;
     }
     if (this.state.fecha_nacimiento === "") {
       this.setState({
         invalidFecha_nacimiento: true,
-        
       });
       valido = false;
     }
-    if (this.state.passwd != this.state.passwd2){
+    if (this.state.passwd != this.state.passwd2) {
       this.setState({
         invalidPasswd: true,
         invalidPasswd2: true,
         mensajePasswd3: "Las contraseñas no son iguales",
-        
-     });
+      });
       valido = false;
     }
-  
 
     if (valido) {
       this.onClickSave();
@@ -182,8 +166,6 @@ class Contenido_Administrador extends Component {
       width: "22em",
       height: "200px",
     };
-  
-
 
     return (
       <>
@@ -196,14 +178,24 @@ class Contenido_Administrador extends Component {
         </div>
         <Modal isOpen={this.state.abierto} style={modalStyles} className="">
           <div className="contenedorModal  border-top border-start border-end border-bottom border-white">
-            <Form onSubmit={this.enviarAlaBD} /*onClick={() => this.submitFormulario()}*/ /*onSubmit={verificarPasswords()}*/>
+            <Form
+              onSubmit={
+                this.enviarAlaBD
+              } /*onClick={() => this.submitFormulario()}*/ /*onSubmit={verificarPasswords()}*/
+            >
               <ModalHeader id="tituloCrearCurso">
                 <a id="tituloModal"> Nuevo instructor </a>
-                
               </ModalHeader>
               <ModalBody id="cuerpoCrearCurso">
-              <i id="obligatorio"><small>obligatorio  </small></i><i className="bi bi-exclamation-circle rojo" width="5px" height="5px"></i>
-              
+                <i id="obligatorio">
+                  <small>obligatorio </small>
+                </i>
+                <i
+                  className="bi bi-exclamation-circle rojo"
+                  width="5px"
+                  height="5px"
+                ></i>
+
                 <FormGroup className="position-relative">
                   <Label for="nombre">Nombre</Label>
                   <Input
@@ -219,11 +211,10 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidNombre}
                   />
-                  
+
                   <p className="caracteres">Caract. Max. 20</p>
-                  
                 </FormGroup>
-               
+
                 <FormGroup>
                   <Label for="nombre">Apellido paterno</Label>
                   <Input
@@ -235,14 +226,14 @@ class Contenido_Administrador extends Component {
                     value={this.state.apellido_paterno}
                     onChange={
                       (this.onChange,
-                      (event) => this.setState({ apellido_paterno: event.target.value }))
+                      (event) =>
+                        this.setState({ apellido_paterno: event.target.value }))
                     }
                     invalid={this.state.invalidApellido_paterno}
                   />
                   <p className="caracteres">Caract. Max. 10</p>
-                  
                 </FormGroup>
-                
+
                 <FormGroup>
                   <Label for="nombre">Apellido materno</Label>
                   <Input
@@ -254,19 +245,19 @@ class Contenido_Administrador extends Component {
                     value={this.state.apellido_materno}
                     onChange={
                       (this.onChange,
-                      (event) => this.setState({ apellido_materno: event.target.value }))
+                      (event) =>
+                        this.setState({ apellido_materno: event.target.value }))
                     }
                     invalid={this.state.invalidApellido_materno}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
-                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Correo electronico</Label>
                   <Input
                     placeholder="algo123@gmail.com"
                     maxlength="20"
-                    type="text"
+                    type="email"
                     id="correo"
                     name="email"
                     value={this.state.email}
@@ -275,9 +266,9 @@ class Contenido_Administrador extends Component {
                       (event) => this.setState({ email: event.target.value }))
                     }
                     invalid={this.state.invalidEmail}
+                    required
                   />
                   <p className="caracteres">Caract. Max. 20</p>
-                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Usuario</Label>
@@ -285,25 +276,25 @@ class Contenido_Administrador extends Component {
                     placeholder="Nombre de usuario del instructor"
                     maxlength="20"
                     type="text"
-                    id="username" 
+                    id="username"
                     name="username"
                     value={this.state.username}
                     onChange={
                       (this.onChange,
-                      (event) => this.setState({ username: event.target.value }))
+                      (event) =>
+                        this.setState({ username: event.target.value }))
                     }
                     invalid={this.state.invalidUsername}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
-                 
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Contraseña</Label>
                   <Input
                     placeholder="Contraseña del instructor"
                     maxlength="20"
-                    type="password" 
-                    id="passwd" 
+                    type="password"
+                    id="passwd"
                     name="passwd"
                     value={this.state.passwd}
                     onChange={
@@ -313,7 +304,6 @@ class Contenido_Administrador extends Component {
                     invalid={this.state.invalidPasswd}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
-                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Vuelve a escribir la Contraseña</Label>
@@ -329,15 +319,13 @@ class Contenido_Administrador extends Component {
                       (event) => this.setState({ passwd2: event.target.value }))
                     }
                     invalid={this.state.invalidPasswd2}
-                    
                   />
                   <FormFeedback tooltip id="mensajePassword">
                     {this.state.mensajePasswd3}
                   </FormFeedback>
                   <p className="caracteres">Caract. Max. 20</p>
-                  
                 </FormGroup>
-               
+
                 <FormGroup>
                   <Label for="nombre">Area de especializacion</Label>
                   <Input
@@ -350,12 +338,13 @@ class Contenido_Administrador extends Component {
                     onChange={
                       (this.onChange,
                       (event) =>
-                        this.setState({ area_especializacion: event.target.value }))
+                        this.setState({
+                          area_especializacion: event.target.value,
+                        }))
                     }
                     invalid={this.state.invalidArea_especializacion}
                   />
                   <p className="caracteres">Caract. Max. 100</p>
-                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Nivel de estudio</Label>
@@ -368,12 +357,12 @@ class Contenido_Administrador extends Component {
                     value={this.state.nivel_estudio}
                     onChange={
                       (this.onChange,
-                      (event) => this.setState({ nivel_estudio: event.target.value }))
+                      (event) =>
+                        this.setState({ nivel_estudio: event.target.value }))
                     }
                     invalid={this.state.invalidNivel_estudio}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
-                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="start">Fecha de nacimiento</Label>
@@ -382,22 +371,19 @@ class Contenido_Administrador extends Component {
                     maxlength="20"
                     type="date"
                     id="start"
-                    name="fecha_nacimiento" 
+                    name="fecha_nacimiento"
                     value={this.state.fecha_nacimiento}
                     onChange={
                       (this.onChange,
-                      (event) => this.setState({ fecha_nacimiento: event.target.value }))
+                      (event) =>
+                        this.setState({ fecha_nacimiento: event.target.value }))
                     }
                     invalid={this.state.invalidFecha_nacimiento}
                   />
                   <p className="caracteres">Caract. Max. 20</p>
-                 
                 </FormGroup>
-                
               </ModalBody>
-              <FormFeedback tooltip>
-                    {this.state.mensajePasswd}
-                  </FormFeedback>
+              <FormFeedback tooltip>{this.state.mensajePasswd}</FormFeedback>
               <ModalFooter id="pieCrearCurso">
                 <Button
                   id="botonCrearCancelar"
@@ -411,7 +397,6 @@ class Contenido_Administrador extends Component {
                   type="submit"
                   id="botonCrearAceptar"
                   onChange={this.onChange}
-                  
                 >
                   {" "}
                   Guardar{" "}
@@ -419,14 +404,10 @@ class Contenido_Administrador extends Component {
               </ModalFooter>
             </Form>
           </div>
-          
         </Modal>
       </>
-      
     );
-   
   }
-  
 
   async onClickSave() {
     this.abrirModal();
@@ -439,17 +420,15 @@ class Contenido_Administrador extends Component {
       alert("Error al registrar instructor, el email o usuario ya esta en uso");
       window.location.href = window.location.href;
     }
-    
-   /* if (res2.success) {
+
+    /* if (res2.success) {
       window.location.href = window.location.href;
       alert("Instructor Registrado");
     } else {
       alert("Error al registrar instructor, verifica los datos");
       window.location.href = window.location.href;
     }*/
-   
   }
- 
 }
 
 export default Contenido_Administrador;
