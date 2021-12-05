@@ -18,22 +18,39 @@ a:active {
   text-decoration: none;
 }
 
-#tituloPagina {
-  margin-left: 50px;
+#tituloPagina{
+  margin-left: 49px;
 }
 
-.Descripcion {
-  width: 410px;
-  height: 210px;
-  background-color: #dcedff;
-  padding: 30px;
+#contenidoDescripcion{
+  text-align: left;
+ padding-left: 5%;
+}
+#logotipoInicio{
   margin-top: 60px;
-  margin-left: 90px;
+  margin-right: 10%;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+#DescripcionInicio {
+  background-color: #dcedff;
+
+  width: 33%;
+  height: 95%;
+  margin-left: 4%;
+  margin-right: auto;
+  margin-top: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  
 }
 
 .logo {
-  margin-left: 600px;
-  margin-top: -160px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Titulo {
@@ -42,12 +59,12 @@ a:active {
 
 #boton_buscar {
   background-color: rgb(81, 81, 162);
-  margin-left: 880px;
+  
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 90px;
-  padding-top: 6px;
+ 
   border-style: hidden;
   text-align: center;
 }
@@ -83,23 +100,23 @@ a:active {
 
 #boton_login {
   background-color: #0ecd67;
-  margin-left: 10px;
+  
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 120px;
-  padding-top: 6px;
+ 
   border-style: hidden;
   text-align: center;
 }
 
 /* CSS instructor*/
 .icono-menu {
-  margin: 0px;
+
   margin-left: 20px;
   font-size: 20px;
   cursor: pointer;
-  margin-bottom: 5px;
+  
 }
 #logo-betasoft {
   margin-left: 12px;
@@ -111,11 +128,7 @@ a:active {
   color: white;
   height: 38px;
   width: 150px;
-  padding-top: none;
-  margin-left: 1000px;
   border-style: hidden;
-  margin-right: 0px;
-  margin-top: none;
   text-align: center;
 }
 
@@ -245,13 +258,25 @@ a:active {
 
 #boton_crearCursos {
   background-color: #0ecd67;
-  margin-left: 1100px;
-  margin-top: 120px;
+ 
+  margin-top: 60px;
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 160px;
-  padding-top: 6px;
+
+  border-style: hidden;
+  text-align: center;
+}
+#boton_crearInstructores {
+  background-color: #0ecd67;
+ 
+  margin-top: 60px;
+  border-radius: 30px;
+  color: white;
+  height: 58px;
+  width: 160px;
+
   border-style: hidden;
   text-align: center;
 }
@@ -416,35 +441,29 @@ a:active {
 
 #Boton_atrasCursos {
   background-color: #0ecd67;
-  margin-left: 500px;
-  margin-top: 0px;
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 200px;
-  padding-top: none;
   border-style: hidden;
   text-align: center;
 }
 #boton_buscarCursos {
   background-color: rgb(81, 81, 162);
-  margin-left: 180px;
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 90px;
-  padding-top: 6px;
+
   border-style: hidden;
   text-align: center;
 }
 #boton_loginCursos {
   background-color: #0ecd67;
-  margin-left: 10px;
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 120px;
-  padding-top: 6px;
   border-style: hidden;
   text-align: center;
 }
@@ -463,8 +482,9 @@ a:active {
 .BienvenidaEstudiante {
   background-color: #dcedff;
   text-align: center;
-  width: 600px;
-  margin-left: 380px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 100px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -547,10 +567,7 @@ a:active {
 #imagen-cursos-estudiante {
   margin-top: 15px;
 }
-#Descripcion {
-  height: 70px;
-  margin-bottom: 0px;
-}
+
 #nombre-del-curso {
   margin-bottom: 8px;
   height: 50px;

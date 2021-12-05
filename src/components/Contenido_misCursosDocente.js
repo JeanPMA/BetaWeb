@@ -112,9 +112,13 @@ class boton_misCursosDocente extends Component {
       <>
         <div className="principal ">
           <div className="secundario">
+          <div class="mr-auto">
+                <div class="d-flex justify-content-end">
             <Button id="boton_crearCursos" onClick={this.abrirModal}>
               Crear nuevo curso
             </Button>
+            </div>
+                </div>
           </div>
         </div>
 

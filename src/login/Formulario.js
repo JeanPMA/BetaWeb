@@ -134,6 +134,7 @@ class Formulario extends Component {
 
   render() {
     return (
+      <div class="d-flex justify-content-center">
       <div className="containerPrincipal">
         <div className="containerSecundario">
           <div className="form-group">
@@ -163,6 +164,7 @@ class Formulario extends Component {
             </button>
           </div>
         </div>
+      </div>
       </div>
     );
   }

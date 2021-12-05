@@ -171,9 +171,14 @@ class Contenido_Administrador extends Component {
       <>
         <div className="principal ">
           <div className="secundario">
-            <Button id="boton_crearCursos" onClick={this.abrirModal}>
-              Agregar Instructor
+          <div class="mr-auto">
+                <div class="d-flex justify-content-end">
+            <Button id="boton_crearInstructores" onClick={this.abrirModal}>
+              Agregar <br></br>
+              Instructor
             </Button>
+            </div>
+                </div>
           </div>
         </div>
         <Modal isOpen={this.state.abierto} style={modalStyles} className="">

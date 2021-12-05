@@ -39,12 +39,13 @@ class NavegacionInstructor extends Component {
     return (
       <div>
         <div>
-          <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <nav class="navbar navbar-light bg-light ">
+          <div class="mr-left">
             <label for="boton-menu" className="icono-menu">
               <FontAwesomeIcon icon={faBars} />
             </label>
 
-            <div >
+            
               <a  id="logo-betasoft" class="navbar-brand" href="#" border-width="medium">
                 BETAWEB
                 <img
@@ -52,10 +53,18 @@ class NavegacionInstructor extends Component {
                   width="30"
                   height="30"
                   class="d-inline-block align-top"
-                  alt=""
+                  alt="logo BETAWEB"
                 />
-                <button id="Boton_cerrar" className="btn " type="button" onClick={()=>this.cerrarSesion()}>Cerrar sesión</button>
+              
               </a>
+              </div>
+              <div class="mr-right">
+                            <div class="p-2 bd-highlight ">
+                <button id="Boton_cerrar" className="btn " type="button" onClick={()=>this.cerrarSesion()}>Cerrar sesión</button>
+                </div>
+                
+            
+                
             </div>
           </nav>
         </div>
