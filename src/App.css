@@ -226,8 +226,9 @@ a:active {
 .bienvenida {
   background-color: #dcedff;
   text-align: center;
-  width: 600px;
-  margin-left: 380px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 100px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -448,7 +449,7 @@ a:active {
   text-align: center;
 }
 .container-instructor {
-  width: 1366px;
+  width: 70%;
   margin: auto;
 }
 .lupa {
@@ -569,4 +570,54 @@ a:active {
 #mensajePassword{
   margin-top: -6%;
   margin-left: 17%;
+}
+.instrucciones {
+  margin: 1%;
+}
+.instrucciones-instructor {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.consejo {
+  height: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.icono {
+  padding-left: 3%;
+}
+@media (max-width: 1000px) {
+  .container-menu {
+    width: 30%;
+  }
+}
+@media (max-width: 730px) {
+  .container-menu {
+    width: 100%;
+  }
+
+  .nombre-usuario {
+    padding-top: 0px;
+
+    font-size: 28px;
+  }
+  .texto-menu {
+    display: none;
+  }
+  .botones-menu-instructor {
+    text-align: center;
+    margin-top: 20%;
+  }
+  .icono-inicio-cursos-instructor {
+    display: none;
+  }
+  .boton-inicio-instructor {
+    border-radius: 0px;
+    border-bottom: 2px solid rgb(224, 224, 224, 0.5);
+  }
+  .boton-cursos-instructor {
+    border-radius: 0px;
+    border-bottom: 2px solid rgb(224, 224, 224, 0.5);
+  }
 }

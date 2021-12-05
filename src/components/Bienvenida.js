@@ -26,7 +26,7 @@ class Bienvenida extends Component {
   return (
     
     <div>
-      <h3>Bienvenido {cookies.get('nombre')} {cookies.get('apellido_paterno')} {cookies.get('apellido_materno')}</h3>
+      <h3 id="bienvenida-instructor">Bienvenido {cookies.get('nombre')} {cookies.get('apellido_paterno')} {cookies.get('apellido_materno')}</h3>
       
     </div>
         

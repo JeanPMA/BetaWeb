@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import InscribirCurso from "./InscribirCurso";
 import MisVideo from "../misCursosEstudiante/MisVideo";
 import "./InscribirCurso.css";
+
 import axios from "axios";
 
 const CursoEstudiante = ({ cursos = [] }) => {

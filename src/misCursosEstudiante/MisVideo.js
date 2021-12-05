@@ -38,7 +38,7 @@ function MisVideo(props) {
               <iframe
                 className="embed-responsive-item"
                 width="750px"
-                height="700px"
+                height="630px"
                 src={"https://www.youtube.com/embed/" + idVideo}
               ></iframe>
             </div>

@@ -4,6 +4,7 @@ import "./Cursoss.css";
 
 const Cursoss = ({ cursos = [] }) => {
   const [curso, setCurso] = useState({});
+  console.log(curso.length);
   return (
     <div>
       {cursos.map((item) => (
