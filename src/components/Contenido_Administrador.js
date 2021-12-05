@@ -266,7 +266,6 @@ class Contenido_Administrador extends Component {
                       (event) => this.setState({ email: event.target.value }))
                     }
                     invalid={this.state.invalidEmail}
-                    required
                   />
                   <p className="caracteres">Caract. Max. 20</p>
                 </FormGroup>
