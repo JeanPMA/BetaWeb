@@ -89,19 +89,19 @@ class Contenido_Administrador extends Component {
 
     let valido = true;
 
-    if (this.state.nombre == "") {
+    if (this.state.nombre.trim() == "") {
       this.setState({
         invalidNombre: true,
       });
       valido = false;
     }
-    if (this.state.apellido_paterno == "") {
+    if (this.state.apellido_paterno.trim() == "") {
       this.setState({
         invalidApellido_paterno: true,
       });
       valido = false;
     }
-    if (this.state.apellido_materno === "") {
+    if (this.state.apellido_materno.trim() === "") {
       this.setState({
         invalidApellido_materno: true,
       });
@@ -113,7 +113,7 @@ class Contenido_Administrador extends Component {
       });
       valido = false;
     }
-    if (this.state.username === "") {
+    if (this.state.username.trim() === "") {
       this.setState({
         invalidUsername: true,
       });
@@ -126,13 +126,13 @@ class Contenido_Administrador extends Component {
       });
       valido = false;
     }
-    if (this.state.area_especializacion === "") {
+    if (this.state.area_especializacion.trim() === "") {
       this.setState({
         invalidArea_especializacion: true,
       });
       valido = false;
     }
-    if (this.state.nivel_estudio === "") {
+    if (this.state.nivel_estudio.trim() === "") {
       this.setState({
         invalidNivel_estudio: true,
       });
