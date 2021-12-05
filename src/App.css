@@ -33,6 +33,10 @@ a:active {
   padding-bottom: 30px;
   margin-bottom: 40px;
 }
+#Descripcion {
+  height: 70px;
+  margin-bottom: 0px;
+}
 
 #DescripcionInicio {
   background-color: #dcedff;
