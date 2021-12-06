@@ -138,8 +138,8 @@ function Lista() {
       }
       return 0;
     });
-    //console.log(cursos_orden);
-    return cursos_orden;*/
+    //console.log(cursos_orden);*/
+    return instruc.cursos;
   };
 
   const getCookies = (cname) => {
