@@ -21,8 +21,10 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Link } from "react-router-dom";
 
 const lupa = <img src={Lupa} className="lupa-2" />;
-const cesto = <img src={cestoBasura} className="cesto-1" width="25" height="25"/>;
-const lapicito = <img src={lapiz} className="cesto-1" width="25" height="25"/>;
+const cesto = (
+  <img src={cestoBasura} className="cesto-1" width="25" height="25" />
+);
+const lapicito = <img src={lapiz} className="cesto-1" width="25" height="25" />;
 const baseUrl = "https://betaweb-back.herokuapp.com/api/curso/";
 
 function Lista() {
@@ -127,7 +129,7 @@ function Lista() {
         instruc = ins;
       }
     });
-    const cursos_orden = instruc.cursos.sort(function (x, y) {
+    /*const cursos_orden = instruc.cursos.sort(function (x, y) {
       if (x.nombre < y.nombre) {
         return -1;
       }
@@ -136,8 +138,8 @@ function Lista() {
       }
       return 0;
     });
-    //console.log(cursos_orden);
-    return cursos_orden;
+    //console.log(cursos_orden);*/
+    return instruc.cursos;
   };
 
   const getCookies = (cname) => {
@@ -214,7 +216,7 @@ function Lista() {
                             className="btn btn-lg"
                             onClick={() => seleccionarCurso(element, "Editar")}
                           >
-                           {" "}
+                            {" "}
                             {lapicito}
                           </button>
                           <button
