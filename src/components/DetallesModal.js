@@ -1,14 +1,7 @@
 import React from "react";
-import $ from "jquery";
-import "./Vista.css";
+import "../misCursosEstudiante/Vista.css";
 
-function MisVideo(props) {
-  const idVideo = props.curso.ubicacion_vid?.split("=")[1];
-  const recargar = () => {
-    $("#videoModal iframe").attr("src", $("#videoModal iframe").attr("src"));
-    $("#videoModal iframe").attr("src", "https://www.youtube.com/embed/" + idVideo);
-  };
-
+function DetallesModal(props) {
   return (
     <div
       className="modal fade"
@@ -26,7 +19,6 @@ function MisVideo(props) {
               {props.curso.nombre}
             </h5>
             <button
-              onClick={() => recargar()}
               type="button"
               className="btn-close"
               data-bs-dismiss="modal"
@@ -34,14 +26,13 @@ function MisVideo(props) {
             ></button>
           </div>
           <div className="modal-body">
-            <div className="embed-responsive embed-responsive-16by9">
-              <iframe
-                className="embed-responsive-item"
-                width="750px"
-                height="630px"
-                src={"https://www.youtube.com/embed/" + idVideo}
-              ></iframe>
-            </div>
+            <img
+              src={props.curso.ubicacion_img}
+              width="50%"
+              className="m-auto"
+            />
+
+            <p className="text-white text-start">{props.curso.descripcion}</p>
           </div>
         </div>
       </div>
@@ -49,4 +40,4 @@ function MisVideo(props) {
   );
 }
 
-export default MisVideo;
+export default DetallesModal;

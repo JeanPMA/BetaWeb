@@ -7,7 +7,7 @@ import End from "../misCursosinst/End";
 
 function Instructor() {
   return (
-    <>
+    <div width="500px">
       <div className="navegacion-menu">
         <NavegacionInstructor />
       </div>
@@ -22,7 +22,7 @@ function Instructor() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

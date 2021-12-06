@@ -7,65 +7,62 @@ import { faPlayCircle } from "@fortawesome/free-regular-svg-icons";
 import { faSquare } from "@fortawesome/free-regular-svg-icons";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import Cookies from "universal-cookie";
-import { render } from "@testing-library/react";
 
 const cookies = new Cookies();
 
-class NavegacionInstructor extends Component {
+class NavegacionAdministrador extends Component {
   cerrarSesion=()=>{
     cookies.remove('id_usuario', {path: "/"});
     cookies.remove('nombre', {path: "/"});
     cookies.remove('apellido_paterno', {path: "/"});
     cookies.remove('apellido_materno', {path: "/"});
-    cookies.remove('email', {path: "/"});
+    cookies.remove('id_admin', {path: "/"});
     cookies.remove('username', {path: "/"});
-    cookies.remove('id_instructor', {path: "/"});
+    cookies.remove('instructor', {path: "/"});
     cookies.remove('estudiante', {path: "/"});
-    cookies.remove('admin', {path: "/"});
+    
     window.location.href='./';
   }
   render() {
     console.log('id_usuario' + cookies.get('id_usuario'));
-      console.log('nombre' + cookies.get('nombre'));
+    console.log('nombre' + cookies.get('nombre'));
       console.log('apellido_paterno' + cookies.get('apellido_paterno'));
       console.log('apellido_materno' + cookies.get('apellido_materno'));
-      console.log('email' + cookies.get('email'));
-      console.log('id_instructor' + cookies.get('id_instructor'));
-      console.log('username' + cookies.get('username'));
-      console.log('passwd' + cookies.get('passwd'));
-      console.log('id_instructor' + cookies.get('id_instructor'));
-      console.log('estudiante' + cookies.get('estudiante'));
-      console.log('admin' + cookies.get('admin'));
+    console.log('username' + cookies.get('username'));
+    console.log('passwd' + cookies.get('passwd'));
+    console.log('id_admin' + cookies.get('id_admin'));
+    console.log('instructor' + cookies.get('instructor'));
+    console.log('estudiante' + cookies.get('estudiante'));
     return (
       <div>
         <div>
-          <nav class="navbar navbar-light bg-light ">
+        <nav class="navbar navbar-light bg-light ">
           <div class="mr-left">
             <label for="boton-menu" className="icono-menu">
               <FontAwesomeIcon icon={faBars} />
             </label>
 
-            
-              <a  id="logo-betasoft" class="navbar-brand" href="#" border-width="medium">
+          
+              <a id="logo-betasoft" class="navbar-brand" href="#" border-width="medium">
                 BETAWEB
                 <img
                   src="https://previews.123rf.com/images/mochipet/mochipet1707/mochipet170700056/82167896-ilustraci%C3%B3n-vectorial-bombilla-con-haces-de-luz-en-estilo-pop-art-dibujos-animados-con-contorno-aisl.jpg"
                   width="30"
                   height="30"
                   class="d-inline-block align-top"
-                  alt="logo BETAWEB"
+                  alt=""
                 />
-              
+               
               </a>
               </div>
               <div class="mr-right">
                             <div class="p-2 bd-highlight ">
-                <button id="Boton_cerrar" className="btn " type="button" onClick={()=>this.cerrarSesion()}>Cerrar sesión</button>
-                </div>
+                            <button id="Boton_cerrar" className="btn " type="button" onClick={()=>this.cerrarSesion()}>Cerrar sesión</button>
+                             </div>
                 
-            
-                
+
             </div>
+
           </nav>
         </div>
         <input type="checkbox" id="boton-menu" />
@@ -87,7 +84,7 @@ class NavegacionInstructor extends Component {
                 <h2 className="texto-menu">Menú</h2>
                 <div className="botones-menu-instructor">
                   <Link
-                    to="/instructor"
+                    to="/administrador"
                     type="button"
                     className="boton-inicio-instructor text-white"
                   >
@@ -97,17 +94,7 @@ class NavegacionInstructor extends Component {
                     <span>Inicio</span>
                   </Link>
 
-                  <Link
-                    to="/VistaInstructor"
-                    type="button"
-                    type="button"
-                    className="boton-cursos-instructor  text-white"
-                  >
-                    <div className="icono-inicio-cursos-instructor icono-boton-instructor">
-                      <FontAwesomeIcon icon={faPlayCircle} />{" "}
-                    </div>
-                    <span>Mis Cursos</span>
-                  </Link>
+                  
                 </div>
               </div>
             </nav>
@@ -120,5 +107,4 @@ class NavegacionInstructor extends Component {
     );
   }
 }
-
-export default NavegacionInstructor;
+export default NavegacionAdministrador;

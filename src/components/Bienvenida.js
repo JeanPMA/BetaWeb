@@ -8,21 +8,25 @@ class Bienvenida extends Component {
    
   componentDidMount(){
     if(!cookies.get('username')){
-        window.location.href="./";
-    }else{
-      if(!cookies.get('id_instructor')){
+      window.location.href="./";
+  }else{
+    if(!cookies.get('id_instructor')){
+      if(!cookies.get('id_estudiante')){ 
+        window.location.href="./administrador";
+      }else{
         window.location.href="./estudiante";
-        
-    }
-    }
+      }
+
   }
+  } 
+}
   
   render() {
       
   return (
     
     <div>
-      <h3>Bienvenido {cookies.get('nombre')} {cookies.get('apellido_paterno')} {cookies.get('apellido_materno')}</h3>
+      <h3 id="bienvenida-instructor">Bienvenido {cookies.get('nombre')} {cookies.get('apellido_paterno')} {cookies.get('apellido_materno')}</h3>
       
     </div>
         
