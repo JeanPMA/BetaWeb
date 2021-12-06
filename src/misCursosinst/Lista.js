@@ -3,6 +3,8 @@ import "./Vista.css";
 import axios from "axios";
 import Lupa from "../assets/lupa.png";
 import Miscursos from "./Miscursos";
+import cestoBasura from "../assets/cestoBasura.png";
+import lapiz from "../assets/lapiz.png";
 import {
   Button,
   Modal,
@@ -19,6 +21,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Link } from "react-router-dom";
 
 const lupa = <img src={Lupa} className="lupa-2" />;
+const cesto = <img src={cestoBasura} className="cesto-1" width="25" height="25"/>;
+const lapicito = <img src={lapiz} className="cesto-1" width="25" height="25"/>;
 const baseUrl = "https://betaweb-back.herokuapp.com/api/curso/";
 
 function Lista() {
@@ -210,7 +214,8 @@ function Lista() {
                             className="btn btn-lg"
                             onClick={() => seleccionarCurso(element, "Editar")}
                           >
-                            <i className="bi bi-pencil-fill celeste"></i>
+                           {" "}
+                            {lapicito}
                           </button>
                           <button
                             className="btn btn-lg"
@@ -219,7 +224,8 @@ function Lista() {
                               seleccionarCurso(element, "Eliminar")
                             }
                           >
-                            <i className="bi bi-trash-fill rojo"></i>
+                            {" "}
+                            {cesto}
                           </button>
                         </td>
                         <Miscursos curso={getCursosByid(element.id_curso)} />

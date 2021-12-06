@@ -3,6 +3,7 @@ import Carousel from "./CarouselInstructor";
 import IconoLupa from "../assets/lupa.png";
 import IconoYoutube from "../assets/YouTube.png";
 import IconoInscribete from "../assets/inscribete2.png";
+import IconoYoutubeBlack from "../assets/youtubeBlack.png";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
