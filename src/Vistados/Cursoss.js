@@ -13,16 +13,14 @@ const Cursoss = ({ cursos = [] }) => {
           id="cursos"
         >
           {" "}
-          <a href="#">
-            <img
-              src={item.ubicacion_img}
-              id="imagen-cursos-estudiante"
-              alt=""
-              width="200px"
-              height="150px"
-              className=" alin border-top border-start border-end border-bottom border-white"
-            />
-          </a>
+          <img
+            src={item.ubicacion_img}
+            id="imagen-cursos-estudiante"
+            alt=""
+            width="200px"
+            height="150px"
+            className=" alin border-top border-start border-end border-bottom border-white"
+          />
           <div className=" card-body style contenedor-datos-curso m-0 mt-2">
             <h4 id="instructor-nombre" className="card-title">
               {item.instructor.nombre}
