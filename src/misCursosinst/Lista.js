@@ -129,17 +129,22 @@ function Lista() {
         instruc = ins;
       }
     });
-    /*const cursos_orden = instruc.cursos.sort(function (x, y) {
-      if (x.nombre < y.nombre) {
-        return -1;
-      }
-      if (x.nombre > y.nombre) {
-        return 1;
-      }
-      return 0;
-    });
-    //console.log(cursos_orden);*/
-    return instruc.cursos;
+    //console.log("cursos que tiene: " + instruc.cursos.length);
+    if (instruc.cursos.length > 0) {
+      const cursos_orden = instruc.cursos.sort(function (x, y) {
+        if (x.nombre < y.nombre) {
+          return -1;
+        }
+        if (x.nombre > y.nombre) {
+          return 1;
+        }
+        return 0;
+      });
+      //console.log(cursos_orden);
+      return cursos_orden;
+    } else {
+      return instruc.cursos;
+    }
   };
 
   const getCookies = (cname) => {
