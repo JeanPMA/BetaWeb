@@ -15,7 +15,7 @@ class NavegacionCursos extends Component{
                     </a> 
                     <div class="mr-right">
                             <div class="p-2 bd-highlight ">
-                    <Link to="/" id="Boton_atrasCursos" className="btn " type="button">Volver Pagina de Inicio</Link>
+                    <Link to="/" id="Boton_atrasCursos" className="btn " type="button">Inicio</Link>
 
                     <Link to="/cursos" id="boton_buscarCursos" className="btn " type="button">Cursos</Link>                    
 
