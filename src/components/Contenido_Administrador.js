@@ -157,6 +157,20 @@ class Contenido_Administrador extends Component {
       this.onClickSave();
     }
   }
+  check(e) {
+    var tecla = (document.all) ? e.keyCode : e.which;
+
+    //Tecla de retroceso para borrar, siempre la permite
+    if (tecla == 8) {
+        return true;
+    }
+
+    // Patron de entrada, en este caso solo acepta numeros y letras
+    var  patron = /[A-Za-z0-9]/;
+    var tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
+}
+
   render() {
     const modalStyles = {
       position: "absolute",
@@ -209,6 +223,7 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="nombre"
                     name="nombre"
+                    pattern="[A-Za-z0-9]{1,15}"
                     value={this.state.nombre}
                     onChange={
                       (this.onChange,
@@ -224,10 +239,11 @@ class Contenido_Administrador extends Component {
                   <Label for="nombre">Apellido paterno</Label>
                   <Input
                     placeholder="Apellido paterno del instructor"
-                    maxlength="10"
+                    maxlength="20"
                     type="text"
                     id="apellidoP"
                     name="apellido_paterno"
+                    pattern="[A-Za-z0-9]{1,15}"
                     value={this.state.apellido_paterno}
                     onChange={
                       (this.onChange,
@@ -236,7 +252,7 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidApellido_paterno}
                   />
-                  <p className="caracteres">Caract. Max. 10</p>
+                  <p className="caracteres">Caract. Max. 20</p>
                 </FormGroup>
 
                 <FormGroup>
@@ -247,6 +263,7 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="apellidoM"
                     name="apellido_materno"
+                    pattern="[A-Za-z0-9]{1,15}"
                     value={this.state.apellido_materno}
                     onChange={
                       (this.onChange,
@@ -282,6 +299,7 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="username"
                     name="username"
+                    pattern="[A-Za-z0-9]{1,15}"
                     value={this.state.username}
                     onChange={
                       (this.onChange,
@@ -298,6 +316,7 @@ class Contenido_Administrador extends Component {
                     placeholder="Contraseña del instructor"
                     maxlength="20"
                     type="password"
+                    pattern="[A-Za-z0-9]{1,15}"
                     id="passwd"
                     name="passwd"
                     value={this.state.passwd}
@@ -315,6 +334,7 @@ class Contenido_Administrador extends Component {
                     placeholder="Vuelve a escribir la contraseña"
                     maxlength="20"
                     type="password"
+                    pattern="[A-Za-z0-9]{1,15}"
                     id="passwd2" //required
                     name="passwd2"
                     value={this.state.passwd2}
@@ -335,9 +355,10 @@ class Contenido_Administrador extends Component {
                   <Input
                     placeholder="Areas de especializacion del instructor"
                     maxlength="100"
-                    type="textarea"
+                    type="text"
                     id="detalleArea"
                     name="area_especializacion"
+                    pattern="[A-Za-z0-9_,]{1,15}"
                     value={this.state.area_especializacion}
                     onChange={
                       (this.onChange,
@@ -354,10 +375,12 @@ class Contenido_Administrador extends Component {
                   <Label for="nombre">Nivel de estudio</Label>
                   <Input
                     placeholder="Nivel de estudio del instructor"
+                    pattern="[A-Za-z0-9]{1,15}"
                     maxlength="20"
                     type="text"
                     id="nivel"
                     name="nivel_estudio"
+                   // onkeypress="return check(event)"
                     value={this.state.nivel_estudio}
                     onChange={
                       (this.onChange,
@@ -376,6 +399,8 @@ class Contenido_Administrador extends Component {
                     type="date"
                     id="start"
                     name="fecha_nacimiento"
+                    value="2002-01-01"
+                    min="1950-01-01" max="2003-12-31"
                     value={this.state.fecha_nacimiento}
                     onChange={
                       (this.onChange,
@@ -403,7 +428,7 @@ class Contenido_Administrador extends Component {
                   onChange={this.onChange}
                 >
                   {" "}
-                  Guardar{" "}
+                  Registrar{" "}
                 </Button>
               </ModalFooter>
             </Form>
