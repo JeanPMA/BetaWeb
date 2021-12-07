@@ -47,7 +47,7 @@
     width: 350px;
     height: 180px;
   }
-  .oferta {
+  .oferta > h2 {
     text-align: center;
   }
 }
