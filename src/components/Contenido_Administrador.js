@@ -177,7 +177,7 @@ class Contenido_Administrador extends Component {
       top: "25%",
       left: "50%",
       transform: "translate(-52%, -90%)",
-      width: "450px",
+      width: "449px",
       height: "200px",
       
     };
@@ -219,8 +219,7 @@ class Contenido_Administrador extends Component {
                   width="5px"
                   height="5px"
                 ></i>
-        <div class="modal-body row col-md-12">
-                <div class="form-group" class="col-md-6">
+        
                 <FormGroup className="position-relative">
                   <Label for="nombre">Nombre</Label>
                   <Input
@@ -229,7 +228,7 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="nombre"
                     name="nombre"
-                    pattern="[A-Za-z0-9]{1,15}"
+                    pattern="[A-Za-z]+"
                     value={this.state.nombre}
                     onChange={
                       (this.onChange,
@@ -249,7 +248,7 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="apellidoP"
                     name="apellido_paterno"
-                    pattern="[A-Za-z0-9]{1,15}"
+                    pattern="[A-Za-z]+"
                     value={this.state.apellido_paterno}
                     onChange={
                       (this.onChange,
@@ -269,7 +268,7 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="apellidoM"
                     name="apellido_materno"
-                    pattern="[A-Za-z0-9]{1,15}"
+                    pattern="[A-Za-z]+"
                     value={this.state.apellido_materno}
                     onChange={
                       (this.onChange,
@@ -316,9 +315,9 @@ class Contenido_Administrador extends Component {
                   />
                   <p className="caracteres">Caract. Max. 20</p>
                 </FormGroup>
-                 </div>
                 
-                <div class="form-group" class="col-md-6">
+                
+         
                 <FormGroup>
                   <Label for="nombre">Contraseña</Label>
                   <Input
@@ -384,7 +383,7 @@ class Contenido_Administrador extends Component {
                   <Label for="nombre">Nivel de estudio</Label>
                   <Input
                     placeholder="Nivel de estudio del instructor"
-                    pattern="[A-Za-z0-9]{1,15}"
+                    pattern="[A-Za-z]+"
                     maxlength="20"
                     type="text"
                     id="nivel"
@@ -420,8 +419,7 @@ class Contenido_Administrador extends Component {
                   />
                   
                 </FormGroup>
-                  </div>
-                </div>
+                 
               </ModalBody>
               <FormFeedback tooltip>{this.state.mensajePasswd}</FormFeedback>
               <ModalFooter id="pieCrearInstructor">
