@@ -39,7 +39,7 @@ const Contacto = () => {
         <div className="containerPrincipal2">
           <div className="containerSecundario2">
             <h2 className="card-title text-center">Contacto</h2>
-            <form className="form-group">
+            <form className="form-group" onSubmit={submit}>
               <label>Nombre Completo: </label>
               <br />{" "}
               <input
@@ -78,7 +78,7 @@ const Contacto = () => {
               <br />{" "}
               <div className="d-flex justify-content-center">
                 {" "}
-                <button id="boton_iniciarSesion2" onClick={submit}>
+                <button type="submit" id="boton_iniciarSesion2">
                   Enviar
                 </button>
               </div>

@@ -36,7 +36,6 @@
 .mensajeContacto {
   height: 200px;
   resize: none;
-  overflow-y: scroll;
 }
 @media (max-width: 910px) {
   .containerPrincipal2 {
