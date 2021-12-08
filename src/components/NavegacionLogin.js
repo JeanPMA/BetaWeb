@@ -18,7 +18,7 @@ class NavigationLogin extends Component{
                             <div class="p-2 bd-highlight ">
                     <Link to="/cursos" id="boton_buscar" className="btn " type="button">Cursos</Link>                    
 
-                     <Link to="/" id="boton_login" className="btn " type="button">Inicio</Link>   
+                     <Link to="/" id="boton_inicio" className="btn " type="button">Inicio</Link>   
                      <Link to="/registro" id="boton_login" className="btn " type="button">Registrarse</Link> 
                             </div>
                     </div>                 

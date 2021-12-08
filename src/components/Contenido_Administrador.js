@@ -174,17 +174,18 @@ class Contenido_Administrador extends Component {
   render() {
     const modalStyles = {
       position: "absolute",
-      top: "26%",
+      top: "25%",
       left: "50%",
-      transform: "translate(-50%, -90%)",
-      width: "22em",
+      transform: "translate(-52%, -90%)",
+      width: "450px",
       height: "200px",
+      
     };
 
     return (
       <>
-        <div className="principal ">
-          <div className="secundario">
+        <div className="principal " >
+          <div className="secundario" >
           <div class="mr-auto">
                 <div class="d-flex justify-content-end">
             <Button id="boton_crearInstructores" onClick={this.abrirModal}>
@@ -195,17 +196,21 @@ class Contenido_Administrador extends Component {
                 </div>
           </div>
         </div>
-        <Modal isOpen={this.state.abierto} style={modalStyles} className="">
-          <div className="contenedorModal  border-top border-start border-end border-bottom border-white">
+        <Modal isOpen={this.state.abierto} style={modalStyles} className="modalInstructor" >
+          <div className="contenedorModalInstructor  border-top border-start border-end border-bottom border-white">
             <Form
               onSubmit={
                 this.enviarAlaBD
               } /*onClick={() => this.submitFormulario()}*/ /*onSubmit={verificarPasswords()}*/
             >
-              <ModalHeader id="tituloCrearCurso">
-                <a id="tituloModal"> Nuevo instructor </a>
+            
+              <ModalHeader id="tituloCrearInstructor">
+                <a id="tituloModalInstructor"> Nuevo instructor </a>
               </ModalHeader>
-              <ModalBody id="cuerpoCrearCurso">
+              
+              <ModalBody id="cuerpoCrearInstructor">
+             
+          
                 <i id="obligatorio">
                   <small>obligatorio </small>
                 </i>
@@ -214,7 +219,8 @@ class Contenido_Administrador extends Component {
                   width="5px"
                   height="5px"
                 ></i>
-
+        <div class="modal-body row col-md-12">
+                <div class="form-group" class="col-md-6">
                 <FormGroup className="position-relative">
                   <Label for="nombre">Nombre</Label>
                   <Input
@@ -310,6 +316,9 @@ class Contenido_Administrador extends Component {
                   />
                   <p className="caracteres">Caract. Max. 20</p>
                 </FormGroup>
+                 </div>
+                
+                <div class="form-group" class="col-md-6">
                 <FormGroup>
                   <Label for="nombre">Contraseña</Label>
                   <Input
@@ -409,13 +418,15 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidFecha_nacimiento}
                   />
-                  <p className="caracteres">Caract. Max. 20</p>
+                  
                 </FormGroup>
+                  </div>
+                </div>
               </ModalBody>
               <FormFeedback tooltip>{this.state.mensajePasswd}</FormFeedback>
-              <ModalFooter id="pieCrearCurso">
+              <ModalFooter id="pieCrearInstructor">
                 <Button
-                  id="botonCrearCancelar"
+                  id="botonCrearCancelarInstructor"
                   onClick={(this.abrirModal, this.actualizarCancelar)}
                   onChange={this.onChange}
                 >
@@ -424,7 +435,7 @@ class Contenido_Administrador extends Component {
                 </Button>
                 <Button
                   type="submit"
-                  id="botonCrearAceptar"
+                  id="botonCrearAceptarInstructor"
                   onChange={this.onChange}
                 >
                   {" "}

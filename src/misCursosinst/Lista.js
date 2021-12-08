@@ -168,7 +168,7 @@ function Lista() {
     left: "50%",
     transform: "translate(-50%, -90%)",
     width: "22em",
-    height: "200px",
+    height: "600px",
   };
 
   return (
