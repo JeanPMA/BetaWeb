@@ -41,7 +41,6 @@ estudiante.create = async (state) => {
                 email: state.email,
             };
         }
-
     }
     const urlPost = baseUrl + "/NewEstudiante";
 

@@ -17,6 +17,7 @@ estudiante2.create = async (state) => {
         return response.data;
       })
 
+     
       .then((response) => {
         var contador = response.length;
         if (response.length > 0) {

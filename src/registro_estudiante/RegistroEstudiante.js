@@ -154,7 +154,6 @@ class RegistroEstudiante extends Component {
 
                                                     id="nombre"
                                                     name="nombre"
-                                                   
                                                     minLength={2}
                                                     maxLength={20}
                                                     placeholder="Nombre"
