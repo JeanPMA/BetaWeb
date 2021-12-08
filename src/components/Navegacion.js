@@ -21,7 +21,7 @@ class Navigation extends Component{
                                 
                                  <Link to="/cursos" id="boton_buscar" className="btn " type="button">Cursos</Link> 
                              
-                                    <Link to="/inicio" id="boton_login" className="btn " type="button">Iniciar Sesión</Link> 
+                                    <Link to="/inicio" id="boton_loginInicio" className="btn " type="button">Iniciar Sesión</Link> 
                                   
                                     </div>
                         </div>

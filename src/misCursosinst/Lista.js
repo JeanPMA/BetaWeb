@@ -168,7 +168,7 @@ function Lista() {
     left: "50%",
     transform: "translate(-50%, -90%)",
     width: "22em",
-    height: "200px",
+    height: "600px",
   };
 
   return (
@@ -340,7 +340,8 @@ function Lista() {
         </ModalHeader>
         <ModalBody id="modal-eliminar">
           Estás Seguro que deseas eliminar el curso:{" "}
-          <b>{cursoSeleccionado && cursoSeleccionado.nombre}</b>
+          <b>{cursoSeleccionado && cursoSeleccionado.nombre}</b> puede que tenga
+          estudiantes inscritos
         </ModalBody>
         <ModalFooter id="modal-eliminar">
           <Button
