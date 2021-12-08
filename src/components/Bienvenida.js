@@ -18,7 +18,7 @@ class Bienvenida extends Component {
       }
 
   }
-  }
+  } 
 }
   
   render() {

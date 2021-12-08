@@ -6,7 +6,7 @@
 .containerPrincipal{
   height: 200px;
   width: 350px;
-  margin-left: 32em;
+  
   margin-top: 10em;
   color: white;
   border-color: white;
@@ -21,7 +21,7 @@
  
 }
 #boton_iniciarSesion{
-  background-color: #0ecd67;
+  background-color: #0e87cd;
   margin-left: 95px;
   margin-top: 25px;
   border-radius: 30px;

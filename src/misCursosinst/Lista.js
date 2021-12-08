@@ -3,6 +3,8 @@ import "./Vista.css";
 import axios from "axios";
 import Lupa from "../assets/lupa.png";
 import Miscursos from "./Miscursos";
+import cestoBasura from "../assets/cestoBasura.png";
+import lapiz from "../assets/lapiz.png";
 import {
   Button,
   Modal,
@@ -19,6 +21,10 @@ import "bootstrap/dist/css/bootstrap.css";
 import { Link } from "react-router-dom";
 
 const lupa = <img src={Lupa} className="lupa-2" />;
+const cesto = (
+  <img src={cestoBasura} className="cesto-1" width="25" height="25" />
+);
+const lapicito = <img src={lapiz} className="cesto-1" width="25" height="25" />;
 const baseUrl = "https://betaweb-back.herokuapp.com/api/curso/";
 
 function Lista() {
@@ -123,17 +129,22 @@ function Lista() {
         instruc = ins;
       }
     });
-    const cursos_orden = instruc.cursos.sort(function (x, y) {
-      if (x.nombre < y.nombre) {
-        return -1;
-      }
-      if (x.nombre > y.nombre) {
-        return 1;
-      }
-      return 0;
-    });
-    //console.log(cursos_orden);
-    return cursos_orden;
+    //console.log("cursos que tiene: " + instruc.cursos.length);
+    if (instruc.cursos.length > 0) {
+      const cursos_orden = instruc.cursos.sort(function (x, y) {
+        if (x.nombre < y.nombre) {
+          return -1;
+        }
+        if (x.nombre > y.nombre) {
+          return 1;
+        }
+        return 0;
+      });
+      //console.log(cursos_orden);
+      return cursos_orden;
+    } else {
+      return instruc.cursos;
+    }
   };
 
   const getCookies = (cname) => {
@@ -157,7 +168,7 @@ function Lista() {
     left: "50%",
     transform: "translate(-50%, -90%)",
     width: "22em",
-    height: "200px",
+    height: "600px",
   };
 
   return (
@@ -210,7 +221,8 @@ function Lista() {
                             className="btn btn-lg"
                             onClick={() => seleccionarCurso(element, "Editar")}
                           >
-                            <i className="bi bi-pencil-fill celeste"></i>
+                            {" "}
+                            {lapicito}
                           </button>
                           <button
                             className="btn btn-lg"
@@ -219,7 +231,8 @@ function Lista() {
                               seleccionarCurso(element, "Eliminar")
                             }
                           >
-                            <i className="bi bi-trash-fill rojo"></i>
+                            {" "}
+                            {cesto}
                           </button>
                         </td>
                         <Miscursos curso={getCursosByid(element.id_curso)} />
@@ -327,7 +340,8 @@ function Lista() {
         </ModalHeader>
         <ModalBody id="modal-eliminar">
           Estás Seguro que deseas eliminar el curso:{" "}
-          <b>{cursoSeleccionado && cursoSeleccionado.nombre}</b>
+          <b>{cursoSeleccionado && cursoSeleccionado.nombre}</b> puede que tenga
+          estudiantes inscritos
         </ModalBody>
         <ModalFooter id="modal-eliminar">
           <Button

@@ -18,22 +18,43 @@ a:active {
   text-decoration: none;
 }
 
-#tituloPagina {
-  margin-left: 50px;
+#tituloPagina{
+  margin-left: 49px;
 }
 
-.Descripcion {
-  width: 410px;
-  height: 210px;
-  background-color: #dcedff;
-  padding: 30px;
+#contenidoDescripcion{
+  text-align: left;
+ padding-left: 5%;
+}
+#logotipoInicio{
   margin-top: 60px;
-  margin-left: 90px;
+  margin-right: 10%;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+}
+#Descripcion {
+  height: 70px;
+  margin-bottom: 0px;
+}
+
+#DescripcionInicio {
+  background-color: #dcedff;
+
+  width: 33%;
+  height: 95%;
+  margin-left: 4%;
+  margin-right: auto;
+  margin-top: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+  
 }
 
 .logo {
-  margin-left: 600px;
-  margin-top: -160px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .Titulo {
@@ -42,12 +63,12 @@ a:active {
 
 #boton_buscar {
   background-color: rgb(81, 81, 162);
-  margin-left: 880px;
+  
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 90px;
-  padding-top: 6px;
+ 
   border-style: hidden;
   text-align: center;
 }
@@ -81,41 +102,61 @@ a:active {
   margin-top: 50px;
 }
 
-#boton_login {
-  background-color: #0ecd67;
-  margin-left: 10px;
+#boton_inicio{
+ 
+  background-color: #0e87cd;
+  
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 120px;
-  padding-top: 6px;
+ 
+  border-style: hidden;
+  text-align: center;
+}
+#boton_login {
+  background-color: rgb(81, 81, 162);
+  
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 120px;
+ 
+  border-style: hidden;
+  text-align: center;
+}
+
+#boton_loginInicio {
+  background-color: #0e87cd;
+  
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 120px;
+ 
   border-style: hidden;
   text-align: center;
 }
 
 /* CSS instructor*/
 .icono-menu {
-  margin: 0px;
+
   margin-left: 20px;
   font-size: 20px;
   cursor: pointer;
-  margin-bottom: 5px;
+  
 }
 #logo-betasoft {
   margin-left: 12px;
 }
 
 #Boton_cerrar {
-  background-color: #0ecd67;
+  background-color: #0e87cd;
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 150px;
-  padding-top: none;
-  margin-left: 1000px;
   border-style: hidden;
-  margin-right: 0px;
-  margin-top: none;
   text-align: center;
 }
 
@@ -244,14 +285,26 @@ a:active {
 }
 
 #boton_crearCursos {
-  background-color: #0ecd67;
-  margin-left: 1100px;
-  margin-top: 120px;
+  background-color: #0e87cd;
+ 
+  margin-top: 60px;
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 160px;
-  padding-top: 6px;
+
+  border-style: hidden;
+  text-align: center;
+}
+#boton_crearInstructores {
+  background-color: #0e87cd;
+ 
+  margin-top: 60px;
+  border-radius: 30px;
+  color: white;
+  height: 58px;
+  width: 160px;
+
   border-style: hidden;
   text-align: center;
 }
@@ -265,13 +318,19 @@ a:active {
   height: 380px;
   width: 360px;
 }
+.contenedorModalInstructor {
+  height: 720px;
 
+}
 #tituloModal {
   margin-left: 100px;
 }
+#tituloModalInstructor {
+  margin-left: 130px;
+}
 #obligatorio{
   text-align: left;
-  margin-left: 230px;
+  margin-left: 290px;
   font-size: 17px;
 }
 
@@ -281,6 +340,7 @@ a:active {
   background: #41567e;
   border: none;
   color: white;
+ 
 }
 
 #pieCrearCurso {
@@ -290,8 +350,53 @@ a:active {
   color: white;
 }
 
+#tituloCrearInstructor{
+  background: #41567e;
+  border: none;
+  color: white;
+  width: 445px;
+}
+
+#cuerpoCrearInstructor{
+  background: #41567e;
+  border: none;
+  color: white;
+  width: 445px;
+}
+
+#pieCrearInstructor{
+  background: #41567e;
+  border: none;
+  width: 445px;
+  color: white;
+}
+#botonCrearCancelarInstructor {
+  background-color: rgb(81, 81, 162);
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 100px;
+  padding-top: 6px;
+  border-style: hidden;
+  margin-right: 120px;
+  margin-top: 20px;
+}
+
+#botonCrearAceptarInstructor {
+  background-color: #0e87cd;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 100px;
+  padding-top: 6px;
+  border-style: hidden;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+
 #botonCrearCancelar {
-  background-color: #0ecd67;
+  background-color: rgb(81, 81, 162);
   border-radius: 30px;
   color: white;
   height: 38px;
@@ -303,7 +408,7 @@ a:active {
 }
 
 #botonCrearAceptar {
-  background-color: #0ecd67;
+  background-color: #0e87cd;
   border-radius: 30px;
   color: white;
   height: 38px;
@@ -415,36 +520,30 @@ a:active {
 }
 
 #Boton_atrasCursos {
-  background-color: #0ecd67;
-  margin-left: 500px;
-  margin-top: 0px;
+  background-color: #0e87cd;
   border-radius: 30px;
   color: white;
   height: 38px;
-  width: 200px;
-  padding-top: none;
+  width: 90px;
   border-style: hidden;
   text-align: center;
 }
 #boton_buscarCursos {
   background-color: rgb(81, 81, 162);
-  margin-left: 180px;
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 90px;
-  padding-top: 6px;
+
   border-style: hidden;
   text-align: center;
 }
 #boton_loginCursos {
-  background-color: #0ecd67;
-  margin-left: 10px;
+  background-color: #0e87cd;
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 120px;
-  padding-top: 6px;
   border-style: hidden;
   text-align: center;
 }
@@ -463,8 +562,9 @@ a:active {
 .BienvenidaEstudiante {
   background-color: #dcedff;
   text-align: center;
-  width: 600px;
-  margin-left: 380px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
   margin-top: 100px;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -547,10 +647,7 @@ a:active {
 #imagen-cursos-estudiante {
   margin-top: 15px;
 }
-#Descripcion {
-  height: 70px;
-  margin-bottom: 0px;
-}
+
 #nombre-del-curso {
   margin-bottom: 8px;
   height: 50px;

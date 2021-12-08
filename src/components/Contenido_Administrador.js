@@ -157,36 +157,60 @@ class Contenido_Administrador extends Component {
       this.onClickSave();
     }
   }
+  check(e) {
+    var tecla = (document.all) ? e.keyCode : e.which;
+
+    //Tecla de retroceso para borrar, siempre la permite
+    if (tecla == 8) {
+        return true;
+    }
+
+    // Patron de entrada, en este caso solo acepta numeros y letras
+    var  patron = /[A-Za-z0-9]/;
+    var tecla_final = String.fromCharCode(tecla);
+    return patron.test(tecla_final);
+}
+
   render() {
     const modalStyles = {
       position: "absolute",
-      top: "26%",
+      top: "25%",
       left: "50%",
-      transform: "translate(-50%, -90%)",
-      width: "22em",
+      transform: "translate(-52%, -90%)",
+      width: "450px",
       height: "200px",
+      
     };
 
     return (
       <>
-        <div className="principal ">
-          <div className="secundario">
-            <Button id="boton_crearCursos" onClick={this.abrirModal}>
-              Agregar Instructor
+        <div className="principal " >
+          <div className="secundario" >
+          <div class="mr-auto">
+                <div class="d-flex justify-content-end">
+            <Button id="boton_crearInstructores" onClick={this.abrirModal}>
+              Agregar <br></br>
+              Instructor
             </Button>
+            </div>
+                </div>
           </div>
         </div>
-        <Modal isOpen={this.state.abierto} style={modalStyles} className="">
-          <div className="contenedorModal  border-top border-start border-end border-bottom border-white">
+        <Modal isOpen={this.state.abierto} style={modalStyles} className="modalInstructor" >
+          <div className="contenedorModalInstructor  border-top border-start border-end border-bottom border-white">
             <Form
               onSubmit={
                 this.enviarAlaBD
               } /*onClick={() => this.submitFormulario()}*/ /*onSubmit={verificarPasswords()}*/
             >
-              <ModalHeader id="tituloCrearCurso">
-                <a id="tituloModal"> Nuevo instructor </a>
+            
+              <ModalHeader id="tituloCrearInstructor">
+                <a id="tituloModalInstructor"> Nuevo instructor </a>
               </ModalHeader>
-              <ModalBody id="cuerpoCrearCurso">
+              
+              <ModalBody id="cuerpoCrearInstructor">
+             
+          
                 <i id="obligatorio">
                   <small>obligatorio </small>
                 </i>
@@ -195,7 +219,8 @@ class Contenido_Administrador extends Component {
                   width="5px"
                   height="5px"
                 ></i>
-
+        <div class="modal-body row col-md-12">
+                <div class="form-group" class="col-md-6">
                 <FormGroup className="position-relative">
                   <Label for="nombre">Nombre</Label>
                   <Input
@@ -204,6 +229,7 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="nombre"
                     name="nombre"
+                    pattern="[A-Za-z0-9]{1,15}"
                     value={this.state.nombre}
                     onChange={
                       (this.onChange,
@@ -219,10 +245,11 @@ class Contenido_Administrador extends Component {
                   <Label for="nombre">Apellido paterno</Label>
                   <Input
                     placeholder="Apellido paterno del instructor"
-                    maxlength="10"
+                    maxlength="20"
                     type="text"
                     id="apellidoP"
                     name="apellido_paterno"
+                    pattern="[A-Za-z0-9]{1,15}"
                     value={this.state.apellido_paterno}
                     onChange={
                       (this.onChange,
@@ -231,7 +258,7 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidApellido_paterno}
                   />
-                  <p className="caracteres">Caract. Max. 10</p>
+                  <p className="caracteres">Caract. Max. 20</p>
                 </FormGroup>
 
                 <FormGroup>
@@ -242,6 +269,7 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="apellidoM"
                     name="apellido_materno"
+                    pattern="[A-Za-z0-9]{1,15}"
                     value={this.state.apellido_materno}
                     onChange={
                       (this.onChange,
@@ -277,6 +305,7 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="username"
                     name="username"
+                    pattern="[A-Za-z0-9]{1,15}"
                     value={this.state.username}
                     onChange={
                       (this.onChange,
@@ -287,12 +316,16 @@ class Contenido_Administrador extends Component {
                   />
                   <p className="caracteres">Caract. Max. 20</p>
                 </FormGroup>
+                 </div>
+                
+                <div class="form-group" class="col-md-6">
                 <FormGroup>
                   <Label for="nombre">Contraseña</Label>
                   <Input
                     placeholder="Contraseña del instructor"
                     maxlength="20"
                     type="password"
+                    pattern="[A-Za-z0-9]{1,15}"
                     id="passwd"
                     name="passwd"
                     value={this.state.passwd}
@@ -310,6 +343,7 @@ class Contenido_Administrador extends Component {
                     placeholder="Vuelve a escribir la contraseña"
                     maxlength="20"
                     type="password"
+                    pattern="[A-Za-z0-9]{1,15}"
                     id="passwd2" //required
                     name="passwd2"
                     value={this.state.passwd2}
@@ -330,9 +364,10 @@ class Contenido_Administrador extends Component {
                   <Input
                     placeholder="Areas de especializacion del instructor"
                     maxlength="100"
-                    type="textarea"
+                    type="text"
                     id="detalleArea"
                     name="area_especializacion"
+                    pattern="[A-Za-z0-9_,]{1,15}"
                     value={this.state.area_especializacion}
                     onChange={
                       (this.onChange,
@@ -349,10 +384,12 @@ class Contenido_Administrador extends Component {
                   <Label for="nombre">Nivel de estudio</Label>
                   <Input
                     placeholder="Nivel de estudio del instructor"
+                    pattern="[A-Za-z0-9]{1,15}"
                     maxlength="20"
                     type="text"
                     id="nivel"
                     name="nivel_estudio"
+                   // onkeypress="return check(event)"
                     value={this.state.nivel_estudio}
                     onChange={
                       (this.onChange,
@@ -371,6 +408,8 @@ class Contenido_Administrador extends Component {
                     type="date"
                     id="start"
                     name="fecha_nacimiento"
+                    value="2002-01-01"
+                    min="1950-01-01" max="2003-12-31"
                     value={this.state.fecha_nacimiento}
                     onChange={
                       (this.onChange,
@@ -379,13 +418,15 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidFecha_nacimiento}
                   />
-                  <p className="caracteres">Caract. Max. 20</p>
+                  
                 </FormGroup>
+                  </div>
+                </div>
               </ModalBody>
               <FormFeedback tooltip>{this.state.mensajePasswd}</FormFeedback>
-              <ModalFooter id="pieCrearCurso">
+              <ModalFooter id="pieCrearInstructor">
                 <Button
-                  id="botonCrearCancelar"
+                  id="botonCrearCancelarInstructor"
                   onClick={(this.abrirModal, this.actualizarCancelar)}
                   onChange={this.onChange}
                 >
@@ -394,11 +435,11 @@ class Contenido_Administrador extends Component {
                 </Button>
                 <Button
                   type="submit"
-                  id="botonCrearAceptar"
+                  id="botonCrearAceptarInstructor"
                   onChange={this.onChange}
                 >
                   {" "}
-                  Guardar{" "}
+                  Registrar{" "}
                 </Button>
               </ModalFooter>
             </Form>

@@ -42,7 +42,7 @@
   }
 
   #Descripcion {
-    overflow: scroll;
+    overflow-y: scroll;
   }
   #nombre-del-curso {
     font-size: 15px;
