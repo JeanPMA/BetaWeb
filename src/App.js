@@ -21,6 +21,7 @@ import MisVideo from "./misCursosEstudiante/MisVideo";
 import Administrador from "./pages/Administrador";
 import RegistroEstudiante from "./registro_estudiante/RegistroEstudiante";
 import Contacto from "./components/Contacto";
+import NavegacionContacto from "./components/Navegacion-Contacto";
 
 class App extends Component {
   render() {
@@ -71,7 +72,7 @@ class App extends Component {
               <Administrador />
             </Route>
             <Route path="/contacto">
-              <NavegacionCursos />
+              <NavegacionContacto />
               <Contacto />
             </Route>
           </Switch>
