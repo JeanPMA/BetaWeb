@@ -43,7 +43,7 @@ const Contacto = () => {
               <label>Nombre Completo: </label>
               <br />{" "}
               <input
-                pattern="[A-Za-z]{1,15}"
+                pattern="[a-zA-Z ]{2,254}"
                 Type="text"
                 maxLength="40"
                 placeholder="Nombre Completo"
@@ -58,7 +58,7 @@ const Contacto = () => {
               <input
                 id="inputs"
                 type="email"
-                equired
+                required
                 placeholder="alguien@gmail.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
