@@ -2,8 +2,8 @@ import axios from "axios";
 
 
 const baseUrl = "https://betaweb-back.herokuapp.com/api";
-const baseUrl2 = "https://betaweb-back.herokuapp.com/api/estudianteList";
-const baseUrl3 = "https://betaweb-back.herokuapp.com/api/usuario";
+const baseUrl2 = "https://betaweb-back.herokuapp.com/api/estudiantesList";
+
 
 const estudiante2 = {};
 
@@ -39,10 +39,10 @@ console.log(respuesta2)
         passwd: state.passwd,
         estudiante: {
           id_estudiante: respuesta2.id_estudiante,
+          nombre: state.nombre,
           apellido_paterno: state.apellido_paterno,
           apellido_materno: state.apellido_materno,
           email: state.email,
-          nombre: state.nombre,
           fecha_nacimiento:state.fecha_nacimiento
         },
        instructor: null,
