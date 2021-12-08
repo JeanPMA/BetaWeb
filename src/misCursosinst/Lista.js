@@ -168,9 +168,8 @@ function Lista() {
     left: "50%",
     transform: "translate(-50%, -90%)",
     width: "22em",
-    height: "600px",
+    height: "200px",
   };
-
   return (
     <>
       <div className="list-group">
