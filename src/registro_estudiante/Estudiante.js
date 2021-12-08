@@ -1,105 +1,55 @@
 import axios from "axios";
 
-const baseUrl = "https://betaweb-back.herokuapp.com/api";
-const baseUrl2 = "https://betaweb-back.herokuapp.com/api/usuario";
+const baseUrl = "https://betaweb-back.herokuapp.com/api/NewEstudiante";
+const baseUrl2 = "https://betaweb-back.herokuapp.com/api/NewUser";
 const estudiante = {};
 var datapost = {};
-var respuesta = {};
-estudiante.create = async (state) => {
-    await axios
-        .get(baseUrl2)
-        .then((response) => {
-            return response.data;
-        })
+var respuesta = null;
+const baseUrl3 = "https://betaweb-back.herokuapp.com/api/estudiantesList";
 
-        .then((response) => {
-            var contador = response.length;
-            if (response.length > 0) {
-                for (var i = 0; i < response.length; i++) {
-                    respuesta = response;
+ estudiante.create = async (state) => {
 
-                }
-            }
-
-        });
-    console.log(respuesta)
-    for (var i = 0; i < respuesta.length; i++) {
-        var contador = respuesta.length;
-        if (respuesta[i].username === state.username) {
-            //alert("El nombre de usuario ya no esta disponible")
-            datapost = {
-                fecha_nacimiento: "2020/01/01",
-            }
-            break;
-
-        } else if (contador === i + 1) {
-            datapost = {
-                nombre: state.nombre,
-                apellido_paterno: state.apellido_paterno,
-                apellido_materno: state.apellido_materno,
-                fecha_nacimiento: state.fecha_nacimiento,
-                email: state.email,
-            };
-        }
-    }
-    const urlPost = baseUrl + "/NewEstudiante";
-
-    console.log(datapost);
-    // console.log(respuesta);
-
-    const res = await axios
-
-        .post(urlPost, datapost)
-        .then((response) => {
-            const data = { success: true, message: response.data };
-            console.log(data);
-            window.location.pathname="/inicio"
-            return data;
-        })
-        .catch((error) => {
-            const data = { success: false, message: error.response.data };
-            console.log(data);
-            return data;
-        });
-
-        const datapost2 = {
-        
-            username: state.username,
-            passwd: state.passwd,
-            estudiante: {
-                
-              apellido_paterno: state.apellido_paterno,
-              apellido_materno: state.apellido_materno,
-              email: state.email,
-              nombre: state.nombre,
-              fecha_nacimiento:state.fecha_nacimiento
-            },
-           instructor: null,
-            admin: null,
-          };
+    datapost = {
+        nombre: state.nombre,
+        apellido_paterno: state.apellido_paterno,
+        apellido_materno: state.apellido_materno,
+        fecha_nacimiento: state.fecha_nacimiento,
+        email: state.email,
+    };
     
-     
-    
-        const urlPost2 = baseUrl + "/NewUser";
-     
-        const res2 = await axios
-        .post(urlPost2, datapost2)
-        .then((response) => {
-          const data2 = { success: true, message: response.data };
-          
-          return data2;
+     await axios
+        .post(baseUrl, datapost)
+        .then( async(response) => {
+            await axios
+                .get(baseUrl3)
+                .then( async(responses) => {
+                    var idestudiante;
+                    for (var i = 0; i < responses.data.length; i++) {
+                        if (responses.data[i].email === state.email) {
+                            idestudiante = responses.data[i].id_estudiante
+                        }
+                    }
+                    var datapost2 = {
+
+                        username: state.username,
+                        passwd: state.passwd2,
+                        estudiante: {
+                            id_estudiante: idestudiante,
+                        }
+                    }
+                    await axios
+                        .post(baseUrl2, datapost2)
+                        .then( async(respo) => {
+                             respuesta=true;
+                        }
+                        ).catch(error =>{
+                           console.log(error);
+                        })
+                })
+        }).catch(error => {
+            console.log(error);
         })
-        .catch((error) => {
-          const data2 = { success: false, message: error.response.data };
-          return data2;
-        });
-        
-
-
-
-    return res;
-
-
+        return respuesta;
 };
 
 export default estudiante;

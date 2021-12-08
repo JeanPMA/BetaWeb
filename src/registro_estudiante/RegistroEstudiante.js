@@ -36,7 +36,6 @@ class RegistroEstudiante extends Component {
             mensajeUsername: "",
             mensajePasswd: "",
             mensajePasswd2: "",
-            mensajePasswd3: "",
             mensajeFecha_nacimiento: "",
             invalidNombre: false,
             invalidApellido_paterno: false,
@@ -49,7 +48,7 @@ class RegistroEstudiante extends Component {
         };
         this.onChange = this.onChange.bind(this);
         this.enviarAlaBD = this.enviarAlaBD.bind(this);
-        console.log("w")
+        
     }
     onChange(e) {
         let name = e.target.name;
@@ -63,7 +62,6 @@ class RegistroEstudiante extends Component {
     }
 
     enviarAlaBD(e) {
-        console.log("hola")
         e.preventDefault();
 
         let valido = true;
@@ -105,6 +103,7 @@ class RegistroEstudiante extends Component {
         if (passwd2 === "" || passwd2.length>20 || passwd2.length<4 ) {
             this.setState({
                 invalidPasswd2: true,
+                invalidPasswd:true,
             });
             valido = false;
         }
@@ -300,7 +299,7 @@ class RegistroEstudiante extends Component {
                                                 />
                                                 <p className="caracteres text-white">Caract. Max. 20</p>
                                                 <FormFeedback tooltip id="mensajePassword">
-                                                    {this.state.mensajePasswd3}
+                                                    {this.state.mensajePasswd}
                                                 </FormFeedback>
 
 
@@ -322,6 +321,7 @@ class RegistroEstudiante extends Component {
                                                         <Button type="reset"
                                                             className="btnn btn-primary btn-lg"
                                                             id="botonCrearCancelar"
+                                                            onChange={this.onChange}
                                                             href="/"
                                                         >Cancelar</Button>
                                                     </div>
@@ -341,13 +341,14 @@ class RegistroEstudiante extends Component {
     }
     async onClickSave() {
         const res = await estudiante.create(this.state);
-       // const res2 = await estudiante2.create(this.state);
-        if (res.success ) {
-          //  window.location.href = window.location.href;
+     console.log(res);
+        if (res) {
+           
             alert("Estudiante Registrado");
-        } else {
+            window.location.pathname="/inicio"
+                } else {
             alert("Error al registrar Estudiante, el email o usuario ya esta en uso");
-         //   window.location.href = window.location.href;
+           
         }
     }
 }
