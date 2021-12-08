@@ -20,6 +20,7 @@ const baseUrl3 = "https://betaweb-back.herokuapp.com/api/estudiantesList";
      await axios
         .post(baseUrl, datapost)
         .then( async(response) => {
+            console.log(response.data);
             await axios
                 .get(baseUrl3)
                 .then( async(responses) => {

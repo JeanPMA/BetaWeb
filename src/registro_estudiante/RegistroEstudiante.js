@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {
     Button,
     Input,
-    Label,
     FormFeedback,
     Form,
 } from "reactstrap";
@@ -10,9 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./RegistroEstudiante.css";
 import estudiante from "./Estudiante";
-import estudiante2 from "./Estudiante2";
 
-const baseUrl3 = "https://betaweb-back.herokuapp.com/api/usuario";
 
 class RegistroEstudiante extends Component {
     state = {
@@ -48,7 +45,7 @@ class RegistroEstudiante extends Component {
         };
         this.onChange = this.onChange.bind(this);
         this.enviarAlaBD = this.enviarAlaBD.bind(this);
-        
+        console.log("w")
     }
     onChange(e) {
         let name = e.target.name;
@@ -62,6 +59,7 @@ class RegistroEstudiante extends Component {
     }
 
     enviarAlaBD(e) {
+        console.log("hola")
         e.preventDefault();
 
         let valido = true;
@@ -143,7 +141,7 @@ class RegistroEstudiante extends Component {
                                     this.enviarAlaBD(e)}>
                                     <br /><br />
                                     <fieldset>
-                                        <legend className="text-white header">REGISTRO ESTUDIANTE</legend>
+                                        <legend className="text-white header">Registro Estudiante</legend>
                                         <br /><br />
                                    
                                         <div className="form-group">
@@ -310,20 +308,20 @@ class RegistroEstudiante extends Component {
                                         <div className="form-group">
                                             <div className="col-md-8 text-center">
                                                 <div className="row">
-                                                    <div className="col-md-4">
-                                                        <Button type="submit"
-                                                            className="btnn btn-primary btn-lg"
-                                                            type="submit"
-                                                            id="botonCrearAceptar"
-                                                        >Registrarme</Button>
-                                                    </div>
-                                                    <div className="col-md-4 ms-auto">
+                                                <div className="col-md-4">
                                                         <Button type="reset"
                                                             className="btnn btn-primary btn-lg"
                                                             id="botonCrearCancelar"
                                                             onChange={this.onChange}
                                                             href="/"
                                                         >Cancelar</Button>
+                                                    </div>
+                                                    <div className="col-md-5 ms-auto">
+                                                        <Button type="submit"
+                                                            className="btnn btn-primary btn-lg"
+                                                            type="submit"
+                                                            id="botonCrearAceptar"
+                                                        >Registrarme</Button>
                                                     </div>
                                                 </div>
                                                 <p><a href="/inicio">¿Ya tengo Cuenta?</a></p>
