@@ -25,6 +25,10 @@
 #cursosRegistrados {
   width: 75%;
 }
+#ver-detalles {
+  color: #ffffff;
+  background-color: #5198a2;
+}
 @media (max-width: 1082px) {
   #cursosRegistrados {
     width: 100%;

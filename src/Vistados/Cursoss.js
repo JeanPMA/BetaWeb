@@ -45,7 +45,7 @@ const Cursoss = ({ cursos = [] }) => {
               <a
                 type="button"
                 href="/inicio"
-                className=" btn btn-success p-0  "
+                className=" btn  p-0  "
                 id="ver-detalles"
               >
                 Ver detalles
