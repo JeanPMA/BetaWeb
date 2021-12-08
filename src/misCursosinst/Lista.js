@@ -340,7 +340,8 @@ function Lista() {
         </ModalHeader>
         <ModalBody id="modal-eliminar">
           Estás Seguro que deseas eliminar el curso:{" "}
-          <b>{cursoSeleccionado && cursoSeleccionado.nombre}</b>
+          <b>{cursoSeleccionado && cursoSeleccionado.nombre}</b> puede que tenga
+          estudiantes inscritos
         </ModalBody>
         <ModalFooter id="modal-eliminar">
           <Button
