@@ -1,0 +1,50 @@
+.login {
+  background-color: #41567e;
+  border-color: white;
+}
+.containerPrincipal2 {
+  height: 200px;
+  width: 500px;
+
+  margin-top: 4%;
+  color: white;
+  border-color: white;
+  border: 100px;
+}
+.containerSecundario2 {
+  border: 1px solid white;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+}
+#boton_iniciarSesion2 {
+  background-color: #0e87cd;
+
+  margin-top: 25px;
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 120px;
+  padding-top: none;
+  border-style: hidden;
+  text-align: center;
+}
+#inputs {
+  width: 100%;
+}
+.mensajeContacto {
+  height: 200px;
+  resize: none;
+  overflow-y: scroll;
+}
+@media (max-width: 910px) {
+  .containerPrincipal2 {
+    width: 65%;
+  }
+}
+@media (max-width: 500px) {
+  .containerPrincipal2 {
+    width: 80%;
+  }
+}

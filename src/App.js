@@ -20,6 +20,8 @@ import ListaCursosParaEstudiantes from "./CursosEstudiante/ListaCursosParaEstudi
 import MisVideo from "./misCursosEstudiante/MisVideo";
 import Administrador from "./pages/Administrador";
 import RegistroEstudiante from "./registro_estudiante/RegistroEstudiante";
+import Contacto from "./components/Contacto";
+import NavegacionContacto from "./components/Navegacion-Contacto";
 
 class App extends Component {
   render() {
@@ -44,7 +46,7 @@ class App extends Component {
               <NavigationLogin />
               <RegistroEstudiante />
             </Route>
-           <Route path="/instructor">
+            <Route path="/instructor">
               <Instructor />
             </Route>
             <Route path="/VistaInstructor">
@@ -62,13 +64,16 @@ class App extends Component {
             <Route path="/cursosDisponibles">
               <NavegacionEstudiante />
               <ListaCursosParaEstudiantes />
-           
             </Route>
             <Route path="/MisVideo">
-              <MisVideo/>
+              <MisVideo />
             </Route>
             <Route path="/administrador">
               <Administrador />
+            </Route>
+            <Route path="/contacto">
+              <NavegacionContacto />
+              <Contacto />
             </Route>
           </Switch>
         </div>

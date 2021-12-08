@@ -344,8 +344,8 @@ function Lista() {
         </ModalBody>
         <ModalFooter id="modal-eliminar">
           <Button
-            className="btn btn-primary"
-            id="botonCrearAceptar"
+            className="btn btn-primary "
+            id="botonCrearCancelar"
             onClick={() => setModalEliminar(false)}
           >
             Cancelar

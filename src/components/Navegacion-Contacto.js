@@ -24,25 +24,8 @@ class Navigation extends Component {
 
         <div class="mr-right">
           <div class="p-2 bd-highlight ">
-            <Link to="/cursos" id="boton_buscar" className="btn " type="button">
-              Cursos
-            </Link>
-
-            <Link
-              to="/inicio"
-              id="boton_loginInicio"
-              className="btn "
-              type="button"
-            >
-              Iniciar Sesión
-            </Link>
-            <Link
-              to="/contacto"
-              id="boton_buscar"
-              className="btn "
-              type="button"
-            >
-              Contacto
+            <Link to="/" id="Boton_atrasCursos" className="btn " type="button">
+              Inicio
             </Link>
           </div>
         </div>

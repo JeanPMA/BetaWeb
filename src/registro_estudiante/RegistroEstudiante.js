@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {
     Button,
     Input,
-    Label,
     FormFeedback,
     Form,
 } from "reactstrap";
@@ -10,9 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "./RegistroEstudiante.css";
 import estudiante from "./Estudiante";
-import estudiante2 from "./Estudiante2";
 
-const baseUrl3 = "https://betaweb-back.herokuapp.com/api/usuario";
 
 class RegistroEstudiante extends Component {
     state = {
@@ -36,7 +33,6 @@ class RegistroEstudiante extends Component {
             mensajeUsername: "",
             mensajePasswd: "",
             mensajePasswd2: "",
-            mensajePasswd3: "",
             mensajeFecha_nacimiento: "",
             invalidNombre: false,
             invalidApellido_paterno: false,
@@ -105,6 +101,7 @@ class RegistroEstudiante extends Component {
         if (passwd2 === "" || passwd2.length>20 || passwd2.length<4 ) {
             this.setState({
                 invalidPasswd2: true,
+                invalidPasswd:true,
             });
             valido = false;
         }
@@ -144,7 +141,7 @@ class RegistroEstudiante extends Component {
                                     this.enviarAlaBD(e)}>
                                     <br /><br />
                                     <fieldset>
-                                        <legend className="text-white header">REGISTRO ESTUDIANTE</legend>
+                                        <legend className="text-white header">Registro Estudiante</legend>
                                         <br /><br />
                                    
                                         <div className="form-group">
@@ -300,7 +297,7 @@ class RegistroEstudiante extends Component {
                                                 />
                                                 <p className="caracteres text-white">Caract. Max. 20</p>
                                                 <FormFeedback tooltip id="mensajePassword">
-                                                    {this.state.mensajePasswd3}
+                                                    {this.state.mensajePasswd}
                                                 </FormFeedback>
 
 
@@ -311,19 +308,20 @@ class RegistroEstudiante extends Component {
                                         <div className="form-group">
                                             <div className="col-md-8 text-center">
                                                 <div className="row">
-                                                    <div className="col-md-4">
+                                                <div className="col-md-4">
+                                                        <Button type="reset"
+                                                            className="btnn btn-primary btn-lg"
+                                                            id="botonCrearCancelar"
+                                                            onChange={this.onChange}
+                                                            href="/"
+                                                        >Cancelar</Button>
+                                                    </div>
+                                                    <div className="col-md-5 ms-auto">
                                                         <Button type="submit"
                                                             className="btnn btn-primary btn-lg"
                                                             type="submit"
                                                             id="botonCrearAceptar"
                                                         >Registrarme</Button>
-                                                    </div>
-                                                    <div className="col-md-4 ms-auto">
-                                                        <Button type="reset"
-                                                            className="btnn btn-primary btn-lg"
-                                                            id="botonCrearCancelar"
-                                                            href="/"
-                                                        >Cancelar</Button>
                                                     </div>
                                                 </div>
                                                 <p><a href="/inicio">¿Ya tengo Cuenta?</a></p>
@@ -341,13 +339,14 @@ class RegistroEstudiante extends Component {
     }
     async onClickSave() {
         const res = await estudiante.create(this.state);
-       // const res2 = await estudiante2.create(this.state);
-        if (res.success ) {
-          //  window.location.href = window.location.href;
+     console.log(res);
+        if (res) {
+           
             alert("Estudiante Registrado");
-        } else {
+            window.location.pathname="/inicio"
+                } else {
             alert("Error al registrar Estudiante, el email o usuario ya esta en uso");
-         //   window.location.href = window.location.href;
+           
         }
     }
 }
