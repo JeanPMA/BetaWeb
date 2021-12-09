@@ -43,38 +43,44 @@ function InscribirCurso(props) {
       <div className="modal-dialog">
         <div className="modal-content color">
           <br />
-          <div className="col-md-9 ms-auto">
-            <h3 className="text-white" id="staticBackdropLabel">
+          <div className="row">
+          <div className="">
+            <h3 className="text-white centro" id="staticBackdropLabel">
               Inscribirse a este curso
             </h3>
+            </div>
           </div>
           <br />
-          <div className="col-md-8 ms-auto">
+          <div className="row">
+          <div className="centro ">
             <img
               src={props.curso?.ubicacion_img || ""}
               alt=""
-              width="200px"
-              height="180px"
+              width="70%"
+              height="90%"
               className=" alin border-top border-start border-end border-bottom border-white"
             />
           </div>
+          </div>
           <br />
-          <div className="row ">
-            <div className="col-md-4 ms-auto">
+          <div className="row centro ">
+            <div className="col-md-5 ms-auto ">
               <button
                 button
                 type="button"
-                className="btnn "
+                className="btnn btn-primary btn-lg"
                 data-bs-dismiss="modal"
               >
                 Cancelar
               </button>
             </div>
-            <div className="col-md-4 ms-auto">
+           <div className="col-md-1 ms-auto "><br/></div>
+           
+            <div className="col-md-6 ms-auto">
               <button
                 type="button"
                 onClick={() => enviar()}
-                className="btnn "
+                className="btnn btn-primary btn-lg"
                 data-bs-dismiss="modal"
               >
                 Aceptar
