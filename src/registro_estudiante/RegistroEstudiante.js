@@ -212,7 +212,7 @@ class RegistroEstudiante extends Component {
                                                     <Input className={`form-control ${invalidFecha_nacimiento ? "is-invalid" : ""}`}
                                                         id="date"
                                                         name="fecha_nacimiento"
-                                                        placeholder="año/mes/dia"
+                                                        placeholder="Fecha de nacimiento"
                                                         type="date"
                                                         //value={fecha_nacimiento}
                                                         min="1995-01-01" max="2007-12-31"
@@ -235,7 +235,7 @@ class RegistroEstudiante extends Component {
                                                     name="email"
                                                     type="email"
                                                     maxLength="20"
-                                                    placeholder="Email "
+                                                    placeholder="Correo electronico "
                                                     pattern=".+@gmail.com"
                                                     className={`form-control ${invalidEmail ? "is-invalid" : ""}`}
                                                     //value={email}
@@ -260,7 +260,7 @@ class RegistroEstudiante extends Component {
                                                   
                                                     minLength="3"
                                                     maxLength="20"
-                                                    placeholder="Usuario"
+                                                    placeholder="Nombre de usuario"
                                                     className={`form-control ${invalidUsername ? "is-invalid" : ""}`}
                                                     value={this.state.username}
                                                     onChange={
@@ -287,7 +287,7 @@ class RegistroEstudiante extends Component {
                                                     maxLength="20"
                                                     className={`form-control ${invalidPasswd2 ? "is-invalid" : ""}`}
                                                     value="clave"
-                                                    placeholder="Vuelve a escribir la contraseña"
+                                                    placeholder="contraseña"
                                                     value={this.state.passwd2}
                                                     onChange={
                                                         (this.onChange,
