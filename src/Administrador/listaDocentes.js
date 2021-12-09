@@ -59,7 +59,7 @@ function ListaDocentes() {
                   </th>
                 </tr>
               </thead>
-              <tbody>
+              <tbody className="table text-white" >
                 {lista.map((element) => {
                   return (
                     element && (
