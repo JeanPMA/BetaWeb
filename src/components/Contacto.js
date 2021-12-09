@@ -28,8 +28,8 @@ const Contacto = () => {
       setMessage("");
 
       alert("El mensaje fue enviado");
+      window.location.href = window.location.href;
     } else {
-      alert("Rellena todos los campos");
     }
   };
 
@@ -39,18 +39,21 @@ const Contacto = () => {
         <div className="containerPrincipal2">
           <div className="containerSecundario2">
             <h2 className="card-title text-center">Contacto</h2>
-            <div className="form-group">
+            <form className="form-group" onSubmit={submit}>
               <label>Nombre Completo: </label>
               <br />{" "}
               <input
-                type="text"
+                pattern="[a-zA-Z ]{2,254}"
+                Type="text"
+                maxLength="40"
                 placeholder="Nombre Completo"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
                 id="inputs"
               />
-              <br /> <label>Email: </label>
+              <small className="caracteres">Caract. Max. 40</small>
+              <br /> <label>Email:</label>
               <br />{" "}
               <input
                 id="inputs"
@@ -63,6 +66,7 @@ const Contacto = () => {
               <br /> <label>Mensaje: </label>
               <br />{" "}
               <textarea
+                maxLength="350"
                 id="inputs"
                 placeholder="Escribe tu mensaje"
                 value={message}
@@ -70,14 +74,15 @@ const Contacto = () => {
                 required
                 className="mensajeContacto"
               ></textarea>
+              <small className="caracteres">Caract. Max. 350</small>
               <br />{" "}
               <div className="d-flex justify-content-center">
                 {" "}
-                <button id="boton_iniciarSesion2" onClick={submit}>
+                <button type="submit" id="boton_iniciarSesion2">
                   Enviar
                 </button>
               </div>
-            </div>
+            </form>
           </div>
         </div>
       </div>

@@ -319,7 +319,7 @@ a:active {
   width: 360px;
 }
 .contenedorModalInstructor {
-  height: 720px;
+  height: 1133px;
 
 }
 #tituloModal {
@@ -717,4 +717,10 @@ a:active {
     border-radius: 0px;
     border-bottom: 2px solid rgb(224, 224, 224, 0.5);
   }
+}
+.listaDocentes{
+  font-size: 90%;
+}
+#tituloMisInstructores{
+  font-size: 90%;
 }
