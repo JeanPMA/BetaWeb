@@ -718,3 +718,9 @@ a:active {
     border-bottom: 2px solid rgb(224, 224, 224, 0.5);
   }
 }
+.listaDocentes{
+  font-size: 90%;
+}
+#tituloMisInstructores{
+  font-size: 90%;
+}
