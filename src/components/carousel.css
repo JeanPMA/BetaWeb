@@ -4,15 +4,18 @@
   width: 250px;
   height: 250px;
 }
-
+.ancho-slider {
+  max-width: 1200px;
+  margin: auto;
+}
 .container-carousel {
   max-width: 1100px;
   padding: 0 50 px;
   margin-left: auto;
   margin-right: auto;
 }
-.oferta {
-  margin-left: 85px;
+.ofertaCursos {
+  margin-left: 20px;
   margin-bottom: 30px;
 }
 .container-cursos {
@@ -38,6 +41,9 @@
   }
 }
 @media (max-width: 760px) {
+  .ofertaCursos {
+    margin: 30px auto;
+  }
   .contenedor-cursos-inicio {
     width: 450px;
     height: 300px;
@@ -48,7 +54,8 @@
     width: 350px;
     height: 180px;
   }
-  .oferta > h2 {
+
+  .ofertaCursos > h2 {
     text-align: center;
   }
 }
