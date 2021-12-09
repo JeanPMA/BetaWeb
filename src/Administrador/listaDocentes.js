@@ -41,7 +41,7 @@ function ListaDocentes() {
       <div className="list-group">
         <div className="col-md-6 col align-self-center">
           <div className="container">
-            <h3 className="text-white">Mis Instructores</h3>
+            <h3 className="text-white" id="tituloMisInstructores" >Mis Instructores </h3>
             <table className="table text-white">
               <thead>
                 <tr>
