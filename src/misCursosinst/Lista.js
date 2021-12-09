@@ -334,30 +334,32 @@ function Lista() {
       </Modal>
 
       <Modal isOpen={modalEliminar} style={modalStyles}>
-        <ModalHeader id="tituloCrearCurso">
-          <a id="tituloModal"> Eliminar curso </a>
-        </ModalHeader>
-        <ModalBody id="modal-eliminar">
-          Estás Seguro que deseas eliminar el curso:{" "}
-          <b>{cursoSeleccionado && cursoSeleccionado.nombre}</b> puede que tenga
-          estudiantes inscritos
-        </ModalBody>
-        <ModalFooter id="modal-eliminar">
-          <Button
-            className="btn btn-primary "
-            id="botonCrearCancelar"
-            onClick={() => setModalEliminar(false)}
-          >
-            Cancelar
-          </Button>
-          <Button
-            className="btn btn-primary"
-            id="botonCrearAceptar"
-            onClick={() => eliminar()}
-          >
-            Confirmar
-          </Button>
-        </ModalFooter>
+        <div className="border-top border-start border-end border-bottom border-white">
+          <ModalHeader id="tituloCrearCurso">
+            <a id="tituloModal"> Eliminar curso </a>
+          </ModalHeader>
+          <ModalBody id="modal-eliminar">
+            Estás Seguro que deseas eliminar el curso:{" "}
+            <b>{cursoSeleccionado && cursoSeleccionado.nombre}</b> puede que
+            tenga estudiantes inscritos
+          </ModalBody>
+          <ModalFooter id="modal-eliminar">
+            <Button
+              className="btn btn-primary "
+              id="botonCrearCancelar"
+              onClick={() => setModalEliminar(false)}
+            >
+              Cancelar
+            </Button>
+            <Button
+              className="btn btn-primary"
+              id="botonCrearAceptar"
+              onClick={() => eliminar()}
+            >
+              Confirmar
+            </Button>
+          </ModalFooter>
+        </div>
       </Modal>
     </>
   );
