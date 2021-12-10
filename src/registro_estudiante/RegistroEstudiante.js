@@ -134,19 +134,20 @@ class RegistroEstudiante extends Component {
         return (
             <>
                 
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-md-10 ms-auto">
+                    <div className=" containerR"  >
+                    
+                       
+                            <div className="centro">
                                 <Form className="form-horizontal" onSubmit={(e) =>
                                     this.enviarAlaBD(e)}>
                                     <br /><br />
-                                    <fieldset>
+                                    <fieldset   class="border border-white">
                                         <legend className="text-white header">Registro Estudiante</legend>
                                         <br /><br />
                                    
                                         <div className="form-group">
-                                            <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-user bigicon"></i></span>
-                                            <div className="col-md-8 ">
+                                            <span className="col-md-1 ms-auto col-md-offset-2 text-center"><i className="fa fa-user bigicon"></i></span>
+                                            <div className="col-md-10 offset-md-1">
                                                 <Input type="text"
 
                                                     id="nombre"
@@ -167,7 +168,7 @@ class RegistroEstudiante extends Component {
 
                                         <div className="form-group">
                                             <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-user bigicon"></i></span>
-                                            <div className="col-md-8">
+                                            <div className="col-md-10 offset-md-1">
                                                 <Input  id="apellido_paterno"
                                                     
                                                     maxLength={20} name="apellido_paterno"
@@ -188,7 +189,7 @@ class RegistroEstudiante extends Component {
 
                                         <div className="form-group">
                                             <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-user bigicon"></i></span>
-                                            <div className="col-md-8">
+                                            <div className="col-md-10 offset-md-1">
                                                 <input id="lsname"
                                                     name="lsname"
                                                     type="text"
@@ -207,7 +208,7 @@ class RegistroEstudiante extends Component {
                                         </div>
 
                                         <div className="bootstrap-iso">
-                                            <div className="col-md-8 col-sm-6 col-xs-12">
+                                            <div className="col-md-10 offset-md-1">
                                                 <div className="form-group">
                                                     <Input className={`form-control ${invalidFecha_nacimiento ? "is-invalid" : ""}`}
                                                         id="date"
@@ -222,6 +223,7 @@ class RegistroEstudiante extends Component {
                                                                     this.setState({ fecha_nacimiento: event.target.value }))
                                                         }
                                                         invalid={invalidFecha_nacimiento?invalidFecha_nacimiento.toString():undefined} />
+                                                        <p className="caracteres text-white"><br/></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -230,7 +232,7 @@ class RegistroEstudiante extends Component {
                                             <span className="col-md-1 col-md-offset-2 text-center">
                                                 <i class="fa fa-envelope-o bigicon"></i>
                                             </span>
-                                            <div className="col-md-8">
+                                            <div className="col-md-10 offset-md-1">
                                                 <Input id="email"
                                                     name="email"
                                                     type="email"
@@ -253,7 +255,7 @@ class RegistroEstudiante extends Component {
                                             <span className="col-md-1 col-md-offset-2 text-center">
                                                 <i className="fa fa-user-square bigicon"></i>
                                             </span>
-                                            <div className="col-md-8">
+                                            <div className="col-md-10 offset-md-1">
                                                 <Input id="usuario"
                                                     name="usuario"
                                                     type="text"
@@ -277,7 +279,7 @@ class RegistroEstudiante extends Component {
                                             <span className="col-md-1 col-md-offset-2 text-center">
                                                 <i className="fa fa-fw fa-eye password-icon show-password "></i>
                                             </span>
-                                            <div className="col-md-8">
+                                            <div className="col-md-10 offset-md-1">
                                                 <Input
                                                     type="password"
                                                     id="passwd"
@@ -303,12 +305,12 @@ class RegistroEstudiante extends Component {
 
                                             </div>
                                         </div>
-                                        <br />
+                                    
 
-                                        <div className="form-group">
-                                            <div className="col-md-8 text-center">
+                                        <div className="form-group centro">
+                                            <div className="col-md-8 offset-md-2">
                                                 <div className="row">
-                                                <div className="col-md-4">
+                                                <div className="col-md-1">
                                                         <Button type="reset"
                                                             className="btnn btn-primary btn-lg"
                                                             id="botonCrearCancelar"
@@ -316,14 +318,14 @@ class RegistroEstudiante extends Component {
                                                             href="/"
                                                         >Cancelar</Button>
                                                     </div>
-                                                    <div className="col-md-5 ms-auto">
+                                                    <div className="col-md-6 ms-auto">
                                                         <Button type="submit"
                                                             className="btnn btn-primary btn-lg"
                                                             type="submit"
                                                             id="botonCrearAceptar"
                                                         >Registrarme</Button>
                                                     </div>
-                                                </div>
+                                                </div><br/>
                                                 <p><a href="/inicio">¿Ya tengo Cuenta?</a></p>
                                             </div>
                                         </div>
@@ -331,7 +333,8 @@ class RegistroEstudiante extends Component {
                                 </Form>
                             </div>
                         </div>
-                    </div>
+                     
+                
          
             </>
         );
