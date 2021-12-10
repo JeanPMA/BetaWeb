@@ -173,7 +173,7 @@ function Lista() {
   return (
     <>
       <div className="list-group">
-        <div className="col-md-6 col align-self-center">
+        <div className="col-md-10 col ">
           <div className="container">
             <h3 className="text-white">Mis cursos</h3>
             <table className="table text-white">
@@ -205,9 +205,9 @@ function Lista() {
                           {element.ubicacion_vid}
                         </td>
 
-                        <td width="200">
+                        <td width="200" className="centro">
                           <button
-                            className="btn btn-lg"
+                            className="bttn"
                             data-bs-toggle="modal"
                             data-bs-target={"#modal-" + element.id_curso}
                             data-bs-whatever="@mdo"
@@ -217,14 +217,14 @@ function Lista() {
                             {lupa}
                           </button>
                           <button
-                            className="btn btn-lg"
+                            className="bttn "
                             onClick={() => seleccionarCurso(element, "Editar")}
                           >
                             {" "}
                             {lapicito}
                           </button>
                           <button
-                            className="btn btn-lg"
+                            className="bttn "
                             type="button"
                             onClick={() =>
                               seleccionarCurso(element, "Eliminar")
