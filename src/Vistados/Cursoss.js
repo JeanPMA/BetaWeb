@@ -33,7 +33,7 @@ const Cursoss = ({ cursos = [] }) => {
             </h4>
             <br></br>
             <a>
-              <p id="nombre-del-curso" className="card-text">
+              <p id="nombre-del-cursoo" className="card-text">
                 {item.nombre}
               </p>
             </a>

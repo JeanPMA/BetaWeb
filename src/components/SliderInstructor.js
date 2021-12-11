@@ -44,7 +44,7 @@ const SliderInstructor = () => {
         <div className="border border-white consejo icono">
           <div className="justify-content-center pt-2 ">
             <div className="icono2-slider-instructor">
-               <img src={lapiz} className="lapiz"  width="50" height="50"/>
+              <img src={lapiz} className="lapiz" width="50" height="50" />
 
               <div>
                 <p className="texto-2">Permite editar un curso ya registrado</p>
@@ -55,7 +55,12 @@ const SliderInstructor = () => {
         <div className=" border border-white consejo icono">
           <div className="justify-content-center pt-2 imagen-oferta ">
             <div className="icono3-slider-instructor">
-              <img src={cestoBasura} className="cestoBasura" width="50" height="50"/>
+              <img
+                src={cestoBasura}
+                className="cestoBasura"
+                width="50"
+                height="50"
+              />
 
               <div>
                 <p className="texto-3">
