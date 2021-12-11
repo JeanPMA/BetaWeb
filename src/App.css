@@ -32,6 +32,7 @@ a:active {
   padding-top: 40px;
   padding-bottom: 30px;
   margin-bottom: 40px;
+  width: 100%;
 }
 #Descripcion {
   height: 70px;
@@ -41,7 +42,7 @@ a:active {
 #DescripcionInicio {
   background-color: #dcedff;
 
-  width: 38%;
+  width: 100%;
   height: 95%;
   margin-left: 4%;
   margin-right: auto;
