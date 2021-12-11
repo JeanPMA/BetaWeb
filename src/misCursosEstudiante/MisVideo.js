@@ -19,7 +19,7 @@ function MisVideo(props) {
       data-bs-backdrop="static"
       data-bs-keyboard="false"
     >
-      <div className="modal-dialog modal-dialog-centered modal-lg">
+      <div className="modal-dialog modal-fullscreen">
         <div className="modal-content color">
           <div className="modal-header">
             <h5 className="modal-title text-white" id="exampleModalLabel">
@@ -33,12 +33,12 @@ function MisVideo(props) {
               aria-label="Close"
             ></button>
           </div>
-          <div className="modal-body">
-            <div className="embed-responsive embed-responsive-16by9">
+          <div className="modal-body modal-fullscreen">
+            <div className=" vista">
               <iframe
-                className="embed-responsive-item"
-                width="750px"
-                height="630px"
+                className="vista"
+                width="100%"
+                height="100%"
                 src={"https://www.youtube.com/embed/" + idVideo}
               ></iframe>
             </div>

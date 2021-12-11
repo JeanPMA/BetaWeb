@@ -42,3 +42,6 @@ transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-
 .centro{
   text-align: center;
   }
+ .vista{
+  height: inherit;
+ }

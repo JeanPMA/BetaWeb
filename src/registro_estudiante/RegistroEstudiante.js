@@ -326,7 +326,7 @@ class RegistroEstudiante extends Component {
                                                         >Registrarme</Button>
                                                     </div>
                                                 </div><br/>
-                                                <p><a href="/inicio">¿Ya tengo Cuenta?</a></p>
+                                                <p><a href="/inicio">¿Ya tienes cuenta?</a></p>
                                             </div>
                                         </div>
                                     </fieldset>
