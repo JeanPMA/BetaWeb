@@ -13,7 +13,7 @@ function DetallesModal(props) {
       data-bs-keyboard="false"
     >
       <div className="modal-dialog modal-dialog-centered modal-lg">
-        <div className="modal-content color">
+        <div className="modal-content color border-white">
           <div className="modal-header">
             <h5 className="modal-title text-white" id="exampleModalLabel">
               {props.curso.nombre}

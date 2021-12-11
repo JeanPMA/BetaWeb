@@ -173,7 +173,7 @@ function Lista() {
   return (
     <>
       <div className="list-group">
-        <div className="col-md-6 col align-self-center">
+        <div className="col-md-10 col ">
           <div className="container">
             <h3 className="text-white">Mis cursos</h3>
             <table className="table text-white">
@@ -205,9 +205,9 @@ function Lista() {
                           {element.ubicacion_vid}
                         </td>
 
-                        <td width="200">
+                        <td width="200" className="centro">
                           <button
-                            className="btn btn-lg"
+                            className="bttn"
                             data-bs-toggle="modal"
                             data-bs-target={"#modal-" + element.id_curso}
                             data-bs-whatever="@mdo"
@@ -217,14 +217,14 @@ function Lista() {
                             {lupa}
                           </button>
                           <button
-                            className="btn btn-lg"
+                            className="bttn "
                             onClick={() => seleccionarCurso(element, "Editar")}
                           >
                             {" "}
                             {lapicito}
                           </button>
                           <button
-                            className="btn btn-lg"
+                            className="bttn "
                             type="button"
                             onClick={() =>
                               seleccionarCurso(element, "Eliminar")
@@ -334,30 +334,32 @@ function Lista() {
       </Modal>
 
       <Modal isOpen={modalEliminar} style={modalStyles}>
-        <ModalHeader id="tituloCrearCurso">
-          <a id="tituloModal"> Eliminar curso </a>
-        </ModalHeader>
-        <ModalBody id="modal-eliminar">
-          Estás Seguro que deseas eliminar el curso:{" "}
-          <b>{cursoSeleccionado && cursoSeleccionado.nombre}</b> puede que tenga
-          estudiantes inscritos
-        </ModalBody>
-        <ModalFooter id="modal-eliminar">
-          <Button
-            className="btn btn-primary "
-            id="botonCrearCancelar"
-            onClick={() => setModalEliminar(false)}
-          >
-            Cancelar
-          </Button>
-          <Button
-            className="btn btn-primary"
-            id="botonCrearAceptar"
-            onClick={() => eliminar()}
-          >
-            Confirmar
-          </Button>
-        </ModalFooter>
+        <div className="border-top border-start border-end border-bottom border-white">
+          <ModalHeader id="tituloCrearCurso">
+            <a id="tituloModal"> Eliminar curso </a>
+          </ModalHeader>
+          <ModalBody id="modal-eliminar">
+            Estás Seguro que deseas eliminar el curso:{" "}
+            <b>{cursoSeleccionado && cursoSeleccionado.nombre}</b> puede que
+            tenga estudiantes inscritos
+          </ModalBody>
+          <ModalFooter id="modal-eliminar">
+            <Button
+              className="btn btn-primary "
+              id="botonCrearCancelar"
+              onClick={() => setModalEliminar(false)}
+            >
+              Cancelar
+            </Button>
+            <Button
+              className="btn btn-primary"
+              id="botonCrearAceptar"
+              onClick={() => eliminar()}
+            >
+              Confirmar
+            </Button>
+          </ModalFooter>
+        </div>
       </Modal>
     </>
   );

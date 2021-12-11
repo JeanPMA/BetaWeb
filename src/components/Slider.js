@@ -17,8 +17,8 @@ const Slider = () => {
 
   return (
     <>
-      <div>
-        <div className="text-white oferta">
+      <div className="ancho-slider">
+        <div className="text-white ofertaCursos">
           <h2>Oferta de cursos</h2>
         </div>
 

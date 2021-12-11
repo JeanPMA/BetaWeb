@@ -4,8 +4,8 @@ import "./Miscursos.css"
 function Miscursos(props) {
   console.log(props);
   return (
-    <div className="modal fade" id={"modal-" + props.curso.id_curso} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div className="modal-dialog">
+    <div className="modal fade " id={"modal-" + props.curso.id_curso} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div className="modal-dialog bor">
         <div className="modal-content" id="myModal">
           <div className="modal-header">
             <h4 className="modal-title text-white" id="exampleModalLabel ">{props.curso.nombre}</h4>

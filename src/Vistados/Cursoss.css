@@ -48,7 +48,7 @@
   #Descripcion {
     overflow-y: scroll;
   }
-  #nombre-del-curso {
+  #nombre-del-cursoo {
     font-size: 15px;
   }
   #Descripcion {
@@ -66,9 +66,8 @@
     display: none;
   }
 
-  #nombre-del-curso {
-    display: flex;
-    justify-content: center;
+  #nombre-del-cursoo {
+    display: block;
     font-size: 20px;
     height: 78%;
     overflow: scroll;
@@ -92,7 +91,7 @@
     height: 350px;
     text-align: center;
   }
-  #nombre-del-curso {
+  #nombre-del-cursoo {
     height: 70px;
     width: 100%;
   }
@@ -113,7 +112,7 @@
   }
 }
 @media (max-width: 379px) {
-  #nombre-del-curso {
+  #nombre-del-cursoo {
     height: 70px;
     width: 100%;
     font-size: 17px;

@@ -18,20 +18,21 @@ a:active {
   text-decoration: none;
 }
 
-#tituloPagina{
+#tituloPagina {
   margin-left: 49px;
 }
 
-#contenidoDescripcion{
+#contenidoDescripcion {
   text-align: left;
- padding-left: 5%;
+  padding-left: 5%;
 }
-#logotipoInicio{
+#logotipoInicio {
   margin-top: 60px;
   margin-right: 10%;
   padding-top: 40px;
   padding-bottom: 30px;
   margin-bottom: 40px;
+  width: 100%;
 }
 #Descripcion {
   height: 70px;
@@ -41,7 +42,7 @@ a:active {
 #DescripcionInicio {
   background-color: #dcedff;
 
-  width: 33%;
+  width: 100%;
   height: 95%;
   margin-left: 4%;
   margin-right: auto;
@@ -49,7 +50,6 @@ a:active {
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 40px;
-  
 }
 
 .logo {
@@ -63,12 +63,12 @@ a:active {
 
 #boton_buscar {
   background-color: rgb(81, 81, 162);
-  
+
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 90px;
- 
+
   border-style: hidden;
   text-align: center;
 }
@@ -84,7 +84,7 @@ a:active {
   color: #fcf93f;
 }
 
-#nombre-del-curso {
+#nombre-del-cursoo {
   font-size: 20px;
   font-weight: bold;
 }
@@ -102,49 +102,46 @@ a:active {
   margin-top: 50px;
 }
 
-#boton_inicio{
- 
+#boton_inicio {
   background-color: #0e87cd;
-  
+
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 120px;
- 
+
   border-style: hidden;
   text-align: center;
 }
 #boton_login {
   background-color: rgb(81, 81, 162);
-  
+
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 120px;
- 
+
   border-style: hidden;
   text-align: center;
 }
 
 #boton_loginInicio {
   background-color: #0e87cd;
-  
+
   border-radius: 30px;
   color: white;
   height: 38px;
   width: 120px;
- 
+
   border-style: hidden;
   text-align: center;
 }
 
 /* CSS instructor*/
 .icono-menu {
-
   margin-left: 20px;
   font-size: 20px;
   cursor: pointer;
-  
 }
 #logo-betasoft {
   margin-left: 12px;
@@ -286,7 +283,7 @@ a:active {
 
 #boton_crearCursos {
   background-color: #0e87cd;
- 
+
   margin-top: 60px;
   border-radius: 30px;
   color: white;
@@ -298,7 +295,7 @@ a:active {
 }
 #boton_crearInstructores {
   background-color: #0e87cd;
- 
+
   margin-top: 60px;
   border-radius: 30px;
   color: white;
@@ -320,7 +317,6 @@ a:active {
 }
 .contenedorModalInstructor {
   height: 1133px;
-
 }
 #tituloModal {
   margin-left: 100px;
@@ -328,19 +324,16 @@ a:active {
 #tituloModalInstructor {
   margin-left: 130px;
 }
-#obligatorio{
+#obligatorio {
   text-align: left;
   margin-left: 290px;
   font-size: 17px;
 }
 
-
-
 #cuerpoCrearCurso {
   background: #41567e;
   border: none;
   color: white;
- 
 }
 
 #pieCrearCurso {
@@ -350,21 +343,21 @@ a:active {
   color: white;
 }
 
-#tituloCrearInstructor{
+#tituloCrearInstructor {
   background: #41567e;
   border: none;
   color: white;
   width: 445px;
 }
 
-#cuerpoCrearInstructor{
+#cuerpoCrearInstructor {
   background: #41567e;
   border: none;
   color: white;
   width: 445px;
 }
 
-#pieCrearInstructor{
+#pieCrearInstructor {
   background: #41567e;
   border: none;
   width: 445px;
@@ -393,7 +386,6 @@ a:active {
   margin-right: 40px;
   margin-top: 20px;
 }
-
 
 #botonCrearCancelar {
   background-color: rgb(81, 81, 162);
@@ -648,7 +640,7 @@ a:active {
   margin-top: 15px;
 }
 
-#nombre-del-curso {
+#nombre-del-cursoo {
   margin-bottom: 8px;
   height: 50px;
 }
@@ -664,7 +656,7 @@ a:active {
 .mostrar {
   display: block;
 }
-#mensajePassword{
+#mensajePassword {
   margin-top: -6%;
   margin-left: 17%;
 }
@@ -706,9 +698,7 @@ a:active {
     text-align: center;
     margin-top: 20%;
   }
-  .icono-inicio-cursos-instructor {
-    display: none;
-  }
+
   .boton-inicio-instructor {
     border-radius: 0px;
     border-bottom: 2px solid rgb(224, 224, 224, 0.5);
@@ -718,9 +708,15 @@ a:active {
     border-bottom: 2px solid rgb(224, 224, 224, 0.5);
   }
 }
-.listaDocentes{
+.listaDocentes {
   font-size: 10px;
 }
-#tituloMisInstructores{
+#tituloMisInstructores {
   font-size: 18px;
+}
+@media (max-width: 585px) {
+  .instrucciones {
+    margin: 5px auto;
+    text-align: center;
+  }
 }

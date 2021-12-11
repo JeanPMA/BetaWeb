@@ -21,3 +21,13 @@
     font-size: 1rem;
     border-radius: 0.25rem;
   }
+  .containerR{
+    width: 340px;
+    background-color: #41567e;
+    margin: 0 auto;
+   
+    text-align: left;
+  }
+  .centro{
+    text-align: center;
+    }
