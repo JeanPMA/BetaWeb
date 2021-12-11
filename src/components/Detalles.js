@@ -4,8 +4,12 @@ class Detalles extends Component {
   render() {
     return (
       <>
-      <div class="d-flex bd-highlight mb-3">
-        <div id="DescripcionInicio" class="me-auto p-2 bd-highlight">
+      <div  id="logotipoInicio" class="d-flex justify-content-center">
+                 <a>
+            <img src={logotipo} width="290" height="190" />
+               </a>
+             </div>
+      <div id="DescripcionInicio">
           <div id="contenidoDescripcion">
           <h3 class="Titulo">
             
@@ -19,13 +23,7 @@ class Detalles extends Component {
              </p>
              </div>
           </div>
-            <div class="p-2 bd-highlight" id="logotipoInicio">
-                 <a>
-            <img src={logotipo} width="290" height="190" />
-               </a>
-           </div>
-        </div>
-        
+            
       </>
     );
   }
