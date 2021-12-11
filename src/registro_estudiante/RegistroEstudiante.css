@@ -22,12 +22,19 @@
     border-radius: 0.25rem;
   }
   .containerR{
-    width: 340px;
+    width:65% ;
     background-color: #41567e;
-    margin: 0 auto;
+    margin:auto;
+    
    
     text-align: left;
   }
   .centro{
     text-align: center;
     }
+    .a{
+      margin-left: 8%;
+    
+    margin-right: 5%;
+    }
+  

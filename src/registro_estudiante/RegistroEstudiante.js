@@ -144,16 +144,16 @@ class RegistroEstudiante extends Component {
                                     <fieldset   class="border border-white">
                                         <legend className="text-white header">Registro Estudiante</legend>
                                         <br /><br />
-                                   
-                                        <div className="form-group">
-                                            <span className="col-md-1 ms-auto col-md-offset-2 text-center"><i className="fa fa-user bigicon"></i></span>
-                                            <div className="col-md-10 offset-md-1">
+                                        <div className="col-md-15 offset-md-0">
+                                        <div className="form-text">
+                                            <span className="col-md-1 ms-auto  text-center"><i className="fa fa-user bigicon"></i></span>
+                                            <div className="col-md-10 offset-md-1 a">
                                                 <Input type="text"
 
                                                     id="nombre"
                                                     name="nombre"
-                                                    minLength={2}
-                                                    maxLength={20}
+                                                    pattern="[A-Za-z]{1,20}"
+                                                    title="Solo letras"
                                                     placeholder="Nombre"
                                                     className={`form-control ${invalidNombre ? "is-invalid" : ""}`}
                                                     onChange={
@@ -168,11 +168,12 @@ class RegistroEstudiante extends Component {
 
                                         <div className="form-group">
                                             <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-user bigicon"></i></span>
-                                            <div className="col-md-10 offset-md-1">
+                                            <div className="col-md-10 offset-md-1 a">
                                                 <Input  id="apellido_paterno"
                                                     
                                                     maxLength={20} name="apellido_paterno"
                                                     type="text"
+                                                    pattern="[A-Za-z]{1,20}"
                                                     placeholder="Apellido Paterno"
                                                     className={`form-control ${invalidApellido_paterno ? "is-invalid" : ""}`}
                                                     //value={this.state.apellido_paterno}
@@ -189,11 +190,11 @@ class RegistroEstudiante extends Component {
 
                                         <div className="form-group">
                                             <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-user bigicon"></i></span>
-                                            <div className="col-md-10 offset-md-1">
+                                            <div className="col-md-10 offset-md-1 a">
                                                 <input id="lsname"
                                                     name="lsname"
                                                     type="text"
-                                                    maxLength="20"
+                                                    pattern="[A-Za-z]{1,20}"
                                                     placeholder="Apellido Materno"
                                                     className={`form-control ${invalidApellido_materno ? "is-invalid" : ""}`}
                                                     value={this.state.apellido_materno}
@@ -208,7 +209,7 @@ class RegistroEstudiante extends Component {
                                         </div>
 
                                         <div className="bootstrap-iso">
-                                            <div className="col-md-10 offset-md-1">
+                                            <div className="col-md-10 offset-md-1 a">
                                                 <div className="form-group">
                                                     <Input className={`form-control ${invalidFecha_nacimiento ? "is-invalid" : ""}`}
                                                         id="date"
@@ -223,7 +224,7 @@ class RegistroEstudiante extends Component {
                                                                     this.setState({ fecha_nacimiento: event.target.value }))
                                                         }
                                                         invalid={invalidFecha_nacimiento?invalidFecha_nacimiento.toString():undefined} />
-                                                        <p className="caracteres text-white"><br/></p>
+                                                        <p className="caracteres text-white">Fecha de nacimiento<br/></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -232,11 +233,11 @@ class RegistroEstudiante extends Component {
                                             <span className="col-md-1 col-md-offset-2 text-center">
                                                 <i class="fa fa-envelope-o bigicon"></i>
                                             </span>
-                                            <div className="col-md-10 offset-md-1">
+                                            <div className="col-md-10 offset-md-1 a">
                                                 <Input id="email"
                                                     name="email"
                                                     type="email"
-                                                    maxLength="20"
+                                                    maxLength="40"
                                                     placeholder="Correo electronico "
                                                     pattern=".+@gmail.com"
                                                     className={`form-control ${invalidEmail ? "is-invalid" : ""}`}
@@ -255,13 +256,11 @@ class RegistroEstudiante extends Component {
                                             <span className="col-md-1 col-md-offset-2 text-center">
                                                 <i className="fa fa-user-square bigicon"></i>
                                             </span>
-                                            <div className="col-md-10 offset-md-1">
+                                            <div className="col-md-10 offset-md-1 a">
                                                 <Input id="usuario"
                                                     name="usuario"
                                                     type="text"
-                                                  
-                                                    minLength="3"
-                                                    maxLength="20"
+                                                    pattern="[A-Za-z]{1,20}"
                                                     placeholder="Nombre de usuario"
                                                     className={`form-control ${invalidUsername ? "is-invalid" : ""}`}
                                                     value={this.state.username}
@@ -279,7 +278,7 @@ class RegistroEstudiante extends Component {
                                             <span className="col-md-1 col-md-offset-2 text-center">
                                                 <i className="fa fa-fw fa-eye password-icon show-password "></i>
                                             </span>
-                                            <div className="col-md-10 offset-md-1">
+                                            <div className="col-md-10 offset-md-1 a">
                                                 <Input
                                                     type="password"
                                                     id="passwd"
@@ -308,7 +307,7 @@ class RegistroEstudiante extends Component {
                                     
 
                                         <div className="form-group centro">
-                                            <div className="col-md-8 offset-md-2">
+                                            <div className="col-md-8 offset-md-3 ">
                                                 <div className="row">
                                                 <div className="col-md-1">
                                                         <Button type="reset"
@@ -318,7 +317,7 @@ class RegistroEstudiante extends Component {
                                                             href="/"
                                                         >Cancelar</Button>
                                                     </div>
-                                                    <div className="col-md-6 ms-auto">
+                                                    <div className="col-md-7 ms-auto">
                                                         <Button type="submit"
                                                             className="btnn btn-primary btn-lg"
                                                             type="submit"
@@ -326,8 +325,10 @@ class RegistroEstudiante extends Component {
                                                         >Registrarme</Button>
                                                     </div>
                                                 </div><br/>
-                                                <p><a href="/inicio">¿Ya tienes cuenta?</a></p>
+                                              
                                             </div>
+                                            <p ><a href="/inicio" className="text-white">¿Ya tienes cuenta?</a></p>
+                                        </div>
                                         </div>
                                     </fieldset>
                                 </Form>
