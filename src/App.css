@@ -327,9 +327,7 @@ a:active {
   height: 1133px;
 }
 
-#tituloModalInstructor {
-  margin-left: 130px;
-}
+
 #obligatorio {
   text-align: left;
   margin-left: 290px;
@@ -353,20 +351,21 @@ a:active {
   background: #41567e;
   border: none;
   color: white;
-  width: 445px;
+  display: flex;
+  justify-content: center;
 }
 
 #cuerpoCrearInstructor {
   background: #41567e;
   border: none;
   color: white;
-  width: 445px;
+  
 }
 
 #pieCrearInstructor {
   background: #41567e;
   border: none;
-  width: 445px;
+ 
   color: white;
 }
 #botonCrearCancelarInstructor {
@@ -547,6 +546,11 @@ a:active {
   width: 70%;
   margin: auto;
 }
+.container-estudiante {
+  width: 70%;
+  margin: auto;
+}
+
 .lupa {
   width: 50px;
   margin-bottom: 17px;
