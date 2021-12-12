@@ -176,9 +176,9 @@ class Contenido_Administrador extends Component {
       position: "absolute",
       top: "25%",
       left: "50%",
-      transform: "translate(-52%, -90%)",
-      width: "360px",
-      height: "200px",
+      transform: "translate(-54%, -90%)",
+      width: "350px",
+      height: "160px",
       
     };
 
