@@ -7,7 +7,7 @@ class Navigation extends Component {
     return (
       <nav class="navbar navbar-light bg-light " id="navContacto">
         <a
-          id="tituloPagina"
+          id="tituloPagina2"
           class="navbar-brand"
           href="javascript:history.back()"
           border-width="medium"
