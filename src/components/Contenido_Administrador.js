@@ -177,7 +177,7 @@ class Contenido_Administrador extends Component {
       top: "25%",
       left: "50%",
       transform: "translate(-52%, -90%)",
-      width: "449px",
+      width: "360px",
       height: "200px",
       
     };
@@ -197,7 +197,7 @@ class Contenido_Administrador extends Component {
           </div>
         </div>
         <Modal isOpen={this.state.abierto} style={modalStyles} className="modalInstructor" >
-          <div className=" border-top border-start border-end border-bottom border-white">
+          <div className="contenedorCrearInstructor border-top border-start border-end border-bottom border-white">
             <Form
               onSubmit={
                 this.enviarAlaBD
