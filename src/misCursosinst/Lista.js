@@ -338,10 +338,11 @@ function Lista() {
           <ModalHeader id="tituloCrearCurso">
             <a id="tituloModal"> Eliminar curso </a>
           </ModalHeader>
-          <ModalBody id="modal-eliminar">
-            Estás Seguro que deseas eliminar el curso:{" "}
-            <b>{cursoSeleccionado && cursoSeleccionado.nombre}</b> puede que
-            tenga estudiantes inscritos
+          <ModalBody id="modal-eliminar" className="  ">
+            ¿Estas seguro que quieres eliminar? <br />
+            <b>{cursoSeleccionado && cursoSeleccionado.nombre}</b>
+            <br />
+            Puede que tenga estudiantes inscritos
           </ModalBody>
           <ModalFooter id="modal-eliminar">
             <Button
