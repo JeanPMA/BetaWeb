@@ -73,7 +73,7 @@ const CursoEstudiante = ({ cursos = [] }) => {
             className=" alin border-top border-start border-end border-bottom border-white"
           />
 
-          <div className=" card-body style m-0 ">
+          <div className=" card-body  m-0">
             <h4 id="instructor-nombre" className="card-title">
               {item.instructor.nombre}
             </h4>

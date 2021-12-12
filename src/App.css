@@ -316,6 +316,8 @@ a:active {
   background: #41567e;
   border: none;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 .contenedorModal {
   height: 380px;
@@ -324,9 +326,7 @@ a:active {
 .contenedorModalInstructor {
   height: 1133px;
 }
-#tituloModal {
-  margin-left: 100px;
-}
+
 #tituloModalInstructor {
   margin-left: 130px;
 }
@@ -401,8 +401,7 @@ a:active {
   width: 100px;
   padding-top: 6px;
   border-style: hidden;
-  margin-right: 40px;
-  margin-top: 20px;
+  margin: 2px auto;
 }
 
 #botonCrearAceptar {
@@ -413,8 +412,7 @@ a:active {
   width: 100px;
   padding-top: 6px;
   border-style: hidden;
-  margin-right: 40px;
-  margin-top: 20px;
+  margin: 2px auto;
 }
 
 .icono1-slider-instructor {

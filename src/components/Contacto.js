@@ -46,13 +46,13 @@ const Contacto = () => {
                 pattern="[a-zA-Z ]{2,254}"
                 Type="text"
                 maxLength="40"
-                placeholder="Nombre Completo"
+                placeholder="Nombre y Apellidos"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
                 id="inputs"
               />
-              <small className="caracteres">Caract. Max. 40</small>
+              <br />
               <br /> <label>Email:</label>
               <br />{" "}
               <input
@@ -63,6 +63,7 @@ const Contacto = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
+              <br />
               <br /> <label>Mensaje: </label>
               <br />{" "}
               <textarea
