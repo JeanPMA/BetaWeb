@@ -197,7 +197,7 @@ class Contenido_Administrador extends Component {
           </div>
         </div>
         <Modal isOpen={this.state.abierto} style={modalStyles} className="modalInstructor" >
-          <div className="contenedorModalInstructor  border-top border-start border-end border-bottom border-white">
+          <div className=" border-top border-start border-end border-bottom border-white">
             <Form
               onSubmit={
                 this.enviarAlaBD
