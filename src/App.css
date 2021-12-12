@@ -27,7 +27,7 @@ a:active {
   padding-left: auto;
 }
 #logotipoInicio {
-  margin-top: 20px;
+  margin-top: 50px;
   margin-right: auto;
   margin-left: auto;
 
@@ -43,15 +43,14 @@ a:active {
 #DescripcionInicio {
   background-color: #dcedff;
 
-  width: 30%;
+  width: 35%;
   height: 95%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 50px;
   padding-top: 10px;
   padding-bottom: 30px;
   margin-bottom: 40px;
-  border-radius: 10px;
 }
 .DescripcionLogo {
   display: flex;
@@ -722,5 +721,61 @@ a:active {
   .instrucciones {
     margin: 5px auto;
     text-align: center;
+  }
+}
+@media (max-width: 929px) {
+  #logotipoInicio {
+    margin-top: 60px;
+  }
+}
+@media (max-width: 876px) {
+  #logotipoInicio {
+    margin-top: 90px;
+  }
+}
+@media (max-width: 692px) {
+  .DescripcionLogo {
+    flex-direction: column;
+  }
+  .DescripcionLogo > * {
+    order: 0;
+  }
+  #logotipoInicio {
+    order: 1;
+    margin-top: 30px;
+    width: 100%;
+  }
+  #logotipoInicio > img {
+    width: 50%;
+  }
+  #DescripcionInicio {
+    order: 2;
+    margin-top: 10px;
+    width: 95%;
+  }
+}
+@media (max-width: 432px) {
+  #logotipoInicio > img {
+    width: 70%;
+  }
+}
+@media (max-width: 501px) {
+  #navInicio {
+    display: flex;
+    justify-content: center;
+  }
+}
+#boton_loginInicio {
+  margin-right: 6px;
+  margin-left: 5px;
+}
+@media (max-width: 326px) {
+  #boton_buscar {
+    width: 100%;
+    margin: 5px auto;
+  }
+  #boton_loginInicio {
+    width: 100%;
+    margin: 5px auto;
   }
 }
