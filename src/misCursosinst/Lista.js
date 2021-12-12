@@ -244,7 +244,7 @@ function Lista() {
         </div>
       </div>
 
-      <Modal isOpen={modalEditar} style={modalStyles}>
+      <Modal isOpen={modalEditar} centered size="lg">
         <div
           className="contenedorModal"
           className=" border-top border-start border-end border-bottom border-white"
@@ -333,7 +333,7 @@ function Lista() {
         </div>
       </Modal>
 
-      <Modal isOpen={modalEliminar} style={modalStyles}>
+      <Modal isOpen={modalEliminar} centered size="lg">
         <div className="border-top border-start border-end border-bottom border-white">
           <ModalHeader id="tituloCrearCurso">
             <a id="tituloModal"> Eliminar curso </a>

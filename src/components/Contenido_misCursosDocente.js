@@ -107,22 +107,21 @@ class boton_misCursosDocente extends Component {
       width: "22em",
       height: "200px",
     };
-
     return (
       <>
         <div className="principal ">
           <div className="secundario">
-          <div class="mr-auto">
-                <div class="d-flex justify-content-end">
-            <Button id="boton_crearCursos" onClick={this.abrirModal}>
-              Crear nuevo curso
-            </Button>
+            <div class="mr-auto">
+              <div class="d-flex justify-content-end">
+                <Button id="boton_crearCursos" onClick={this.abrirModal}>
+                  Crear nuevo curso
+                </Button>
+              </div>
             </div>
-                </div>
           </div>
         </div>
 
-        <Modal isOpen={this.state.abierto} style={modalStyles} className="">
+        <Modal isOpen={this.state.abierto} centered size="lg" className="">
           <div
             className="contenedorModal  "
             className=" border-top border-start border-end border-bottom border-white"
