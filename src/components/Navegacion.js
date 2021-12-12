@@ -5,7 +5,7 @@ import Cursos from "../pages/Cursos";
 class Navigation extends Component {
   render() {
     return (
-      <nav class="navbar navbar-light bg-light ">
+      <nav class="navbar navbar-light bg-light" id="navInicio">
         <a
           id="tituloPagina"
           class="navbar-brand"
@@ -23,8 +23,8 @@ class Navigation extends Component {
         </a>
 
         <div class="mr-right">
-          <div class="p-2 bd-highlight ">
-            <Link to="/cursos" id="boton_buscar" className="btn " type="button">
+          <div class="p-2 bd-highlight btInicio">
+            <Link to="/cursos" id="boton_buscar" className="btn" type="button">
               Cursos
             </Link>
 

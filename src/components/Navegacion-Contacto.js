@@ -5,9 +5,9 @@ import Cursos from "../pages/Cursos";
 class Navigation extends Component {
   render() {
     return (
-      <nav class="navbar navbar-light bg-light ">
+      <nav class="navbar navbar-light bg-light " id="navContacto">
         <a
-          id="tituloPagina"
+          id="tituloPagina2"
           class="navbar-brand"
           href="javascript:history.back()"
           border-width="medium"
@@ -22,7 +22,7 @@ class Navigation extends Component {
           />
         </a>
 
-        <div class="mr-right">
+        <div class="mr-right" id="inicioContacto">
           <div class="p-2 bd-highlight ">
             <Link to="/" id="Boton_atrasCursos" className="btn " type="button">
               Inicio
