@@ -328,7 +328,7 @@ a:active {
 
 #obligatorio {
   text-align: left;
-  margin-left: 290px;
+  margin-left: 230px;
   font-size: 17px;
 }
 
@@ -351,19 +351,20 @@ a:active {
   color: white;
   display: flex;
   justify-content: center;
+  width: 100%;
 }
 
 #cuerpoCrearInstructor {
   background: #41567e;
   border: none;
   color: white;
-  
+  width: 100%;
 }
 
 #pieCrearInstructor {
   background: #41567e;
   border: none;
- 
+  width: 100%;
   color: white;
 }
 #botonCrearCancelarInstructor {
@@ -374,7 +375,7 @@ a:active {
   width: 100px;
   padding-top: 6px;
   border-style: hidden;
-  margin-right: 120px;
+  margin-right: 40px;
   margin-top: 20px;
 }
 
