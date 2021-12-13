@@ -317,11 +317,12 @@ class RegistroEstudiante extends Component {
                                                             href="/"
                                                         >Cancelar</Button>
                                                     </div>
+                                               
                                                     <div className="col-md-7 ms-auto">
                                                         <Button type="submit"
                                                             className="btnn btn-primary btn-lg"
                                                             type="submit"
-                                                            id="botonCrearAceptar"
+                                                           
                                                         >Registrarme</Button>
                                                     </div>
                                                 </div><br/>
