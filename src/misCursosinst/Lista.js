@@ -173,7 +173,7 @@ function Lista() {
   return (
     <>
       <div className="list-group">
-        <div className="col-md-10 col ">
+        <div className="col-md-8 offset-md-2 ">
           <div className="container">
             <h3 className="text-white">Mis cursos</h3>
             <table className="table text-white">

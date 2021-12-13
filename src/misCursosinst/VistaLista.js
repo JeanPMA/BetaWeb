@@ -9,7 +9,7 @@ function VistaLista() {
       <div className="navegacion-menu">
         <NavegacionInstructor />
       </div>
-      <div className="container-instructor">
+      <div className="">
         <div className="contenido-pagina">
           <div className="contenido">
             <Contenido_misCursosDocente />

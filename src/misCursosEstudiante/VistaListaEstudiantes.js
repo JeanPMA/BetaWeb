@@ -10,7 +10,7 @@ function VistaListaEstudiantes() {
       <div className="navegacion-menu">
         <NavegacionEstudiante />
       </div>
-      <div className="container-instructor">
+      <div className="">
         <div className="contenido-pagina">
           <div className="contenido">
             <Contenido_misCursosEstudiante />
