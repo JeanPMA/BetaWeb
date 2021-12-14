@@ -2,13 +2,11 @@ import React, { useEffect, useState } from "react";
 import "./VistaAdministrador.css";
 import axios from "axios";
 
-
 const baseUrl = "https://betaweb-back.herokuapp.com/api/instructorList/";
 
 function ListaDocentes() {
-    
   const [lista, setLista] = useState([]);
-  
+
   useEffect(() => {
     axios
       .get("https://betaweb-back.herokuapp.com/api/instructorList")
@@ -19,7 +17,6 @@ function ListaDocentes() {
         console.log(error);
       });
   }, []);
-
 
   const getCookies = (cname) => {
     var name = cname + "=";
@@ -41,8 +38,10 @@ function ListaDocentes() {
       <div className="list-group">
         <div className="col-md-6 col align-self-center">
           <div className="container">
-            <h3 className="text-white" id="tituloMisInstructores">Mis Instructores</h3>
-            <table className="table text-white">
+            <h3 className="text-white" id="tituloMisInstructores">
+              Mis Instructores
+            </h3>
+            <table className="table text-white tablaInstructor">
               <thead>
                 <tr>
                   <th scope="col" className="text-white">
@@ -71,12 +70,8 @@ function ListaDocentes() {
                         <td className="text-white ">
                           {element.apellido_materno}
                         </td>
-                        
-                        <td className="text-white ">
-                          {element.email}
-                        </td>
-                        
-                                         
+
+                        <td className="text-white ">{element.email}</td>
                       </tr>
                     )
                   );

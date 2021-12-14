@@ -173,7 +173,7 @@ function Lista() {
   return (
     <>
       <div className="list-group">
-        <div className="col-md-10 col ">
+        <div className="col-md-8 offset-md-2 ">
           <div className="container">
             <h3 className="text-white">Mis cursos</h3>
             <table className="table text-white">
@@ -244,7 +244,7 @@ function Lista() {
         </div>
       </div>
 
-      <Modal isOpen={modalEditar} centered size="lg">
+      <Modal isOpen={modalEditar} centered backdrop="static">
         <div
           className="contenedorModal"
           className=" border-top border-start border-end border-bottom border-white"
@@ -333,7 +333,7 @@ function Lista() {
         </div>
       </Modal>
 
-      <Modal isOpen={modalEliminar} centered size="lg">
+      <Modal isOpen={modalEliminar} centered backdrop="static">
         <div className="border-top border-start border-end border-bottom border-white">
           <ModalHeader id="tituloCrearCurso">
             <a id="tituloModal"> Eliminar curso </a>

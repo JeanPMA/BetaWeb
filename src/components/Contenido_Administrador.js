@@ -158,18 +158,18 @@ class Contenido_Administrador extends Component {
     }
   }
   check(e) {
-    var tecla = (document.all) ? e.keyCode : e.which;
+    var tecla = document.all ? e.keyCode : e.which;
 
     //Tecla de retroceso para borrar, siempre la permite
     if (tecla == 8) {
-        return true;
+      return true;
     }
 
     // Patron de entrada, en este caso solo acepta numeros y letras
-    var  patron = /[A-Za-z0-9]/;
+    var patron = /[A-Za-z0-9]/;
     var tecla_final = String.fromCharCode(tecla);
     return patron.test(tecla_final);
-}
+  }
 
   render() {
     const modalStyles = {
@@ -178,52 +178,48 @@ class Contenido_Administrador extends Component {
       left: "50%",
       transform: "translate(-54%, -90%)",
       width: "350px",
-      height: "160px",
-      
     };
 
     return (
       <>
-        <div className="principal " >
-          <div className="secundario" >
-          <div class="mr-auto">
-                <div class="d-flex justify-content-end">
-            <Button id="boton_crearInstructores" onClick={this.abrirModal}>
-              Agregar <br></br>
-              Instructor
-            </Button>
+        <div className="principal ">
+          <div className="secundario">
+            <div class="mr-auto">
+              <div class="d-flex justify-content-end">
+                <Button id="boton_crearInstructores" onClick={this.abrirModal}>
+                  Agregar Instructor
+                </Button>
+              </div>
             </div>
-                </div>
           </div>
         </div>
-        <Modal isOpen={this.state.abierto} style={modalStyles} className="modalInstructor" >
-          <div className="contenedorCrearInstructor border-top border-start border-end border-bottom border-white">
+        <Modal isOpen={this.state.abierto}>
+          <div className="border-top border-start border-end border-bottom border-white">
             <Form
               onSubmit={
                 this.enviarAlaBD
               } /*onClick={() => this.submitFormulario()}*/ /*onSubmit={verificarPasswords()}*/
             >
-            
               <ModalHeader id="tituloCrearInstructor">
                 <a id="tituloModalInstructor"> Nuevo instructor </a>
               </ModalHeader>
-              
+
               <ModalBody id="cuerpoCrearInstructor">
-             
-          
-                <i id="obligatorio">
-                  <small>obligatorio </small>
-                </i>
-                <i
-                  className="bi bi-exclamation-circle rojo"
-                  width="5px"
-                  height="5px"
-                ></i>
-        
+                <div className="d-flex justify-content-end">
+                  <i className="m-1">
+                    <small>obligatorio </small>
+                  </i>
+                  <i
+                    className="bi bi-exclamation-circle rojo m-1"
+                    width="5px"
+                    height="5px"
+                  ></i>
+                </div>
+
                 <FormGroup className="position-relative">
                   <Label for="nombre">Nombre</Label>
                   <Input
-                    placeholder="Nombre del instructor"
+                    placeholder="Ej.: Marco"
                     maxlength="20"
                     type="text"
                     id="nombre"
@@ -236,14 +232,12 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidNombre}
                   />
-
-                  <p className="caracteres">Caract. Max. 20</p>
                 </FormGroup>
 
                 <FormGroup>
                   <Label for="nombre">Apellido paterno</Label>
                   <Input
-                    placeholder="Apellido paterno del instructor"
+                    placeholder="Ej.: Paredes"
                     maxlength="20"
                     type="text"
                     id="apellidoP"
@@ -257,13 +251,12 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidApellido_paterno}
                   />
-                  <p className="caracteres">Caract. Max. 20</p>
                 </FormGroup>
 
                 <FormGroup>
                   <Label for="nombre">Apellido materno</Label>
                   <Input
-                    placeholder="Apellido materno del instructor"
+                    placeholder="Ej.: Ledezma"
                     maxlength="20"
                     type="text"
                     id="apellidoM"
@@ -277,12 +270,11 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidApellido_materno}
                   />
-                  <p className="caracteres">Caract. Max. 20</p>
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Correo electronico</Label>
                   <Input
-                    placeholder="algo123@gmail.com"
+                    placeholder="Ej.: algo123@gmail.com"
                     maxlength="20"
                     type="email"
                     id="correo"
@@ -294,12 +286,11 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidEmail}
                   />
-                  <p className="caracteres">Caract. Max. 20</p>
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Usuario</Label>
                   <Input
-                    placeholder="Nombre de usuario del instructor"
+                    placeholder="Ej.: marquito123"
                     maxlength="20"
                     type="text"
                     id="username"
@@ -313,15 +304,12 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidUsername}
                   />
-                  <p className="caracteres">Caract. Max. 20</p>
                 </FormGroup>
-                
-                
-         
+
                 <FormGroup>
                   <Label for="nombre">Contraseña</Label>
                   <Input
-                    placeholder="Contraseña del instructor"
+                    placeholder="Ej.: marco123A"
                     maxlength="20"
                     type="password"
                     pattern="[A-Za-z0-9]{1,15}"
@@ -334,12 +322,11 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidPasswd}
                   />
-                  <p className="caracteres">Caract. Max. 20</p>
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Vuelve a escribir la Contraseña</Label>
                   <Input
-                    placeholder="Vuelve a escribir la contraseña"
+                    placeholder="Ej.: marco123A"
                     maxlength="20"
                     type="password"
                     pattern="[A-Za-z0-9]{1,15}"
@@ -355,18 +342,17 @@ class Contenido_Administrador extends Component {
                   <FormFeedback tooltip id="mensajePassword">
                     {this.state.mensajePasswd3}
                   </FormFeedback>
-                  <p className="caracteres">Caract. Max. 20</p>
                 </FormGroup>
 
                 <FormGroup>
                   <Label for="nombre">Area de especializacion</Label>
                   <Input
-                    placeholder="Areas de especializacion del instructor"
+                    placeholder="Ej.: Ingenieria de software, Redes 1"
                     maxlength="100"
                     type="text"
                     id="detalleArea"
                     name="area_especializacion"
-                    pattern="[A-Za-z0-9_,]{1,15}"
+                    pattern="[A-Za-z0-9-,- ]{1,15}"
                     value={this.state.area_especializacion}
                     onChange={
                       (this.onChange,
@@ -377,18 +363,17 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidArea_especializacion}
                   />
-                  <p className="caracteres">Caract. Max. 100</p>
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Nivel de estudio</Label>
                   <Input
-                    placeholder="Nivel de estudio del instructor"
-                    pattern="[A-Za-z]+"
+                    placeholder="Ej.: Ingenieria"
+                    pattern="[A-Za-z- ]+"
                     maxlength="20"
                     type="text"
                     id="nivel"
                     name="nivel_estudio"
-                   // onkeypress="return check(event)"
+                    // onkeypress="return check(event)"
                     value={this.state.nivel_estudio}
                     onChange={
                       (this.onChange,
@@ -397,7 +382,6 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidNivel_estudio}
                   />
-                  <p className="caracteres">Caract. Max. 20</p>
                 </FormGroup>
                 <FormGroup>
                   <Label for="start">Fecha de nacimiento</Label>
@@ -408,7 +392,8 @@ class Contenido_Administrador extends Component {
                     id="start"
                     name="fecha_nacimiento"
                     value="2002-01-01"
-                    min="1950-01-01" max="2003-12-31"
+                    min="1950-01-01"
+                    max="2003-12-31"
                     value={this.state.fecha_nacimiento}
                     onChange={
                       (this.onChange,
@@ -417,9 +402,7 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidFecha_nacimiento}
                   />
-                  
                 </FormGroup>
-                 
               </ModalBody>
               <FormFeedback tooltip>{this.state.mensajePasswd}</FormFeedback>
               <ModalFooter id="pieCrearInstructor">

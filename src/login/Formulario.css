@@ -1,26 +1,24 @@
-
-.login{
+.login {
   background-color: #41567e;
   border-color: white;
 }
-.containerPrincipal{
+.containerPrincipal {
   height: 200px;
   width: 350px;
-  
+
   margin-top: 10em;
   color: white;
   border-color: white;
-  border: 100px ;
+  border: 100px;
 }
-.containerSecundario{
+.containerSecundario {
   border: 1px solid white;
   padding-left: 20px;
   padding-top: 40px;
   padding-right: 30px;
   padding-bottom: 30px;
- 
 }
-#boton_iniciarSesion{
+#boton_iniciarSesion {
   background-color: #0e87cd;
   margin-left: 95px;
   margin-top: 25px;
@@ -31,4 +29,9 @@
   padding-top: none;
   border-style: hidden;
   text-align: center;
+}
+@media (max-width: 356px) {
+  .containerPrincipal {
+    margin-top: 240px;
+  }
 }

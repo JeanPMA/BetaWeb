@@ -121,7 +121,12 @@ class boton_misCursosDocente extends Component {
           </div>
         </div>
 
-        <Modal isOpen={this.state.abierto} centered size="lg" className="">
+        <Modal
+          isOpen={this.state.abierto}
+          centered
+          backdrop="static"
+          className=""
+        >
           <div
             className="contenedorModal  "
             className=" border-top border-start border-end border-bottom border-white"

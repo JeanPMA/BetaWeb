@@ -90,7 +90,7 @@ a:active {
   color: #fcf93f;
 }
 
-#nombre-del-cursoo {
+#nombre-del-curso {
   font-size: 20px;
   font-weight: bold;
 }
@@ -181,6 +181,7 @@ a:active {
 #boton-menu:checked ~ .container-menu {
   opacity: 1;
   visibility: visible;
+  position: fixed;
 }
 
 .cont-menu {
@@ -273,7 +274,7 @@ a:active {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 150px;
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 40px;
@@ -290,7 +291,8 @@ a:active {
 #boton_crearCursos {
   background-color: #0e87cd;
 
-  margin-top: 60px;
+  margin-top: 110px;
+  margin-right: 10px;
   border-radius: 30px;
   color: white;
   height: 38px;
@@ -302,11 +304,9 @@ a:active {
 #boton_crearInstructores {
   background-color: #0e87cd;
 
-  margin-top: 60px;
+  margin-top: 120px;
   border-radius: 30px;
   color: white;
-  height: 58px;
-  width: 160px;
 
   border-style: hidden;
   text-align: center;
@@ -324,11 +324,9 @@ a:active {
   width: 360px;
 }
 
-
-
 #obligatorio {
   text-align: left;
-  margin-left: 230px;
+  margin-left: 220px;
   font-size: 17px;
 }
 
@@ -366,6 +364,8 @@ a:active {
   border: none;
   width: 100%;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 #botonCrearCancelarInstructor {
   background-color: rgb(81, 81, 162);
@@ -375,8 +375,7 @@ a:active {
   width: 100px;
   padding-top: 6px;
   border-style: hidden;
-  margin-right: 40px;
-  margin-top: 20px;
+  margin: 3px auto;
 }
 
 #botonCrearAceptarInstructor {
@@ -387,8 +386,7 @@ a:active {
   width: 100px;
   padding-top: 6px;
   border-style: hidden;
-  margin-right: 40px;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 #botonCrearCancelar {
@@ -399,7 +397,7 @@ a:active {
   width: 100px;
   padding-top: 6px;
   border-style: hidden;
-  margin: 2px auto;
+  margin: 20px auto;
 }
 
 #botonCrearAceptar {
@@ -567,7 +565,7 @@ a:active {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 150px;
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 40px;
@@ -650,7 +648,7 @@ a:active {
   margin-top: 15px;
 }
 
-#nombre-del-cursoo {
+#nombre-del-curso {
   margin-bottom: 8px;
   height: 50px;
 }
@@ -705,24 +703,32 @@ a:active {
     display: none;
   }
   .botones-menu-instructor {
-    text-align: center;
     margin-top: 20%;
   }
 
   .boton-inicio-instructor {
+    font-size: 40px;
     border-radius: 0px;
     border-bottom: 2px solid rgb(224, 224, 224, 0.5);
   }
   .boton-cursos-instructor {
     border-radius: 0px;
+    font-size: 40px;
     border-bottom: 2px solid rgb(224, 224, 224, 0.5);
+  }
+  .icono-inicio-cursos-instructor {
+    font-size: 40px;
+    margin-left: 30px;
+  }
+  #boton-menu:checked .container-instructor {
+    position: fixed;
   }
 }
 .listaDocentes {
   font-size: 10px;
 }
 #tituloMisInstructores {
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 @media (max-width: 585px) {
   .instrucciones {
@@ -855,5 +861,140 @@ a:active {
   #boton_login {
     width: 100%;
     margin: 5px auto;
+  }
+}
+#navInicioCursos {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+.buscadorCursosInicio {
+  margin-top: 80px;
+}
+#navegacionEstudiante {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+.margen-buscador {
+  margin-top: 30px;
+}
+#navInstructor {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+@media (max-width: 890px) {
+  .bienvenida {
+    width: 80%;
+  }
+  .container-instructor {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media (max-width: 656px) {
+  .bienvenida {
+    width: 100%;
+  }
+}
+@media (max-width: 586px) {
+  .bienvenida {
+    margin-top: 150px;
+  }
+}
+@media (max-width: 890px) {
+  .BienvenidaEstudiante {
+    width: 80%;
+  }
+  .container-estudiante {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media (max-width: 656px) {
+  .BienvenidaEstudiante {
+    width: 100%;
+  }
+}
+@media (max-width: 586px) {
+  .BienvenidaEstudiante {
+    margin-top: 150px;
+  }
+}
+#btn-close {
+  opacity: 1;
+}
+#navegacionLogin {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+#navAdmin {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+@media (max-width: 351px) {
+  .margen-buscador {
+    margin-top: 60px;
+  }
+  .buscadorCursosInicio {
+    margin-top: 110px;
+  }
+}
+@media (max-width: 447px) {
+  .buscadorCursosInicio {
+    margin-top: 110px;
+  }
+}
+@media (max-width: 327px) {
+  .buscadorCursosInicio {
+    margin-top: 214px;
+  }
+}
+#botonCrearCancelarEst {
+  background-color: rgb(81, 81, 162);
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 100px;
+  padding-top: 6px;
+  border-style: hidden;
+}
+.tablaInstructor {
+  font-size: 1rem;
+}
+@media (max-width: 554px) {
+  #tituloMisInstructores {
+    font-size: 18px;
+  }
+  .tablaInstructor {
+    font-size: 12px;
+  }
+}
+@media (max-width: 426px) {
+  .tablaInstructor {
+    font-size: 10px;
+  }
+}
+.container-admin {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 426px) {
+  .tablaInstructor {
+    font-size: 9px;
+  }
+}
+@media (max-width: 340px) {
+  .tablaInstructor {
+    font-size: 8px;
   }
 }

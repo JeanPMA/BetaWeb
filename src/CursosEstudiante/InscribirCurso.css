@@ -26,9 +26,6 @@
   border-radius: 0.25rem;
 }
 .btnnn {
-  background-color: #41567e;
-  color: #0e87cd;
-
   border-style: hidden;
   text-align: center;
 
@@ -43,7 +40,16 @@
   -webkit-user-select: none;
   user-select: none;
 }
-
+#Descripcion-Curso-Estudiante {
+  height: 48px;
+  overflow-y: scroll;
+}
+#nombre-del-curso {
+  height: 30px;
+}
+.boton-inscribirse {
+  width: 100px;
+}
 @media (max-width: 1082px) {
   #cursosRegistrados {
     width: 100%;
@@ -63,14 +69,14 @@
     width: 100%;
   }
 
-  #Descripcion {
-    overflow: scroll;
+  #Descripcion-Curso-Estudiante {
+    overflow-y: scroll;
   }
-  #nombre-del-cursoo {
+  #nombre-del-curso {
     font-size: 15px;
   }
-  #Descripcion {
-    height: 55%;
+  #Descripcion-Curso-Estudiante {
+    height: 47%;
   }
   #cursos {
     height: 260px;
@@ -80,16 +86,15 @@
   }
 }
 @media (max-width: 768px) {
-  #Descripcion {
-    display: none;
+  .boton-inscribirse {
+    width: 100%;
   }
-
-  #nombre-del-cursoo {
+  #nombre-del-curso {
     display: block;
 
     font-size: 20px;
-    height: 78%;
-    overflow: scroll;
+    height: 18%;
+    overflow-y: scroll;
   }
   #instructor-nombre {
     font-size: 15px;
@@ -120,15 +125,20 @@
     height: 50px;
     margin: 1%;
   }
-
+  #instructor-apellido-materno {
+    display: none;
+  }
   #cursos {
     display: block;
     height: 350px;
     text-align: center;
   }
-  #nombre-del-cursoo {
-    height: 70px;
+  #nombre-del-curso {
+    height: 22px;
     width: 100%;
+  }
+  #Descripcion-Curso-Estudiante {
+    height: 42px;
   }
   #imagen-cursos-estudiante {
     width: 70%;
@@ -147,8 +157,7 @@
   }
 }
 @media (max-width: 379px) {
-  #nombre-del-cursoo {
-    height: 70px;
+  #nombre-del-curso {
     width: 100%;
     font-size: 17px;
   }

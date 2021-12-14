@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cursoss from "./Cursoss";
-import logoLupa from "../imagenes/logoLupa.png";
+import logoLupa from "../assets/lupa.png";
 import axios from "axios";
 
 function Vista() {
@@ -54,7 +54,7 @@ function Vista() {
 
   return (
     <div>
-      <div>
+      <div className="buscadorCursosInicio">
         <input
           class="buscador"
           type="search"

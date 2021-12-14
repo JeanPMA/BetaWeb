@@ -11,38 +11,42 @@ import Cookies from "universal-cookie";
 const cookies = new Cookies();
 
 class NavegacionEstudiante extends Component {
-  cerrarSesion=()=>{
-    cookies.remove('id_usuario', {path: "/"});
-    cookies.remove('nombre', {path: "/"});
-    cookies.remove('apellido_paterno', {path: "/"});
-    cookies.remove('apellido_materno', {path: "/"});
-    cookies.remove('id_estudiante', {path: "/"});
-    cookies.remove('username', {path: "/"});
-    cookies.remove('instructor', {path: "/"});
-    cookies.remove('admin', {path: "/"});
-    window.location.href='./';
-  }
+  cerrarSesion = () => {
+    cookies.remove("id_usuario", { path: "/" });
+    cookies.remove("nombre", { path: "/" });
+    cookies.remove("apellido_paterno", { path: "/" });
+    cookies.remove("apellido_materno", { path: "/" });
+    cookies.remove("id_estudiante", { path: "/" });
+    cookies.remove("username", { path: "/" });
+    cookies.remove("instructor", { path: "/" });
+    cookies.remove("admin", { path: "/" });
+    window.location.href = "./";
+  };
   render() {
-    console.log('id_usuario' + cookies.get('id_usuario'));
-    console.log('nombre' + cookies.get('nombre'));
-      console.log('apellido_paterno' + cookies.get('apellido_paterno'));
-      console.log('apellido_materno' + cookies.get('apellido_materno'));
-    console.log('username' + cookies.get('username'));
-    console.log('passwd' + cookies.get('passwd'));
-    console.log('id_estudiante' + cookies.get('id_estudiante'));
-    console.log('instructor' + cookies.get('instructor'));
-    console.log('admin' + cookies.get('admin'));
+    console.log("id_usuario" + cookies.get("id_usuario"));
+    console.log("nombre" + cookies.get("nombre"));
+    console.log("apellido_paterno" + cookies.get("apellido_paterno"));
+    console.log("apellido_materno" + cookies.get("apellido_materno"));
+    console.log("username" + cookies.get("username"));
+    console.log("passwd" + cookies.get("passwd"));
+    console.log("id_estudiante" + cookies.get("id_estudiante"));
+    console.log("instructor" + cookies.get("instructor"));
+    console.log("admin" + cookies.get("admin"));
     return (
       <div>
         <div>
-          <nav class="navbar navbar-light bg-light ">
-          <div class="mr-left">
-            <label for="boton-menu" className="icono-menu">
-              <FontAwesomeIcon icon={faBars} />
-            </label>
+          <nav class="navbar navbar-light bg-light " id="navegacionEstudiante">
+            <div class="mr-left">
+              <label for="boton-menu" className="icono-menu">
+                <FontAwesomeIcon icon={faBars} />
+              </label>
 
-            
-              <a id="logo-betasoft" class="navbar-brand" href="#" border-width="medium">
+              <a
+                id="logo-betasoft"
+                class="navbar-brand"
+                href="#"
+                border-width="medium"
+              >
                 BETAWEB
                 <img
                   src="https://previews.123rf.com/images/mochipet/mochipet1707/mochipet170700056/82167896-ilustraci%C3%B3n-vectorial-bombilla-con-haces-de-luz-en-estilo-pop-art-dibujos-animados-con-contorno-aisl.jpg"
@@ -51,17 +55,20 @@ class NavegacionEstudiante extends Component {
                   class="d-inline-block align-top"
                   alt=""
                 />
-                   
               </a>
-              </div>
-              <div class="mr-right">
-                            <div class="p-2 bd-highlight ">
-                            <button id="Boton_cerrar" className="btn " type="button" onClick={()=>this.cerrarSesion()}>Cerrar sesión</button>
-                             </div>
-                
-
             </div>
-
+            <div class="mr-right">
+              <div class="p-2 bd-highlight ">
+                <button
+                  id="Boton_cerrar"
+                  className="btn "
+                  type="button"
+                  onClick={() => this.cerrarSesion()}
+                >
+                  Cerrar sesión
+                </button>
+              </div>
+            </div>
           </nav>
         </div>
         <input type="checkbox" id="boton-menu" />
@@ -124,9 +131,7 @@ class NavegacionEstudiante extends Component {
             <FontAwesomeIcon icon={faTimes} />
           </label>
         </div>
-        
       </div>
-      
     );
   }
 }

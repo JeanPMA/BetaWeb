@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Carousel from "react-grid-carousel";
 import "./carousel.css";
 import DetallesModal from "./DetallesModal";
+import "bootstrap/dist/css/bootstrap.css";
 
 const Slider = () => {
   const [cursos, setCursos] = useState([]);
@@ -17,7 +18,7 @@ const Slider = () => {
 
   return (
     <>
-      <div className="ancho-slider">
+      <div className="ancho-slider border-white">
         <div className="text-white ofertaCursos">
           <h2>Oferta de cursos</h2>
         </div>
@@ -62,7 +63,7 @@ const Slider = () => {
                       </p>
                     </div>
 
-                    <div className="text-white align-self-center p-2 ">
+                    <div className="text-white align-self-center p-2 nombreCursoSlider ">
                       <p>{item.nombre}</p>
                     </div>
                   </div>
