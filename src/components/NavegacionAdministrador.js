@@ -90,8 +90,8 @@ class NavegacionAdministrador extends Component {
               <div className="menu-instructor">
                 <h2 className="texto-menu">Menú</h2>
                 <div className="botones-menu-instructor">
-                  <Link
-                    to="/administrador"
+                  <a
+                    href="/administrador"
                     type="button"
                     className="boton-inicio-instructor text-white"
                   >
@@ -99,7 +99,7 @@ class NavegacionAdministrador extends Component {
                       <FontAwesomeIcon icon={faHome} />
                     </div>
                     <span>Inicio</span>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </nav>
