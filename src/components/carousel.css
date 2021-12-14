@@ -28,9 +28,7 @@
   margin-bottom: 0px;
   margin-top: 10px;
 }
-.nombreCursoSlider {
-  overflow-y: scroll;
-}
+
 @media (max-width: 1200px) {
   .contenedor-cursos-inicio {
     width: 300px;
