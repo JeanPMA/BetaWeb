@@ -223,7 +223,7 @@ class Contenido_Administrador extends Component {
                 <FormGroup className="position-relative">
                   <Label for="nombre">Nombre</Label>
                   <Input
-                    placeholder="Nombre del instructor"
+                    placeholder="Ej.: Marco"
                     maxlength="20"
                     type="text"
                     id="nombre"
@@ -237,13 +237,13 @@ class Contenido_Administrador extends Component {
                     invalid={this.state.invalidNombre}
                   />
 
-                  <p className="caracteres">Caract. Max. 20</p>
+                  
                 </FormGroup>
 
                 <FormGroup>
                   <Label for="nombre">Apellido paterno</Label>
                   <Input
-                    placeholder="Apellido paterno del instructor"
+                    placeholder="Ej.: Paredes"
                     maxlength="20"
                     type="text"
                     id="apellidoP"
@@ -257,13 +257,13 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidApellido_paterno}
                   />
-                  <p className="caracteres">Caract. Max. 20</p>
+                
                 </FormGroup>
 
                 <FormGroup>
                   <Label for="nombre">Apellido materno</Label>
                   <Input
-                    placeholder="Apellido materno del instructor"
+                    placeholder="Ej.: Ledezma"
                     maxlength="20"
                     type="text"
                     id="apellidoM"
@@ -277,12 +277,12 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidApellido_materno}
                   />
-                  <p className="caracteres">Caract. Max. 20</p>
+               
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Correo electronico</Label>
                   <Input
-                    placeholder="algo123@gmail.com"
+                    placeholder="Ej.: algo123@gmail.com"
                     maxlength="20"
                     type="email"
                     id="correo"
@@ -294,12 +294,12 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidEmail}
                   />
-                  <p className="caracteres">Caract. Max. 20</p>
+                 
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Usuario</Label>
                   <Input
-                    placeholder="Nombre de usuario del instructor"
+                    placeholder="Ej.: marquito123"
                     maxlength="20"
                     type="text"
                     id="username"
@@ -313,7 +313,7 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidUsername}
                   />
-                  <p className="caracteres">Caract. Max. 20</p>
+                 
                 </FormGroup>
                 
                 
@@ -321,7 +321,7 @@ class Contenido_Administrador extends Component {
                 <FormGroup>
                   <Label for="nombre">Contraseña</Label>
                   <Input
-                    placeholder="Contraseña del instructor"
+                    placeholder="Ej.: marco123A"
                     maxlength="20"
                     type="password"
                     pattern="[A-Za-z0-9]{1,15}"
@@ -334,12 +334,12 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidPasswd}
                   />
-                  <p className="caracteres">Caract. Max. 20</p>
+                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Vuelve a escribir la Contraseña</Label>
                   <Input
-                    placeholder="Vuelve a escribir la contraseña"
+                    placeholder="Ej.: marco123A"
                     maxlength="20"
                     type="password"
                     pattern="[A-Za-z0-9]{1,15}"
@@ -355,18 +355,18 @@ class Contenido_Administrador extends Component {
                   <FormFeedback tooltip id="mensajePassword">
                     {this.state.mensajePasswd3}
                   </FormFeedback>
-                  <p className="caracteres">Caract. Max. 20</p>
+                 
                 </FormGroup>
 
                 <FormGroup>
                   <Label for="nombre">Area de especializacion</Label>
                   <Input
-                    placeholder="Areas de especializacion del instructor"
+                    placeholder="Ej.: Ingenieria de software, Redes 1"
                     maxlength="100"
                     type="text"
                     id="detalleArea"
                     name="area_especializacion"
-                    pattern="[A-Za-z0-9_,]{1,15}"
+                    pattern="[A-Za-z0-9-,- ]{1,15}"
                     value={this.state.area_especializacion}
                     onChange={
                       (this.onChange,
@@ -377,13 +377,13 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidArea_especializacion}
                   />
-                  <p className="caracteres">Caract. Max. 100</p>
+                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Nivel de estudio</Label>
                   <Input
-                    placeholder="Nivel de estudio del instructor"
-                    pattern="[A-Za-z]+"
+                    placeholder="Ej.: Ingenieria"
+                    pattern="[A-Za-z- ]+"
                     maxlength="20"
                     type="text"
                     id="nivel"
@@ -397,7 +397,7 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidNivel_estudio}
                   />
-                  <p className="caracteres">Caract. Max. 20</p>
+                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="start">Fecha de nacimiento</Label>

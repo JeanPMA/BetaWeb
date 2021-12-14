@@ -11,6 +11,7 @@ import Cookies from "universal-cookie";
 const cookies = new Cookies();
 
 class NavegacionEstudiante extends Component {
+
   cerrarSesion=()=>{
     cookies.remove('id_usuario', {path: "/"});
     cookies.remove('nombre', {path: "/"});
@@ -83,7 +84,7 @@ class NavegacionEstudiante extends Component {
                 <h2 className="texto-menu">Menú</h2>
                 <div className="botones-menu-instructor">
                   <Link
-                    to="/estudiante"
+                    to="/estudiante"                   
                     type="button"
                     className="boton-inicio-instructor text-white"
                   >
@@ -94,6 +95,7 @@ class NavegacionEstudiante extends Component {
                   </Link>
 
                   <Link
+                
                     to="/VistaEstudiante"
                     type="button"
                     type="button"
