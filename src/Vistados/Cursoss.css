@@ -68,7 +68,8 @@
     margin-top: 20px;
   }
   #search {
-    margin-top: 10px;
+    margin-right: 2px;
+    height: 35px;
   }
 
   #nombre-del-curso {
@@ -91,6 +92,10 @@
   }
   #ver-detalles {
     width: 100%;
+  }
+  .margen-buscador {
+    display: flex;
+    align-items: center;
   }
 }
 @media (max-width: 570px) {

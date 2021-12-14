@@ -20,9 +20,11 @@ a:active {
 
 #tituloPagina {
   margin-left: 20px;
+  font-size: 1.5rem;
 }
 #tituloPagina2 {
   margin-left: 20px;
+  font-size: 1.5rem;
 }
 
 #contenidoDescripcion {
@@ -146,11 +148,12 @@ a:active {
 /* CSS instructor*/
 .icono-menu {
   margin-left: 20px;
-  font-size: 20px;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 #logo-betasoft {
   margin-left: 12px;
+  font-size: 1.5rem;
 }
 
 #Boton_cerrar {
@@ -905,6 +908,9 @@ a:active {
   .bienvenida {
     margin-top: 150px;
   }
+  .margen-buscador {
+    margin-top: 40px;
+  }
 }
 @media (max-width: 890px) {
   .BienvenidaEstudiante {
@@ -944,6 +950,7 @@ a:active {
   .margen-buscador {
     margin-top: 60px;
   }
+
   .buscadorCursosInicio {
     margin-top: 110px;
   }

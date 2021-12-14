@@ -86,6 +86,16 @@
   }
 }
 @media (max-width: 768px) {
+  .buscadorCursosInicio {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+  #logo_lupa {
+    margin-right: 6px;
+    margin-left: 0;
+  }
   .boton-inscribirse {
     width: 100%;
   }
@@ -114,16 +124,13 @@
     height: 50px;
     margin: 2%;
   }
-  #logo_lupa {
-    display: none;
-  }
 }
 
 @media (max-width: 570px) {
   .buscador {
     width: 97%;
     height: 50px;
-    margin: 1%;
+    margin: 3%;
   }
   #instructor-apellido-materno {
     display: none;
