@@ -728,7 +728,7 @@ a:active {
   font-size: 10px;
 }
 #tituloMisInstructores {
-  font-size: 18px;
+  font-size: 1.5rem;
 }
 @media (max-width: 585px) {
   .instrucciones {
@@ -966,4 +966,35 @@ a:active {
   width: 100px;
   padding-top: 6px;
   border-style: hidden;
+}
+.tablaInstructor {
+  font-size: 1rem;
+}
+@media (max-width: 554px) {
+  #tituloMisInstructores {
+    font-size: 18px;
+  }
+  .tablaInstructor {
+    font-size: 12px;
+  }
+}
+@media (max-width: 426px) {
+  .tablaInstructor {
+    font-size: 10px;
+  }
+}
+.container-admin {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 426px) {
+  .tablaInstructor {
+    font-size: 9px;
+  }
+}
+@media (max-width: 340px) {
+  .tablaInstructor {
+    font-size: 8px;
+  }
 }
