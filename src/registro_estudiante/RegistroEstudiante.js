@@ -4,6 +4,7 @@ import {
     Input,
     FormFeedback,
     Form,
+    Label,
 } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
@@ -66,7 +67,7 @@ class RegistroEstudiante extends Component {
         const { nombre, apellido_paterno ,apellido_materno,username,passwd2,fecha_nacimiento,email} = this.state
         
         
-        if (nombre.trim() === "" || nombre.length < 3 || nombre.length > 20) {
+        if (nombre.trim() === "" ) {
             
             this.setState({
                 invalidNombre: true,
@@ -137,23 +138,25 @@ class RegistroEstudiante extends Component {
                     <div className=" containerR"  >
                     
                        
-                            <div className="centro">
+                            <div className="">
                                 <Form className="form-horizontal" onSubmit={(e) =>
                                     this.enviarAlaBD(e)}>
                                     <br /><br />
                                     <fieldset   class="border border-white">
-                                        <legend className="text-white header">Registro Estudiante</legend>
+                                        <legend className="text-white header centro">Registro Estudiante</legend>
                                         <br /><br />
                                         <div className="col-md-15 offset-md-0">
-                                        <div className="form-text">
+                                        <div className="">
                                             <span className="col-md-1 ms-auto  text-center"><i className="fa fa-user bigicon"></i></span>
                                             <div className="col-md-10 offset-md-1 a">
+                                            <Label for="apellido_paterno" className="texto">Nombre</Label>
                                                 <Input type="text"
 
                                                     id="nombre"
                                                     name="nombre"
-                                                    pattern="[A-Za-z]{1,20}"
-                                                    title="Solo letras"
+                                                    pattern="[A-Za-z]+"
+                                                    minLength="3"
+                                                    maxlength="20"
                                                     placeholder="Nombre"
                                                     className={`form-control ${invalidNombre ? "is-invalid" : ""}`}
                                                     onChange={
@@ -169,12 +172,14 @@ class RegistroEstudiante extends Component {
                                         <div className="form-group">
                                             <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-user bigicon"></i></span>
                                             <div className="col-md-10 offset-md-1 a">
+                                            <Label for="apellido_paterno" className="texto">Apellido Paterno</Label>
                                                 <Input  id="apellido_paterno"
-                                                    
-                                                    maxLength={20} name="apellido_paterno"
+                                                     minLength="3"
+                                                    maxLength={20} 
+                                                    name="apellido_paterno"
                                                     type="text"
-                                                    pattern="[A-Za-z]{1,20}"
-                                                    placeholder="Apellido Paterno"
+                                                    pattern="[A-Za-z]+"
+                                                    placeholder="Apellido_paterno"
                                                     className={`form-control ${invalidApellido_paterno ? "is-invalid" : ""}`}
                                                     //value={this.state.apellido_paterno}
                                                     onChange={
@@ -191,11 +196,14 @@ class RegistroEstudiante extends Component {
                                         <div className="form-group">
                                             <span className="col-md-1 col-md-offset-2 text-center"><i className="fa fa-user bigicon"></i></span>
                                             <div className="col-md-10 offset-md-1 a">
-                                                <input id="lsname"
+                                            <Label for="lsname" className="texto">Apellido Materno</Label>
+                                                <Input id="lsname"
                                                     name="lsname"
                                                     type="text"
-                                                    pattern="[A-Za-z]{1,20}"
-                                                    placeholder="Apellido Materno"
+                                                    pattern="[A-Za-z]+"
+                                                    minLength="3"
+                                                    maxLength="20"
+                                                    placeholder="Apellido_materno"
                                                     className={`form-control ${invalidApellido_materno ? "is-invalid" : ""}`}
                                                     value={this.state.apellido_materno}
                                                     onChange={
@@ -211,6 +219,7 @@ class RegistroEstudiante extends Component {
                                         <div className="bootstrap-iso">
                                             <div className="col-md-10 offset-md-1 a">
                                                 <div className="form-group">
+                                                <Label for="date" className="texto">Fecha de nacimiento</Label>
                                                     <Input className={`form-control ${invalidFecha_nacimiento ? "is-invalid" : ""}`}
                                                         id="date"
                                                         name="fecha_nacimiento"
@@ -224,7 +233,7 @@ class RegistroEstudiante extends Component {
                                                                     this.setState({ fecha_nacimiento: event.target.value }))
                                                         }
                                                         invalid={invalidFecha_nacimiento?invalidFecha_nacimiento.toString():undefined} />
-                                                        <p className="caracteres text-white">Fecha de nacimiento<br/></p>
+                                                        <p className="caracteres text-white"><br/></p>
                                                 </div>
                                             </div>
                                         </div>
@@ -234,11 +243,13 @@ class RegistroEstudiante extends Component {
                                                 <i class="fa fa-envelope-o bigicon"></i>
                                             </span>
                                             <div className="col-md-10 offset-md-1 a">
+                                            <Label for="email" className="texto">Correo electronico</Label>
                                                 <Input id="email"
                                                     name="email"
                                                     type="email"
-                                                    maxLength="40"
-                                                    placeholder="Correo electronico "
+                                                    minLength="3"
+                                                    maxLength="20"
+                                                    placeholder="algo123@gmail.com"
                                                     pattern=".+@gmail.com"
                                                     className={`form-control ${invalidEmail ? "is-invalid" : ""}`}
                                                     //value={email}
@@ -257,11 +268,14 @@ class RegistroEstudiante extends Component {
                                                 <i className="fa fa-user-square bigicon"></i>
                                             </span>
                                             <div className="col-md-10 offset-md-1 a">
+                                            <Label for="usuario" className="texto">Usuario</Label>
                                                 <Input id="usuario"
                                                     name="usuario"
                                                     type="text"
-                                                    pattern="[A-Za-z]{1,20}"
-                                                    placeholder="Nombre de usuario"
+                                                    name="username"
+                                                     pattern="[A-Za-z0-9]{1,15}"
+                                                     minLength="3"
+                                                     maxLength="20"
                                                     className={`form-control ${invalidUsername ? "is-invalid" : ""}`}
                                                     value={this.state.username}
                                                     onChange={
@@ -279,16 +293,17 @@ class RegistroEstudiante extends Component {
                                                 <i className="fa fa-fw fa-eye password-icon show-password "></i>
                                             </span>
                                             <div className="col-md-10 offset-md-1 a">
+                                            <Label for="passwd" className="texto">Contraseña</Label>
                                                 <Input
                                                     type="password"
                                                     id="passwd"
                                                     name="passwd"
-                                                   
+                                                    pattern="[A-Za-z0-9]{1,15}"
                                                     minLength="8"
                                                     maxLength="20"
                                                     className={`form-control ${invalidPasswd2 ? "is-invalid" : ""}`}
                                                     value="clave"
-                                                    placeholder="contraseña"
+                                                    placeholder="Contraseña del estudiante"
                                                     value={this.state.passwd2}
                                                     onChange={
                                                         (this.onChange,
