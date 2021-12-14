@@ -158,18 +158,18 @@ class Contenido_Administrador extends Component {
     }
   }
   check(e) {
-    var tecla = (document.all) ? e.keyCode : e.which;
+    var tecla = document.all ? e.keyCode : e.which;
 
     //Tecla de retroceso para borrar, siempre la permite
     if (tecla == 8) {
-        return true;
+      return true;
     }
 
     // Patron de entrada, en este caso solo acepta numeros y letras
-    var  patron = /[A-Za-z0-9]/;
+    var patron = /[A-Za-z0-9]/;
     var tecla_final = String.fromCharCode(tecla);
     return patron.test(tecla_final);
-}
+  }
 
   render() {
     const modalStyles = {
@@ -178,48 +178,44 @@ class Contenido_Administrador extends Component {
       left: "50%",
       transform: "translate(-54%, -90%)",
       width: "350px",
-      height: "160px",
-      
     };
 
     return (
       <>
-        <div className="principal " >
-          <div className="secundario" >
-          <div class="mr-auto">
-                <div class="d-flex justify-content-end">
-            <Button id="boton_crearInstructores" onClick={this.abrirModal}>
-              Agregar <br></br>
-              Instructor
-            </Button>
+        <div className="principal ">
+          <div className="secundario">
+            <div class="mr-auto">
+              <div class="d-flex justify-content-end">
+                <Button id="boton_crearInstructores" onClick={this.abrirModal}>
+                  Agregar Instructor
+                </Button>
+              </div>
             </div>
-                </div>
           </div>
         </div>
-        <Modal isOpen={this.state.abierto} style={modalStyles} className="modalInstructor" >
-          <div className="contenedorCrearInstructor border-top border-start border-end border-bottom border-white">
+        <Modal isOpen={this.state.abierto}>
+          <div className="border-top border-start border-end border-bottom border-white">
             <Form
               onSubmit={
                 this.enviarAlaBD
               } /*onClick={() => this.submitFormulario()}*/ /*onSubmit={verificarPasswords()}*/
             >
-            
               <ModalHeader id="tituloCrearInstructor">
                 <a id="tituloModalInstructor"> Nuevo instructor </a>
               </ModalHeader>
-              
+
               <ModalBody id="cuerpoCrearInstructor">
-             
-          
-                <i id="obligatorio">
-                  <small>obligatorio </small>
-                </i>
-                <i
-                  className="bi bi-exclamation-circle rojo"
-                  width="5px"
-                  height="5px"
-                ></i>
-        
+                <div className="d-flex justify-content-end">
+                  <i className="m-1">
+                    <small>obligatorio </small>
+                  </i>
+                  <i
+                    className="bi bi-exclamation-circle rojo m-1"
+                    width="5px"
+                    height="5px"
+                  ></i>
+                </div>
+
                 <FormGroup className="position-relative">
                   <Label for="nombre">Nombre</Label>
                   <Input
@@ -236,8 +232,6 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidNombre}
                   />
-
-                  
                 </FormGroup>
 
                 <FormGroup>
@@ -257,7 +251,6 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidApellido_paterno}
                   />
-                
                 </FormGroup>
 
                 <FormGroup>
@@ -277,7 +270,6 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidApellido_materno}
                   />
-               
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Correo electronico</Label>
@@ -294,7 +286,6 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidEmail}
                   />
-                 
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Usuario</Label>
@@ -313,11 +304,8 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidUsername}
                   />
-                 
                 </FormGroup>
-                
-                
-         
+
                 <FormGroup>
                   <Label for="nombre">Contraseña</Label>
                   <Input
@@ -334,7 +322,6 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidPasswd}
                   />
-                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Vuelve a escribir la Contraseña</Label>
@@ -355,7 +342,6 @@ class Contenido_Administrador extends Component {
                   <FormFeedback tooltip id="mensajePassword">
                     {this.state.mensajePasswd3}
                   </FormFeedback>
-                 
                 </FormGroup>
 
                 <FormGroup>
@@ -377,7 +363,6 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidArea_especializacion}
                   />
-                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="nombre">Nivel de estudio</Label>
@@ -388,7 +373,7 @@ class Contenido_Administrador extends Component {
                     type="text"
                     id="nivel"
                     name="nivel_estudio"
-                   // onkeypress="return check(event)"
+                    // onkeypress="return check(event)"
                     value={this.state.nivel_estudio}
                     onChange={
                       (this.onChange,
@@ -397,7 +382,6 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidNivel_estudio}
                   />
-                  
                 </FormGroup>
                 <FormGroup>
                   <Label for="start">Fecha de nacimiento</Label>
@@ -408,7 +392,8 @@ class Contenido_Administrador extends Component {
                     id="start"
                     name="fecha_nacimiento"
                     value="2002-01-01"
-                    min="1950-01-01" max="2003-12-31"
+                    min="1950-01-01"
+                    max="2003-12-31"
                     value={this.state.fecha_nacimiento}
                     onChange={
                       (this.onChange,
@@ -417,9 +402,7 @@ class Contenido_Administrador extends Component {
                     }
                     invalid={this.state.invalidFecha_nacimiento}
                   />
-                  
                 </FormGroup>
-                 
               </ModalBody>
               <FormFeedback tooltip>{this.state.mensajePasswd}</FormFeedback>
               <ModalFooter id="pieCrearInstructor">

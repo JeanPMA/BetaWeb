@@ -307,8 +307,6 @@ a:active {
   margin-top: 120px;
   border-radius: 30px;
   color: white;
-  height: 58px;
-  width: 160px;
 
   border-style: hidden;
   text-align: center;
@@ -366,6 +364,8 @@ a:active {
   border: none;
   width: 100%;
   color: white;
+  display: flex;
+  justify-content: center;
 }
 #botonCrearCancelarInstructor {
   background-color: rgb(81, 81, 162);
@@ -375,8 +375,7 @@ a:active {
   width: 100px;
   padding-top: 6px;
   border-style: hidden;
-  margin-right: 40px;
-  margin-top: 20px;
+  margin: 3px auto;
 }
 
 #botonCrearAceptarInstructor {
@@ -387,8 +386,7 @@ a:active {
   width: 100px;
   padding-top: 6px;
   border-style: hidden;
-  margin-right: 40px;
-  margin-top: 20px;
+  margin: 20px auto;
 }
 
 #botonCrearCancelar {
@@ -399,7 +397,7 @@ a:active {
   width: 100px;
   padding-top: 6px;
   border-style: hidden;
-  margin: 2px auto;
+  margin: 20px auto;
 }
 
 #botonCrearAceptar {
