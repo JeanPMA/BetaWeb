@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "./CarouselInstructor";
-import IconoLupa from "../assets/lupa.png";
+import IconoLupa from "../assets/lupa_blanca.png";
 import IconoYoutube from "../assets/YouTube.png";
 import IconoInscribete from "../assets/inscribete2.png";
 import IconoYoutubeBlack from "../assets/youtubeBlack.png";
@@ -12,8 +12,7 @@ import {
   faPencilAlt,
   faTrash,
   faEyeSlash,
-  faRegistered
-
+  faRegistered,
 } from "@fortawesome/free-solid-svg-icons";
 const SliderInstructor = () => {
   return (
@@ -49,7 +48,12 @@ const SliderInstructor = () => {
         <div className="border border-white consejo icono">
           <div className="justify-content-center pt-2 ">
             <div className="icono2-slider-instructor">
-              <img src={IconoInscribete} className="inscribete" height="40px" width="50px" />
+              <img
+                src={IconoInscribete}
+                className="inscribete"
+                height="40px"
+                width="50px"
+              />
 
               <div>
                 <p className="texto-2">Inscribete a los cursos que deseas</p>
@@ -60,12 +64,15 @@ const SliderInstructor = () => {
         <div className=" border border-white consejo icono">
           <div className="justify-content-center pt-2 imagen-oferta ">
             <div className="icono3-slider-instructor">
-              <img src={IconoYoutube} className="YouTube" height="50px" width="50px"/>
+              <img
+                src={IconoYoutube}
+                className="YouTube"
+                height="50px"
+                width="50px"
+              />
 
               <div>
-                <p className="texto-3">
-                 Visualiza el contenido de los cursos 
-                </p>
+                <p className="texto-3">Visualiza el contenido de los cursos</p>
               </div>
             </div>
           </div>
