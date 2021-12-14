@@ -190,7 +190,7 @@ class RegistroEstudiante extends Component {
                           invalidNombre ? invalidNombre.toString() : undefined
                         }
                       />
-                      <p className="caracteres text-white">Caract. Max. 20</p>
+                      <p className="caracteres text-white"></p>
                     </div>
                   </div>
 
@@ -227,7 +227,7 @@ class RegistroEstudiante extends Component {
                             : undefined
                         }
                       />
-                      <p className="caracteres text-white">Caract. Max. 20</p>
+                      <p className="caracteres text-white"></p>
                     </div>
                   </div>
 
@@ -264,7 +264,7 @@ class RegistroEstudiante extends Component {
                             : undefined
                         }
                       />
-                      <p className="caracteres text-white">Caract. Max. 20</p>
+                      <p className="caracteres text-white"></p>
                     </div>
                   </div>
 
@@ -299,7 +299,7 @@ class RegistroEstudiante extends Component {
                           }
                         />
                         <p className="caracteres text-white">
-                          <br />
+                        
                         </p>
                       </div>
                     </div>
@@ -334,7 +334,7 @@ class RegistroEstudiante extends Component {
                           invalidEmail ? invalidEmail.toString() : undefined
                         }
                       />
-                      <p className="caracteres text-white">Caract. Max. 20</p>
+                      <p className="caracteres text-white"></p>
                     </div>
                   </div>
 
@@ -369,7 +369,7 @@ class RegistroEstudiante extends Component {
                             : undefined
                         }
                       />
-                      <p className="caracteres text-white">Caract. Max. 20</p>
+                      <p className="caracteres text-white"></p>
                     </div>
                   </div>
 
@@ -403,7 +403,7 @@ class RegistroEstudiante extends Component {
                           invalidPasswd2 ? invalidPasswd2.toString() : undefined
                         }
                       />
-                      <p className="caracteres text-white">Caract. Max. 20</p>
+                      <p className="caracteres text-white"></p>
                       <FormFeedback tooltip id="mensajePassword">
                         {this.state.mensajePasswd}
                       </FormFeedback>
