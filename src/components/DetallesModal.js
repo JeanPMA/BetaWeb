@@ -20,9 +20,10 @@ function DetallesModal(props) {
             </h5>
             <button
               type="button"
-              className="btn-close"
+              className="btn-close btn-close-white"
               data-bs-dismiss="modal"
               aria-label="Close"
+              id="btn-close"
             ></button>
           </div>
           <div className="modal-body">

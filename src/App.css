@@ -181,6 +181,7 @@ a:active {
 #boton-menu:checked ~ .container-menu {
   opacity: 1;
   visibility: visible;
+  position: fixed;
 }
 
 .cont-menu {
@@ -273,7 +274,7 @@ a:active {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 150px;
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 40px;
@@ -290,7 +291,8 @@ a:active {
 #boton_crearCursos {
   background-color: #0e87cd;
 
-  margin-top: 60px;
+  margin-top: 110px;
+  margin-right: 10px;
   border-radius: 30px;
   color: white;
   height: 38px;
@@ -302,7 +304,7 @@ a:active {
 #boton_crearInstructores {
   background-color: #0e87cd;
 
-  margin-top: 60px;
+  margin-top: 120px;
   border-radius: 30px;
   color: white;
   height: 58px;
@@ -323,8 +325,6 @@ a:active {
   height: 380px;
   width: 360px;
 }
-
-
 
 #obligatorio {
   text-align: left;
@@ -567,7 +567,7 @@ a:active {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+  margin-top: 150px;
   padding-top: 30px;
   padding-bottom: 30px;
   margin-bottom: 40px;
@@ -705,17 +705,25 @@ a:active {
     display: none;
   }
   .botones-menu-instructor {
-    text-align: center;
     margin-top: 20%;
   }
 
   .boton-inicio-instructor {
+    font-size: 40px;
     border-radius: 0px;
     border-bottom: 2px solid rgb(224, 224, 224, 0.5);
   }
   .boton-cursos-instructor {
     border-radius: 0px;
+    font-size: 40px;
     border-bottom: 2px solid rgb(224, 224, 224, 0.5);
+  }
+  .icono-inicio-cursos-instructor {
+    font-size: 40px;
+    margin-left: 30px;
+  }
+  #boton-menu:checked .container-instructor {
+    position: fixed;
   }
 }
 .listaDocentes {
@@ -856,4 +864,81 @@ a:active {
     width: 100%;
     margin: 5px auto;
   }
+}
+#navInicioCursos {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+.buscadorCursosInicio {
+  margin-top: 80px;
+}
+#navegacionEstudiante {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+.margen-buscador {
+  margin-top: 30px;
+}
+#navInstructor {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+@media (max-width: 890px) {
+  .bienvenida {
+    width: 80%;
+  }
+  .container-instructor {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media (max-width: 656px) {
+  .bienvenida {
+    width: 100%;
+  }
+}
+@media (max-width: 586px) {
+  .bienvenida {
+    margin-top: 150px;
+  }
+}
+@media (max-width: 890px) {
+  .BienvenidaEstudiante {
+    width: 80%;
+  }
+  .container-estudiante {
+    width: 90%;
+    margin: auto;
+  }
+}
+@media (max-width: 656px) {
+  .BienvenidaEstudiante {
+    width: 100%;
+  }
+}
+@media (max-width: 586px) {
+  .BienvenidaEstudiante {
+    margin-top: 150px;
+  }
+}
+#btn-close {
+  opacity: 1;
+}
+#navegacionLogin {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
+}
+#navAdmin {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 }

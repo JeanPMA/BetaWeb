@@ -6,7 +6,7 @@
 }
 .ancho-slider {
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
 .container-carousel {
   max-width: 1100px;
@@ -15,7 +15,8 @@
   margin-right: auto;
 }
 .ofertaCursos {
-  margin-left: 20px;
+  max-width: 1100px;
+  margin-left: 60px;
   margin-bottom: 30px;
 }
 .container-cursos {

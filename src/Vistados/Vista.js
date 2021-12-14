@@ -54,7 +54,7 @@ function Vista() {
 
   return (
     <div>
-      <div>
+      <div className="buscadorCursosInicio">
         <input
           class="buscador"
           type="search"

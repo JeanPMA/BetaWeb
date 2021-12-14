@@ -1,33 +1,29 @@
 .btnn {
- 
   background-color: #0e87cd;
   border-radius: 30px;
   color: white;
   height: 38px;
- 
+
   padding-top: 6px;
   border-style: hidden;
   margin: 2px auto;
-  }
-  .containerR{
-    width:65% ;
-    background-color: #41567e;
-    margin:auto;
-    
-   
-    text-align: left;
-  }
-  .centro{
-    text-align: center;
-    }
-    .a{
-      margin-left: 8%;
-    
-    margin-right: 5%;
-    }
-    .texto{
-      color:white;
-      left: auto;;
-    }
- 
-  
+}
+.containerR {
+  width: 50%;
+  background-color: #41567e;
+  margin: 100px auto;
+
+  text-align: left;
+}
+.centro {
+  text-align: center;
+}
+.a {
+  margin-left: 8%;
+
+  margin-right: 5%;
+}
+.texto {
+  color: white;
+  left: auto;
+}
