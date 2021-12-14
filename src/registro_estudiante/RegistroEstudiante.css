@@ -27,3 +27,8 @@
   color: white;
   left: auto;
 }
+@media (max-width: 356px) {
+  .containerR {
+    margin-top: 180px;
+  }
+}
