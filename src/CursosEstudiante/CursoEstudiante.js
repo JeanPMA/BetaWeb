@@ -84,10 +84,10 @@ const CursoEstudiante = ({ cursos = [] }) => {
               {item.instructor.apellido_materno}
             </h4>
             <br />{" "}
-            <p id="nombre-del-cursoo" className="card-text ">
+            <p id="nombre-del-curso" className="card-text ">
               {item.nombre}
             </p>
-            <p id="Descripcion" className="card-text">
+            <p id="Descripcion-Curso-Estudiante" className="card-text">
               {item.descripcion}
             </p>
             <div class="d-grid justify-content-md-end">
@@ -97,15 +97,16 @@ const CursoEstudiante = ({ cursos = [] }) => {
                   onClick={() => setCurso(item)}
                   data-bs-toggle="modal"
                   data-bs-target="#staticBackdrop"
-                  className="btnnn btn-outline-success boton-inscribirse"
+                  className="btn  boton-inscribirse"
+                  style={{ color: "white", background: "#0e87cd" }}
                 >
                   Inscribirse
                 </button>
               ) : (
                 <button
                   type="button"
-                  style={{ color: "yellow" }}
-                  className="btnnn btn-outline-warning boton-inscribirse"
+                  style={{ color: "white", background: "rgb(81, 81, 162)" }}
+                  className="btn  boton-inscribirse"
                 >
                   Inscrito
                 </button>

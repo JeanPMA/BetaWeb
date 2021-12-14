@@ -14,7 +14,9 @@
 #cursosRegistrados {
   margin-top: 80px;
 }
-
+#Descripcionn {
+  height: 65px;
+}
 .a {
   margin-left: 30px;
 }
@@ -45,14 +47,14 @@
     width: 100%;
   }
 
-  #Descripcion {
+  #Descripcionn {
     overflow-y: scroll;
   }
-  #nombre-del-cursoo {
+  #nombre-del-curso {
     font-size: 15px;
   }
-  #Descripcion {
-    height: 55%;
+  #Descripcionn {
+    height: 47%;
   }
   #cursos {
     height: 260px;
@@ -68,15 +70,15 @@
   #search {
     margin-top: 10px;
   }
-  #Descripcion {
-    display: none;
-  }
 
-  #nombre-del-cursoo {
+  #nombre-del-curso {
     display: block;
-    font-size: 20px;
-    height: 78%;
-    overflow: scroll;
+    font-size: 15px;
+    height: 20%;
+    overflow-y: scroll;
+  }
+  #Descripcionn {
+    height: 47%;
   }
   #instructor-nombre {
     font-size: 15px;
@@ -97,9 +99,12 @@
     height: 350px;
     text-align: center;
   }
-  #nombre-del-cursoo {
-    height: 70px;
+  #nombre-del-curso {
     width: 100%;
+    height: 22px;
+  }
+  #Descripcionn {
+    height: 42px;
   }
   #imagen-cursos-estudiante {
     width: 70%;
@@ -118,8 +123,7 @@
   }
 }
 @media (max-width: 379px) {
-  #nombre-del-cursoo {
-    height: 70px;
+  #nombre-del-curso {
     width: 100%;
     font-size: 17px;
   }

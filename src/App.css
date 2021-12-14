@@ -90,7 +90,7 @@ a:active {
   color: #fcf93f;
 }
 
-#nombre-del-cursoo {
+#nombre-del-curso {
   font-size: 20px;
   font-weight: bold;
 }
@@ -648,7 +648,7 @@ a:active {
   margin-top: 15px;
 }
 
-#nombre-del-cursoo {
+#nombre-del-curso {
   margin-bottom: 8px;
   height: 50px;
 }
@@ -939,4 +939,31 @@ a:active {
   width: 100%;
   top: 0;
   z-index: 1;
+}
+@media (max-width: 351px) {
+  .margen-buscador {
+    margin-top: 60px;
+  }
+  .buscadorCursosInicio {
+    margin-top: 110px;
+  }
+}
+@media (max-width: 447px) {
+  .buscadorCursosInicio {
+    margin-top: 110px;
+  }
+}
+@media (max-width: 327px) {
+  .buscadorCursosInicio {
+    margin-top: 214px;
+  }
+}
+#botonCrearCancelarEst {
+  background-color: rgb(81, 81, 162);
+  border-radius: 30px;
+  color: white;
+  height: 38px;
+  width: 100px;
+  padding-top: 6px;
+  border-style: hidden;
 }
