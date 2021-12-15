@@ -93,8 +93,8 @@ class NavegacionInstructor extends Component {
               <div className="menu-instructor">
                 <h2 className="texto-menu">Menú</h2>
                 <div className="botones-menu-instructor">
-                  <Link
-                    to="/instructor"
+                  <a
+                    href="/instructor"
                     type="button"
                     className="boton-inicio-instructor text-white"
                   >
@@ -102,10 +102,10 @@ class NavegacionInstructor extends Component {
                       <FontAwesomeIcon icon={faHome} />
                     </div>
                     <span>Inicio</span>
-                  </Link>
+                  </a>
 
-                  <Link
-                    to="/VistaInstructor"
+                  <a
+                    href="/VistaInstructor"
                     type="button"
                     type="button"
                     className="boton-cursos-instructor  text-white"
@@ -114,7 +114,7 @@ class NavegacionInstructor extends Component {
                       <FontAwesomeIcon icon={faPlayCircle} />{" "}
                     </div>
                     <span>Mis Cursos</span>
-                  </Link>
+                  </a>
                 </div>
               </div>
             </nav>

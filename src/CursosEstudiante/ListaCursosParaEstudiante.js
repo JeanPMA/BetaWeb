@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CursoEstudiante from "../CursosEstudiante/CursoEstudiante";
-import logoLupa from "../assets/lupa.png";
+import logoLupa from "../assets/lupa_blanca.png";
 import axios from "axios";
 import IncribirCurso from "../CursosEstudiante/InscribirCurso";
 

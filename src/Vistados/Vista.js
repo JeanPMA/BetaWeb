@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cursoss from "./Cursoss";
-import logoLupa from "../assets/lupa.png";
+import logoLupa from "../assets/lupa_blanca.png";
 import axios from "axios";
 
 function Vista() {

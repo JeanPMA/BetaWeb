@@ -36,6 +36,7 @@ class Navigation extends Component {
             >
               Iniciar Sesión
             </Link>
+
             <Link
               to="/contacto"
               id="boton_buscar"

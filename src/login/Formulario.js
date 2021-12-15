@@ -134,9 +134,15 @@ class Formulario extends Component {
 
   render() {
     return (
+      
       <div class="d-flex justify-content-center">
+        
       <div className="containerPrincipal">
+        
         <div className="containerSecundario">
+           <legend className="tituloLogin text-white header centro">
+                  Iniciar Sesión
+                </legend>
           <div className="form-group">
             <label>Usuario: </label>
             <br />
@@ -162,7 +168,13 @@ class Formulario extends Component {
             >
               Iniciar Sesión
             </button>
+            
           </div>
+          <p id="noCuenta">
+                <a href="/registro" className="text-white">
+                        ¿No tienes cuenta? Haz click aqui
+                </a>
+           </p>
         </div>
       </div>
       </div>

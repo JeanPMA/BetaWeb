@@ -15,7 +15,7 @@
   margin-top: 80px;
 }
 #Descripcionn {
-  height: 65px;
+  height: 60px;
 }
 .a {
   margin-left: 30px;
@@ -28,8 +28,8 @@
   width: 75%;
 }
 #ver-detalles {
-  color: #ffffff;
-  background-color: #244972;
+  color: #091d36;
+  background-color: #c2d2e9;
 }
 @media (max-width: 1082px) {
   #cursosRegistrados {
@@ -68,7 +68,8 @@
     margin-top: 20px;
   }
   #search {
-    margin-top: 10px;
+    margin-right: 2px;
+    height: 35px;
   }
 
   #nombre-del-curso {
@@ -91,6 +92,10 @@
   }
   #ver-detalles {
     width: 100%;
+  }
+  .margen-buscador {
+    display: flex;
+    align-items: center;
   }
 }
 @media (max-width: 570px) {
