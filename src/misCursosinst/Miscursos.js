@@ -4,7 +4,7 @@ import "./Miscursos.css"
 function Miscursos(props) {
   console.log(props);
   return (
-    <div className="modal fade " id={"modal-" + props.curso.id_curso} tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div className="modal fade " data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"   id={"modal-" + props.curso.id_curso}  aria-hidden="true">
       <div className="modal-dialog bor">
         <div className="modal-content" id="myModal">
           <div className="modal-header">
@@ -26,7 +26,7 @@ function Miscursos(props) {
             </div>
           </div>
           <div className="d-grid gap-2 col-4 mx-auto">
-            <button type="button" className="ali btnn mb-2 rounded-pill shadow-sm" data-bs-dismiss="modal">Volver</button>
+            <button type="button" className="ali btnn mb-2 rounded-pill shadow-sm" data-bs-dismiss="modal" >Volver</button>
           </div>
         </div>
       </div>
