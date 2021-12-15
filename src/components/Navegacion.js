@@ -35,6 +35,14 @@ class Navigation extends Component {
               type="button"
             >
               Iniciar Sesión
+            </Link>            
+            <Link
+              to="/registro"
+              id="boton_loginInicio"
+              className="btn "
+              type="button"
+            >
+              Registrarse
             </Link>
             <Link
               to="/contacto"
