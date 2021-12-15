@@ -177,7 +177,7 @@ class RegistroEstudiante extends Component {
                         pattern="[A-Za-z]+"
                         minLength="3"
                         maxlength="20"
-                        placeholder="Nombre"
+                        placeholder="Ej.: Marco"
                         className={`form-control ${
                           invalidNombre ? "is-invalid" : ""
                         }`}
@@ -209,7 +209,7 @@ class RegistroEstudiante extends Component {
                         name="apellido_paterno"
                         type="text"
                         pattern="[A-Za-z]+"
-                        placeholder="Apellido_paterno"
+                        placeholder="Ej.: Paredes"
                         className={`form-control ${
                           invalidApellido_paterno ? "is-invalid" : ""
                         }`}
@@ -246,7 +246,7 @@ class RegistroEstudiante extends Component {
                         pattern="[A-Za-z]+"
                         minLength="3"
                         maxLength="20"
-                        placeholder="Apellido_materno"
+                        placeholder="Ej.: Ledezma"
                         className={`form-control ${
                           invalidApellido_materno ? "is-invalid" : ""
                         }`}
@@ -319,7 +319,7 @@ class RegistroEstudiante extends Component {
                         type="email"
                         minLength="3"
                         maxLength="20"
-                        placeholder="algo123@gmail.com"
+                        placeholder="Ej.: algo123@gmail.com"
                         pattern=".+@gmail.com"
                         className={`form-control ${
                           invalidEmail ? "is-invalid" : ""
@@ -347,6 +347,7 @@ class RegistroEstudiante extends Component {
                         Usuario
                       </Label>
                       <Input
+                        placeholder="Ej.: marquito123"
                         id="usuario"
                         name="usuario"
                         type="text"
@@ -392,7 +393,7 @@ class RegistroEstudiante extends Component {
                           invalidPasswd2 ? "is-invalid" : ""
                         }`}
                         value="clave"
-                        placeholder="Contraseña del estudiante"
+                        placeholder="Ej.: marco123A"
                         value={this.state.passwd2}
                         onChange={
                           (this.onChange,

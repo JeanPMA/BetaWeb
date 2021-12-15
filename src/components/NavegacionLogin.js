@@ -31,14 +31,7 @@ class NavigationLogin extends Component {
             <Link to="/" id="boton_inicio" className="btn " type="button">
               Inicio
             </Link>
-            <Link
-              to="/registro"
-              id="boton_login"
-              className="btn "
-              type="button"
-            >
-              Registrarse
-            </Link>
+            
           </div>
         </div>
       </nav>
