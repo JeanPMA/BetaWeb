@@ -41,14 +41,15 @@
   user-select: none;
 }
 #Descripcion-Curso-Estudiante {
-  height: 48px;
-  overflow-y: scroll;
+  height: 65px;
+  margin-bottom: 0;
 }
 #nombre-del-curso {
-  height: 30px;
+  height: 46px;
 }
 .boton-inscribirse {
   width: 100px;
+  padding: 0;
 }
 @media (max-width: 1082px) {
   #cursosRegistrados {
@@ -68,7 +69,9 @@
   #cursosRegistrados {
     width: 100%;
   }
-
+  .boton-inscribirse {
+    margin-top: 6px;
+  }
   #Descripcion-Curso-Estudiante {
     overflow-y: scroll;
   }
@@ -98,6 +101,8 @@
   }
   .boton-inscribirse {
     width: 100%;
+    height: 35px;
+    font-size: 20px;
   }
   #nombre-del-curso {
     display: block;
@@ -131,6 +136,10 @@
     width: 97%;
     height: 50px;
     margin: 3%;
+  }
+  .boton-inscribirse {
+    margin-top: 15px;
+    font-size: 23px;
   }
   #instructor-apellido-materno {
     display: none;
